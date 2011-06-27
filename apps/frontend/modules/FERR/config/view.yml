@@ -1,0 +1,4 @@
+mostrarFormularioSuccess:
+ javascripts:   [fileuploader.js, funciones_FERR.js,jquery.loadJSON.js,-jquery.history.js, -jquery.form.js, -jquery.validate.js, -jquery.Rut.min.js, -jquery.cookie.js, -funciones_Ayuda.js,-funciones_Timer.js,-jquery.form.js, -jquery.Rut.min.js, -jquery.cookie.js, -funciones_Ayuda.js,-funciones_Timer.js, jqModal.js]
+ stylesheets:    [fileuploader.css, ferr.css, style.css, tablitas.css]
+ 

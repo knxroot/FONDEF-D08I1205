@@ -1,0 +1,3 @@
+mostrarFormularioSuccess:
+ javascripts:   [jquery.autoresize.js,jquery-ui.tabs.paging.js,jquery.loadJSON.js, jquery.validate.js, funciones_FCRIMINOMETRICA.js, jqModal.js]
+ stylesheets:   [excel.css, style.css, tablitas.css]

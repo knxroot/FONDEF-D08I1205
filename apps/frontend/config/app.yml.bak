@@ -1,0 +1,15 @@
+# default values
+all:
+    sf_guard_plugin:
+        routes_register: false
+        #success_signin_url:      @my_route?param=value # el plugin usa la referencia como defecto
+        #success_signout_url:     module/action         # el plugin usa la referencia como defecto
+    
+    database:
+        db_name: psico
+        db_host: localhost
+        db_user: 
+        db_pass: 
+        
+    supercontrolador:
+          blacklist_FERR: ['module','action','Guardar']

@@ -1,0 +1,10 @@
+Listen 127.0.0.1:8081
+ 
+<VirtualHost 127.0.0.1:8081>
+DocumentRoot "C:\wamp\www\fondef\web"
+DirectoryIndex index.php
+<Directory "C:\wamp\www\fondef\web">
+AllowOverride All
+Allow from All
+</Directory>
+</VirtualHost>

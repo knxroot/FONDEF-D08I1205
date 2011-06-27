@@ -1,0 +1,76 @@
+
+/** formulario _hurtosyrobos **/
+.eda-table {
+    width: 100%;
+}
+
+.eda-table-desripcion {
+    text-align: center;
+    font-weight: bold;
+}
+
+.eda-table input:focus {
+    border: 2px solid #76CFFC;
+    margin: -2px
+}
+
+.eda-table td {
+    border: 1px solid silver;
+    padding: 1px;
+    color: #555;
+}
+
+.eda-table input {
+    width: 61px!important;
+    text-align:right;
+    padding:0 2px;
+}
+
+.eda-table input.resultado-fila {
+    width: 40px!important;
+    text-align: center;
+}
+
+.eda-table-intervalo {
+    display: block;
+    font-size: .8em;
+    text-align: center!important;
+    font-weight: bold   
+}
+
+.eda-table-indice-td {
+    width: 30px;
+}
+
+.eda-table-pregunta, 
+.eda-table-indice {
+    text-align: right;
+    display:block;
+    padding:0 3px;
+}
+
+.eda-table-pregunta {
+    min-width: 315px;
+}
+
+.eda-table-descripcion-intervalos {
+    text-align: center;
+    display: block;
+}
+
+.eda-table-comentarios {
+    width: 835px;
+    height: 50px;
+}
+
+.eda-3-descripcion p{
+    line-height:150%;
+    padding:0;
+    margin:0;
+    text-align:center;
+}
+
+.eda-opcion {
+    text-align:center;
+    width: 150px;
+}

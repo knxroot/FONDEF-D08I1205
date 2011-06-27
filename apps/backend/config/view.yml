@@ -1,0 +1,28 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/13-View
+
+default:
+  http_metas:
+    content-type: text/html; charset=utf-8
+
+  metas:
+    author:  Gustavo Lacoste <gustavo@lacosox.org>
+    copyright: Licensed under GPL and MIT.
+    title:        Sitema de registro de adolecentes infractores de ley PANEL ADMINISTRACION
+    description:  Proyecto FONDEF d08i1205
+    keywords:     psicologia,psico, delitos,d08i1205,
+    language:     es
+    robots: all
+
+
+  stylesheets:    [reset.css, text.css, redmond/jquery-ui-1.8.1.custom.css, 960.css, base.css, administracion.css]
+#  stylesheets:    [reset.css, text.css, ufro2009/jquery-ui.css, 960.css, formee/css/form-structure.css, formee/css/form-style.css,style-dialog-calendars.css, base.css]
+  #stylesheets:    [reset.css, text.css, redmond/jquery-ui-1.8.1.custom.css, 960.css, formee/css/form-structure.css, formee/css/form-style.css, style-dialog-calendars.css, jquery.ketchup.css, base.css]
+
+  javascripts:   [jquery-1.4.2.min.js, jquery-ui-1.8.1.custom.min.js, jquery.history.js]
+  #javascripts:   [jquery.js,f2.js]
+
+  #javascripts:    [jquery-1.4.2.min.js, jquery-ui-1.8.1.custom.min.js, jquery.history.js, jquery.form.js, jquery.ketchup.js, jquery.form.wizard-2.0.1.js, funciones.js]
+
+  has_layout:     true
+  layout:         layout

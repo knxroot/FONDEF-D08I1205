@@ -1,0 +1,40 @@
+default:
+    http_metas:
+        content-type: text/html; charset=utf-8
+
+    metas:
+        author:       Gustavo Lacoste <gustavo@lacosox.org>, Carlos Henriquez <carlos.henriquez.lara@gmail.com>, Absalon Valdes O. <absalon.valdes@hotmail.com>
+        copyright:    Licensed under GPL and MIT. # Es cierto? 
+        title:        Sitema de registro de adolecentes infractores de ley
+        description:  Proyecto FONDEF d08i1205 (ESTRATEGIA ECOSISTÉMICA ESPECIALIZADA DE INTERVENCIÓN DIFERENCIADA PARA FAVORECER LA INTEGRACIÓN PSI COSOCIAL DE ADOLESCENTES INFRACTORES DE LEY)
+        keywords:     psicologia,psico, delitos,d08i1205,
+        language:     es 
+        robots:       all
+
+
+    stylesheets:
+        - reset.css
+        - text.css
+        - redmond/jquery-ui-1.8.1.custom.css
+        - 960.css
+        - formee/css/form-structure.css
+        - formee/css/form-style.css
+        - style-dialog-calendars.css
+        - base.css
+        - ayuda.css
+
+    javascripts:   
+        - jquery-1.4.2.min.js
+        - jquery-ui-1.8.1.custom.min.js
+        - jquery.history.js
+        - jquery.form.js
+        - jquery.validate.js
+        - jquery.Rut.min.js
+        - funciones_global.js
+        - jquery.cookie.js
+        - funciones_Ayuda.js
+        - funciones_Timer.js
+        - tipsy/src/javascripts/jquery.tipsy.js
+
+    has_layout:     true
+    layout:         layout
