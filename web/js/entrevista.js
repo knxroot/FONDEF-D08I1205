@@ -5,44 +5,45 @@
 $().ready(function() {
     $("#formulario_ENTREVISTA").validate({
                 rules: {
-                  f_inicio_evaluacion: {
-                    required: true,
-                    dateISO: true
-                  },
-                  f_termino_evaluacion: {
-                    required: true,
-                    dateISO: true
-                  },
-                  t_total_invertido: {
-                    required: true,
-                    number: true
-                  },
-                  t_delincuencia: {
+                  encuadre_entrevista: {
                     required: true,
                     minlength: 3
                   },
-                  
-                  riesgos_criminogenicos: {
+                  expectativas: {
                     required: true,
                     minlength: 3
                   },
-                  recursos_intervencion: {
+                  congruencias_incongruencias: {
                     required: true,
                     minlength: 3
                   },
-                  crespuesta_intervencion: {
+                  creencias_valores_cog: {
                     required: true,
                     minlength: 3
                   },
-                  fdiferenciados_intervencion: {
+                  estrat_res_problemas: {
                     required: true,
                     minlength: 3
+                  },
+                  sintesis_aspectos_rel: {
+                    required: true,
+                    minlength: 3
+                  },
+                  obs_generales_impresioncaso: {
+                    required: true,
+                    minlength: 3
+                  },
+                  apreciacion_posibilidad_cambio: {
+                    required: true,
+                    minlength: 3
+                  },
+                  file: {
+                    required: true
                   }
-                  
                 },
                 messages: {
-                  t_total_invertido: {
-                    number: "Introduzca el tiempo invertido en horas"
+                  file: {
+                    required: "El archivo no se ha subido o ha fallado el proceso de carga. Sube otro e intenta denuevo."
                   }
                 }
     });//fin definicion de validaciones

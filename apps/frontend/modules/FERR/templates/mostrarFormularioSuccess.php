@@ -522,13 +522,12 @@
                           multiple: false,
                           allowedExtensions: ['gno'],
                           messages: {
-                            typeError: "{file} posee una extension invalida. Solo la extension {extensions} (GenoPro) esta permitida.",
-                            sizeError: "{file} es demasiado grande, el tamano maximo de un archivo es {sizeLimit}.",
-                            minSizeError: "{file} es demasiado pequeno, el tamano minimo de un archivo es {minSizeLimit}.",
-                            emptyError: "{file} esta vacio, porfavor selecciona el archivo denuevo e intenta otra vez.",
-                            onLeave: "Los archivos se estan subiendo, si te cierras la ventana ahora la subida se cancelara."
+                            typeError: "{file} posee una extensi\u00F3n inv\u00E1lida. S\u00F3lo la extensi\u00F3n {extensions} (GenoPro) est\u00E1 permitida.",
+                            sizeError: "{file} es demasiado grande, el tama\u00F1o m\u00E1ximo de un archivo es {sizeLimit}.",
+                            minSizeError: "{file} es demasiado peque\u00F1o, el tama\u00F1o m\u00EDnimo de un archivo es {minSizeLimit}.",
+                            emptyError: "{file} est\u00E1 vacio, porfavor selecciona el archivo denuevo e intenta otra vez.",
+                            onLeave: "Los archivos se est\u00E1n subiendo, si cierras la ventana ahora el proceso de subida se cancelar\u00E1."
                            }
-
                       });
                   }
 

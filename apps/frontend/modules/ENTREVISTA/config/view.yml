@@ -1,3 +1,3 @@
 all:
- stylesheets:   ['entrevista.css']
- javascripts:   ['entrevista.js']
+ stylesheets:   ['fileuploader.css','entrevista.css']
+ javascripts:   ['fileuploader.js','entrevista.js']
