@@ -8,24 +8,29 @@
   <div id="dialogo-instrucciones" style="display: none;" title="Instrucciones CACSA">
 	<p>
 		<span class="ui-icon-info-grande" style="float:left; margin:4px 4px 4px 4px;"></span>
-      En este formulario te presentamos una serie de frases que los jóvenes usan para describirse a sí mismos. Se presentan aquí para ayudarte a describir tus sentimientos y actitudes.
+      A continuación encontrarás una serie de frases que se refieren a modos de actuar en relación
+
+a los otros y a las normas y convenciones sociales. Léelas con atención y marca la alternativa
+de respuesta que mejor representa tu forma de actuar, es decir, la frecuencia con que has
+hecho la conducta señalada, y a continuación responde si esa conducta ocurrió o no en los
+últimos 12 meses.
       <br><br>
-      <b>Al responder trata de hacerlo del modo más serio y honesto posible.</b>
-      No te preocupes si algunas frases te parecen poco comunes, divertidas o extrañas; se han incluido para describir diferentes tipos de problemas que los jóvenes pueden tener.
-      <br><br>
-      1.- Cuando decidas que la frase <b>describe tu situación personal</b>, o <b>estás de acuerdo</b> selecciona la letra <b>V</b> para indicar que es <b>V</b>erdadera.
-      <br>
-      2.- Si decides que la frase <b>no describe tu situación personal</b>, o <b>estás en desacuerdo</b> selecciona la letra <b>F</b> para indicar que es <b>F</b>alsa.
-      <br>
-      <?php echo image_tag('ejemplorespuesta.png', 'alt=Selecciona el radio que tenga el label V o el label F') ?>
+Las posibilidades de respuesta son cinco:      
+	  <br><br>
+	  
+      1)	Si nunca lo has hecho, selecciona Nunca <b>nunca</b><br>
+     2)	Si solamente lo has hecho una o dos veces en tu vida, selecciona <b>1 ó 2 Veces </b><br> 
+     3)	Si lo has hecho más de dos veces, pero no es una conducta frecuente para ti, selecciona <b>Casi Siempre</b><br>
+	 4)	Si la realizas todos los meses, selecciona  <b>Varias Veces </b><br>
+	  5)	Si la realizas todas las semanas, selecciona <b>Siempre</b><br>
+	
+	
+	
 	</p>
-  <h6>Recuerda:</h6>
-  <ul>
-    <li>Comienza leyendo cada frase, una a una y trata de responder a todas, aun cuando no estés muy seguro/a de tu decisión. Si lo has intentado pero no puedes decidirte, entonces responde la frase escribiendo la letra <b>F (Falso)</b>.</li>
-    <li>Si te equivocas o deseas cambiar alguna respuesta, selecciona nuevamente la letra correspondiente.</li>
-    <li>Si tienes dudas o deseas que te expliquen una palabra o frase, <b>pide ayuda</b>.</li>
-    <li>Para volver a hacer aparecer estas instrucciones haz click en el ícono superior <?php echo image_tag('pediarayuda.png', 'alt=el icono que tiene la i') ?>.</li>
- </ul>
+	
+	Si tu respuesta es Nunca, pasa de inmediato a la siguiente frase, pero si eliges alguna de las otras cuatro alternativas, responde a continuación si lo has hecho o no durante el último año (últimos doce meses), para ello sólo debes marcar <b>Si o No</b>
+  
+ <br>
  <br>
   <input type="checkbox" id="LeiLasInstrucciones" name="LeiLasInstrucciones" value="LeiLasInstrucciones" /> <b>Declaro haber leido las instrucciones y comprenderlas.</b> <br>
   </div>
@@ -37,13 +42,13 @@
   
       <span class="icono-ver-instrucciones" onclick="$('#dialogo-instrucciones').dialog('open');"></span>
   </div>
-    <div class="grid-5-12">
+    <div class="grid-7-12">
         <h3> Conducta Social</h3>
       </div>
-<div class="grid-2-12">
-        <h3>  Frecuencia</h3>
+<div class="grid-3-12">
+        <h3>     Frecuencia</h3>
       </div>
-      <div class="grid-3-12">
+      <div class="grid-2-12">
         <h3>  Ultimos 12 meses</h3>
       </div> 
 <div class="clear">
@@ -51,7 +56,7 @@
 <?php foreach ($Preguntas_CACSA as $pregunta):?>
   <!-- Comienzo Bloque Pregunta -->
   <div id="CACSA_pregunta_<?php echo $pregunta["id_pregunta"];?>" class="CACSA_bloque_pregunta">
-		<div class="grid-5-12">
+		<div class="grid-7-12">
 			<label class="form-lbl-V-or-F">
         <?php echo $pregunta["id_pregunta"].".-".$pregunta["texto_pregunta"];?>
         <?php if($pregunta["es_requerida"]): ?>
@@ -60,41 +65,41 @@
       </label>
 		</div>
        
-    <div class="grid-2-12">
-        <div  style="width: 50px;display: inline;float: left;height: 100%;margin-left: 1%;margin-right: 1%;padding: 0.5% 0.5% 0.8%;" >
+    <div class="grid-3-12">
+        <div  style="width: 120px;display: inline;float: left;height: 100%;margin-left: 1%;margin-right: 1%;padding: 0.5% 0.5% 0.8%;" >
       <ul class="form-list-rdo">
            <select type="checkbox" id="<?php echo $pregunta["id_pregunta"];?>"  name="radio_VorF_CACSA_<?php echo $pregunta["id_pregunta"];?>"  >
-                               <OPTION VALUE="0" Onclick="ocultar(<?php echo $pregunta["id_pregunta"];?>)" >0 - Ninguna</OPTION>
-                               <OPTION VALUE="1" Onclick="mostrar(<?php echo $pregunta["id_pregunta"];?>)">1 - Baja</OPTION>
-                               <OPTION VALUE="2" Onclick="mostrar(<?php echo $pregunta["id_pregunta"];?>)">2 - Mediana</OPTION>
-                               <OPTION VALUE="3" Onclick="mostrar(<?php echo $pregunta["id_pregunta"];?>)">3 - Alta</OPTION>
-                               <OPTION VALUE="4" Onclick="mostrar(<?php echo $pregunta["id_pregunta"];?>)">4 - Muy Alta</OPTION>
+                               <OPTION VALUE="0" Onclick="ocultar(<?php echo $pregunta["id_pregunta"];?>)" >Nunca</OPTION>
+                               <OPTION VALUE="1" Onclick="mostrar(<?php echo $pregunta["id_pregunta"];?>)">1 ó 2 Veces</OPTION>
+                               <OPTION VALUE="3" Onclick="mostrar(<?php echo $pregunta["id_pregunta"];?>)">Varias veces</OPTION>
+                               <OPTION VALUE="5" Onclick="mostrar(<?php echo $pregunta["id_pregunta"];?>)">Casi Siempre</OPTION>
+                               <OPTION VALUE="6" Onclick="mostrar(<?php echo $pregunta["id_pregunta"];?>)">Siempre</OPTION>
                                 </select>
        	</ul>
         </div>
     </div>
 
 
-       <div id="respuesta2" class="grid-3-12" >
-   
-           <div id="envoltorio<?php echo $pregunta["id_pregunta"];?>" style="display:none">
+       <div id="respuesta2" class="grid-2-12" >
+    
+           <div id="envoltorio<?php echo $pregunta["id_pregunta"];?>" style="display:none;width: 100px">
 
         
          
-                     <ul>
+                     
 
-                          <li><input class="botonradio"  name="respuesta2_CACSA_<?php echo $pregunta["id_pregunta"];?>" type="radio" value="si" /><label class="form-lbl">Si</label></li>
-                          <li><input class="botonradio"  name="respuesta2_CACSA_<?php echo $pregunta["id_pregunta"];?>" type="radio" value="no" /><label class="form-lbl">No</label></li>
+                          <input class="botonradio"  name="respuesta2_CACSA_<?php echo $pregunta["id_pregunta"];?>" type="radio" value="si" /><label >Si</label>
+                          <input class="botonradio"  name="respuesta2_CACSA_<?php echo $pregunta["id_pregunta"];?>" type="radio" value="no" /><label >No</label>
 
-                     </ul>
+                     
         
 		
 
                
            </div> <!-- Fin envoltorio-->
 
-      </div>
-
+      
+  </div>
     <div class="grid-1-12"> <!-- tools para la pregunta -->
      <div id="boton_add_comentario_<?php echo $pregunta["id_pregunta"];?>" class="ui-icon-comentar" onclick="$('#dialogo-addcomentario').data('pregunta', {id: '<?php echo $pregunta["id_pregunta"];?>',numero: '<?php echo $pregunta["id_pregunta"];?>', texto: '<?php echo trim($pregunta["texto_pregunta"]);?>'}).dialog('open');"></div>
      </div>
