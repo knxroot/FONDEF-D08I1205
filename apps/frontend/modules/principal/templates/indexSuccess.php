@@ -303,7 +303,7 @@
             </div>
 
             <div class="grid-4-12">
-                <label class="form-lbl">Fecha detención <em class="form-req">*</em></label>
+                <label class="form-lbl">Fecha de comisión del delito  <em class="form-req">*</em></label>
                 <input type="text" class="form-txt" name="input_fecha_detencion[]" id="input_detencion"/>
             </div>
 
@@ -832,7 +832,7 @@
           
 
             <div class="grid-5-12">
-                <label class="form-lbl">Fecha detención <em class="form-req">*</em></label>
+                <label class="form-lbl">Fecha de comisión del delito <em class="form-req">*</em></label>
                 <input type="text" class="form-txt" name="input_fecha_detencion2[]" id="input_detencion2"/>
             </div>
 

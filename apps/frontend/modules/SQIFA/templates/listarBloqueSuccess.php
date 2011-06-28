@@ -20,6 +20,7 @@
              echo 'Sección C. Las siguientes preguntas se basan observacuibes y otra información que haya obtenido de un profesor / padres / persona que conozco bien al adolscente';
          }  ?>
  </span>
+  </br>
  <?php foreach ($Preguntas_SQIFA as $pregunta):?>
   <!-- Comienzo Bloque Pregunta -->
   <div id="SQIFA_pregunta_<?php echo $pregunta['id_pregunta'];?>" class="SQIFA_bloque_pregunta">
