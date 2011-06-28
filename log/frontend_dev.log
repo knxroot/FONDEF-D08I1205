@@ -18004,3 +18004,83 @@ Jun 27 23:18:48 symfony [info] {sfWebDebugLogger} Action "principal/home" 100.09
 Jun 27 23:18:48 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
 Jun 27 23:18:48 symfony [info] {sfWebDebugLogger} View "Success" for "principal/home" 74.19 ms (1)
 Jun 27 23:18:48 symfony [info] {sfWebResponse} Send content (45941 o)
+Jun 28 00:19:01 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'principal',  'action' => 'home',)
+Jun 28 00:19:01 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 00:19:01 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 00:19:01 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 00:19:01 symfony [info] {principalActions} Call "principalActions->executeHome()"
+Jun 28 00:19:01 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 00:19:01 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 00:19:01 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/principal/templates/homeSuccess.php"
+Jun 28 00:19:01 symfony [info] {main} Set slot "title"
+Jun 28 00:19:01 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 00:19:01 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 00:19:01 symfony [info] {main} Get slot "title"
+Jun 28 00:19:01 symfony [info] {main} Get slot "title"
+Jun 28 00:19:01 symfony [info] {main} Get slot "login-box"
+Jun 28 00:19:01 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 00:19:01 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 00:19:01 symfony [info] {sfWebDebugLogger} Configuration 534.88 ms (9)
+Jun 28 00:19:01 symfony [info] {sfWebDebugLogger} Factories 241.99 ms (1)
+Jun 28 00:19:01 symfony [info] {sfWebDebugLogger} Action "principal/home" 131.54 ms (1)
+Jun 28 00:19:01 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Jun 28 00:19:01 symfony [info] {sfWebDebugLogger} View "Success" for "principal/home" 87.95 ms (1)
+Jun 28 00:19:01 symfony [info] {sfWebResponse} Send content (46000 o)
+Jun 28 00:19:08 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /principal with parameters array (  'module' => 'principal',  'action' => 'index',)
+Jun 28 00:19:08 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 00:19:08 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 00:19:08 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 00:19:08 symfony [info] {principalActions} Call "principalActions->executeIndex()"
+Jun 28 00:19:08 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/principal/templates/indexSuccess.php"
+Jun 28 00:19:08 symfony [info] {main} Set slot "title"
+Jun 28 00:19:08 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 00:19:08 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 00:19:08 symfony [info] {main} Get slot "title"
+Jun 28 00:19:08 symfony [info] {main} Get slot "title"
+Jun 28 00:19:08 symfony [info] {main} Get slot "login-box"
+Jun 28 00:19:08 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 00:19:08 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 00:19:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 00:19:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 00:19:08 symfony [info] {sfWebDebugLogger} Configuration 25.27 ms (9)
+Jun 28 00:19:08 symfony [info] {sfWebDebugLogger} Factories 70.51 ms (1)
+Jun 28 00:19:08 symfony [info] {sfWebDebugLogger} Action "principal/index" 15.30 ms (1)
+Jun 28 00:19:08 symfony [info] {sfWebDebugLogger} View "Success" for "principal/index" 160.48 ms (1)
+Jun 28 00:19:08 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.02 ms (2)
+Jun 28 00:19:08 symfony [info] {sfWebResponse} Send content (123063 o)
+Jun 28 00:19:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /principal/consultaRegiones with parameters array (  'module' => 'principal',  'action' => 'consultaRegiones',)
+Jun 28 00:19:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /principal/ConsultaCoEvaluador with parameters array (  'module' => 'principal',  'action' => 'ConsultaCoEvaluador',)
+Jun 28 00:19:09 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /principal/consultaMateriaDelito with parameters array (  'module' => 'principal',  'action' => 'consultaMateriaDelito',)
+Jun 28 00:19:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 00:19:09 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 00:19:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 00:19:09 symfony [info] {principalActions} Call "principalActions->executeConsultaRegiones()"
+Jun 28 00:19:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 00:19:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 00:19:09 symfony [info] {sfWebDebugLogger} Configuration 32.92 ms (8)
+Jun 28 00:19:09 symfony [info] {sfWebDebugLogger} Factories 88.24 ms (1)
+Jun 28 00:19:09 symfony [info] {sfWebDebugLogger} Action "principal/consultaRegiones" 35.99 ms (1)
+Jun 28 00:19:09 symfony [info] {sfWebDebugLogger} View "None" for "principal/consultaRegiones" 0.02 ms (1)
+Jun 28 00:19:09 symfony [info] {sfWebResponse} Send content (815 o)
+Jun 28 00:19:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 00:19:09 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 00:19:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 00:19:09 symfony [info] {principalActions} Call "principalActions->executeConsultaCoEvaluador()"
+Jun 28 00:19:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 00:19:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 00:19:09 symfony [info] {sfWebDebugLogger} Configuration 24.52 ms (8)
+Jun 28 00:19:09 symfony [info] {sfWebDebugLogger} Factories 187.39 ms (1)
+Jun 28 00:19:09 symfony [info] {sfWebDebugLogger} Action "principal/ConsultaCoEvaluador" 31.72 ms (1)
+Jun 28 00:19:09 symfony [info] {sfWebDebugLogger} View "None" for "principal/ConsultaCoEvaluador" 0.02 ms (1)
+Jun 28 00:19:09 symfony [info] {sfWebResponse} Send content (188 o)
+Jun 28 00:19:09 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 00:19:09 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 00:19:09 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 00:19:09 symfony [info] {principalActions} Call "principalActions->executeConsultaMateriaDelito()"
+Jun 28 00:19:09 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 00:19:09 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 00:19:09 symfony [info] {sfWebDebugLogger} Configuration 35.14 ms (8)
+Jun 28 00:19:09 symfony [info] {sfWebDebugLogger} Factories 280.00 ms (1)
+Jun 28 00:19:09 symfony [info] {sfWebDebugLogger} Action "principal/consultaMateriaDelito" 30.62 ms (1)
+Jun 28 00:19:09 symfony [info] {sfWebDebugLogger} View "None" for "principal/consultaMateriaDelito" 0.02 ms (1)
+Jun 28 00:19:09 symfony [info] {sfWebResponse} Send content (1745 o)
