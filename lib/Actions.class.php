@@ -129,7 +129,36 @@ class Actions extends sfActions
 	}
         //  cierra sfSuperControlador
         
+	 /**
+	 * Retorna true en caso de que sea un encuestado accesible, false si
+         * no es un encuestado al que se pueda o deba acceder.
+	 * @return string Retorna un Int que representa si o no
+	 */
+	public function esEncuestadoAccesibleAutoreporte(sfWebRequest $request)
+	{
+            $this->BD_Conectar();
+            $idUser=$this->getUser()->getGuardUser()->getId();
+            $this->idEncuestado=$request->getParameter('idEncuestado');
+            $this->forward404If(!$this->idEncuestado);
+            $habraalgo="SELECT *
+             FROM `encuestado`
+             WHERE `id_encuestado` ={$this->idEncuestado}
+                 AND 
+                   `id_user_responsable_principal` ={$idUser}
+             LIMIT 1";
+            echo $habraalgo;
+            $result = mysql_query($habraalgo);
+            $rows=mysql_num_rows($result);
 
+            if ($rows > 0)
+            {
+                return 1;
+            }
+            else{
+                 return 0;
+            }
+
+	} 
         
 	/**
 	* Retorna todas las respuestas de un usuario en formato json para que sean

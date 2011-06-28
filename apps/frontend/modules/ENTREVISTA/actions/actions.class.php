@@ -30,6 +30,8 @@ class ENTREVISTAActions extends Actions
      $this->BD_Conectar();
      $idUser=$this->getUser()->getGuardUser()->getId();
      $this->idEncuestado=$request->getParameter('idEncuestado');
+      
+     $this->forward404If(!$this->esEncuestadoAccesibleAutoreporte($request));
      $this->forward404If(!$this->idEncuestado);
     /* Siempre se muestra vacio dado que una vez que envia el formulari
       ya no puede volver a modificarlo, por lo tanto se va directo a la vista*/
