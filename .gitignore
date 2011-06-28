@@ -1,5 +1,8 @@
 .*
 Thumbs.db
-!.gitignore
 lib/vendor*
 cache/*
+log/*
+web/uploads/*
+config/databases.yml
+apps/frontend/config/app.yml
