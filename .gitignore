@@ -2,3 +2,4 @@
 Thumbs.db
 !.gitignore
 lib/vendor*
+cache/*
