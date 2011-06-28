@@ -29,7 +29,12 @@ Las posibilidades de respuesta son cinco:
 	</p>
 	
 	Si tu respuesta es Nunca, pasa de inmediato a la siguiente frase, pero si eliges alguna de las otras cuatro alternativas, responde a continuación si lo has hecho o no durante el último año (últimos doce meses), para ello sólo debes marcar <b>Si o No</b>
-  
+   <br>
+ <br>
+ <b>Ejemplo<b>
+<br>
+<br>
+  <?php echo image_tag('cacsa1.jpg', 'alt=Selecciona el radio que tenga el label V o el label F') ?>
  <br>
  <br>
   <input type="checkbox" id="LeiLasInstrucciones" name="LeiLasInstrucciones" value="LeiLasInstrucciones" /> <b>Declaro haber leido las instrucciones y comprenderlas.</b> <br>
