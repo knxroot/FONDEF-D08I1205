@@ -56,7 +56,21 @@ class ENTREVISTAActions extends Actions
    }
    
    
-   
+    public function executeSubirArchivo(sfWebRequest $request)
+    {
+      //$fileName = $this->getRequest()->getFileName('file');
+     // $this->getRequest()->moveFile('file', sfConfig::get('sf_upload_dir').'/'.$fileName);
+      //$this->redirect('media/show?filename='.$fileName);
+
+      $directory=sfConfig::get('sf_upload_dir')."/CONSENTIMIENTOS_INFORMADOS/aaa";
+      if ($request->isXmlHttpRequest())
+      {
+        $uploader = new qqFileUploader();
+        $result = $uploader->handleUpload($directory,true);
+        $result = htmlspecialchars(json_encode($result), ENT_NOQUOTES);
+        return $this->renderText($result);
+      }
+    }
    
    
 }
