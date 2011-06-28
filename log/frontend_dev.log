@@ -18084,3 +18084,582 @@ Jun 28 00:19:09 symfony [info] {sfWebDebugLogger} Factories 280.00 ms (1)
 Jun 28 00:19:09 symfony [info] {sfWebDebugLogger} Action "principal/consultaMateriaDelito" 30.62 ms (1)
 Jun 28 00:19:09 symfony [info] {sfWebDebugLogger} View "None" for "principal/consultaMateriaDelito" 0.02 ms (1)
 Jun 28 00:19:09 symfony [info] {sfWebResponse} Send content (1745 o)
+Jun 28 02:56:37 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'principal',  'action' => 'home',)
+Jun 28 02:56:37 symfony [info] {myUser} Automatic user logout due to timeout
+Jun 28 02:56:37 symfony [info] {myUser} User is not authenticated
+Jun 28 02:56:37 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 02:56:37 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 02:56:37 symfony [info] {sfBasicSecurityFilter} Action "principal/home" requires authentication, forwarding to "sfGuardAuth/signin"
+Jun 28 02:56:38 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 02:56:38 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 02:56:38 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Jun 28 02:56:38 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/sfGuardAuth/templates/signinSuccess.php"
+Jun 28 02:56:38 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 02:56:38 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 02:56:38 symfony [info] {main} Get slot "title"
+Jun 28 02:56:38 symfony [info] {main} Get slot "login-box"
+Jun 28 02:56:38 symfony [info] {sfWebResponse} Send status "HTTP/1.1 401 Unauthorized"
+Jun 28 02:56:38 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 02:56:38 symfony [info] {sfWebDebugLogger} Configuration 4083.58 ms (12)
+Jun 28 02:56:38 symfony [info] {sfWebDebugLogger} Factories 1628.47 ms (1)
+Jun 28 02:56:38 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 178.95 ms (1)
+Jun 28 02:56:38 symfony [info] {sfWebDebugLogger} View "Success" for "sfGuardAuth/signin" 421.38 ms (1)
+Jun 28 02:56:39 symfony [info] {sfWebResponse} Send content (41712 o)
+Jun 28 02:56:49 symfony [info] {sfPatternRouting} Match route "sf_guard_signin" (/ingresar) for /ingresar with parameters array (  'module' => 'sfGuardAuth',  'action' => 'signin',)
+Jun 28 02:56:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 02:56:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 02:56:49 symfony [info] {sfGuardAuthActions} Call "sfGuardAuthActions->executeSignin()"
+Jun 28 02:56:50 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 02:56:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.username = ? AND s.is_active = ?) - (admini, 1)
+Jun 28 02:56:50 symfony [info] {myUser} User is authenticated
+Jun 28 02:56:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_user_permission s2 ON s.id = s2.permission_id WHERE (s2.user_id IN (?)) - (2)
+Jun 28 02:56:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.user_id AS s2__user_id, s2.group_id AS s2__group_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_group s LEFT JOIN sf_guard_user_group s2 ON s.id = s2.group_id WHERE (s2.user_id IN (?)) - (2)
+Jun 28 02:56:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.name AS s__name, s.description AS s__description, s.created_at AS s__created_at, s.updated_at AS s__updated_at, s2.group_id AS s2__group_id, s2.permission_id AS s2__permission_id, s2.created_at AS s2__created_at, s2.updated_at AS s2__updated_at FROM sf_guard_permission s LEFT JOIN sf_guard_group_permission s2 ON s.id = s2.permission_id WHERE (s2.group_id IN (?)) - (2)
+Jun 28 02:56:51 symfony [info] {myUser} Add credential(s) "admin"
+Jun 28 02:56:51 symfony [info] {Doctrine_Connection_Statement} execute : UPDATE sf_guard_user SET last_login = ?, updated_at = ? WHERE id = ? - (2011-06-28 02:56:51, 2011-06-28 02:56:51, 2)
+Jun 28 02:56:51 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) - (2)
+Jun 28 02:56:51 symfony [info] {sfFrontWebController} Redirect to "http://127.0.0.1:86/"
+Jun 28 02:56:51 symfony [info] {sfWebResponse} Send status "HTTP/1.1 302 Found"
+Jun 28 02:56:51 symfony [info] {sfWebResponse} Send header "Location: http://127.0.0.1:86/"
+Jun 28 02:56:51 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 02:56:51 symfony [info] {sfWebDebugLogger} Configuration 109.18 ms (8)
+Jun 28 02:56:51 symfony [info] {sfWebDebugLogger} Factories 446.64 ms (1)
+Jun 28 02:56:51 symfony [info] {sfWebDebugLogger} Action "sfGuardAuth/signin" 2307.96 ms (1)
+Jun 28 02:56:51 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.32 ms (7)
+Jun 28 02:56:51 symfony [info] {sfWebResponse} Send content (91 o)
+Jun 28 02:56:52 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'principal',  'action' => 'home',)
+Jun 28 02:56:52 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 02:56:52 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 02:56:52 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 02:56:53 symfony [info] {principalActions} Call "principalActions->executeHome()"
+Jun 28 02:56:53 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 02:56:53 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 02:56:53 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/principal/templates/homeSuccess.php"
+Jun 28 02:56:53 symfony [info] {main} Set slot "title"
+Jun 28 02:56:53 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 02:56:53 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 02:56:53 symfony [info] {main} Get slot "title"
+Jun 28 02:56:53 symfony [info] {main} Get slot "title"
+Jun 28 02:56:53 symfony [info] {main} Get slot "login-box"
+Jun 28 02:56:54 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 02:56:54 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 02:56:54 symfony [info] {sfWebDebugLogger} Configuration 319.94 ms (10)
+Jun 28 02:56:54 symfony [info] {sfWebDebugLogger} Factories 290.69 ms (1)
+Jun 28 02:56:54 symfony [info] {sfWebDebugLogger} Action "principal/home" 686.62 ms (1)
+Jun 28 02:56:54 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.09 ms (2)
+Jun 28 02:56:54 symfony [info] {sfWebDebugLogger} View "Success" for "principal/home" 428.73 ms (1)
+Jun 28 02:56:54 symfony [info] {sfWebResponse} Send content (46744 o)
+Jun 28 02:57:01 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /principal/dashboard/idEncuestado/6 with parameters array (  'module' => 'principal',  'action' => 'dashboard',  'idEncuestado' => '6',)
+Jun 28 02:57:02 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 02:57:02 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 02:57:02 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 02:57:02 symfony [info] {principalActions} Call "principalActions->executeDashboard()"
+Jun 28 02:57:02 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 02:57:02 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 02:57:03 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/principal/templates/dashboardSuccess.php"
+Jun 28 02:57:03 symfony [info] {main} Set slot "title"
+Jun 28 02:57:03 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 02:57:03 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 02:57:03 symfony [info] {main} Get slot "title"
+Jun 28 02:57:03 symfony [info] {main} Get slot "title"
+Jun 28 02:57:03 symfony [info] {main} Get slot "login-box"
+Jun 28 02:57:03 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 02:57:03 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 02:57:03 symfony [info] {sfWebDebugLogger} Configuration 106.01 ms (9)
+Jun 28 02:57:03 symfony [info] {sfWebDebugLogger} Factories 314.67 ms (1)
+Jun 28 02:57:03 symfony [info] {sfWebDebugLogger} Action "principal/dashboard" 925.02 ms (1)
+Jun 28 02:57:03 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.09 ms (2)
+Jun 28 02:57:03 symfony [info] {sfWebDebugLogger} View "Success" for "principal/dashboard" 178.82 ms (1)
+Jun 28 02:57:03 symfony [info] {sfWebResponse} Send content (50492 o)
+Jun 28 03:00:23 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /principal with parameters array (  'module' => 'principal',  'action' => 'index',)
+Jun 28 03:00:24 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:00:24 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:00:24 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:00:24 symfony [info] {principalActions} Call "principalActions->executeIndex()"
+Jun 28 03:00:24 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/principal/templates/indexSuccess.php"
+Jun 28 03:00:24 symfony [info] {main} Set slot "title"
+Jun 28 03:00:24 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:00:24 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:00:24 symfony [info] {main} Get slot "title"
+Jun 28 03:00:24 symfony [info] {main} Get slot "title"
+Jun 28 03:00:24 symfony [info] {main} Get slot "login-box"
+Jun 28 03:00:25 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:00:25 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:00:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:00:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:00:25 symfony [info] {sfWebDebugLogger} Configuration 2731.28 ms (9)
+Jun 28 03:00:25 symfony [info] {sfWebDebugLogger} Factories 1283.56 ms (1)
+Jun 28 03:00:25 symfony [info] {sfWebDebugLogger} Action "principal/index" 10.30 ms (1)
+Jun 28 03:00:25 symfony [info] {sfWebDebugLogger} View "Success" for "principal/index" 702.09 ms (1)
+Jun 28 03:00:25 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.08 ms (2)
+Jun 28 03:00:25 symfony [info] {sfWebResponse} Send content (124779 o)
+Jun 28 03:00:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /principal/ConsultaCoEvaluador with parameters array (  'module' => 'principal',  'action' => 'ConsultaCoEvaluador',)
+Jun 28 03:00:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /principal/consultaRegiones with parameters array (  'module' => 'principal',  'action' => 'consultaRegiones',)
+Jun 28 03:00:31 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /principal/consultaMateriaDelito with parameters array (  'module' => 'principal',  'action' => 'consultaMateriaDelito',)
+Jun 28 03:00:31 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:00:31 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:00:31 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:00:31 symfony [info] {principalActions} Call "principalActions->executeConsultaRegiones()"
+Jun 28 03:00:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:00:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:00:32 symfony [info] {sfWebDebugLogger} Configuration 205.96 ms (8)
+Jun 28 03:00:32 symfony [info] {sfWebDebugLogger} Factories 670.06 ms (1)
+Jun 28 03:00:32 symfony [info] {sfWebDebugLogger} Action "principal/consultaRegiones" 484.81 ms (1)
+Jun 28 03:00:32 symfony [info] {sfWebDebugLogger} View "None" for "principal/consultaRegiones" 0.08 ms (1)
+Jun 28 03:00:32 symfony [info] {sfWebResponse} Send content (815 o)
+Jun 28 03:00:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:00:32 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:00:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:00:32 symfony [info] {principalActions} Call "principalActions->executeConsultaCoEvaluador()"
+Jun 28 03:00:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:00:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:00:32 symfony [info] {sfWebDebugLogger} Configuration 197.37 ms (8)
+Jun 28 03:00:32 symfony [info] {sfWebDebugLogger} Factories 1467.93 ms (1)
+Jun 28 03:00:32 symfony [info] {sfWebDebugLogger} Action "principal/ConsultaCoEvaluador" 17.16 ms (1)
+Jun 28 03:00:32 symfony [info] {sfWebDebugLogger} View "None" for "principal/ConsultaCoEvaluador" 0.10 ms (1)
+Jun 28 03:00:32 symfony [info] {sfWebResponse} Send content (188 o)
+Jun 28 03:00:32 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:00:32 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:00:32 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:00:32 symfony [info] {principalActions} Call "principalActions->executeConsultaMateriaDelito()"
+Jun 28 03:00:32 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:00:32 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:00:32 symfony [info] {sfWebDebugLogger} Configuration 186.01 ms (8)
+Jun 28 03:00:32 symfony [info] {sfWebDebugLogger} Factories 1505.70 ms (1)
+Jun 28 03:00:32 symfony [info] {sfWebDebugLogger} Action "principal/consultaMateriaDelito" 130.88 ms (1)
+Jun 28 03:00:32 symfony [info] {sfWebDebugLogger} View "None" for "principal/consultaMateriaDelito" 0.08 ms (1)
+Jun 28 03:00:32 symfony [info] {sfWebResponse} Send content (1745 o)
+Jun 28 03:01:11 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /principal/dashboard/idEncuestado/6 with parameters array (  'module' => 'principal',  'action' => 'dashboard',  'idEncuestado' => '6',)
+Jun 28 03:01:11 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:01:11 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:01:11 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:01:11 symfony [info] {principalActions} Call "principalActions->executeDashboard()"
+Jun 28 03:01:12 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:01:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:01:12 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/principal/templates/dashboardSuccess.php"
+Jun 28 03:01:12 symfony [info] {main} Set slot "title"
+Jun 28 03:01:12 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:01:12 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:01:12 symfony [info] {main} Get slot "title"
+Jun 28 03:01:12 symfony [info] {main} Get slot "title"
+Jun 28 03:01:12 symfony [info] {main} Get slot "login-box"
+Jun 28 03:01:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:01:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:01:12 symfony [info] {sfWebDebugLogger} Configuration 95.91 ms (9)
+Jun 28 03:01:12 symfony [info] {sfWebDebugLogger} Factories 318.80 ms (1)
+Jun 28 03:01:12 symfony [info] {sfWebDebugLogger} Action "principal/dashboard" 437.31 ms (1)
+Jun 28 03:01:12 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.09 ms (2)
+Jun 28 03:01:12 symfony [info] {sfWebDebugLogger} View "Success" for "principal/dashboard" 213.80 ms (1)
+Jun 28 03:01:12 symfony [info] {sfWebResponse} Send content (50784 o)
+Jun 28 03:01:22 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /MACI with parameters array (  'module' => 'MACI',  'action' => 'index',)
+Jun 28 03:01:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:01:22 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:01:22 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:01:22 symfony [info] {MACIActions} Call "MACIActions->executeIndex()"
+Jun 28 03:01:22 symfony [info] {MACIActions} Forward to action "MACI/listarBloque"
+Jun 28 03:01:22 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:01:22 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:01:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:01:23 symfony [info] {MACIActions} Call "MACIActions->executeListarBloque()"
+Jun 28 03:01:23 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:01:23 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:01:23 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/MACI/templates/listarBloqueSuccess.php"
+Jun 28 03:01:23 symfony [info] {main} Set slot "title"
+Jun 28 03:01:23 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:01:23 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:01:23 symfony [info] {main} Get slot "title"
+Jun 28 03:01:23 symfony [info] {main} Get slot "title"
+Jun 28 03:01:23 symfony [info] {main} Get slot "login-box"
+Jun 28 03:01:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:01:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:01:23 symfony [info] {sfWebDebugLogger} Configuration 525.58 ms (13)
+Jun 28 03:01:23 symfony [info] {sfWebDebugLogger} Factories 302.47 ms (1)
+Jun 28 03:01:23 symfony [info] {sfWebDebugLogger} Action "MACI/index" 923.47 ms (1)
+Jun 28 03:01:23 symfony [info] {sfWebDebugLogger} Action "MACI/listarBloque" 474.27 ms (1)
+Jun 28 03:01:23 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.09 ms (2)
+Jun 28 03:01:23 symfony [info] {sfWebDebugLogger} View "Success" for "MACI/listarBloque" 370.21 ms (1)
+Jun 28 03:01:24 symfony [info] {sfWebResponse} Send content (75536 o)
+Jun 28 03:01:44 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /MACI with parameters array (  'module' => 'MACI',  'action' => 'index',)
+Jun 28 03:01:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:01:44 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:01:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:01:44 symfony [info] {MACIActions} Call "MACIActions->executeIndex()"
+Jun 28 03:01:44 symfony [info] {MACIActions} Forward to action "MACI/listarBloque"
+Jun 28 03:01:44 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:01:44 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:01:44 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:01:44 symfony [info] {MACIActions} Call "MACIActions->executeListarBloque()"
+Jun 28 03:01:45 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:01:45 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:01:45 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/MACI/templates/listarBloqueSuccess.php"
+Jun 28 03:01:45 symfony [info] {main} Set slot "title"
+Jun 28 03:01:45 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:01:45 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:01:45 symfony [info] {main} Get slot "title"
+Jun 28 03:01:45 symfony [info] {main} Get slot "title"
+Jun 28 03:01:45 symfony [info] {main} Get slot "login-box"
+Jun 28 03:01:45 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:01:45 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:01:45 symfony [info] {sfWebDebugLogger} Configuration 170.84 ms (12)
+Jun 28 03:01:45 symfony [info] {sfWebDebugLogger} Factories 397.82 ms (1)
+Jun 28 03:01:45 symfony [info] {sfWebDebugLogger} Action "MACI/index" 830.41 ms (1)
+Jun 28 03:01:45 symfony [info] {sfWebDebugLogger} Action "MACI/listarBloque" 501.76 ms (1)
+Jun 28 03:01:45 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.10 ms (2)
+Jun 28 03:01:45 symfony [info] {sfWebDebugLogger} View "Success" for "MACI/listarBloque" 236.91 ms (1)
+Jun 28 03:01:45 symfony [info] {sfWebResponse} Send content (75661 o)
+Jun 28 03:02:10 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /SQIFA with parameters array (  'module' => 'SQIFA',  'action' => 'index',)
+Jun 28 03:02:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:02:10 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:02:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:02:10 symfony [info] {SQIFAActions} Call "SQIFAActions->executeIndex()"
+Jun 28 03:02:10 symfony [info] {SQIFAActions} Forward to action "SQIFA/listarBloque"
+Jun 28 03:02:10 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:02:10 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:02:10 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:02:11 symfony [info] {SQIFAActions} Call "SQIFAActions->executeListarBloque()"
+Jun 28 03:02:11 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:02:11 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:02:11 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/SQIFA/templates/listarBloqueSuccess.php"
+Jun 28 03:02:12 symfony [info] {main} Set slot "title"
+Jun 28 03:02:12 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:02:12 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:02:12 symfony [info] {main} Get slot "title"
+Jun 28 03:02:12 symfony [info] {main} Get slot "title"
+Jun 28 03:02:12 symfony [info] {main} Get slot "login-box"
+Jun 28 03:02:12 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:02:12 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:02:12 symfony [info] {sfWebDebugLogger} Configuration 748.63 ms (13)
+Jun 28 03:02:12 symfony [info] {sfWebDebugLogger} Factories 397.84 ms (1)
+Jun 28 03:02:12 symfony [info] {sfWebDebugLogger} Action "SQIFA/index" 1425.01 ms (1)
+Jun 28 03:02:12 symfony [info] {sfWebDebugLogger} Action "SQIFA/listarBloque" 601.30 ms (1)
+Jun 28 03:02:12 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.07 ms (2)
+Jun 28 03:02:12 symfony [info] {sfWebDebugLogger} View "Success" for "SQIFA/listarBloque" 729.81 ms (1)
+Jun 28 03:02:12 symfony [info] {sfWebResponse} Send content (64634 o)
+Jun 28 03:03:17 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /MACI with parameters array (  'module' => 'MACI',  'action' => 'index',)
+Jun 28 03:03:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:03:17 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:03:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:03:17 symfony [info] {MACIActions} Call "MACIActions->executeIndex()"
+Jun 28 03:03:17 symfony [info] {MACIActions} Forward to action "MACI/listarBloque"
+Jun 28 03:03:17 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:03:17 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:03:17 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:03:17 symfony [info] {MACIActions} Call "MACIActions->executeListarBloque()"
+Jun 28 03:03:18 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:03:18 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:03:18 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/MACI/templates/listarBloqueSuccess.php"
+Jun 28 03:03:18 symfony [info] {main} Set slot "title"
+Jun 28 03:03:18 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:03:18 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:03:18 symfony [info] {main} Get slot "title"
+Jun 28 03:03:18 symfony [info] {main} Get slot "title"
+Jun 28 03:03:18 symfony [info] {main} Get slot "login-box"
+Jun 28 03:03:18 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:03:18 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:03:18 symfony [info] {sfWebDebugLogger} Configuration 145.20 ms (12)
+Jun 28 03:03:18 symfony [info] {sfWebDebugLogger} Factories 281.63 ms (1)
+Jun 28 03:03:18 symfony [info] {sfWebDebugLogger} Action "MACI/index" 817.80 ms (1)
+Jun 28 03:03:18 symfony [info] {sfWebDebugLogger} Action "MACI/listarBloque" 508.27 ms (1)
+Jun 28 03:03:18 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.10 ms (2)
+Jun 28 03:03:18 symfony [info] {sfWebDebugLogger} View "Success" for "MACI/listarBloque" 238.11 ms (1)
+Jun 28 03:03:18 symfony [info] {sfWebResponse} Send content (75791 o)
+Jun 28 03:30:34 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'principal',  'action' => 'home',)
+Jun 28 03:30:35 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:30:35 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:30:35 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:30:35 symfony [info] {principalActions} Call "principalActions->executeHome()"
+Jun 28 03:30:35 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:30:35 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:30:36 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/principal/templates/homeSuccess.php"
+Jun 28 03:30:36 symfony [info] {main} Set slot "title"
+Jun 28 03:30:36 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:30:36 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:30:36 symfony [info] {main} Get slot "title"
+Jun 28 03:30:36 symfony [info] {main} Get slot "title"
+Jun 28 03:30:36 symfony [info] {main} Get slot "login-box"
+Jun 28 03:30:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:30:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:30:36 symfony [info] {sfWebDebugLogger} Configuration 3894.04 ms (9)
+Jun 28 03:30:36 symfony [info] {sfWebDebugLogger} Factories 1504.50 ms (1)
+Jun 28 03:30:36 symfony [info] {sfWebDebugLogger} Action "principal/home" 577.11 ms (1)
+Jun 28 03:30:36 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.10 ms (2)
+Jun 28 03:30:36 symfony [info] {sfWebDebugLogger} View "Success" for "principal/home" 457.13 ms (1)
+Jun 28 03:30:36 symfony [info] {sfWebResponse} Send content (47469 o)
+Jun 28 03:30:49 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /principal/dashboard/idEncuestado/6 with parameters array (  'module' => 'principal',  'action' => 'dashboard',  'idEncuestado' => '6',)
+Jun 28 03:30:49 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:30:49 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:30:49 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:30:49 symfony [info] {principalActions} Call "principalActions->executeDashboard()"
+Jun 28 03:30:50 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:30:50 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:30:50 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/principal/templates/dashboardSuccess.php"
+Jun 28 03:30:50 symfony [info] {main} Set slot "title"
+Jun 28 03:30:50 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:30:50 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:30:50 symfony [info] {main} Get slot "title"
+Jun 28 03:30:50 symfony [info] {main} Get slot "title"
+Jun 28 03:30:50 symfony [info] {main} Get slot "login-box"
+Jun 28 03:30:50 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:30:50 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:30:50 symfony [info] {sfWebDebugLogger} Configuration 3195.10 ms (9)
+Jun 28 03:30:50 symfony [info] {sfWebDebugLogger} Factories 1951.72 ms (1)
+Jun 28 03:30:50 symfony [info] {sfWebDebugLogger} Action "principal/dashboard" 785.69 ms (1)
+Jun 28 03:30:50 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.11 ms (2)
+Jun 28 03:30:50 symfony [info] {sfWebDebugLogger} View "Success" for "principal/dashboard" 261.90 ms (1)
+Jun 28 03:30:50 symfony [info] {sfWebResponse} Send content (51052 o)
+Jun 28 03:31:04 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /ENTREVISTA with parameters array (  'module' => 'ENTREVISTA',  'action' => 'index',)
+Jun 28 03:31:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:31:04 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:31:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:31:04 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeIndex()"
+Jun 28 03:31:04 symfony [info] {ENTREVISTAActions} Forward to action "ENTREVISTA/mostrarFormulario"
+Jun 28 03:31:04 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:31:04 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:31:04 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:31:05 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeMostrarFormulario()"
+Jun 28 03:31:05 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:31:05 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:31:05 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/ENTREVISTA/templates/mostrarFormularioSuccess.php"
+Jun 28 03:31:05 symfony [info] {main} Set slot "title"
+Jun 28 03:31:05 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:31:05 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:31:05 symfony [info] {main} Get slot "title"
+Jun 28 03:31:05 symfony [info] {main} Get slot "title"
+Jun 28 03:31:05 symfony [info] {main} Get slot "login-box"
+Jun 28 03:31:05 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:31:05 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:31:05 symfony [info] {sfWebDebugLogger} Configuration 751.71 ms (13)
+Jun 28 03:31:05 symfony [info] {sfWebDebugLogger} Factories 292.69 ms (1)
+Jun 28 03:31:05 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/index" 1012.69 ms (1)
+Jun 28 03:31:05 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/mostrarFormulario" 558.72 ms (1)
+Jun 28 03:31:05 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.10 ms (2)
+Jun 28 03:31:05 symfony [info] {sfWebDebugLogger} View "Success" for "ENTREVISTA/mostrarFormulario" 353.55 ms (1)
+Jun 28 03:31:06 symfony [info] {sfWebResponse} Send content (50787 o)
+Jun 28 03:34:54 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /ENTREVISTA with parameters array (  'module' => 'ENTREVISTA',  'action' => 'index',)
+Jun 28 03:34:54 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:34:54 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:34:54 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:34:55 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeIndex()"
+Jun 28 03:34:55 symfony [info] {ENTREVISTAActions} Forward to action "ENTREVISTA/mostrarFormulario"
+Jun 28 03:34:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:34:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:34:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:34:55 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeMostrarFormulario()"
+Jun 28 03:34:55 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:34:55 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:34:56 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/ENTREVISTA/templates/mostrarFormularioSuccess.php"
+Jun 28 03:34:56 symfony [info] {main} Set slot "title"
+Jun 28 03:34:56 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:34:56 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:34:56 symfony [info] {main} Get slot "title"
+Jun 28 03:34:56 symfony [info] {main} Get slot "title"
+Jun 28 03:34:56 symfony [info] {main} Get slot "login-box"
+Jun 28 03:34:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:34:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:34:56 symfony [info] {sfWebDebugLogger} Configuration 4084.34 ms (12)
+Jun 28 03:34:56 symfony [info] {sfWebDebugLogger} Factories 1501.38 ms (1)
+Jun 28 03:34:56 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/index" 1708.48 ms (1)
+Jun 28 03:34:56 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/mostrarFormulario" 632.00 ms (1)
+Jun 28 03:34:56 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.11 ms (2)
+Jun 28 03:34:56 symfony [info] {sfWebDebugLogger} View "Success" for "ENTREVISTA/mostrarFormulario" 872.03 ms (1)
+Jun 28 03:34:56 symfony [info] {sfWebResponse} Send content (50843 o)
+Jun 28 03:36:55 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /ENTREVISTA with parameters array (  'module' => 'ENTREVISTA',  'action' => 'index',)
+Jun 28 03:36:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:36:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:36:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:36:55 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeIndex()"
+Jun 28 03:36:55 symfony [info] {ENTREVISTAActions} Forward to action "ENTREVISTA/mostrarFormulario"
+Jun 28 03:36:55 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:36:55 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:36:55 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:36:55 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeMostrarFormulario()"
+Jun 28 03:36:56 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:36:56 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:36:56 symfony [err] {sfError404Exception} This request has been forwarded to a 404 error page by the action "ENTREVISTA/mostrarFormulario".
+Jun 28 03:36:56 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jun 28 03:36:56 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:36:56 symfony [info] {sfWebDebugLogger} Configuration 171.45 ms (11)
+Jun 28 03:36:56 symfony [info] {sfWebDebugLogger} Factories 294.38 ms (1)
+Jun 28 03:36:56 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/index" 848.39 ms (1)
+Jun 28 03:36:56 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/mostrarFormulario" 779.25 ms (1)
+Jun 28 03:36:56 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.10 ms (2)
+Jun 28 03:37:03 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /ENTREVISTA with parameters array (  'module' => 'ENTREVISTA',  'action' => 'index',)
+Jun 28 03:37:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:37:03 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:37:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:37:03 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeIndex()"
+Jun 28 03:37:03 symfony [info] {ENTREVISTAActions} Forward to action "ENTREVISTA/mostrarFormulario"
+Jun 28 03:37:03 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:37:03 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:37:03 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:37:03 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeMostrarFormulario()"
+Jun 28 03:37:03 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:37:03 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:37:03 symfony [err] {sfError404Exception} This request has been forwarded to a 404 error page by the action "ENTREVISTA/mostrarFormulario".
+Jun 28 03:37:04 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jun 28 03:37:04 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:37:04 symfony [info] {sfWebDebugLogger} Configuration 96.56 ms (11)
+Jun 28 03:37:04 symfony [info] {sfWebDebugLogger} Factories 303.52 ms (1)
+Jun 28 03:37:04 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/index" 898.16 ms (1)
+Jun 28 03:37:04 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/mostrarFormulario" 830.87 ms (1)
+Jun 28 03:37:04 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.09 ms (2)
+Jun 28 03:37:15 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /ENTREVISTA with parameters array (  'module' => 'ENTREVISTA',  'action' => 'index',)
+Jun 28 03:37:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:37:15 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:37:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:37:15 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeIndex()"
+Jun 28 03:37:15 symfony [info] {ENTREVISTAActions} Forward to action "ENTREVISTA/mostrarFormulario"
+Jun 28 03:37:15 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:37:15 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:37:15 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:37:15 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeMostrarFormulario()"
+Jun 28 03:37:15 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:37:15 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:37:15 symfony [err] {sfError404Exception} This request has been forwarded to a 404 error page by the action "ENTREVISTA/mostrarFormulario".
+Jun 28 03:37:16 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jun 28 03:37:16 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:37:16 symfony [info] {sfWebDebugLogger} Configuration 81.30 ms (11)
+Jun 28 03:37:16 symfony [info] {sfWebDebugLogger} Factories 291.08 ms (1)
+Jun 28 03:37:16 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/index" 832.50 ms (1)
+Jun 28 03:37:16 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/mostrarFormulario" 770.81 ms (1)
+Jun 28 03:37:16 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.10 ms (2)
+Jun 28 03:37:23 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /ENTREVISTA with parameters array (  'module' => 'ENTREVISTA',  'action' => 'index',)
+Jun 28 03:37:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:37:23 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:37:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:37:23 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeIndex()"
+Jun 28 03:37:23 symfony [info] {ENTREVISTAActions} Forward to action "ENTREVISTA/mostrarFormulario"
+Jun 28 03:37:23 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:37:23 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:37:23 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:37:23 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeMostrarFormulario()"
+Jun 28 03:37:23 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:37:23 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:37:23 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/ENTREVISTA/templates/mostrarFormularioSuccess.php"
+Jun 28 03:37:23 symfony [info] {main} Set slot "title"
+Jun 28 03:37:23 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:37:23 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:37:23 symfony [info] {main} Get slot "title"
+Jun 28 03:37:23 symfony [info] {main} Get slot "title"
+Jun 28 03:37:23 symfony [info] {main} Get slot "login-box"
+Jun 28 03:37:23 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:37:23 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:37:23 symfony [info] {sfWebDebugLogger} Configuration 94.53 ms (12)
+Jun 28 03:37:23 symfony [info] {sfWebDebugLogger} Factories 290.89 ms (1)
+Jun 28 03:37:23 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/index" 627.00 ms (1)
+Jun 28 03:37:23 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/mostrarFormulario" 371.89 ms (1)
+Jun 28 03:37:23 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.09 ms (2)
+Jun 28 03:37:23 symfony [info] {sfWebDebugLogger} View "Success" for "ENTREVISTA/mostrarFormulario" 188.34 ms (1)
+Jun 28 03:37:24 symfony [info] {sfWebResponse} Send content (50685 o)
+Jun 28 03:40:07 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /ENTREVISTA with parameters array (  'module' => 'ENTREVISTA',  'action' => 'index',)
+Jun 28 03:40:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:40:07 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:40:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:40:07 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeIndex()"
+Jun 28 03:40:07 symfony [info] {ENTREVISTAActions} Forward to action "ENTREVISTA/mostrarFormulario"
+Jun 28 03:40:07 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:40:07 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:40:07 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:40:07 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeMostrarFormulario()"
+Jun 28 03:40:07 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:40:07 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:40:08 symfony [err] {sfError404Exception} This request has been forwarded to a 404 error page by the action "ENTREVISTA/mostrarFormulario".
+Jun 28 03:40:08 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jun 28 03:40:08 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:40:08 symfony [info] {sfWebDebugLogger} Configuration 119.27 ms (11)
+Jun 28 03:40:08 symfony [info] {sfWebDebugLogger} Factories 344.25 ms (1)
+Jun 28 03:40:08 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/index" 1359.74 ms (1)
+Jun 28 03:40:08 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/mostrarFormulario" 1285.26 ms (1)
+Jun 28 03:40:08 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.09 ms (2)
+Jun 28 03:40:11 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'principal',  'action' => 'home',)
+Jun 28 03:40:12 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:40:12 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:40:12 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:40:12 symfony [info] {principalActions} Call "principalActions->executeHome()"
+Jun 28 03:40:12 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:40:12 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:40:12 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/principal/templates/homeSuccess.php"
+Jun 28 03:40:13 symfony [info] {main} Set slot "title"
+Jun 28 03:40:13 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:40:13 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:40:13 symfony [info] {main} Get slot "title"
+Jun 28 03:40:13 symfony [info] {main} Get slot "title"
+Jun 28 03:40:13 symfony [info] {main} Get slot "login-box"
+Jun 28 03:40:13 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:40:13 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:40:13 symfony [info] {sfWebDebugLogger} Configuration 514.88 ms (10)
+Jun 28 03:40:13 symfony [info] {sfWebDebugLogger} Factories 289.01 ms (1)
+Jun 28 03:40:13 symfony [info] {sfWebDebugLogger} Action "principal/home" 382.84 ms (1)
+Jun 28 03:40:13 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.10 ms (2)
+Jun 28 03:40:13 symfony [info] {sfWebDebugLogger} View "Success" for "principal/home" 345.66 ms (1)
+Jun 28 03:40:13 symfony [info] {sfWebResponse} Send content (47464 o)
+Jun 28 03:40:20 symfony [info] {sfPatternRouting} Match route "default" (/:module/:action/*) for /principal/dashboard/idEncuestado/6 with parameters array (  'module' => 'principal',  'action' => 'dashboard',  'idEncuestado' => '6',)
+Jun 28 03:40:20 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:40:20 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:40:20 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:40:20 symfony [info] {principalActions} Call "principalActions->executeDashboard()"
+Jun 28 03:40:21 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:40:21 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:40:21 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/principal/templates/dashboardSuccess.php"
+Jun 28 03:40:21 symfony [info] {main} Set slot "title"
+Jun 28 03:40:21 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:40:21 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:40:21 symfony [info] {main} Get slot "title"
+Jun 28 03:40:21 symfony [info] {main} Get slot "title"
+Jun 28 03:40:21 symfony [info] {main} Get slot "login-box"
+Jun 28 03:40:21 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:40:21 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:40:21 symfony [info] {sfWebDebugLogger} Configuration 107.40 ms (9)
+Jun 28 03:40:21 symfony [info] {sfWebDebugLogger} Factories 333.84 ms (1)
+Jun 28 03:40:21 symfony [info] {sfWebDebugLogger} Action "principal/dashboard" 487.08 ms (1)
+Jun 28 03:40:21 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.09 ms (2)
+Jun 28 03:40:21 symfony [info] {sfWebDebugLogger} View "Success" for "principal/dashboard" 187.77 ms (1)
+Jun 28 03:40:21 symfony [info] {sfWebResponse} Send content (51044 o)
+Jun 28 03:45:29 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /ENTREVISTA with parameters array (  'module' => 'ENTREVISTA',  'action' => 'index',)
+Jun 28 03:45:29 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:45:29 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:45:29 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:45:29 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeIndex()"
+Jun 28 03:45:29 symfony [info] {ENTREVISTAActions} Forward to action "ENTREVISTA/mostrarFormulario"
+Jun 28 03:45:30 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:45:30 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:45:30 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:45:30 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeMostrarFormulario()"
+Jun 28 03:45:30 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:45:30 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:45:30 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\modules/ENTREVISTA/templates/mostrarFormularioSuccess.php"
+Jun 28 03:45:30 symfony [info] {main} Set slot "title"
+Jun 28 03:45:30 symfony [info] {sfPHPView} Decorate content with "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:45:30 symfony [info] {sfPHPView} Render "C:\wamp\www\FONDEF-D08I1205\apps\frontend\templates/layout.php"
+Jun 28 03:45:30 symfony [info] {main} Get slot "title"
+Jun 28 03:45:30 symfony [info] {main} Get slot "title"
+Jun 28 03:45:30 symfony [info] {main} Get slot "login-box"
+Jun 28 03:45:30 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jun 28 03:45:30 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:45:30 symfony [info] {sfWebDebugLogger} Configuration 3090.57 ms (12)
+Jun 28 03:45:30 symfony [info] {sfWebDebugLogger} Factories 1522.09 ms (1)
+Jun 28 03:45:30 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/index" 951.84 ms (1)
+Jun 28 03:45:30 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/mostrarFormulario" 494.66 ms (1)
+Jun 28 03:45:30 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.11 ms (2)
+Jun 28 03:45:30 symfony [info] {sfWebDebugLogger} View "Success" for "ENTREVISTA/mostrarFormulario" 373.62 ms (1)
+Jun 28 03:45:31 symfony [info] {sfWebResponse} Send content (50780 o)
+Jun 28 03:45:42 symfony [info] {sfPatternRouting} Match route "default_index" (/:module) for /ENTREVISTA with parameters array (  'module' => 'ENTREVISTA',  'action' => 'index',)
+Jun 28 03:45:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:45:42 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:45:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:45:42 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeIndex()"
+Jun 28 03:45:42 symfony [info] {ENTREVISTAActions} Forward to action "ENTREVISTA/mostrarFormulario"
+Jun 28 03:45:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jun 28 03:45:42 symfony [info] {sfFilterChain} Executing filter "sfBasicSecurityFilter"
+Jun 28 03:45:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jun 28 03:45:43 symfony [info] {ENTREVISTAActions} Call "ENTREVISTAActions->executeMostrarFormulario()"
+Jun 28 03:45:43 symfony [info] {Doctrine_Connection_Mysql} exec : SET NAMES 'UTF8' - ()
+Jun 28 03:45:43 symfony [info] {Doctrine_Connection_Statement} execute : SELECT s.id AS s__id, s.first_name AS s__first_name, s.last_name AS s__last_name, s.email_address AS s__email_address, s.username AS s__username, s.algorithm AS s__algorithm, s.salt AS s__salt, s.password AS s__password, s.is_active AS s__is_active, s.is_super_admin AS s__is_super_admin, s.last_login AS s__last_login, s.created_at AS s__created_at, s.updated_at AS s__updated_at FROM sf_guard_user s WHERE (s.id = ?) LIMIT 1 - (2)
+Jun 28 03:45:43 symfony [err] {sfError404Exception} This request has been forwarded to a 404 error page by the action "ENTREVISTA/mostrarFormulario".
+Jun 28 03:45:43 symfony [info] {sfWebResponse} Send status "HTTP/1.1 404 Not Found"
+Jun 28 03:45:43 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jun 28 03:45:43 symfony [info] {sfWebDebugLogger} Configuration 111.00 ms (11)
+Jun 28 03:45:43 symfony [info] {sfWebDebugLogger} Factories 330.03 ms (1)
+Jun 28 03:45:43 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/index" 1104.30 ms (1)
+Jun 28 03:45:43 symfony [info] {sfWebDebugLogger} Action "ENTREVISTA/mostrarFormulario" 986.87 ms (1)
+Jun 28 03:45:43 symfony [info] {sfWebDebugLogger} Database (Doctrine) 0.11 ms (2)
