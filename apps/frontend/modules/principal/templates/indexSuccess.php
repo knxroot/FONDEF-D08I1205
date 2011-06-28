@@ -101,7 +101,7 @@
 		</div>
 
 		<div class="grid-6-12">
-		<label class="form-lbl">IngresoFamiliar <em class="form-req">*</em></label>
+		<label class="form-lbl">Ingreso Familiar <em class="form-req">*</em></label>
 		<select name="select_ingreso_familiar" id="select_ingreso_familiar">
 			<option value="Menos de $150.000" selected="">Menos de $150.000</option>
 			<option value="$150.000 a $300.000">$150.000 a $300.000</option>
@@ -1394,7 +1394,7 @@
 
 
 
-<div id="dialog-confirm-registro" title="Ingresar nuevo encuestado?">
+<div id="dialog-confirm-registro" title="Ingresar nuevo evaluado?">
 	<p><span class="ui-icon ui-icon-alert" style="float:left; margin:0 7px 20px 0;"></span><strong>Hey!</strong> ¿Estás seguro que quieres guardar los datos de este nuevo encuestado?. Si estas complertamente seguro de agregar a un nuevo encuestado presiona <b>Registrar Encuestado</b>; puedes presionar <b>Cancelar</b> si deseas corregir los datos antes de enviar el formulario.</p>
 </div>
 
