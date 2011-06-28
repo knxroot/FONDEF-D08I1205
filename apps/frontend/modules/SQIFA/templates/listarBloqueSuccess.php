@@ -9,7 +9,7 @@
 <form id="formulario_SQIFA" name="formulario_SQIFA" class="form" method="post" action="<?php echo $url_next_post; ?>">
   <?php if(!($es_ultimo_bloque)): ?>
   <div class="grid-12-12 ui-widget-header ui-corner-all" style="position: relative;">(CESMA) Cuestionario de exploración en salud mental para adolecentes - <?php echo $porcCompletado; ?> % completado</div>
-  <span style="border:1px solid red;dislay:block;padding:5px;margin-left:10px;">
+  </h1>
   <?php if ($bloque_valor==1){
             echo 'Sección A. Las siguientes preguntas deben ser contestadas por el adolescente';
          }
@@ -17,10 +17,13 @@
             echo 'Sección B. Más preuntas que debe contestar el adloscente (Respuestas tipo (Si/No)';
          }
          else if ($bloque_valor==3){
-             echo 'Sección C. Las siguientes preguntas se basan observacuibes y otra información que haya obtenido de un profesor / padres / persona que conozco bien al adolscente';
+             echo 'Sección C. Las siguientes preguntas se basan observacuibes y otra información que haya obtenido de un profesor / padres / persona que conozca bien al adolscente';
          }  ?>
- </span>
+      </h1>
   </br>
+  </br>
+  </br>
+ 
  <?php foreach ($Preguntas_SQIFA as $pregunta):?>
   <!-- Comienzo Bloque Pregunta -->
   <div id="SQIFA_pregunta_<?php echo $pregunta['id_pregunta'];?>" class="SQIFA_bloque_pregunta">
