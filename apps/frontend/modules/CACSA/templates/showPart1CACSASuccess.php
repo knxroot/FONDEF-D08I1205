@@ -65,7 +65,7 @@ Las posibilidades de respuesta son cinco:
 			<label class="form-lbl-V-or-F">
         <?php echo $pregunta["id_pregunta"].".-".$pregunta["texto_pregunta"];?>
         <?php if($pregunta["es_requerida"]): ?>
-          <em class="form-req">*</em>
+          <em class="form-req"></em>
         <?php endif;?>
       </label>
 		</div>
