@@ -38,18 +38,18 @@ FormEGED.prototype.inicializar= function(){
    * El efecto puede ser logrado también cambiando el focus con la tecla tab.
    **/
    
-   $("#EGED_pregunta_1").simpletip({ content: 'Consignar este enunciado si el adolescente comete por lo menos un delito contra las personas', position: ["350", "20"] });
-  $("#EGED_pregunta_2").simpletip({ content: 'Consignar este enunciado si el adolescente, en el conjunto de su historia delictiva, acumula más de 5 delitos', position: ["350", "-10"] });
-     $("#EGED_pregunta_3").simpletip({ content: 'Consignar este enunciado si el adolescente estaba intoxicado (droga o alcohol) durante la comisión de por lo menos uno de los delitos', position: ["350", "-5"] });
-      $("#EGED_pregunta_4").simpletip({ content: 'Consignar este enunciado si el adolescente tenía en su poder o utilizaba instrumentos o un arma durante la comisión de por lo menos uno de los delitos', position: ["350", "-5"] });
-	  $("#EGED_pregunta_5").simpletip({ content: 'Consignar este enunciado si el adolescente ha planeado u organizado sus delitos', position: ["350", "-5"] });
-	  $("#EGED_pregunta_6").simpletip({ content: 'Consignar este enunciado si el adolescente comete por lo menos un delito en compañía de pares que tienen antecedentes criminales', position: ["350", "-5"] });
-	  $("#EGED_pregunta_7").simpletip({ content: 'Consignar este enunciado si el adolescente tiene entre sus conocidos o amigos (además de los cómplices) pares desadaptados y / o infractores', position: ["350", "-5"] });
-	  $("#EGED_pregunta_8").simpletip({ content: 'Consignar este enunciado si el adolescente no siente ningún tipo de tensión durante la comisión de por lo menos un delito', position: ["350", "-5"] });
-	  $("#EGED_pregunta_9").simpletip({ content: 'Consignar este enunciado si el adolescente tiene motivaciones utilitarias en por lo menos uno de los delitos', position: ["350", "-5"] });
-	  $("#EGED_pregunta_10").simpletip({ content: 'Consignar este enunciado si el adolescente tiene antecedentes penales', position: ["350", "-5"] });
-	  $("#EGED_pregunta_11").simpletip({ content: 'Consignar este enunciado si el adolescente comete un delito antes de los 12 años', position: ["350", "-5"] });
-	  $("#EGED_pregunta_12").simpletip({ content: 'Consignar este enunciado si el adolescente ha presentado comportamientos destructivos durante la comisión de uno o dos delitos', position: ["350", "-5"] });
+   $("#pregunta_1").simpletip({ content: 'Consignar este enunciado si el adolescente comete por lo menos un delito contra las personas', position: ["20", "-10"] });
+  $("#2").simpletip({ content: 'Consignar este enunciado si el adolescente, en el conjunto de su historia delictiva, acumula más de 5 delitos', position: ["20", "-35"] });
+     $("#EGED_pregunta_3").simpletip({ content: 'Consignar este enunciado si el adolescente estaba intoxicado (droga o alcohol) durante la comisión de por lo menos uno de los delitos', position: ["20", "-5"] });
+      $("#EGED_pregunta_4").simpletip({ content: 'Consignar este enunciado si el adolescente tenía en su poder o utilizaba instrumentos o un arma durante la comisión de por lo menos uno de los delitos', position: ["20", "-5"] });
+	  $("#EGED_pregunta_5").simpletip({ content: 'Consignar este enunciado si el adolescente ha planeado u organizado sus delitos', position: ["20", "-5"] });
+	  $("#EGED_pregunta_6").simpletip({ content: 'Consignar este enunciado si el adolescente comete por lo menos un delito en compañía de pares que tienen antecedentes criminales', position: ["20", "-5"] });
+	  $("#EGED_pregunta_7").simpletip({ content: 'Consignar este enunciado si el adolescente tiene entre sus conocidos o amigos (además de los cómplices) pares desadaptados y / o infractores', position: ["20", "-5"] });
+	  $("#EGED_pregunta_8").simpletip({ content: 'Consignar este enunciado si el adolescente no siente ningún tipo de tensión durante la comisión de por lo menos un delito', position: ["20", "-5"] });
+	  $("#EGED_pregunta_9").simpletip({ content: 'Consignar este enunciado si el adolescente tiene motivaciones utilitarias en por lo menos uno de los delitos', position: ["20", "-5"] });
+	  $("#EGED_pregunta_10").simpletip({ content: 'Consignar este enunciado si el adolescente tiene antecedentes penales', position: ["20", "-5"] });
+	  $("#EGED_pregunta_11").simpletip({ content: 'Consignar este enunciado si el adolescente comete un delito antes de los 12 años', position: ["20", "-5"] });
+	  $("#EGED_pregunta_12").simpletip({ content: 'Consignar este enunciado si el adolescente ha presentado comportamientos destructivos durante la comisión de uno o dos delitos', position: ["20", "-5"] });
 	 
   $('.botonradio').focusin(function() {
     var nombre_radio=$(this).attr('name');//nombreradio
