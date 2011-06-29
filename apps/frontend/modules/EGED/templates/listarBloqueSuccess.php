@@ -31,7 +31,7 @@
   <div id="EGED_pregunta_<?php echo $pregunta["id_pregunta"];?>" class="EGED_bloque_pregunta">
 		<div class="grid-8-12">
 			<label class="form-lbl-V-or-F">
-        <?php echo $pregunta["id_pregunta"].".-".$pregunta["texto_pregunta"];?><div id="pregunta_<?php echo $pregunta["id_pregunta"];?>"><a href="# "> <IMG src="/images/question-white.png" /></a></div>
+        <?php echo $pregunta["id_pregunta"].".-".$pregunta["texto_pregunta"];?><a href="#" class="tip_trigger"> <IMG src="/images/question-white.png" /><span class="tip"> <?php echo $pregunta["instrucciones"]; ?></span></a>
         <?php if($pregunta["es_requerida"]): ?>
           <em class="form-req"></em>
         <?php endif;?>

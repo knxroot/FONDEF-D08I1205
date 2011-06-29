@@ -89,7 +89,7 @@ public function executeListarBloque(sfWebRequest $request)
 
         $cantidad_ya_respondidas=0;
 
-    $sql_consulta_preguntas_bloque_EGED="SELECT mp.id_pregunta_EGED AS id_pregunta, mp.texto AS texto_pregunta, mp.es_requerido AS es_requerida
+    $sql_consulta_preguntas_bloque_EGED="SELECT mp.id_pregunta_EGED AS id_pregunta, mp.texto AS texto_pregunta, mp.es_requerido AS es_requerida, mp.instruccion AS instrucciones
                                           FROM EGED_preguntas mp
                                           LEFT JOIN (
                                             SELECT *
