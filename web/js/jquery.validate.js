@@ -480,7 +480,7 @@ $.extend($.validator, {
 			
 			// if radio/checkbox, validate first element in group instead
 			if (this.checkable(element)) {
-				element = this.findByName( element.name )[0];
+				element = this.findByName( element.name )[1];
 			}
 			
 			var rules = $(element).rules();

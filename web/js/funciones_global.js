@@ -62,12 +62,22 @@ var Main = (function () {
       }, "Porfavor ingresa aqui el valor solicitado.");
 
 
+
+
+      
+      
+
       /* @description En el select debes seleccionar algo, diferente a lo que se
        * muestra por defecto, excepto si el mismo esta desactivado obviamente
        * @ignore
        */
       jQuery.validator.addMethod("noDefaultSelect",function(value, element) {
           if (element.value == "none" && !($(element).is(":disabled"))){return false;}
+          else {return true;}
+          },"Porfavor selecciona una opción");
+
+      jQuery.validator.addMethod("noNunca",function(value, element) {
+          if (value == "0"){return false;}
           else {return true;}
           },"Porfavor selecciona una opción");
 
@@ -147,6 +157,10 @@ function showEfectInputField(){
 
 $().ready(function() {
     var m=Main.getInstance({enableValidation: 'true',enableEfectosEnInputs: 'true'});
+    
+    //validador del check
+    
+    
 }); 
 
 

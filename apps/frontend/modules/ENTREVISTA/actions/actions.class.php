@@ -57,7 +57,6 @@ class ENTREVISTAActions extends Actions
      
    }
    
-   
     public function executeSubirArchivo(sfWebRequest $request)
     {
       //$fileName = $this->getRequest()->getFileName('file');

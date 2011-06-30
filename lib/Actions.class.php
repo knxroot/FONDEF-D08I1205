@@ -146,7 +146,6 @@ class Actions extends sfActions
                  AND 
                    `id_user_responsable_principal` ={$idUser}
              LIMIT 1";
-            echo $habraalgo;
             $result = mysql_query($habraalgo);
             $rows=mysql_num_rows($result);
 

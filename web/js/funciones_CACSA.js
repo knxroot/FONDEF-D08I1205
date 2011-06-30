@@ -113,7 +113,7 @@ FormCACSA.prototype.inicializar= function(){
         $('#count').html(count);//Output the count variable previously calculated into the div with id= count
         $('#progressbar').animate(//Increase the width of the css property "width"
           {
-          "width": value+'%',
+          "width": value+'%'
           }, 1);//Increase the progress bar
       } else {
         $("#progressbar").css("background-color","#ff8200");//If More words is typed into the textarea than the specified limit ,Change the progress bar from blue to yellow
@@ -145,6 +145,9 @@ FormCACSA.prototype.inicializar= function(){
 
 } //END FormIngresoEncuestado.prototype.inicializar
 
+
+
+
 /**
  * Realiza una validación del formulario aplicando las reglas de  validación de primer nivel para el formulario
  * CACSA. Las configuraciones por defecto de las validaciones (estilo grafico, etc) son heredadas
@@ -157,7 +160,7 @@ FormCACSA.prototype.inicializar= function(){
 FormCACSA.prototype.validar= function(){
     if(Main.getInstance().enableValidation === 'true'){
       jQuery.validator.addClassRules("botonradio", {
-        required: true
+        required: false
       });
       return $("#formulario_CACSA").valid(); //retorna true si valido, false si invalido
     } else{

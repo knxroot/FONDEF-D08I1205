@@ -54,14 +54,14 @@ Las posibilidades de respuesta son cinco:
         <h3>     Frecuencia</h3>
       </div>
       <div class="grid-2-12">
-        <h3>  Ultimos 12 meses</h3>
+        <h3>  Últimos 12 meses</h3>
       </div> 
 <div class="clear">
 </div>
 <?php foreach ($Preguntas_CACSA as $pregunta):?>
   <!-- Comienzo Bloque Pregunta -->
   <div id="CACSA_pregunta_<?php echo $pregunta["id_pregunta"];?>" class="CACSA_bloque_pregunta">
-		<div class="grid-7-12">
+		<div class="grid-6-12">
 			<label class="form-lbl-V-or-F">
         <?php echo $pregunta["id_pregunta"].".-".$pregunta["texto_pregunta"];?>
         <?php if($pregunta["es_requerida"]): ?>
@@ -85,7 +85,7 @@ Las posibilidades de respuesta son cinco:
     </div>
 
 
-       <div id="respuesta2" class="grid-2-12" >
+       <div id="respuesta2" class="grid-3-12" >
     
            <div id="envoltorio<?php echo $pregunta["id_pregunta"];?>" style="display:none;width: 100px">
 
@@ -115,6 +115,8 @@ Las posibilidades de respuesta son cinco:
       <textarea id="comentario_<?php echo $pregunta["id_pregunta"];?>" name="comentario_<?php echo $pregunta["id_pregunta"];?>" title="Comentario"></textarea>
     </div>
   </div>
+  <div class="clear">
+</div>
   <!-- Fin Bloque Pregunta -->
 <?php endforeach ?>
 
@@ -122,7 +124,7 @@ Las posibilidades de respuesta son cinco:
   <!-- Comienzo Bloque Dialogo añadir comentario -->
   <div id="dialogo-addcomentario" style="display: none;" title="Agregar comentario">
     <p>A continuación agrega un comentario a la pregunta <i id="dialog_i_pregunta_referencia" class="referencia_pregunta"> ERROR RECARGE LA PAGINA PORFAVOR</i></p>
-    <div  style="margin:auto; padding:auto;width:500px;">
+    <div  style="margin:auto; padding:auto; width:500px;">
       <div style="height:25px">
 
         <div style="float:left"><b>Comentario</b></div>

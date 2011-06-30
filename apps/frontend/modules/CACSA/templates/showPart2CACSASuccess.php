@@ -2,7 +2,7 @@
   <?php  echo "Formulario a CACSA ({$porcCompletado} % completado)";?>
 <?php end_slot(); ?>
 
-<?php $url_next_post=url_for('CACSA/proximoBloquePart1CACSA?idEncuestado='.$idEncuestado);?>
+<?php $url_next_post=url_for('CACSA/proximoBloquePart2CACSA?idEncuestado='.$idEncuestado);?>
 
 <!-- Comienzo Bloque Dialogo Instrucciones -->
   <div id="dialogo-instrucciones" style="display: none;" title="Instrucciones CACSA">
