@@ -89,7 +89,9 @@ FormIngresoEncuestado.prototype.inicializar= function(){
        *  SELECT MATERIA
        *  @returns {String} Codigo HTML del select de materia delictual, materia delito.
        *  @see carpeta de requerimientos usuario
+       *          $("input[name^='select_tipo_materia']").change(function () {
        **/
+      
       $("#select_tipo_materia").change(function () {
         $("#select_tipo_materia option:selected").each(function () {
           var materiaSeleccionada=$(this).val();
@@ -103,7 +105,7 @@ FormIngresoEncuestado.prototype.inicializar= function(){
           });
       });
 	  //
-	     $("#select_tipo_materia2").change(function () {
+      $("#select_tipo_materia2").change(function () {
         $("#select_tipo_materia2 option:selected").each(function () {
           var materiaSeleccionada=$(this).val();
           $.get(url_consultaCausaDelito,

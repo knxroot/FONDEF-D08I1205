@@ -146,7 +146,7 @@ function showEfectInputField(){
 
 
 $().ready(function() {
-    var m=Main.getInstance({enableValidation: 'true',enableEfectosEnInputs: 'true'});
+    var m=Main.getInstance({enableValidation: 'false',enableEfectosEnInputs: 'true'});
 }); 
 
 

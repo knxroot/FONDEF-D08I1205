@@ -11,7 +11,7 @@
 <script type="text/javascript">var url_consultaCoevaluador="<?php echo url_for('principal/ConsultaCoEvaluador'); ?>";</script>
 
 
-
+  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 <form id="formulario_IngRegAIDLey" name="formulario_IngRegAIDLey" class="form" method="post" action="<?php echo url_for('principal/procesarForm', true) ?>">
 <!-- ********************Primera etapa******************** -->
@@ -303,12 +303,12 @@
             </div>
 
             <div class="grid-4-12">
-                <label class="form-lbl">Fecha de comisión del delito  <em class="form-req">*</em></label>
+                <label class="form-lbl">Fecha de comisión del delito  aaaa/mm/dd <em class="form-req">*</em></label>
                 <input type="text" class="form-txt" name="input_fecha_detencion[]" id="input_detencion"/>
             </div>
 
             <div class="grid-4-12">
-                <label class="form-lbl">Fecha control de detención <em class="form-req">*</em></label>
+                <label class="form-lbl">Fecha control de detención aaaa/mm/dd <em class="form-req">*</em></label>
                 <input type="text" class="form-txt" name="input_fecha_control_detencion[]" id="input_fecha_control_detencion"/>
             </div>	
 			
@@ -832,12 +832,12 @@
           
 
             <div class="grid-5-12">
-                <label class="form-lbl">Fecha de comisión del delito <em class="form-req">*</em></label>
+                <label class="form-lbl">Fecha de comisión del delito aaaa/mm/dd<em class="form-req">*</em></label>
                 <input type="text" class="form-txt" name="input_fecha_detencion2[]" id="input_detencion2"/>
             </div>
 
             <div class="grid-5-12">
-                <label class="form-lbl">Fecha control de detención <em class="form-req">*</em></label>
+                <label class="form-lbl">Fecha control de detención aaaa/mm/dd<em class="form-req">*</em></label>
                 <input type="text" class="form-txt" name="input_fecha_control_detencion2[]" id="input_fecha_control_detencion2"/>
             </div>	
 				
