@@ -194,7 +194,7 @@
    <div class="grid_3">
        <a href="<?php echo url_for('DEP_ADO/index?idEncuestado='.$idEncuestado);?>">
        <div class="menu-dashboard-autoreporte-clickeable">
-        DEP-ADO
+        DEPADO
         </div></a>
    </div>
    <div class="grid_3">
@@ -234,7 +234,7 @@
    <div class="grid_3">
      <a href="<?php echo url_for('JIR/index?idEncuestado='.$idEncuestado);?>">
      <div class="menu-dashboard-autoreporte-clickeable">
-      JI-R
+      JIR
       </div></a>
    </div>
    <div class="grid_3">

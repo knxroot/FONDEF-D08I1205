@@ -592,16 +592,7 @@
             </div>
           </div><div class="clear"></div>
 
-          <div class="grid-12-12">
-            <div class="grid-6-12 row_tabla3_odd">
-              <input type="text" name="F3_4_frecuencia" id="F3_4_frecuencia" value="0" style="width:32px;height:32px;"/> Intervención ambulatoria Infractores (PIA, PLA, PLAE, SBC, PSA) <a href="#" class="iaitrigger"><IMG src="/images/question-white.png" /></a></div>
-            <div class="grid-2-12 row_tabla3_odd">
-              <input type="text" name="F3_4_edad" id="F3_4_edad" value="0" style="width:32px;height:32px;"/> años
-            </div>
-            <div class="grid-4-12 row_tabla3_odd">
-              <textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="F3_4_comentario" name="F3_4_comentario" style="width:98%; height:70px;"></textarea>
-            </div>
-          </div><div class="clear"></div>
+          
 
           <div class="grid-12-12">
             <div class="grid-6-12 row_tabla3_even">
@@ -752,7 +743,7 @@
 
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               d.- Fugas de la escuela (más de 3 escapadas) <a href="#" class="5ftrigger"><IMG src="/images/question-white.png" /></a>
+               d.- Fugas de la escuela (más de 3 escapadas) <a href="#" class="5dtrigger"><IMG src="/images/question-white.png" /></a>
                      </label>
        </div>
        <div class="grid-4-12">
@@ -907,7 +898,7 @@
 
        <div class="grid-3-12"></div>
        <div class="grid-5-12 f5total">
-                               Total F-6 Relación con partes con desadaptación social
+                               Total F-6 Relación con pares con desadaptación social
        </div>
        <div id="total_relacion_con_pares" class="grid-1-12 f5resultado">0</div>
        <div class="grid-3-12"></div>
@@ -933,8 +924,8 @@
                                   "k"=>"Otros miembros de la familia presentan conductas delictivas",
                                   "l"=>"Se registra violencia intrafamiliar severa",
                                   "m"=>"Abuso de alcohol en los adultos de la familia",
-								  "n"=>"Abuso de alcohol en los adultos de la familia",								  
-                                  "o"=>"Uno o más miembros de la familiar presentan un transtorno psiquiátrico. Psicosis, demencia u otro.",
+								  "n"=>"Abuso de drogas y alcohol en más de un miembro de la familia",								  
+                                  "o"=>"Uno o más miembros de la familiar presentan un trastorno psiquiátrico, psicosis, demencia u otro",
                                   "p"=>"Ha sido víctima de abuso sexual",
                                   "q"=>"Ha sido víctima de maltrato físico");?>
 
@@ -1047,9 +1038,9 @@
     $array_f9=array(
                                   "a"=>"Hay abuso de alguna droga",
                                   "b"=>"Hay abuso de alcohol",
-                                  "c"=>"Hay una conducta adictiva dependiente de drogas o alcohol en grupo y sólo",
-                                  "d"=>"El consumo de drogas afecta negativamente su comportamiento y funcionamiento en general",
-                                  "e"=>"Consume solventes volátiles o pasta base",
+                                  "c"=>"Consume solventes, volátiles y pasta base”. Mantener las instrucciones como están",
+                                  "d"=>"hay una conducta adictiva dependiente de drogas o alcohol en grupo y solo",
+                                  "e"=>"El consumo de drogas afecta negativamente su comportamiento y funcionamiento en general",
                                   "f"=>"Presenta conductas delictivas asociadas a la dependencia de droga");?>
 
           <?php foreach ($array_f9 as $indice => $valor):?>
@@ -1129,7 +1120,7 @@
     $fx='f11';
     $array_f11=array(
                                   "a"=>"Se muestra con buenos recursos cognitivos para comprender y pensar sobre si mismo y su realidad",
-                                  "b"=>"Muestra habilidades sociales con sus pares. Se comunica muy bien ",
+                                  "b"=>"Muestra habilidades sociales con sus pares ",
                                   "c"=>"Muestra habilidades sociales para comunicarse con adultos",
                                   "d"=>"Solicita activamente colaboración o ayuda cuando lo necesita ",
                                   "e"=>"Acepta la ayuda que se le ofrece y participa",

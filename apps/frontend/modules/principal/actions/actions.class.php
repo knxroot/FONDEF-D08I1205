@@ -73,7 +73,12 @@ $SQL_CONSULTA_NOMBRE="SELECT `input_primer_nombre` , `input_otros_nombres` , `in
     sfConfig::set('sf_escaping_strategy', false);
       $this->encuestados = mysql_query($sql_listar_encuestados);
 
-
+ $sql_listar_coevaluados="SELECT `id_encuestado` ,`input_run_nconverificador`, `input_primer_nombre` , `input_otros_nombres` , `input_primer_apellido` , `input_segundo_apellido` , `input_fnacimiento` , `created_at` , `updated_at` FROM `encuestado` WHERE `select_user_responsable_secundario1` = '{$this->getUser()->getGuardUser()->getId()}'";
+    sfConfig::set('sf_escaping_strategy', false);
+      $this->coevaluados = mysql_query($sql_listar_coevaluados);
+      
+      
+      
        return sfView::SUCCESS;
     }else{
        return sfView::ERROR;
