@@ -34,7 +34,7 @@
         <td class="eda-table-indice-td">
             <span class="eda-table-indice"><?php echo $indice + 1 ?></span>
         </td>
-        <td><span class="eda-table-pregunta app-context-help"><?php echo $pregunta ?></span></td>
+        <td><?php echo $pregunta ?></td>
         <?php for($i = 0; $i < count($intervalos); $i++) :?>
             <td>
                 <input type="text" maxlength="2" size="20" 

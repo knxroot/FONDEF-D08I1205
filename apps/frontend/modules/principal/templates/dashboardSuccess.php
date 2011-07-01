@@ -81,7 +81,7 @@
    <div class="grid_3">
      <a href="<?php echo url_for('CAIE/index?idEncuestado='.$idEncuestado);?>">
      <div class="menu-dashboard-autoreporte-clickeable">
-      CAIE
+      CICUM
       </div></a>
    </div>
    <div class="grid_3">
