@@ -297,6 +297,10 @@ FormIngresoEncuestado.prototype.validar= function(){
               select_comuna: {
                 noDefaultSelect: true
               },
+              input_domicilio: {
+                required: true,
+                minlength: 3/*nombre de minimo 3 letras*/
+              },
               radio_procedencia: {
                 required: true,
                 defaultInvalid: true

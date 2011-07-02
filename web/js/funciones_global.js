@@ -156,15 +156,8 @@ function showEfectInputField(){
 
 
 $().ready(function() {
-<<<<<<< HEAD
-    var m=Main.getInstance({enableValidation: 'true',enableEfectosEnInputs: 'true'});
-    
     //validador del check
-    
-    
-=======
-    var m=Main.getInstance({enableValidation: 'false',enableEfectosEnInputs: 'true'});
->>>>>>> 770661aff7f78383adcde2514d27ed2ae6b56a89
+    var m=Main.getInstance({enableValidation: 'true',enableEfectosEnInputs: 'true'});
 }); 
 
 

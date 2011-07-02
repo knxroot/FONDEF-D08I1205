@@ -11,7 +11,6 @@
 <script type="text/javascript">var url_consultaCoevaluador="<?php echo url_for('principal/ConsultaCoEvaluador'); ?>";</script>
 
 
-  aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 
 <form id="formulario_IngRegAIDLey" name="formulario_IngRegAIDLey" class="form" method="post" action="<?php echo url_for('principal/procesarForm', true) ?>">
 <!-- ********************Primera etapa******************** -->
@@ -77,6 +76,26 @@
 			<option value="none" selected="">Seleccione Comuna</option>
 		</select>
 		</div>
+     
+                 <div class="grid-7-12">
+                   <label class="form-lbl">Domicilio <em class="form-req">*</em></label>
+                   <input type="text" value="" id="input_domicilio" name="input_domicilio" style="float: left;" class="form-txt run">
+                 </div>
+
+		<div class="grid-5-12">
+		<label class="form-lbl">Nacionalidad<em class="form-req">*</em></label>
+                <select name="select_nacionalidad" id="select_nacionalidad">
+			<option value="Chilena" selected="">Chilena</option>
+                        <option value="Peruana">Peruana</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Boliviana">Boliviana</option>
+                        <option value="Ecuatoriana">Ecuatoriana</option>
+                        <option value="Brasilena">Brasileña</option>
+                        
+		</select>
+		</div>
+     
+     
 		<div class="grid-5-12">
 			<label class="form-lbl">Procedencia <em class="form-req">*</em></label>
 			<ul class="form-list-rdo">

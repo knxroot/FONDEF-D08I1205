@@ -1,0 +1,624 @@
+CIngresoCausa:
+  connection: doctrine
+  tableName: c_ingreso_causa
+  columns:
+    id_materia:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    id_causa:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    causa_nombre:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    codigo_delito:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    CIngresoMateria:
+      local: id_materia
+      foreign: id_materia
+      type: one
+CIngresoMateria:
+  connection: doctrine
+  tableName: c_ingreso_materia
+  columns:
+    id_materia:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: false
+    materia:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    CIngresoCausa:
+      local: id_materia
+      foreign: id_materia
+      type: many
+
+  connection: doctrine
+  tableName: cesma_preguntas
+  columns:
+    id_pregunta_cesma:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    num_pregunta:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    texto:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    es_requerido:
+      type: integer(1)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    bloque_num:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  connection: doctrine
+  tableName: encuestado
+  columns:
+    id_encuestado:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    id_user_responsable_principal:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_user_responsable_secundario1:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    id_user_responsable_secundario:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    input_run_nconverificador:
+      type: string(9)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_primer_nombre:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_otros_nombres:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_primer_apellido:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_segundo_apellido:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    radio_sexo:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_fnacimiento:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_region:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_provincia:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_comuna:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    radio_procedencia:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_localidad_indigena:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    select_origen_etnico:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_ingreso_familiar:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_residencia_regular:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_hijo:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_ultimcurso_aprobado:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_anio_ultimocurso:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_actesc_encurso:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_tipo_asistencia:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_asistencia_pconace:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_tipo_pconace:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: false
+      autoincrement: false
+    created_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    updated_at:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_nacionalidad:
+      type: string(254)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_domicilio:
+      type: string(254)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    SfGuardUser:
+      local: id_user_responsable_principal
+      foreign: id
+      type: one
+    SfGuardUser_2:
+      class: SfGuardUser
+      local: id_user_responsable_secundario
+      foreign: id
+      type: one
+    Cacsa2Respuestas:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: many
+    Cacsa3Respuestas:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: many
+    CaieRespuestas:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: many
+    CsveRespuestas:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: many
+    DepAdoRespuestas:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: many
+    EgedRespuestas:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: many
+    EncuestadoActinputado:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: many
+    EncuestadoCanteriores:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: many
+    EncuestadoSanciones:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: many
+    EstadosInstrumentos:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: many
+    FerrRespuestas:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: many
+    IrncRespuestas:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: many
+    IrncRespuestas_4:
+      class: IrncRespuestas
+      local: id_encuestado
+      foreign: id_encuestado
+      type: many
+    JirRespuestas:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: many
+    MaciRespuestas:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: many
+    SqifaRespuestas:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: many
+EncuestadoActinputado:
+  connection: doctrine
+  tableName: encuestado_actinputado
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    input_fecha_inicio_investigacion3:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_plazo_investigacion3:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_tribunal3:
+      type: string(254)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_tipo_materia3:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_causa_delito3:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    id_encuestado:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_ruk_3:
+      type: string(254)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Encuestado:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: one
+EncuestadoCanteriores:
+  connection: doctrine
+  tableName: encuestado_canteriores
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    input_fecha_inicio_condena2:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_fecha_termino_condena2:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_tribunal2:
+      type: string(254)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_tipo_materia2:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_causa_delito2:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    id_encuestado:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_ruk_2:
+      type: string(254)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_fecha_detencion2:
+      type: string(254)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_fecha_control_detencion2:
+      type: string(254)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Encuestado:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: one
+EncuestadoSanciones:
+  connection: doctrine
+  tableName: encuestado_sanciones
+  columns:
+    id:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: true
+      autoincrement: true
+    select_sistema_atencion:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_nombre_programa:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_ciudad_programa:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_tiempo_total_condena:
+      type: integer(4)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_fecha_inicio_condena:
+      type: timestamp(25)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_tipo_materia:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_causa_delito:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    id_encuestado:
+      type: integer(8)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    select_tipo_tiempo_total_condena:
+      type: string(255)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_ruk:
+      type: string(254)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_fecha_detencion:
+      type: string(254)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+    input_fecha_control_detencion:
+      type: string(254)
+      fixed: false
+      unsigned: false
+      primary: false
+      notnull: true
+      autoincrement: false
+  relations:
+    Encuestado:
+      local: id_encuestado
+      foreign: id_encuestado
+      type: one
