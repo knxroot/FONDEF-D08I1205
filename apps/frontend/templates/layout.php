@@ -96,9 +96,9 @@
         </div>                      
         <div class="grid_1">|                  
         </div>                      
-        <div class="grid_2 suffix_5"><?php echo link_to('Acerca de ...', 'http://code.google.com/p/fondef-d08i1205/') ?>
+        <div class="grid_2 suffix_4"><?php echo link_to('Acerca de ...', 'http://code.google.com/p/fondef-d08i1205/') ?>
         </div>                      
-        <div class="grid_2"><b><?php echo link_to('Fondef D08I1205', 'http://www.fondef.cl/bases/fondef/PROYECTO/08/I/D08I1205.HTML') ?></b>
+        <div class="grid_3"><b><?php echo link_to('Fondef D08I1205', 'http://www.fondef.cl/bases/fondef/PROYECTO/08/I/D08I1205.HTML') ?></b>
         </div>                              
         <div class="clear">                        
         </div>             

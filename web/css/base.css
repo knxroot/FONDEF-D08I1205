@@ -315,9 +315,12 @@ table.tablesorter thead tr .headerSortDown {
 	background-image: url("../images/desc.gif");
 }
 table.tablesorter thead tr .headerSortDown, table.tablesorter thead tr .headerSortUp {
-background-color: #ff8200;
+background-color: #fcdf69;
+color: #2c302f;
 }
-
+.admin-encuestas-btn:hover{
+background: none repeat scroll 0 0 #8ad749 !important;
+}
 /*COlores de operaciones de edicion sobre tabla de usuarios encuestados*/
 
 .operaciones a:link{

@@ -1,11 +1,11 @@
 <?php slot('title') ?>
-  <?php  echo "Formulario a CAIE ({$porcCompletado} % completado)";?>
+  <?php  echo "Formulario CICUM ({$porcCompletado} % completado)";?>
 <?php end_slot(); ?>
 
 <?php $url_next_post=url_for('CAIE/proximoBloque?idEncuestado='.$idEncuestado);?>
 
 <!-- Comienzo Bloque Dialogo Instrucciones -->
-  <div id="dialogo-instrucciones" style="display: none;" title="Instrucciones (CAIE)">
+  <div id="dialogo-instrucciones" style="display: none;" title="Instrucciones (CICUM)">
 	<p>
 		<span class="ui-icon-info-grande" style="float:left; margin:4px 4px 4px 4px;"></span>
      Tú sabes que en este región hay personas que son mapuches y también personas que no son mapuches. Ya que tú vives en esta región, queremos pedir tu ayuda para conocer mejor las costumbres y modos de ser de estos dos grupos de personas.
@@ -41,7 +41,7 @@
 
 <form id="formulario_CAIE" name="formulario_CAIE" class="form" method="post" action="<?php echo $url_next_post; ?>">
   <?php if(!($es_ultimo_bloque)): ?>
-  <div class="grid-12-12 ui-widget-header ui-corner-all" style="position: relative;">Formulario CAIE - <?php echo $porcCompletado; ?> % completado
+  <div class="grid-12-12 ui-widget-header ui-corner-all" style="position: relative;">Formulario CICUM - <?php echo $porcCompletado; ?> % completado
   <span class="icono-ver-instrucciones" onclick="$('#dialogo-instrucciones').dialog('open');"></span>
   </div>
 <?php foreach ($Preguntas_CAIE as $pregunta):?>

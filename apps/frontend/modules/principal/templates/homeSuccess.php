@@ -53,9 +53,9 @@
 <div class="prefix_3 grid_9">
      <div class="botonerainferior" style="padding: 0.3em 0.4em !important;">
 <?php if($showtable == "yes"): ?>
-       <input type="submit" id="botonadministrarEncuestas" onclick = "toogleListaEncuestas();" value="Administrar Mis Cuestionarios -" title="administrar cuestionarios" class="form-button" style="display: block;width:100%;height: 40px;">
+       <input type="submit" id="botonadministrarEncuestas" onclick = "toogleListaEncuestas();" value="Administrar Mis Cuestionarios -" title="administrar cuestionarios" class="form-button admin-encuestas-btn" style="display: block;width:100%;height: 40px;">
 <?php else: ?>
-       <input type="submit" id="botonadministrarEncuestas" onclick = "toogleListaEncuestas();" value="Administrar Mis Cuestionarios +" title="administrar cuestionarios" class="form-button" style="display: block;width:100%;height: 40px;">       
+       <input type="submit" id="botonadministrarEncuestas" onclick = "toogleListaEncuestas();" value="Administrar Mis Cuestionarios +" title="administrar cuestionarios" class="form-button admin-encuestas-btn" style="display: block;width:100%;height: 40px;">       
 <?php endif; ?>
      </div>
 </div>

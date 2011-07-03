@@ -285,34 +285,7 @@ $this->datocierre="Cerrado el ".$esCerrado[1].", en un tiempo total de respuesta
 
 }
 
-/**
- * Dado un usuario y un encuestado retorna el porcentaje de completado del
- * formulario IRNC para dicho encuestado.
- *
- * @param integer $id_user id del usuario que esta completo la encuesta en la red
- * @param integer $id_encuestado id del encuestado (adolecente infractor de ley)
- */
-public function getPorcentajeCompletadoIRNC($idUser,$idEncuestado){
-  $this->BD_Conectar();
-  /* en el procentaje de avance en este caso no se toma en cuenta las preguntas
-   *  con checkbox, solo se consideran los radiobox porque sino no se podria
-   * calcular
-   */
-  $SQL_CONSULTA_PORCENTAJE="SELECT ROUND( count( * ) *100 / (
-                              SELECT count( * )
-                              FROM `IRNC_preguntas` as irp WHERE irp.bloque_num < 9 )) AS porcCompletado
-                            FROM `IRNC_respuestas`
-                            WHERE id_user = '{$idUser}'
-                            AND id_encuestado = '{$idEncuestado}'
-                            AND id_pregunta_IRNC < 43
-                            LIMIT 0 , 30";
 
-//echo $SQL_CONSULTA_PORCENTAJE;
-
-  $porcCompletado = mysql_query($SQL_CONSULTA_PORCENTAJE);
-  $porcCompletado = mysql_fetch_array($porcCompletado);
-  return $porcCompletado[0];
-}
 
 
 }

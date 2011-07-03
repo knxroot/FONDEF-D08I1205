@@ -1,5 +1,5 @@
 <?php slot('title') ?>
-  <?php  echo sprintf('Dash Board') ?>
+  <?php  echo sprintf('CACSA') ?>
 <?php end_slot(); ?>
 
 <!-- trabaja con un container grid 16  de 960grid system-->

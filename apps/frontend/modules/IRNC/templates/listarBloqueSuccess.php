@@ -1,5 +1,4 @@
 <?php
-// no haga esto en casa, sin la supervisión de un adulto :D
 function findRespCom($array,$campo,$key){
   foreach ($array as $r){
    
@@ -129,7 +128,7 @@ function findEsRespCom($array,$campo,$key){
             <ul>
               <li><input type="checkbox" value="SI" name="check_VorF_IRNC_51" id="check_VorF_IRNC_51" <?php findRespRespSI($respuestas,'respuesta','51');?>><label for="check_VorF_IRNC_51">Maltrato de parte de la madre</label></li>
               <li><input type="checkbox" value="SI" name="check_VorF_IRNC_52" id="check_VorF_IRNC_52" <?php findRespRespSI($respuestas,'respuesta','52');?>><label for="check_VorF_IRNC_52">Trauma familiar grave:</label><input type="text" class="form-txt" style="width:100px;<?php findEsRespCom($respuestas,'respuesta','52');?>" value="<?php findRespCom($respuestas,'comentario','52');?>" name="check_VorF_IRNComfix_52" id="check_VorF_IRNComfix_input" /></li>              
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_53" id="check_VorF_IRNC_53" <?php findRespRespSI($respuestas,'respuesta','53');?>><label for="check_VorF_IRNC_53">Otro:</label><input type="text" class="form-txt" style="width:100px;<?php findEsRespCom($respuestas,'respuesta','53');?>" value="<?php findRespCom($respuestas,'comentario','53');?>" name="check_VorF_IRNComfix_53" id="check_VorF_IRNComfix_input" /></li>   
+              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_53" id="check_VorF_IRNC_53" <?php findRespRespSI($respuestas,'respuesta','53');?>><label for="check_VorF_IRNC_53">Otro:</label><input type="text" class="form-txt" style="width:100px;<?php findEsRespCom($respuestas,'respuesta','53');?>" value="<?php findRespCom($respuestas,'comentario','53');?>" name="check_VorF_IRNComfix_53" id="check_VorF_IRNComfix_input_otro" /></li>   
             </ul>
           </div>
           <div class="clear"></div>
@@ -184,7 +183,7 @@ function findEsRespCom($array,$campo,$key){
               <li><input type="checkbox" value="SI" name="check_VorF_IRNC_77" id="check_VorF_IRNC_77" <?php findRespRespSI($respuestas,'respuesta','77');?>><label for="check_VorF_IRNC_77">Evasión</label></li>
               <li><input type="checkbox" value="SI" name="check_VorF_IRNC_78" id="check_VorF_IRNC_78" <?php findRespRespSI($respuestas,'respuesta','78');?>><label for="check_VorF_IRNC_78">Protección</label></li>
               <li><input type="checkbox" value="SI" name="check_VorF_IRNC_79" id="check_VorF_IRNC_79" <?php findRespRespSI($respuestas,'respuesta','79');?>><label for="check_VorF_IRNC_79">Condiciones de vida difíciles</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_80" id="check_VorF_IRNC_80" <?php findRespRespSI($respuestas,'respuesta','80');?>><label for="check_VorF_IRNC_80">Otro</label><input type="text" class="form-txt" style="width:100px;<?php findEsRespCom($respuestas,'respuesta','80');?>" value="<?php findRespCom($respuestas,'comentario','80');?>" name="check_VorF_IRNComfix_80" id="check_VorF_IRNComfix_input" /></li>
+              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_80" id="check_VorF_IRNC_80" <?php findRespRespSI($respuestas,'respuesta','80');?>><label for="check_VorF_IRNC_80">Otro</label><input type="text" class="form-txt" style="width:100px;<?php findEsRespCom($respuestas,'respuesta','80');?>" value="<?php findRespCom($respuestas,'comentario','80');?>" name="check_VorF_IRNComfix_80" id="check_VorF_IRNComfix_input_otro2" /></li>
             </ul>
           </div>
           <div class="clear"></div>

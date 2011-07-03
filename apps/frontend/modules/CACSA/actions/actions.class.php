@@ -19,7 +19,11 @@ class CACSAActions extends Actions
   public function executeIndex(sfWebRequest $request)
   {
     //$this->forward('CACSA','listarBloque');
+      
      $this->idEncuestado=$request->getParameter('idEncuestado');
+     $idUser=$this->getUser()->getGuardUser()->getId();
+     $this->porcCompletadoCACSA1=$this->getPorcentajeCompletadoPart1CACSA($idUser, $this->idEncuestado);
+     $this->porcCompletadoCACSA2=$this->getPorcentajeCompletadoPart2CACSA($idUser, $this->idEncuestado);
   }
 
 
@@ -57,25 +61,27 @@ public function executeProximoBloquePart1CACSA(sfWebRequest $request)
 
       $valRespuesta1=$request->getParameter('radio_VorF_CACSA_'.$id_preg);
       $valRespuesta2=$request->getParameter('respuesta2_CACSA_'.$id_preg);
-      $valRespuesta3=$request->getParameter('radio_respuesta3_CACSA_'.$id_preg);
+      if (!isset($valRespuesta2)) { $valRespuesta2 = '';}
+      //$valRespuesta3=$request->getParameter('radio_respuesta3_CACSA_'.$id_preg);
 
 
       $sql_insert_respuesta="INSERT INTO CACSA2_respuestas (
         `id_user` ,
         `respuesta` ,
         `respuesta2` ,
-        `respuesta3` ,
         `comentario` ,
         `id_encuestado` ,
-        `id_pregunta_CACSA`
+        `id_pregunta_CACSA2`
       )
       VALUES (
-        '{$idUser}', '{$valRespuesta}', '{$valRespuesta2}', '{$valRespuesta3}', '{$arrayRespuestas["comentario_{$id_preg}"]}', '{$this->idEncuestado}', '{$id_preg}');";
+        '{$idUser}', '{$valRespuesta}', '{$valRespuesta2}', '', '{$this->idEncuestado}', '{$id_preg}');";
 
       $SQL_INSERTAR_RESPUESTAS=$SQL_INSERTAR_RESPUESTAS.$sql_insert_respuesta;
        mysql_query($sql_insert_respuesta);
+
      }
   }
+  $this->porcCompletado=$this->getPorcentajeCompletadoPart1CACSA($idUser, $this->idEncuestado);
     $this->forward('CACSA', 'showPart1CACSA');
 }
 
@@ -109,19 +115,18 @@ public function executeProximoBloquePart2CACSA(sfWebRequest $request)
       $sql_insert_respuesta="INSERT INTO CACSA3_respuestas (
         `id_user` ,
         `respuesta` ,
-        `respuesta2` ,
-        `respuesta3` ,
         `comentario` ,
         `id_encuestado` ,
-        `id_pregunta_CACSA`
+        `id_pregunta_CACSA3`
       )
       VALUES (
-        '{$idUser}', '{$valRespuesta}', '{$valRespuesta2}', '{$valRespuesta3}', '{$arrayRespuestas["comentario_{$id_preg}"]}', '{$this->idEncuestado}', '{$id_preg}');";
-
+        '{$idUser}', '{$valRespuesta}', '', '{$this->idEncuestado}', '{$id_preg}');";
+// GL: en el insert en comentario estaba {$arrayRespuestas["comentario_{$id_preg}"]} pero lo quite porque ya no es encesario
       $SQL_INSERTAR_RESPUESTAS=$SQL_INSERTAR_RESPUESTAS.$sql_insert_respuesta;
        mysql_query($sql_insert_respuesta);
      }
   }
+  $this->porcCompletado=$this->getPorcentajeCompletadoPart2CACSA($idUser, $this->idEncuestado);
     $this->forward('CACSA', 'showPart2CACSA');
 }
 
@@ -239,7 +244,7 @@ public function executeShowPart2CACSA(sfWebRequest $request)
                                           ) mr ON mp.id_pregunta_CACSA3 = mr.id_pregunta_CACSA3
                                           WHERE mr.id_pregunta_CACSA3 IS NULL
                                           ORDER BY mp.id_pregunta_CACSA3
-                                          LIMIT {$cantidad_ya_respondidas} , ".($cantidad_ya_respondidas+20).";";
+                                          LIMIT {$cantidad_ya_respondidas} , ".($cantidad_ya_respondidas+10).";";
 
     /*
     }else{
@@ -270,39 +275,6 @@ public function executeShowPart2CACSA(sfWebRequest $request)
       }
 }
 
-/**
- * Dado un usuario y un encuestado retorna el porcentaje de completado del
- * formulario CACSA para dicho encuestado.
- *
- * @param integer $id_user id del usuario que esta completo la encuesta en la red
- * @param integer $id_encuestado id del encuestado (adolecente infractor de ley)
- */
-public function getPorcentajeCompletadoPart1CACSA($idUser,$idEncuestado){
-  $this->BD_Conectar();
-  $SQL_CONSULTA_PORCENTAJE="SELECT ROUND( count( * ) *100 / (
-                              SELECT count( * )
-                              FROM `CACSA2_preguntas` )) AS porcCompletado
-                            FROM `CACSA2_respuestas`
-                            WHERE id_user = '{$idUser}'
-                            AND id_encuestado = '{$idEncuestado}'
-                            LIMIT 0 , 30";
-  $porcCompletado = mysql_query($SQL_CONSULTA_PORCENTAJE);
-  $porcCompletado = mysql_fetch_array($porcCompletado);
-  return $porcCompletado[0];
-}
 
-public function getPorcentajeCompletadoPart2CACSA($idUser,$idEncuestado){
-  $this->BD_Conectar();
-  $SQL_CONSULTA_PORCENTAJE="SELECT ROUND( count( * ) *100 / (
-                              SELECT count( * )
-                              FROM `CACSA3_preguntas` )) AS porcCompletado
-                            FROM `CACSA3_respuestas`
-                            WHERE id_user = '{$idUser}'
-                            AND id_encuestado = '{$idEncuestado}'
-                            LIMIT 0 , 30";
-  $porcCompletado = mysql_query($SQL_CONSULTA_PORCENTAJE);
-  $porcCompletado = mysql_fetch_array($porcCompletado);
-  return $porcCompletado[0];
-}
 
 }

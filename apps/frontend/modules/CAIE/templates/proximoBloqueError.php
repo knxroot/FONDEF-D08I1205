@@ -1,5 +1,5 @@
 <?php slot('title') ?>
-  <?php  echo sprintf('Formulario CAIE') ?>
+  <?php  echo sprintf('Formulario CICUM') ?>
 <?php end_slot(); ?>
 
 <div id="homeAlertMensaje" class="ui-widget">

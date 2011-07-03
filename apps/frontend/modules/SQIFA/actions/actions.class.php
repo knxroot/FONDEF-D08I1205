@@ -231,25 +231,6 @@ public function executeListarBloque(sfWebRequest $request)
       $this->bloque_valor=$primera;
 }
 
-/**
- * Dado un usuario y un encuestado retorna el porcentaje de completado del
- * formulario SQIFA para dicho encuestado.
- *
- * @param integer $id_user id del usuario que esta completo la encuesta en la red
- * @param integer $id_encuestado id del encuestado (adolecente infractor de ley)
- */
-public function getPorcentajeCompletadoSQIFA($idUser,$idEncuestado){
-  $this->BD_Conectar();
-  $SQL_CONSULTA_PORCENTAJE="SELECT ROUND( count( * ) *100 / (
-                              SELECT count( * )
-                              FROM `SQIFA_preguntas` )) AS porcCompletado
-                            FROM `SQIFA_respuestas`
-                            WHERE id_user = '{$idUser}'
-                            AND id_encuestado = '{$idEncuestado}'
-                            LIMIT 0 , 30";
-  $porcCompletado = mysql_query($SQL_CONSULTA_PORCENTAJE);
-  $porcCompletado = mysql_fetch_array($porcCompletado);
-  return $porcCompletado[0];
-}
+
 
 }

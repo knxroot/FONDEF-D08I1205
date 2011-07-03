@@ -211,4 +211,178 @@ class Actions extends sfActions
       else
        return true;
      }
+     
+     
+     /* PORCENTAJES DE COMPLETAODS DE FORMA GLOBAL*/
+     
+    /**
+     * Dado un usuario y un encuestado retorna el porcentaje de completado del
+     * formulario IRNC para dicho encuestado.
+     *
+     * @param integer $id_user id del usuario que esta completo la encuesta en la red
+     * @param integer $id_encuestado id del encuestado (adolecente infractor de ley)
+     */
+    public function getPorcentajeCompletadoIRNC($idUser,$idEncuestado){
+      $this->BD_Conectar();
+      /* en el procentaje de avance en este caso no se toma en cuenta las preguntas
+       *  con checkbox, solo se consideran los radiobox porque sino no se podria
+       * calcular
+       */
+      $SQL_CONSULTA_PORCENTAJE="SELECT ROUND( count( * ) *100 / (
+                                  SELECT count( * )
+                                  FROM `IRNC_preguntas` as irp WHERE irp.bloque_num < 9 )) AS porcCompletado
+                                FROM `IRNC_respuestas`
+                                WHERE id_user = '{$idUser}'
+                                AND id_encuestado = '{$idEncuestado}'
+                                AND id_pregunta_IRNC < 43
+                                LIMIT 0 , 30";
+
+    //echo $SQL_CONSULTA_PORCENTAJE;
+
+      $porcCompletado = mysql_query($SQL_CONSULTA_PORCENTAJE);
+      $porcCompletado = mysql_fetch_array($porcCompletado);
+      return $porcCompletado[0];
+    }
+
+
+/**
+ * Dado un usuario y un encuestado retorna el porcentaje de completado del
+ * formulario MACI para dicho encuestado.
+ *
+ * @param integer $id_user id del usuario que esta completo la encuesta en la red
+ * @param integer $id_encuestado id del encuestado (adolecente infractor de ley)
+ */
+public function getPorcentajeCompletadoMACI($idUser,$idEncuestado){
+  $this->BD_Conectar();
+  $SQL_CONSULTA_PORCENTAJE="SELECT ROUND( count( * ) *100 / (
+                              SELECT count( * )
+                              FROM `maci_preguntas` )) AS porcCompletado
+                            FROM `maci_respuestas`
+                            WHERE id_user = '{$idUser}'
+                            AND id_encuestado = '{$idEncuestado}'
+                            LIMIT 0 , 30";
+  $porcCompletado = mysql_query($SQL_CONSULTA_PORCENTAJE);
+  $porcCompletado = mysql_fetch_array($porcCompletado);
+  return $porcCompletado[0];
+}
+
+/**
+ * Dado un usuario y un encuestado retorna el porcentaje de completado del
+ * formulario JIR para dicho encuestado.
+ *
+ * @param integer $id_user id del usuario que esta completo la encuesta en la red
+ * @param integer $id_encuestado id del encuestado (adolecente infractor de ley)
+ */
+public function getPorcentajeCompletadoJIR($idUser,$idEncuestado){
+  $this->BD_Conectar();
+  $SQL_CONSULTA_PORCENTAJE="SELECT ROUND( count( * ) *100 / (
+                              SELECT count( * )
+                              FROM `JIR_preguntas` )) AS porcCompletado
+                            FROM `JIR_respuestas`
+                            WHERE id_user = '{$idUser}'
+                            AND id_encuestado = '{$idEncuestado}'
+                            LIMIT 0 , 30";
+  $porcCompletado = mysql_query($SQL_CONSULTA_PORCENTAJE);
+  $porcCompletado = mysql_fetch_array($porcCompletado);
+  return $porcCompletado[0];
+}
+
+
+/**
+ * Dado un usuario y un encuestado retorna el porcentaje de completado del
+ * formulario CAIE para dicho encuestado.
+ *
+ * @param integer $id_user id del usuario que esta completo la encuesta en la red
+ * @param integer $id_encuestado id del encuestado (adolecente infractor de ley)
+ */
+public function getPorcentajeCompletadoCICUM($idUser,$idEncuestado){
+  $this->BD_Conectar();
+  $SQL_CONSULTA_PORCENTAJE="SELECT ROUND( count( * ) *100 / (
+                              SELECT count( * )
+                              FROM `CAIE_preguntas` )) AS porcCompletado
+                            FROM `CAIE_respuestas`
+                            WHERE id_user = '{$idUser}'
+                            AND id_encuestado = '{$idEncuestado}'
+                            LIMIT 0 , 30";
+  $porcCompletado = mysql_query($SQL_CONSULTA_PORCENTAJE);
+  $porcCompletado = mysql_fetch_array($porcCompletado);
+  return $porcCompletado[0];
+}
+
+    public function getPorcentajeCompletadoENTREVISTA($idUser,$idEncuestado){
+        $this->BD_Conectar();
+        $habraalgo="SELECT * FROM entrevista_respuestas WHERE `id_user`={$idUser} AND `id_encuestado`={$idEncuestado} AND `id_respuesta`='CLOSE_FLAG' AND `respuesta`='CERRADO'";
+        $result = mysql_query($habraalgo);
+        $rows=mysql_num_rows($result);
+
+        if ($rows > 0)
+        {
+            return 100;
+        }
+        else{
+             return 0;
+        } 
+    }
+
+/**
+ * Dado un usuario y un encuestado retorna el porcentaje de completado del
+ * formulario CACSA para dicho encuestado.
+ *
+ * @param integer $id_user id del usuario que esta completo la encuesta en la red
+ * @param integer $id_encuestado id del encuestado (adolecente infractor de ley)
+ */
+public function getPorcentajeCompletadoPart1CACSA($idUser,$idEncuestado){
+  $this->BD_Conectar();
+  $SQL_CONSULTA_PORCENTAJE="SELECT ROUND( count( * ) *100 / (
+                              SELECT count( * )
+                              FROM `CACSA2_preguntas` )) AS porcCompletado
+                            FROM `CACSA2_respuestas`
+                            WHERE id_user = '{$idUser}'
+                            AND id_encuestado = '{$idEncuestado}'
+                            LIMIT 0 , 30";
+  $porcCompletado = mysql_query($SQL_CONSULTA_PORCENTAJE);
+  $porcCompletado = mysql_fetch_array($porcCompletado);
+  return $porcCompletado[0];
+}
+
+public function getPorcentajeCompletadoPart2CACSA($idUser,$idEncuestado){
+  $this->BD_Conectar();
+  $SQL_CONSULTA_PORCENTAJE="SELECT ROUND( count( * ) *100 / (
+                              SELECT count( * )
+                              FROM `CACSA3_preguntas` )) AS porcCompletado
+                            FROM `CACSA3_respuestas`
+                            WHERE id_user = '{$idUser}'
+                            AND id_encuestado = '{$idEncuestado}'
+                            LIMIT 0 , 30";
+  $porcCompletado = mysql_query($SQL_CONSULTA_PORCENTAJE);
+  $porcCompletado = mysql_fetch_array($porcCompletado);
+  return $porcCompletado[0];
+}
+
+public function getPorcentajeCompletadoCACSA($idUser,$idEncuestado){
+  return ($this->getPorcentajeCompletadoPart1CACSA($idUser,$idEncuestado)+$this->getPorcentajeCompletadoPart2CACSA($idUser,$idEncuestado))/2;
+}
+
+/**
+ * Dado un usuario y un encuestado retorna el porcentaje de completado del
+ * formulario SQIFA para dicho encuestado.
+ *
+ * @param integer $id_user id del usuario que esta completo la encuesta en la red
+ * @param integer $id_encuestado id del encuestado (adolecente infractor de ley)
+ */
+public function getPorcentajeCompletadoSQIFA($idUser,$idEncuestado){
+  $this->BD_Conectar();
+  $SQL_CONSULTA_PORCENTAJE="SELECT ROUND( count( * ) *100 / (
+                              SELECT count( * )
+                              FROM `SQIFA_preguntas` )) AS porcCompletado
+                            FROM `SQIFA_respuestas`
+                            WHERE id_user = '{$idUser}'
+                            AND id_encuestado = '{$idEncuestado}'
+                            LIMIT 0 , 30";
+  $porcCompletado = mysql_query($SQL_CONSULTA_PORCENTAJE);
+  $porcCompletado = mysql_fetch_array($porcCompletado);
+  return $porcCompletado[0];
+}
+
+
 }
