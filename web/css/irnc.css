@@ -1,0 +1,180 @@
+/* 
+    Document   : irnc
+    Created on : 02-07-2011, 10:39:55 PM
+    Author     : Gustavo Lacoste <gustavo@lacosox.org>
+    Description:
+        Este estilo era parte del MACI y lo usaban varios módulos, pero por
+    alguna extraña razón fallaba en algunos modulos asi es que mejor lo copie
+    y deje funcionando en los módulos que funcionaba bien, hay que revisar esto
+    luego. Este css incoorpora funcionalidades adicionales sobre los módulos (NO
+   CRITICAS)
+*/
+
+.IRNC_bloque_pregunta{
+  border: solid 1px transparent; /*solo para que al tener la pregunta seleccionada y poner el border dashed no cambie la proporcion de las cosas*/
+}
+
+.IRNC_bloque_pregunta:hover{
+  background-color: #f6fbff;
+}
+.IRNC_bloque_pregunta_seleccionada{
+  background-color: #fffff0 !important;
+  border:1px dashed #aaaaaa;
+  text-shadow: -1px -1px 0 #FFFFFF;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+}
+
+.form textarea {height: 30px;display: block; font-family: Sans-serif;}
+
+
+.IRNC_bloque_pregunta_seleccionada .form-lbl-V-or-F{
+  font-weight: bolder !important;
+  color: #000000;
+}
+
+#text_area_input_comentario {
+	width:508px;
+	height:75px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	border-color:#AEAEAE #BBBBBB #BBBBBB;
+	border-style:solid;
+	border-width:1px;
+	border-top:2px solid #E8E8E8;
+}
+
+
+#text_area_input_comentario:focus {
+  -moz-box-shadow:0 0 8px rgba(82, 168, 236, 0.5);
+	border-color:#52a8ec #52a8ec #52a8ec #52a8ec;
+  border-style:solid;
+	border-width:1px;
+}
+
+.referencia_pregunta{
+  color: #666666;
+  font-family: Georgia,Palatino,serif;
+  font-style: italic;
+  font-variant: normal;
+
+}
+
+#progressbar {
+	width:0px;
+	height:16px;
+}
+#barbox {
+	float:right;
+	height:16px;
+	background-color:#FFFFFF;
+	width:100px;
+	border:solid 2px #000;
+	margin-right:3px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+#count {
+	float:right;
+	margin-right:8px;
+	font-family:'Georgia', Times New Roman, Times, serif;
+	font-size:16px;
+	font-weight:bold;
+	color:#666666
+}
+
+.ui-dialog .ui-dialog-buttonpane button { float: right; margin: .5em .4em .5em 0; cursor: pointer; padding: .2em .6em .3em .6em; line-height: 1.4em; width:auto; overflow:visible;
+background-color: red;
+}
+
+.form-lbl-V-or-F{ /*el resto lod efine formee*/
+	font-size:1em;
+	font-weight: normal;
+  color: #555555;
+  overflow: auto;
+}
+
+
+/*Configuración tabs paguinado*/
+
+.ui-tabs-paging-next {
+	float: right !important;
+}
+.ui-tabs-paging-prev,
+.ui-tabs-paging-next {
+	background: transparent !important;
+	border: 0 !important;
+	margin-bottom: 1px !important;
+}
+
+#example4 .ui-tabs-paging-prev,
+#example4 .ui-tabs-paging-next {
+	font-weight: bold;
+}
+
+
+.ui-tabs-paging-prev a,
+.ui-tabs-paging-next a {
+    display: block;
+    position: relative;
+    top: 1px;
+    border: 0;
+    z-index: 2;
+    padding: 0;
+    /* color: #444; */
+    text-decoration: none;
+	background: transparent !important;
+	cursor: pointer;
+}
+.ui-tabs-paging-next a:hover,
+.ui-tabs-paging-next a:focus,
+.ui-tabs-paging-next a:active,
+.ui-tabs-paging-prev a:hover,
+.ui-tabs-paging-prev a:focus,
+.ui-tabs-paging-prev a:active {
+	background: transparent;
+}
+.ui-tabs-paging-disabled {
+	visibility: hidden;
+}
+
+
+/* Algunos estilos de botones
+*/
+
+	.fg-button { outline: 0; margin:0 4px 0 0; padding: .4em 1em; text-decoration:none !important; cursor:pointer; position: relative; text-align: center; zoom: 1; }
+	.fg-button .ui-icon { position: absolute; top: 50%; margin-top: -8px; left: 50%; margin-left: -8px; }
+
+	a.fg-button { float:left; }
+
+	/* remove extra button width in IE */
+	button.fg-button { width:auto; overflow:visible; }
+
+	.fg-button-icon-left { padding-left: 2.1em; }
+	.fg-button-icon-right { padding-right: 2.1em; }
+	.fg-button-icon-left .ui-icon { right: auto; left: .2em; margin-left: 0; }
+	.fg-button-icon-right .ui-icon { left: auto; right: .2em; margin-left: 0; }
+
+	.fg-button-icon-solo { display:block; width:8px; text-indent: -9999px; }	 /* solo icon buttons must have block properties for the text-indent to work */
+
+	.fg-buttonset { float:left; }
+	.fg-buttonset .fg-button { float: left; }
+	.fg-buttonset-single .fg-button,
+	.fg-buttonset-multi .fg-button { margin-right: -1px;}
+
+	.fg-toolbar { padding: .5em; margin: 0;  }
+	.fg-toolbar .fg-buttonset { margin-right:1.5em; padding-left: 1px; }
+	.fg-toolbar .fg-button { font-size: 1em;  }
+
+/*Mensaje de guardado*/
+.msg-guardando{
+  color: #888A85;
+  font-weight:bold;
+  display: none;
+}
+
+/*checkbox label resaltado*/
+.checkboxlabel_on{
+  font-weight: bold;
+  color: #D93636;
+}

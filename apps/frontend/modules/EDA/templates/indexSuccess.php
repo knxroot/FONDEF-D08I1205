@@ -58,7 +58,7 @@
     </div>
 <a class="form-button-off form-left" 
    style="display: block;" 
-   href="<?php echo url_for('EDA/index?idEncuestado=' . $idEncuestado) ?>" 
+   href="<?php echo url_for('principal/dashboard?idEncuestado='.$idEncuestado);?>" 
    onclick="return confirm('Al salir del formulario perderás la información que hayas respondido en la pantalla actual. ¿Estas seguro que deseas salir del formulario actual?');">
    <- Volver al menú
 </a>

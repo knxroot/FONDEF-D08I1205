@@ -121,7 +121,7 @@
    </div>
    <div class="grid_3">
      <div class="menu-dashboard-autoreporte">
-      J
+      <?php echo $porcCompletadoCACSA; ?> %
       </div>
    </div>
 
@@ -135,7 +135,7 @@
    </div>
    <div class="grid_3">
      <div class="menu-dashboard-juicioprofesional">
-      H
+      <?php echo $porcCompletadoIRNC; ?> %
       </div>
    </div>
    <div class="grid_3">
@@ -186,7 +186,7 @@
    </div>
    <div class="grid_3">
      <div class="menu-dashboard-autoreporte">
-      J
+      <?php echo $porcCompletadoCESMA; ?> %
       </div>
    </div>
    <div class="clear"></div><br>

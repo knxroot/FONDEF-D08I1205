@@ -101,17 +101,17 @@ $('.textarea_comentario_expicito').autoResize({
 
    $('input[name="check_VorF_IRNC_53"]').change(function () {
         if($("#check_VorF_IRNC_53").is(':checked')){
-          $("#check_VorF_IRNComfix_input").fadeIn().focus();
+          $("#check_VorF_IRNComfix_input_otro").fadeIn().focus();
         }else{
-          $("#check_VorF_IRNComfix_input").hide();
+          $("#check_VorF_IRNComfix_input_otro").hide();
       }
    });
 
    $('input[name="check_VorF_IRNC_80"]').change(function () {
         if($("#check_VorF_IRNC_80").is(':checked')){
-          $("#check_VorF_IRNComfix_input").fadeIn().focus();
+          $("#check_VorF_IRNComfix_input_otro2").fadeIn().focus();
         }else{
-          $("#check_VorF_IRNComfix_input").hide();
+          $("#check_VorF_IRNComfix_input_otro2").hide();
       }
    });
 

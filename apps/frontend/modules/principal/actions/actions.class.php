@@ -15,10 +15,25 @@ class principalActions extends Actions
         // redireccionar si no se ha indicado encuestado
         $this->forward404If(!$this->idEncuestado);
 
-        // obtener porcentajes completados
+
+        // los porcentajes de completado de los instrumentos
+       /* porcentajes de instrumentos de autoreporte */
+        $this->porcCompletadoENTREVISTA= $this->getPorcentajeCompletadoENTREVISTA($idUser,$this->idEncuestado);
+        $this->porcCompletadoCAIE = $this->getPorcentajeCompletadoCICUM($idUser,$this->idEncuestado);
+        $this->porcCompletadoCACSA = $this->getPorcentajeCompletadoCACSA($idUser,$this->idEncuestado);
+       // $this->porcCompletadoEDA = $this->getPorcentajeCompletadoEDA($idUser,$this->idEncuestado);
+        $this->porcCompletadoCESMA = $this->getPorcentajeCompletadoSQIFA($idUser,$this->idEncuestado);
+       // $this->porcCompletadoDEPADO = $this->getPorcentajeCompletadoDEPADO($idUser,$this->idEncuestado);
         $this->porcCompletadoMACI = $this->getPorcentajeCompletadoMACI($idUser,$this->idEncuestado);
-        $this->porcCompletadoJIR  = $this->getPorcentajeCompletadoJIR($idUser,$this->idEncuestado);
-        $this->porcCompletadoCAIE = $this->getPorcentajeCompletadoCAIE($idUser,$this->idEncuestado);
+       // $this->porcCompletadoCSVE = $this->getPorcentajeCompletadoCSVE($idUser,$this->idEncuestado);
+       // $this->porcCompletadoJIR  = $this->getPorcentajeCompletadoJIR($idUser,$this->idEncuestado);
+       // $this->porcCompletadoCONCLUSIONES  = $this->getPorcentajeCompletadoCONCLUSIONES($idUser,$this->idEncuestado);
+
+       /* porcentajes de instrumentos de juicio profesional */
+       // $this->porcCompletadoEGED = $this->getPorcentajeCompletadoEGED($idUser,$this->idEncuestado);
+       // $this->porcCompletadoFERR = $this->getPorcentajeCompletadoFERR($idUser,$this->idEncuestado);
+       // $this->porcCompletadoIRNC = $this->getPorcentajeCompletadoIRNC($idUser,$this->idEncuestado);
+       // $this->porcCompletadoFCMF = $this->getPorcentajeCompletadoFCMF($idUser,$this->idEncuestado);
 
         $SQL_NOMBRES_RESPONSABLE_PRINCIPAL="SELECT `first_name` , `last_name`
             FROM `sf_guard_user`
@@ -403,69 +418,6 @@ public function executeGetSiRUNYaRegistrado(sfWebRequest $request){
   }else{return $this->renderText('noExiste');}
 }
 
-/**
- * Dado un usuario y un encuestado retorna el porcentaje de completado del
- * formulario MACI para dicho encuestado.
- *
- * @param integer $id_user id del usuario que esta completo la encuesta en la red
- * @param integer $id_encuestado id del encuestado (adolecente infractor de ley)
- */
-public function getPorcentajeCompletadoMACI($idUser,$idEncuestado){
-  $this->BD_Conectar();
-  $SQL_CONSULTA_PORCENTAJE="SELECT ROUND( count( * ) *100 / (
-                              SELECT count( * )
-                              FROM `maci_preguntas` )) AS porcCompletado
-                            FROM `maci_respuestas`
-                            WHERE id_user = '{$idUser}'
-                            AND id_encuestado = '{$idEncuestado}'
-                            LIMIT 0 , 30";
-  $porcCompletado = mysql_query($SQL_CONSULTA_PORCENTAJE);
-  $porcCompletado = mysql_fetch_array($porcCompletado);
-  return $porcCompletado[0];
-}
-
-/**
- * Dado un usuario y un encuestado retorna el porcentaje de completado del
- * formulario JIR para dicho encuestado.
- *
- * @param integer $id_user id del usuario que esta completo la encuesta en la red
- * @param integer $id_encuestado id del encuestado (adolecente infractor de ley)
- */
-public function getPorcentajeCompletadoJIR($idUser,$idEncuestado){
-  $this->BD_Conectar();
-  $SQL_CONSULTA_PORCENTAJE="SELECT ROUND( count( * ) *100 / (
-                              SELECT count( * )
-                              FROM `JIR_preguntas` )) AS porcCompletado
-                            FROM `JIR_respuestas`
-                            WHERE id_user = '{$idUser}'
-                            AND id_encuestado = '{$idEncuestado}'
-                            LIMIT 0 , 30";
-  $porcCompletado = mysql_query($SQL_CONSULTA_PORCENTAJE);
-  $porcCompletado = mysql_fetch_array($porcCompletado);
-  return $porcCompletado[0];
-}
-
-
-/**
- * Dado un usuario y un encuestado retorna el porcentaje de completado del
- * formulario CAIE para dicho encuestado.
- *
- * @param integer $id_user id del usuario que esta completo la encuesta en la red
- * @param integer $id_encuestado id del encuestado (adolecente infractor de ley)
- */
-public function getPorcentajeCompletadoCAIE($idUser,$idEncuestado){
-  $this->BD_Conectar();
-  $SQL_CONSULTA_PORCENTAJE="SELECT ROUND( count( * ) *100 / (
-                              SELECT count( * )
-                              FROM `CAIE_preguntas` )) AS porcCompletado
-                            FROM `CAIE_respuestas`
-                            WHERE id_user = '{$idUser}'
-                            AND id_encuestado = '{$idEncuestado}'
-                            LIMIT 0 , 30";
-  $porcCompletado = mysql_query($SQL_CONSULTA_PORCENTAJE);
-  $porcCompletado = mysql_fetch_array($porcCompletado);
-  return $porcCompletado[0];
-}
 
 
 }
