@@ -25,9 +25,10 @@ class principalActions extends Actions
         $this->porcCompletadoCESMA = $this->getPorcentajeCompletadoSQIFA($idUser,$this->idEncuestado);
        // $this->porcCompletadoDEPADO = $this->getPorcentajeCompletadoDEPADO($idUser,$this->idEncuestado);
         $this->porcCompletadoMACI = $this->getPorcentajeCompletadoMACI($idUser,$this->idEncuestado);
-       // $this->porcCompletadoCSVE = $this->getPorcentajeCompletadoCSVE($idUser,$this->idEncuestado);
-       // $this->porcCompletadoJIR  = $this->getPorcentajeCompletadoJIR($idUser,$this->idEncuestado);
-       // $this->porcCompletadoCONCLUSIONES  = $this->getPorcentajeCompletadoCONCLUSIONES($idUser,$this->idEncuestado);
+        $this->porcCompletadoCSVE = $this->getPorcentajeCompletadoCSVE($idUser,$this->idEncuestado);
+        $this->porcCompletadoJIR  = $this->getPorcentajeCompletadoJIR($idUser,$this->idEncuestado);
+
+        $this->porcCompletadoCONCLUSIONES  = $this->getPorcentajeCompletadoCONCLUSIONES($idUser,$this->idEncuestado);
 
        /* porcentajes de instrumentos de juicio profesional */
        // $this->porcCompletadoEGED = $this->getPorcentajeCompletadoEGED($idUser,$this->idEncuestado);

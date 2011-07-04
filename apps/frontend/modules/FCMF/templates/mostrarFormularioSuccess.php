@@ -1,11 +1,11 @@
 <?php slot('title') ?>
-  <?php  echo "[{$porcCompletado} % completado] (FERR) Ficha de evaluación de riesgos y recursos de comportamiento desadaptativo";?>
+  <?php  echo "[{$porcCompletado} % completado] (FCMF) FALTA EL NOMBRE DE ESTE INSTRUMENTO"; ?>
 <?php end_slot(); ?>
 
 <?php $url_save_post=url_for('FCMF/GuardarInstrumento?idEncuestado='.$idEncuestado);?>
 
   <?php if(!($es_ultimo_bloque)): ?>
-  <div class="grid-12-12 ui-widget ui-widget-header ui-corner-all" style="position: relative;"><?php  echo "[{$porcCompletado} % completado] (FERR) Ficha de evaluación de riesgos y recursos de comportamiento desadaptativo";?>
+  <div class="grid-12-12 ui-widget ui-widget-header ui-corner-all" style="position: relative;"><?php  echo "[{$porcCompletado} % completado] (FCMF) FALTA EL NOMBRE DE ESTE INSTRUMENTO";?>
   </div><div class="clear"></div>
 
 
@@ -24,7 +24,7 @@
 
 <div class="grid-6-12">
  <div id="accordion"> 
- <h3><a href="#">1.1 Antagonismo</a></h3>
+ <h3><a href="#"><div style="float:left;">1.1 Antagonismo</div> <div id="result_11" style="margin-left: 350px;">(0)</div></a> </h3>
 	 <div>
 						<div id="516965" align=left x:publishsource="Excel">
 
@@ -319,7 +319,7 @@
 
 	</div> 
 
-<h3><a href="#">1.2 Inintimidabilidad</a></h3>
+<h3><a href="#"><div style="float:left;">1.2 Inintimidabilidad</div> <div id="result_12" style="margin-left: 350px;">(0)</div></a></h3>
     <div>
 	<div id="5_21727" align=left x:publishsource="Excel">
 
@@ -505,7 +505,7 @@
 </div>
 <div class="grid-6-12">
  <div id="accordion2">
-    <h3><a href="#">2.1 Funcionalidad</a></h3>
+    <h3><a href="#"><div style="float:left;">2.1 Funcionalidad</div> <div id="result_21" style="margin-left: 350px;">(0)</div></a></h3>
 		<div>
 						<div id="5_18094" align=center x:publishsource="Excel">
 
@@ -833,7 +833,7 @@
 		</div>
 					
 					
-    <h3><a href="#">2.2 Receptividad</a></h3>
+    <h3><a href="#"><div style="float:left;">2.2 Receptividad</div> <div id="result_22" style="margin-left: 350px;">(0)</div></a></h3>
     <div><div id="5_21549" align=center x:publishsource="Excel">
 
 <table border=0 cellpadding=0 cellspacing=0 width=363 style='border-collapse:

@@ -102,6 +102,8 @@ if(el.substr(0, 2)=='11'){
 	if(!isNaN(aux)){
 		$('#11suma').val(aux);
 		$('#11').val($('#11suma').val()/4);
+                $('#result_11').html('('+$('#11').val()+')');
+                
 	}
 }
 
@@ -110,6 +112,7 @@ if(el.substr(0, 2)=='12'){
 	if(!isNaN(aux)){
 		$('#12suma').val(aux);
 		$('#12').val($('#12suma').val()/4);
+                $('#result_12').html('('+$('#12').val()+')');
 	}
 }
 
@@ -118,6 +121,7 @@ if(el.substr(0, 2)=='21'){
 	if(!isNaN(aux)){
 		$('#21suma').val(aux);
 		$('#21').val($('#21suma').val()/4);
+                $('#result_21').html('('+$('#21').val()+')');
 	}
 }
 
@@ -126,6 +130,7 @@ if(el.substr(0, 2)=='22'){
 	if(!isNaN(aux)){
 		$('#22suma').val(aux);
 		$('#22').val($('#22suma').val()/4);
+                $('#result_22').html('('+$('#22').val()+')');
 	}
 }
 

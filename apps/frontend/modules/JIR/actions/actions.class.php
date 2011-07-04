@@ -8,7 +8,7 @@
  * @author     Gustavo Lacoste <gustavo@lacosox.org>
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class JIRActions extends sfActions
+class JIRActions extends Actions
 {
 
  /**
@@ -110,46 +110,4 @@ public function executeListarBloque(sfWebRequest $request)
         $this->is_show_instruccions='true';
       }
 }
-
-/**
- * Dado un usuario y un encuestado retorna el porcentaje de completado del
- * formulario JIR para dicho encuestado.
- *
- * @param integer $id_user id del usuario que esta completo la encuesta en la red
- * @param integer $id_encuestado id del encuestado (adolecente infractor de ley)
- */
-public function getPorcentajeCompletadoJIR($idUser,$idEncuestado){
-  $this->BD_Conectar();
-  $SQL_CONSULTA_PORCENTAJE="SELECT ROUND( count( * ) *100 / (
-                              SELECT count( * )
-                              FROM `JIR_preguntas` )) AS porcCompletado
-                            FROM `JIR_respuestas`
-                            WHERE id_user = '{$idUser}'
-                            AND id_encuestado = '{$idEncuestado}'
-                            LIMIT 0 , 30";
-  $porcCompletado = mysql_query($SQL_CONSULTA_PORCENTAJE);
-  $porcCompletado = mysql_fetch_array($porcCompletado);
-  return $porcCompletado[0];
-}
-
-
-/** Comienza la coneccion con la base de datos
- */
-public function BD_Conectar(){
-    $Error_mysql_connect=false;
-    $Error_mysql_select_db=false;
-    $coneccion = @mysql_connect("localhost", "sis_infractores", "infractores2010");
-    mysql_query ("SET NAMES 'utf8'");
-    if(!$coneccion)
-     $Error_mysql_connect = true;
-
-    $bd = @mysql_select_db("psico") ;
-    if(!$bd)
-      $Error_mysql_select_db = true;
-
-    if($Error_mysql_connect || $Error_mysql_select_db )
-      return  false;
-    else
-      return true;
-  }
 }
