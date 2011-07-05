@@ -10,7 +10,7 @@
   </div>
   <div class="grid-12-12">
     <br>
-    <b>1.- Durante los <u>últimos 12 meses</u> ¿has consumido alguno de estos productos? si es así ¿Cuál ha sido la frecuencia de tu consumo?.</b>
+    <b>1.- Durante los <u>últimos 12 meses</u> ¿has consumido alguno de estos productos?; si es así ¿Cuál ha sido la frecuencia de tu consumo?.</b>
   </div>
   <div class="clear"></div>
   <br><br>
@@ -23,87 +23,87 @@
       <div class="grid-2-12">Alrededor de una vez al mes</div>
       <div class="grid-2-12">El fin de semana o una o dos veces en la semana</div>
       <div class="grid-2-12">3 veces y más en la semana, pero no todos los días</div>
-      <div class="grid-1-12">Todos los dias</div>
+      <div class="grid-1-12">Todos los días</div>
     </div>
 
     <div class="grid-12-12">
       <div class="grid-3-12"><b>Alcohol</b></div>
-      <div class="grid-1-12"><input type="radio" name="1" value="No ha consumido" /></div>
-      <div class="grid-1-12"><input type="radio" name="1" value="En ocasiones" /></div>
-      <div class="grid-2-12"><input type="radio" name="1" value="Alrededor de una vez al mes" /></div>
-      <div class="grid-2-12"><input type="radio" name="1" value="El fin de semana o una o dos veces en la semana" /></div>
-      <div class="grid-2-12"><input type="radio" name="1" value="3 veces y más en la semana, pero no todos los días" /></div>
-      <div class="grid-1-12"><input type="radio" name="1" value="Todos los dias" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="1" value="No ha consumido" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="1" value="En ocasiones" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="1" value="Alrededor de una vez al mes" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="1" value="El fin de semana o una o dos veces en la semana" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="1" value="3 veces y más en la semana, pero no todos los días" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="1" value="Todos los dias" /></div>
     </div>
 
     <div class="grid-12-12 tabla_columna_par">
       <div class="grid-3-12"><b>Marihuana</b> <small>(ej.: yerba, pito, caña, huiro, macoña, etc.)</small></div>
-      <div class="grid-1-12"><input type="radio" name="2" value="No ha consumido" /></div>
-      <div class="grid-1-12"><input type="radio" name="2" value="En ocasiones" /></div>
-      <div class="grid-2-12"><input type="radio" name="2" value="Alrededor de una vez al mes" /></div>
-      <div class="grid-2-12"><input type="radio" name="2" value="El fin de semana o una o dos veces en la semana" /></div>
-      <div class="grid-2-12"><input type="radio" name="2" value="3 veces y más en la semana, pero no todos los días" /></div>
-      <div class="grid-1-12"><input type="radio" name="2" value="Todos los dias" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="2" value="No ha consumido" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="2" value="En ocasiones" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="2" value="Alrededor de una vez al mes" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="2" value="El fin de semana o una o dos veces en la semana" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="2" value="3 veces y más en la semana, pero no todos los días" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="2" value="Todos los dias" /></div>
     </div>
 
     <div class="grid-12-12">
-      <div class="grid-3-12"><b>Cocaina</b> <small>(ej.: coca, haley, raya, pasta base, línea, angustia,etc.)</small></div>
-      <div class="grid-1-12"><input type="radio" name="3" value="No ha consumido" /></div>
-      <div class="grid-1-12"><input type="radio" name="3" value="En ocasiones" /></div>
-      <div class="grid-2-12"><input type="radio" name="3" value="Alrededor de una vez al mes" /></div>
-      <div class="grid-2-12"><input type="radio" name="3" value="El fin de semana o una o dos veces en la semana" /></div>
-      <div class="grid-2-12"><input type="radio" name="3" value="3 veces y más en la semana, pero no todos los días" /></div>
-      <div class="grid-1-12"><input type="radio" name="3" value="Todos los dias" /></div>
+      <div class="grid-3-12"><b>Cocaina</b> <small>(ej: coca, haley, raya, pasta base, línea, angustia, etc.)</small></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="3" value="No ha consumido" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="3" value="En ocasiones" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="3" value="Alrededor de una vez al mes" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="3" value="El fin de semana o una o dos veces en la semana" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="3" value="3 veces y más en la semana, pero no todos los días" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="3" value="Todos los dias" /></div>
     </div>
 
     <div class="grid-12-12 tabla_columna_par">
       <div class="grid-3-12"><b>Pegamento/solvente</b> <small>(ej.: neopren, bencina, laca, etc.)</small></div>
-      <div class="grid-1-12"><input type="radio" name="4" value="No ha consumido" /></div>
-      <div class="grid-1-12"><input type="radio" name="4" value="En ocasiones" /></div>
-      <div class="grid-2-12"><input type="radio" name="4" value="Alrededor de una vez al mes" /></div>
-      <div class="grid-2-12"><input type="radio" name="4" value="El fin de semana o una o dos veces en la semana" /></div>
-      <div class="grid-2-12"><input type="radio" name="4" value="3 veces y más en la semana, pero no todos los días" /></div>
-      <div class="grid-1-12"><input type="radio" name="4" value="Todos los dias" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="4" value="No ha consumido" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="4" value="En ocasiones" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="4" value="Alrededor de una vez al mes" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="4" value="El fin de semana o una o dos veces en la semana" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="4" value="3 veces y más en la semana, pero no todos los días" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="4" value="Todos los dias" /></div>
     </div>
 
     <div class="grid-12-12">
       <div class="grid-3-12"><b>Alucinógenos</b> <small>(ej.: LSD, PCP, éxtasis, floripondio, peyote, etc.)</small></div>
-      <div class="grid-1-12"><input type="radio" name="5" value="No ha consumido" /></div>
-      <div class="grid-1-12"><input type="radio" name="5" value="En ocasiones" /></div>
-      <div class="grid-2-12"><input type="radio" name="5" value="Alrededor de una vez al mes" /></div>
-      <div class="grid-2-12"><input type="radio" name="5" value="El fin de semana o una o dos veces en la semana" /></div>
-      <div class="grid-2-12"><input type="radio" name="5" value="3 veces y más en la semana, pero no todos los días" /></div>
-      <div class="grid-1-12"><input type="radio" name="5" value="Todos los dias" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="5" value="No ha consumido" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="5" value="En ocasiones" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="5" value="Alrededor de una vez al mes" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="5" value="El fin de semana o una o dos veces en la semana" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="5" value="3 veces y más en la semana, pero no todos los días" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="5" value="Todos los dias" /></div>
     </div>
 
     <div class="grid-12-12 tabla_columna_par">
       <div class="grid-3-12"><b>Heroina</b> <small>(ej.: smack)</small></div>
-      <div class="grid-1-12"><input type="radio" name="6" value="No ha consumido" /></div>
-      <div class="grid-1-12"><input type="radio" name="6" value="En ocasiones" /></div>
-      <div class="grid-2-12"><input type="radio" name="6" value="Alrededor de una vez al mes" /></div>
-      <div class="grid-2-12"><input type="radio" name="6" value="El fin de semana o una o dos veces en la semana" /></div>
-      <div class="grid-2-12"><input type="radio" name="6" value="3 veces y más en la semana, pero no todos los días" /></div>
-      <div class="grid-1-12"><input type="radio" name="6" value="Todos los dias" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="6" value="No ha consumido" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="6" value="En ocasiones" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="6" value="Alrededor de una vez al mes" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="6" value="El fin de semana o una o dos veces en la semana" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="6" value="3 veces y más en la semana, pero no todos los días" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="6" value="Todos los dias" /></div>
     </div>
 
     <div class="grid-12-12">
       <div class="grid-3-12"><b>Anfetaminas / speed</b> <small>(ej.: anfeta, pepa, tonaril, etc.)</small></div>
-      <div class="grid-1-12"><input type="radio" name="7" value="No ha consumido" /></div>
-      <div class="grid-1-12"><input type="radio" name="7" value="En ocasiones" /></div>
-      <div class="grid-2-12"><input type="radio" name="7" value="Alrededor de una vez al mes" /></div>
-      <div class="grid-2-12"><input type="radio" name="7" value="El fin de semana o una o dos veces en la semana" /></div>
-      <div class="grid-2-12"><input type="radio" name="7" value="3 veces y más en la semana, pero no todos los días" /></div>
-      <div class="grid-1-12"><input type="radio" name="7" value="Todos los dias" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="7" value="No ha consumido" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="7" value="En ocasiones" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="7" value="Alrededor de una vez al mes" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="7" value="El fin de semana o una o dos veces en la semana" /></div>
+      <div class="grid-2-12"><input type="radio" class="botonradio" name="7" value="3 veces y más en la semana, pero no todos los días" /></div>
+      <div class="grid-1-12"><input type="radio" class="botonradio" name="7" value="Todos los dias" /></div>
     </div>
 
     <div class="grid-12-12 tabla_columna_par">
       <div id="opcion_otros" class="grid-3-12"><div style="width: 80%;" id="texto_otros"><b>Otros *</b></div></div>
-      <div class="grid-1-12"><input type="radio" name="8" value="No ha consumido" /></div>
-      <div class="grid-1-12"><input type="radio" name="8" value="En ocasiones" /></div>
-      <div class="grid-2-12"><input type="radio" name="8" value="Alrededor de una vez al mes" /></div>
-      <div class="grid-2-12"><input type="radio" name="8" value="El fin de semana o una o dos veces en la semana" /></div>
-      <div class="grid-2-12"><input type="radio" name="8" value="3 veces y más en la semana, pero no todos los días" /></div>
-      <div class="grid-1-12"><input type="radio" name="8" value="Todos los dias" /></div>
+      <div class="grid-1-12"><input type="radio" name="8" class="botonradio" value="No ha consumido" /></div>
+      <div class="grid-1-12"><input type="radio" name="8" class="botonradio" value="En ocasiones" /></div>
+      <div class="grid-2-12"><input type="radio" name="8" class="botonradio" value="Alrededor de una vez al mes" /></div>
+      <div class="grid-2-12"><input type="radio" name="8" class="botonradio" value="El fin de semana o una o dos veces en la semana" /></div>
+      <div class="grid-2-12"><input type="radio" name="8" class="botonradio" value="3 veces y más en la semana, pero no todos los días" /></div>
+      <div class="grid-1-12"><input type="radio" name="8" class="botonradio" value="Todos los dias" /></div>
     </div>
   </div>
   <div class="clear"></div>
@@ -169,8 +169,8 @@
     </div>
     <div class="grid-3-12">
         <ul class="form-list-rdo">
-          <li><input type="radio" value="Si" name="12" class="botonradio"><label class="form-lbl">Si</label></li>
-          <li><input type="radio" value="No" name="12" class="botonradio"><label class="form-lbl">No</label></li>
+          <li><input type="radio" value="Si" name="12" class="botonradio2"><label class="form-lbl">Si</label></li>
+          <li><input type="radio" value="No" name="12" checked="" class="botonradio2"><label class="form-lbl">No</label></li>
         </ul>
     </div>
     <div class="grid-1-12"></div><div class="clear"></div>
@@ -185,7 +185,7 @@
       <div class="grid-10-12">
         <b>a) <u>Joven Varón</u></b> En los últimos 12 meses ¿cuántas veces has consumido 8 unidades de alcohol o más en una misma ocasión?
       </div>
-      <div class="grid-1-12"><input class="form-txt" type="text" name="13" value="" size="45px"/></div><div class="grid-1-12">Nº de veces</div>
+      <div class="grid-1-12"><input class="form-txt" type="text" name="13" value="0" size="45px"/></div><div class="grid-1-12">Nº de veces</div>
       <div class="clear"></div>
     </div>
     <br>
@@ -193,7 +193,7 @@
       <div class="grid-10-12">
         <b>b) <u>Joven Dama</u></b> En los últimos 12 meses ¿cuántas veces has consumido 5 unidades de alcohol o más en una misma ocasión?
       </div>
-      <div class="grid-1-12"><input class="form-txt" type="text" name="14" value="" size="45px"/></div><div class="grid-1-12">Nº de veces</div>
+      <div class="grid-1-12"><input class="form-txt" type="text" name="14" value="0" size="45px"/></div><div class="grid-1-12">Nº de veces</div>
       <div class="clear"></div>
     </div>
   </div><div class="clear"></div>
@@ -209,8 +209,8 @@
       </div>
       <div class="grid-2-12">
         <ul class="form-list-rdo">
-          <li><input type="radio" value="Si" name="15" class="botonradio"><label class="form-lbl">Si</label></li>
-          <li><input type="radio" value="No" name="15" class="botonradio"><label class="form-lbl">No</label></li>
+          <li><input type="radio" value="Si" name="15" class="botonradio2"><label class="form-lbl">Si</label></li>
+          <li><input type="radio" value="No" name="15" checked="" class="botonradio2"><label class="form-lbl">No</label></li>
         </ul>
       </div>
       <div class="clear"></div>
@@ -222,8 +222,8 @@
       </div>
       <div class="grid-2-12">
         <ul class="form-list-rdo">
-          <li><input type="radio" value="Si" name="16" class="botonradio"><label class="form-lbl">Si</label></li>
-          <li><input type="radio" value="No" name="16" class="botonradio"><label class="form-lbl">No</label></li>
+          <li><input type="radio" value="Si" name="16" class="botonradio2"><label class="form-lbl">Si</label></li>
+          <li><input type="radio" value="No" name="16" checked="" class="botonradio2"><label class="form-lbl">No</label></li>
         </ul>
       </div>
       <div class="clear"></div>
@@ -236,8 +236,8 @@
       </div>
       <div class="grid-2-12">
         <ul class="form-list-rdo">
-          <li><input type="radio" value="Si" name="17" class="botonradio"><label class="form-lbl">Si</label></li>
-          <li><input type="radio" value="No" name="17" class="botonradio"><label class="form-lbl">No</label></li>
+          <li><input type="radio" value="Si" name="17" class="botonradio2"><label class="form-lbl">Si</label></li>
+          <li><input type="radio" value="No" name="17" checked="" class="botonradio2"><label class="form-lbl">No</label></li>
         </ul>
       </div>
       <div class="clear"></div>
@@ -250,8 +250,8 @@
       </div>
       <div class="grid-2-12">
         <ul class="form-list-rdo">
-          <li><input type="radio" value="Si" name="18" class="botonradio"><label class="form-lbl">Si</label></li>
-          <li><input type="radio" value="No" name="18" class="botonradio"><label class="form-lbl">No</label></li>
+          <li><input type="radio" value="Si" name="18" class="botonradio2"><label class="form-lbl">Si</label></li>
+          <li><input type="radio" value="No" name="18" checked="" class="botonradio2"><label class="form-lbl">No</label></li>
         </ul>
       </div>
       <div class="clear"></div>
@@ -265,8 +265,8 @@
       </div>
       <div class="grid-2-12">
         <ul class="form-list-rdo">
-          <li><input type="radio" value="Si" name="19" class="botonradio"><label class="form-lbl">Si</label></li>
-          <li><input type="radio" value="No" name="19" class="botonradio"><label class="form-lbl">No</label></li>
+          <li><input type="radio" value="Si" name="19" class="botonradio2"><label class="form-lbl">Si</label></li>
+          <li><input type="radio" value="No" name="19" checked="" class="botonradio2"><label class="form-lbl">No</label></li>
         </ul>
       </div>
       <div class="clear"></div>
@@ -279,8 +279,8 @@
       </div>
       <div class="grid-2-12">
         <ul class="form-list-rdo">
-          <li><input type="radio" value="Si" name="20" class="botonradio"><label class="form-lbl">Si</label></li>
-          <li><input type="radio" value="No" name="20" class="botonradio"><label class="form-lbl">No</label></li>
+          <li><input type="radio" value="Si" name="20" class="botonradio2"><label class="form-lbl">Si</label></li>
+          <li><input type="radio" value="No" name="20" checked="" class="botonradio2"><label class="form-lbl">No</label></li>
         </ul>
       </div>
       <div class="clear"></div>
@@ -293,8 +293,8 @@
       </div>
       <div class="grid-2-12">
         <ul class="form-list-rdo">
-          <li><input type="radio" value="Si" name="21" class="botonradio"><label class="form-lbl">Si</label></li>
-          <li><input type="radio" value="No" name="21" class="botonradio"><label class="form-lbl">No</label></li>
+          <li><input type="radio" value="Si" name="21" class="botonradio2"><label class="form-lbl">Si</label></li>
+          <li><input type="radio" value="No" name="21" checked="" class="botonradio2"><label class="form-lbl">No</label></li>
         </ul>
       </div>
       <div class="clear"></div>
@@ -307,8 +307,8 @@
       </div>
       <div class="grid-2-12">
         <ul class="form-list-rdo">
-          <li><input type="radio" value="Si" name="22" class="botonradio"><label class="form-lbl">Si</label></li>
-          <li><input type="radio" value="No" name="22" class="botonradio"><label class="form-lbl">No</label></li>
+          <li><input type="radio" value="Si" name="22" class="botonradio2"><label class="form-lbl">Si</label></li>
+          <li><input type="radio" value="No" name="22" checked="" class="botonradio2"><label class="form-lbl">No</label></li>
         </ul>
       </div>
       <div class="clear"></div>
@@ -321,8 +321,8 @@
       </div>
       <div class="grid-2-12">
         <ul class="form-list-rdo">
-          <li><input type="radio" value="Si" name="23" class="botonradio"><label class="form-lbl">Si</label></li>
-          <li><input type="radio" value="No" name="23" class="botonradio"><label class="form-lbl">No</label></li>
+          <li><input type="radio" value="Si" name="23" class="botonradio2"><label class="form-lbl">Si</label></li>
+          <li><input type="radio" value="No" name="23" checked="" class="botonradio2"><label class="form-lbl">No</label></li>
         </ul>
       </div>
       <div class="clear"></div>
@@ -335,8 +335,8 @@
       </div>
       <div class="grid-2-12">
         <ul class="form-list-rdo">
-          <li><input type="radio" value="Si" name="24" class="botonradio"><label class="form-lbl">Si</label></li>
-          <li><input type="radio" value="No" name="24" class="botonradio"><label class="form-lbl">No</label></li>
+          <li><input type="radio" value="Si" name="24" class="botonradio2"><label class="form-lbl">Si</label></li>
+          <li><input type="radio" value="No" name="24" checked="" class="botonradio2"><label class="form-lbl">No</label></li>
         </ul>
       </div>
       <div class="clear"></div>
@@ -347,17 +347,17 @@
 
   <!-- CP7 -->
   <div id="pregunta7" class="grid-12-12">
-    <b>7.- ¿Cuál ha sido tu consumo de tabaco en los <u>últimos 12 meses</u>?</b> <small>(ennegrecer la respuesta)</small>
+    <b>7.- ¿Cuál ha sido tu consumo de tabaco en los <u>últimos 12 meses</u>?</b>
     <br><br>
     <div class="grid-6-12">
-      <input type="radio" name="25" value="Sin Consumo" />Sin Consumo <br>
-      <input type="radio" name="25" value="En ocasiones " />En ocasiones <br>
-      <input type="radio" name="25" value="Alrededor de una vez al mes" />Alrededor de una vez al mes <br>
+      <input type="radio" name="25" class="botonradio" value="Sin Consumo" />Sin Consumo <br>
+      <input type="radio" name="25"  class="botonradio"  value="En ocasiones " />En ocasiones <br>
+      <input type="radio" name="25"  class="botonradio" value="Alrededor de una vez al mes" />Alrededor de una vez al mes <br>
     </div>
     <div class="grid-6-12">
-      <input type="radio" name="25" value="El fin de semana o una a dos veces por semana" />El fin de semana o una a dos veces por semana<br>
-      <input type="radio" name="25" value="3 veces y + por semana pero no todos los días" />3 veces y + por semana pero no todos los días<br>
-      <input type="radio" name="25" value="Todos los días" />Todos los días<br>
+      <input type="radio" name="25"  class="botonradio"  value="El fin de semana o una a dos veces por semana" />El fin de semana o una a dos veces por semana<br>
+      <input type="radio" name="25"  class="botonradio"  value="3 veces y + por semana pero no todos los días" />3 veces y + por semana pero no todos los días<br>
+      <input type="radio" name="25"  class="botonradio" value="Todos los días" />Todos los días<br>
     </div>
   </div><div class="clear"></div><br><br>
   <!-- FP7 -->
@@ -398,7 +398,7 @@
 <br>
 
 <div id="dialog-envio-resp-por-bloque" title="Confirmar">
-	<p><span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 20px 0;"></span><strong>¿Estas seguro que deseas continuar enviando los datos?.</strong> Una vez que envies las respuestas de este bloque de preguntas ya no podrán ser modificadas.</p>
+	<p><span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 20px 0;"></span><strong>¿Estas seguro que deseas finalizar este instrumento?.</strong> Una vez que envies las respuestas de este instrumento ya no podrán ser modificadas.</p>
 </div>
 
 

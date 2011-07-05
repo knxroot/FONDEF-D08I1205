@@ -159,11 +159,14 @@
    </div>
 
    <div class="prefix_1 grid_2">
-   <a href="<?php echo url_for('FCMF/index?idEncuestado='.$idEncuestado);?>">
-       <div class="menu-dashboard-juicioprofesional-clickeable">
-        FCMF
-      </div>
+    <div class="menu-dashboard-juicioprofesional">
+    <a href="<?php echo url_for('FCMF/index?idEncuestado='.$idEncuestado);?>">
+    <div class="menu-dashboard-juicioprofesional-clickeable">
+      FCMF
+    </div></a>
    </div>
+   </div>
+   
    <div class="grid_3">
      <div class="menu-dashboard-juicioprofesional">
       H
