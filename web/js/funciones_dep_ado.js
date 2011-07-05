@@ -14,6 +14,9 @@
  *
  * 1.- <a href="http://youhack.me/2010/04/22/live-character-count-with-progress-bar-using-jquery/comment-page-1/">+JQuery limitador de palabras/a><br>.
  */
+
+var sinConsumoEnLosUltimos12Meses=false;
+       
 FormDEP_ADO= function(){
   /** @ignore */
   var inicializar=function(){};
@@ -33,6 +36,28 @@ FormDEP_ADO.prototype.inicializar= function(){
    **/
   $('#formulario_DEP_ADO')[0].reset();
 
+
+/*
+var validator=$("#formulario_DEP_ADO").validate({
+            //Reglas de validación
+           rules: {
+              13: {
+                required: true,
+                digits: true
+              },
+	      14: {
+                required: true,
+                digits: true
+              }
+          },
+           messages: {
+              input_edad: {
+                digits: "Introduzca la cantidad en números"
+              }
+            }
+       
+       });*/
+
   /**
    * @description Habilita tools algunos tool tips particulares en el instrumento
    **/
@@ -50,12 +75,15 @@ FormDEP_ADO.prototype.inicializar= function(){
  });
 
 
+
+
+
 /**
  * Esta funcion verifica que en la pregunta uno se ha declarado que el adolecente no ha consumido ningún tipo de droga durante los últimos 12 meses
  *@function
  **/
 function esSinConsumoen12meses(){
-var sinConsumoEnLosUltimos12Meses=false;
+sinConsumoEnLosUltimos12Meses=false;
  if ($("input[name='1']:checked").val() == 'No ha consumido') {
     if ($("input[name='2']:checked").val() == 'No ha consumido') {
       if ($("input[name='3']:checked").val() == 'No ha consumido') {
@@ -75,9 +103,17 @@ var sinConsumoEnLosUltimos12Meses=false;
   }
   /* Si el adolecente no ha consumido drogas en los últimos 12 meses entonces se ocultan las preguntas para pasar directo a la pregunta7*/
   if(sinConsumoEnLosUltimos12Meses){
+     // $('.new').hide();
+    /*
+     $('#pregunta4 input').rules("remove");
+     $('#pregunta5 input').rules("remove");
+     $('#pregunta6 input').rules("remove");*/
+     
      $('#pregunta4').hide();$('#pregunta5').hide();$('#pregunta6').hide();
   }else{
+     // $('.new').hide();
      $('#pregunta4').show();$('#pregunta5').show();$('#pregunta6').show();
+     
   }
  }
 /* FIN esSinConsumoen12meses() */
@@ -183,7 +219,7 @@ $("input[name='8']").change(function(){ esSinConsumoen12meses();});
 			modal: true,
       autoOpen: false,
 			buttons: {
-				"Continuar con proximo bloque": function() {
+				"Continuar y Finalizar": function() {
           document.formulario_DEP_ADO.submit();
 				},
 				"Cancelar": function() {
@@ -194,6 +230,10 @@ $("input[name='8']").change(function(){ esSinConsumoen12meses();});
 
 } //END FormIngresoEncuestado.prototype.inicializar
 
+function selectRequerido(element) {
+  var options = $("option:selected", element);
+  return options.length > 0 && ( element.type == "select-multiple" || ($.browser.msie && !(options[0].attributes['value'].specified) ? options[0].text : options[0].value).length > 0);
+}
 /**
  * Realiza una validación del formulario aplicando las reglas de  validación de primer nivel para el formulario
  * DEP_ADO. Las configuraciones por defecto de las validaciones (estilo grafico, etc) son heredadas
@@ -208,11 +248,13 @@ FormDEP_ADO.prototype.validar= function(){
       jQuery.validator.addClassRules("botonradio", {
         required: true
       });
-      return $("#formulario_DEP_ADO").valid(); //retorna true si valido, false si invalido
+     // $('.new').show();
+      return  $("#formulario_DEP_ADO").valid();//retorna true si valido, false si invalido
     } else{
       return true; //retorna verdadero si las validaciones estan desactivadas, esto es para que pase como si los campos fueran validos
     }
 }
+
 
 /*Eliminar espacios en cadenas para ver si no hay nada*/
 function lTrim(sStr){

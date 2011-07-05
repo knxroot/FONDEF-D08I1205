@@ -1,0 +1,11 @@
+/* 
+    Document   : depado
+    Created on : 05-07-2011, 01:12:38 AM
+    Author     : Gustavo Lacoste <gustavo@lacosox.org>
+    Description:
+        algunos retoques míminos para el depado
+*/
+
+#pregunta7 input{
+    margin-right: 6px;
+}

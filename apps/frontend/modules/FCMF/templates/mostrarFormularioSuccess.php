@@ -1,11 +1,11 @@
 <?php slot('title') ?>
-  <?php  echo "[{$porcCompletado} % completado] (FCMF) FALTA EL NOMBRE DE ESTE INSTRUMENTO"; ?>
+  <?php  echo "[{$porcCompletado} % completado] (FCMF) Ficha Criminométrica"; ?>
 <?php end_slot(); ?>
 
 <?php $url_save_post=url_for('FCMF/GuardarInstrumento?idEncuestado='.$idEncuestado);?>
 
   <?php if(!($es_ultimo_bloque)): ?>
-  <div class="grid-12-12 ui-widget ui-widget-header ui-corner-all" style="position: relative;"><?php  echo "[{$porcCompletado} % completado] (FCMF) FALTA EL NOMBRE DE ESTE INSTRUMENTO";?>
+  <div class="grid-12-12 ui-widget ui-widget-header ui-corner-all" style="position: relative;"><?php  echo "[{$porcCompletado} % completado] (FCMF) Ficha Criminométrica";?>
   </div><div class="clear"></div>
 
 
