@@ -11,21 +11,37 @@ class EDAActions extends Actions
         // Cargar configuracion de instrumento
         $this->config = $this->loadItems(__DIR__.'/../config/items.yml');
 
-        // 
         $this->iniciado = true;
+      $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'eda_respuestas');
+       
+      if($this->esCerrado($request, 'eda_respuestas')){
+         return      $this->forward('EDA','Cerrado');;
+     }
+     return sfView::SUCCESS;
     }
+    
+     public function executeMostrarFormulario(sfWebRequest $request)
+        {
+              // preparaMostrarFormulario retorna un JSON que se usa para mostrar el instrumento
+
+             $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'eda_respuestas');
+        }
+        
+        public function executeCerrado(sfWebRequest $request)
+        {
+               $this->idEncuestado=$request->getParameter('idEncuestado');
+            
+        }
+
         
     /**
      * Guarda el instrumento y obtiene su porcentaje de llenado
      * @param sfWebRequest $request
      */
-    public function executeSave(sfWebRequest $request)
-    {
-        $dom = new XmlDomConstruct('1.0', 'utf-8');
-        $dom->fromMixed($request->getPostParameters());
-        
-        return $this->renderText(json_encode($request->getPostParameters()));
-    }
+   public function executeGuardarInstrumento(sfWebRequest $request)
+	{
+		$this->GuardarInstrumento($request, 'eda_respuestas'); //guarda todas las variables del usuario actual cara de palo en la BD
+	}
     
     /**
      * Lee los datos de un instrumento especifico a un usuario y

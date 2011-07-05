@@ -38,4 +38,11 @@ EDA.prototype.formTablaCruzada = function(selector) {
     })
 }
 
-$(document).ready(function(){ new EDA() });
+$(document).ready(function(){ new EDA();
+$('form').submit(function(){
+     
+        $('#msg-guardando').show();
+
+    });
+    
+    });

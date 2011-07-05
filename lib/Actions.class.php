@@ -65,31 +65,37 @@ class Actions extends sfActions
 		$habraalgo="SELECT * FROM `{$nombretabla}` WHERE `id_user`={$idUser} AND `id_encuestado`={$this->idEncuestado} AND `concensoMode`={$this->concensoMode} LIMIT 1";
 		$result = mysql_query($habraalgo);
 		$rows=mysql_num_rows($result);
-		
+		$sqlGuardar=null;
+                
 		if ($rows > 0)
 		{
-                        $this->sql_guardar="";
+                        $sqlGuardar="";
 			foreach ($arrayRespuestas as $idelement => $value) {
                           if (!in_array($idelement, $elementosAIgnorar)) {
-				$this->sql_guardar= "UPDATE {$nombretabla} SET `respuesta` = '".mysql_real_escape_string($value)."' WHERE `{$nombretabla}`.`id_respuesta` = '".mysql_real_escape_string($idelement)."' AND `{$nombretabla}`.`id_user` =".(int)mysql_real_escape_string($idUser)." AND `{$nombretabla}`.`id_encuestado` =".(int)mysql_real_escape_string($this->idEncuestado)." AND `{$nombretabla}`.`concensoMode` =".(int)mysql_real_escape_string($this->concensoMode)." LIMIT 1;";
-                                mysql_query($this->sql_guardar);  
+				$sqlGuardar=$sqlGuardar."UPDATE {$nombretabla} SET `respuesta` = '".mysql_real_escape_string($value)."' WHERE `{$nombretabla}`.`id_respuesta` = '".mysql_real_escape_string($idelement)."' AND `{$nombretabla}`.`id_user` =".(int)mysql_real_escape_string($idUser)." AND `{$nombretabla}`.`id_encuestado` =".(int)mysql_real_escape_string($this->idEncuestado)." AND `{$nombretabla}`.`concensoMode` =".(int)mysql_real_escape_string($this->concensoMode)." LIMIT 1;";
+                                 
                           }
                         }
+                        mysql_query($sqlGuardar); 
+                        echo $sqlGuardar; 
 		}
 		else
 		{
+                    $sqlGuardar="";
 			foreach ($arrayRespuestas as $idelement => $value) {
                           if (!in_array($idelement, $elementosAIgnorar)) {
-			   $this->sql_guardar="INSERT INTO {$nombretabla} (id_respuesta ,respuesta,id_user,id_encuestado,concensoMode) VALUES (
+			   $sqlGuardar=$sqlGuardar."INSERT INTO {$nombretabla} (id_respuesta ,respuesta,id_user,id_encuestado,concensoMode) VALUES (
 				'".mysql_real_escape_string($idelement)."', 
 				'".mysql_real_escape_string($value)."', 
 				'".mysql_real_escape_string($idUser)."', 
 				'".mysql_real_escape_string($this->idEncuestado)."', 
 				'".mysql_real_escape_string($this->concensoMode)."' );"; 
 				
-				mysql_query($this->sql_guardar); 
+				
                           }
                         }
+                        mysql_query($sqlGuardar);
+                        echo $sqlGuardar;
 		}
 		
 		/*retorna true si todo OK*/

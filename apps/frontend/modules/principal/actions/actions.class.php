@@ -29,6 +29,13 @@ class principalActions extends Actions
         $this->porcCompletadoJIR  = $this->getPorcentajeCompletadoJIR($idUser,$this->idEncuestado);
 
         $this->porcCompletadoCONCLUSIONES  = $this->getPorcentajeCompletadoCONCLUSIONES($idUser,$this->idEncuestado);
+        
+  $esCerrado=$this->esCerrado($request, 'eda_respuestas');
+  
+     $this->porcCompletadoEDA = $esCerrado*100;
+      
+     
+   
 
        /* porcentajes de instrumentos de juicio profesional */
        // $this->porcCompletadoEGED = $this->getPorcentajeCompletadoEGED($idUser,$this->idEncuestado);

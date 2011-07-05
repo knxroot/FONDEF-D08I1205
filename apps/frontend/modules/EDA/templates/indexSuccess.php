@@ -1,6 +1,7 @@
 <?php slot('title') ?>
   <?php  echo sprintf('Escala de Delicuencia Autorevelada') ?>
 <?php end_slot(); ?>
+<?php $url_save_post=url_for('EDA/GuardarInstrumento?idEncuestado='.$idEncuestado);?>
 
 <!-- Instrucciones -->
 <?php include_partial('instrucciones') ?>
@@ -12,7 +13,7 @@
 <div class="clear"></div>
 
 <!-- Formulario -->
-<form id="form_eda" name="form_eda" class="form960 page-main-form" method="post" action="<?php echo url_for('EDA/save') ?>">
+<form id="form_eda" name="form_eda" class="form960 page-main-form" method="post" action="<?php echo $url_save_post; ?>">
     <div class="grid-12-12">
         <div id="tabPanel" class="ui-widget ui-widget-content ui-corner-all">
             <!-- Tabs -->
@@ -62,9 +63,28 @@
    onclick="return confirm('Al salir del formulario perderás la información que hayas respondido en la pantalla actual. ¿Estas seguro que deseas salir del formulario actual?');">
    <- Volver al menú
 </a>
-<input type="submit" value="Finalizar" title="enviar" class="form-button form-right">
+ <button class="form-button" type="submit" name="Guardar"><span class="ui-icon ui-icon-disk" style="float:left;"></span>Guardar</button>
+ 
+
+ <input type="text" id="CLOSE_FLAG" name="CLOSE_FLAG" style="display:none" value="NOCERRADO"></input>
+<div class="grid_2 prefix_9">
+   <a class="form-button-off form-left" style="display: block;"
+      onclick="
+              if(confirm('OJO. Al cerrar el formulario ya no podrás volver a modificarlo.')){
+                  $('#CLOSE_FLAG').val('CERRADO');
+                   document.form_eda.submit();
+              }">Cerrar forever</a>
+</div>
+<div class="clear"></div>
+</form>
 
 <!-- Javascript de inicio de form -->
-<?php include_partial('javascript', array('iniciado' => $iniciado)) ?>
 
 
+<script type="text/javascript">
+                $().ready(function() {
+                     $("form").loadJSON(<?php echo $sf_data->getRaw('respuestasGuardadas');?>);
+                     $("#msgzone").hide();
+                     $("#contenido").show();
+                });
+</script>

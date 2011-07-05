@@ -38,20 +38,20 @@
         <?php for($i = 0; $i < count($intervalos); $i++) :?>
             <td>
                 <input type="text" maxlength="2" size="20" 
-                    name="<?php echo $inputprefix ?>pos-<?php echo $indice + 1 ?>[]" 
+                    name="<?php echo $inputprefix ?>F<?php echo $indice + 1 ?>C<?php echo $i + 1 ?>" 
                     class="preg-val <?php echo $indice + 1?>-<?php echo $i ?>" />
             </td>
         <?php endfor ?>
-        <td><input type="text" value="0" class="resultado-fila fila-<?php echo $i ?>" readonly /></td>
+        <td><input type="text" value="0" name="<?php echo $inputprefix ?>resultadoF<?php echo $indice + 1 ?> "class="resultado-fila fila-<?php echo $i ?>" readonly /></td>
     </tr>
     <?php endforeach ?>
     <tr>
         <td>&nbsp;</td>
         <td>&nbsp;</td>
         <?php for($i = 0; $i < count($intervalos); $i++) :?>
-            <td><input type="text" size="20" class="resultado-col col-<?php echo $i ?>" readonly /></td>
+            <td><input name="<?php echo $inputprefix ?>resultadoC<?php echo $i + 1 ?>" type="text" size="20"  class="resultado-col col-<?php echo $i ?>" readonly /></td>
         <?php endfor ?>
-        <td><input type="text" value="0" size="20" class="resultado-fila resultado-diag" readonly /></td>
+        <td><input name="<?php echo $inputprefix ?>resultado"type="text" value="0" size="20" class="resultado-fila resultado-diag" readonly /></td>
     </tr>
     <tr>
         <td>&nbsp;</td>

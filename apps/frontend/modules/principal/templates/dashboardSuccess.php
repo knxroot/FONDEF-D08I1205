@@ -154,7 +154,7 @@
    </div>
    <div class="grid_3">
      <div class="menu-dashboard-autoreporte">
-      J
+      <?php echo $porcCompletadoEDA; ?> %
       </div>
    </div>
 
