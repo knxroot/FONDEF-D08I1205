@@ -101,8 +101,9 @@ if(el.substr(0, 2)=='11'){
 	var aux=sumartotal('11');
 	if(!isNaN(aux)){
 		$('#11suma').val(aux);
-		$('#11').val($('#11suma').val()/4);
-                $('#result_11').html('('+$('#11').val()+')');
+		$('#11').val(Math.round(($('#11suma').val()/4)*100)/100);
+                
+                $('#result_11').html('('+Math.round($('#11').val()*100)/100+')');
                 
 	}
 }
@@ -111,8 +112,8 @@ if(el.substr(0, 2)=='12'){
 	var aux=sumartotal('12');
 	if(!isNaN(aux)){
 		$('#12suma').val(aux);
-		$('#12').val($('#12suma').val()/4);
-                $('#result_12').html('('+$('#12').val()+')');
+		$('#12').val(Math.round(($('#12suma').val()/4)*100)/100);
+                $('#result_12').html('('+Math.round($('#12').val()*100)/100+')');
 	}
 }
 
@@ -120,8 +121,8 @@ if(el.substr(0, 2)=='21'){
 	var aux=sumartotal('21');
 	if(!isNaN(aux)){
 		$('#21suma').val(aux);
-		$('#21').val($('#21suma').val()/4);
-                $('#result_21').html('('+$('#21').val()+')');
+		$('#21').val(Math.round(($('#21suma').val()/4)*100)/100);
+                $('#result_21').html('('+Math.round($('#21').val()*100)/100+')');
 	}
 }
 
@@ -129,31 +130,31 @@ if(el.substr(0, 2)=='22'){
 	var aux=sumartotal('22');
 	if(!isNaN(aux)){
 		$('#22suma').val(aux);
-		$('#22').val($('#22suma').val()/4);
-                $('#result_22').html('('+$('#22').val()+')');
+		$('#22').val(Math.round(($('#22suma').val()/4)*100)/100);
+                $('#result_22').html('('+Math.round($('#22').val()*100)/100+')');
 	}
 }
 
 /* SUMAS DE ABAJO*/
 var cdelic=parseFloat($('#11').val())+ parseFloat($('#12').val());
+
 var csocial=parseFloat(10)-(parseFloat($('#21').val())+ parseFloat($('#22').val()));
 
 
 if(!isNaN(cdelic) ){
-$('#cdelic').val(cdelic);
+$('#cdelic').val(Math.round(cdelic*100)/100);
 }
 
 if(!isNaN(csocial)){
 	
-	$('#csocial').val(csocial);
+	$('#csocial').val(Math.round(csocial*100)/100);
 	
 	
 }
 
 if(!isNaN(cdelic)&&!isNaN(csocial)){
 $('#sumafinal').val(cdelic+csocial);
-	$('#indicecrim').val($('#sumafinal').val()/2);
-	
+	$('#indicecrim').val(Math.round(($('#sumafinal').val()/2)*100)/100);
 	}
 
 switch(el)
