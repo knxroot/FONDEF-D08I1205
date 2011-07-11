@@ -35,8 +35,15 @@ class FCMFActions extends Actions
         public function executeMostrarFormulario(sfWebRequest $request)
         {
               // preparaMostrarFormulario retorna un JSON que se usa para mostrar el instrumento
-
-             $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'ferr2_respuestas');
+    if($this->esCerrado($request, 'fcmf_respuestas')){
+         return $this->forward('FCMF','Cerrado');;
+    }
+             $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'fcmf_respuestas');
         }
-
+        
+        public function executeCerrado(sfWebRequest $request)
+        {
+               $this->idEncuestado=$request->getParameter('idEncuestado');
+            
+        }
 }

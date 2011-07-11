@@ -1206,12 +1206,18 @@
     <div class="grid-4-12">
       <button class="form-button" type="submit" name="Guardar"><span class="ui-icon ui-icon-disk" style="float:left;"></span>Guardar</button>
     </div>
+    
+    
+    <input type="text" id="CLOSE_FLAG" name="CLOSE_FLAG" style="display:none" value="NOCERRADO"></input>
     <div class="grid-4-12">
-      <?php if($porcCompletado>=100):?><!-- Solo si el procentaje de avance es 100%muestro el botón para finalizar el formulario -->
-      <button class="form-button-off" type="button" name="Finalizar" onclick = "finalizarFERR();"><span class="ui-icon ui-icon-circle-check" style="float:left;"></span>Finalizar Formulario</button>
-      <input type="text" name="esCerrarForm" id="esCerrarForm" style="display: none" value="NOCERRAR"/>
-      <?php endif; ?>
-    </div><div class="clear"></div>
+    <a class="form-button-off form-left" style="display: block;"
+      onclick="
+              if(confirm('OJO. Al cerrar el formulario ya no podrás volver a modificarlo.')){
+                  $('#CLOSE_FLAG').val('CERRADO');
+                   document.formulario_FERR.submit();
+              }">Cerrar</a>
+    </div>
+    
 
     <?php else: ?>
     <div class="grid-4-12"></div>
@@ -1221,6 +1227,9 @@
     <div class="grid-4-12"></div><div class="clear"></div>
     <?php endif; ?>
     <!-- Fin Botón envio de formulario, en caso de ser último bloque advierte que se cerrará el formulario si se continua -->
+
+
+    
     </form>
     <br>
 <!-- MODALS-->	

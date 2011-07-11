@@ -40,13 +40,15 @@ class principalActions extends Actions
 
      $this->esEvaluadorSecundario=$this->soyResponsableSecundario($request);
 
-     
-     
+
 
        /* porcentajes de instrumentos de juicio profesional */
         $this->porcCompletadoEGED  = $this->getPorcentajeCompletadoEGED($idUser,$this->idEncuestado);
-       // $this->porcCompletadoFERR = $this->getPorcentajeCompletadoFERR($idUser,$this->idEncuestado);
+        $esCerradoFerr=$this->esCerrado($request, 'ferr2_respuestas');
+        $this->porcCompletadoFERR = $esCerradoFerr*100;
         $this->porcCompletadoIRNC = $this->getPorcentajeCompletadoIRNC($idUser,$this->idEncuestado);
+        $esCerradoFcmf=$this->esCerrado($request, 'fcmf_respuestas');
+        $this->porcCompletadoFCMF = $esCerradoFcmf*100;
        // $this->porcCompletadoFCMF = $this->getPorcentajeCompletadoFCMF($idUser,$this->idEncuestado);
 
         $SQL_NOMBRES_RESPONSABLE_PRINCIPAL="SELECT `first_name` , `last_name`

@@ -116,7 +116,7 @@
    </div>
    <div class="grid_3">
      <div class="menu-dashboard-juicioprofesional">
-      K
+      <?php echo $porcCompletadoFERR; ?> %
       </div>
    </div>
    <div class="grid_3">
@@ -198,7 +198,7 @@
    
    <div class="grid_3">
      <div class="menu-dashboard-juicioprofesional">
-      H
+      <?php echo $porcCompletadoFCMF; ?> %
       </div>
    </div>
    <div class="grid_3">

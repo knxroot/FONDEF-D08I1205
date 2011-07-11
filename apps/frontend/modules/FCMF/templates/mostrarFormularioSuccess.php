@@ -1276,11 +1276,18 @@
 <div class="grid-4-12">
   <button class="form-button" type="submit" name="Guardar"><span class="ui-icon ui-icon-disk" style="float:left;"></span>Guardar</button>
 </div>
-<div class="grid-4-12">
-  <?php if($porcCompletado>=100):?><!-- Solo si el procentaje de avance es 100%muestro el botón para finalizar el formulario -->
-  <button class="form-button-off" type="button" name="Finalizar" onclick = "finalizarFCRIMINOMETRICA();"><span class="ui-icon ui-icon-circle-check" style="float:left;"></span>Finalizar Formulario</button>
-<input type="text" name="esCerrarForm" id="esCerrarForm" style="display: none" value="NOCERRAR"/>
-  <?php endif; ?>
+
+
+
+    <input type="text" id="CLOSE_FLAG" name="CLOSE_FLAG" style="display:none" value="NOCERRADO"></input>
+    <div class="grid-4-12">
+    <a class="form-button-off form-left" style="display: block;"
+      onclick="
+              if(confirm('OJO. Al cerrar el formulario ya no podrás volver a modificarlo.')){
+                  $('#CLOSE_FLAG').val('CERRADO');
+                   document.formulario_FCRIMINOMETRICA.submit();
+              }">Cerrar</a>
+    </div>
 </div><div class="clear"></div>
 
 <?php else: ?>
