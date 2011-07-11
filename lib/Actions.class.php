@@ -200,11 +200,9 @@ class Actions extends sfActions
         
         
 	/**
-	* Retorna todas las respuestas de un usuario en formato json para que sean
-        * parseadas en JS con JQuery y recrear el formulario que estaba guardado
-	* 
-	* $concensoMode =1 Si se esta guardando en modo consenso , 0 en caso contrario
-	* @return string Retorna un String que representa la cadena en formato JSON A parsear
+	* Retorna 0 o 1 dependiendo si la tabla esta cerrada para dicho user y dicho idencuestado
+        * funciona para todos los que usan el supercontrolador
+        * 
 	*/
 	public function esCerrado(sfWebRequest $request,$nombretabla)
 	{

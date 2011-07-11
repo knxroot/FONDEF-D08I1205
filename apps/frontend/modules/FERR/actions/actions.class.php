@@ -18,6 +18,7 @@ class FERRActions extends Actions
   */
   public function executeIndex(sfWebRequest $request)
   {
+     
     $this->forward('FERR','mostrarFormulario');
   }
   
@@ -49,8 +50,16 @@ class FERRActions extends Actions
         public function executeMostrarFormulario(sfWebRequest $request)
         {
               // preparaMostrarFormulario retorna un JSON que se usa para mostrar el instrumento
-
+    if($this->esCerrado($request, 'ferr2_respuestas')){
+         return $this->forward('FERR','Cerrado');;
+    }
              $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'ferr2_respuestas');
+        }
+        
+        public function executeCerrado(sfWebRequest $request)
+        {
+               $this->idEncuestado=$request->getParameter('idEncuestado');
+            
         }
 
 }
