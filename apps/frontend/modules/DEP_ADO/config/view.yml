@@ -1,3 +1,3 @@
 listarBloqueSuccess:
- javascripts:   [jquery.simpletip-1.3.1.min.js, funciones_dep_ado.js]
+ javascripts:   [jquery.simpletip-1.3.1.min.js, funciones_dep_ado.js, jquery.loadJSON.js]
  stylesheets:    [depado.css]
