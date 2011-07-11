@@ -402,3 +402,10 @@
 </div>
 
 
+<script type="text/javascript">
+                $().ready(function() {
+                     $("form").loadJSON(<?php echo $sf_data->getRaw('respuestasGuardadas');?>);
+                     $("#msgzone").hide();
+                     $("#contenido").show();
+                });
+</script>
