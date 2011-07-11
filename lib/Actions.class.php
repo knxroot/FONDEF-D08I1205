@@ -165,6 +165,38 @@ class Actions extends sfActions
 
 	} 
         
+	 /**
+	 * Retorna true en caso de que el usuario actual(el que esta usando el sistema)
+	 * sea un evaluador secundario para el encuestado con idEcuestado
+	 *
+	 * @return string Retorna un Int que representa si o no
+	 */
+	public function soyResponsableSecundario(sfWebRequest $request)
+	{
+            $this->BD_Conectar();
+            $idUser=$this->getUser()->getGuardUser()->getId();
+            $this->idEncuestado=$request->getParameter('idEncuestado');
+            $this->forward404If(!$this->idEncuestado);
+            $habraalgo="SELECT *
+             FROM `encuestado`
+             WHERE `id_encuestado` ={$this->idEncuestado}
+                 AND 
+                   `select_user_responsable_secundario1` ={$idUser}
+             LIMIT 1";
+            $result = mysql_query($habraalgo);
+            $rows=mysql_num_rows($result);
+
+            if ($rows > 0)
+            {
+                return 1;
+            }
+            else{
+                 return 0;
+            }
+
+	}
+        
+        
 	/**
 	* Retorna todas las respuestas de un usuario en formato json para que sean
         * parseadas en JS con JQuery y recrear el formulario que estaba guardado
@@ -310,7 +342,26 @@ public function getPorcentajeCompletadoCICUM($idUser,$idEncuestado){
         } 
     }
 
-    
+/**
+ * Dado un usuario y un encuestado retorna el porcentaje de completado del
+ * formulario EGED para dicho encuestado.
+ *
+ * @param integer $id_user id del usuario que esta completo la encuesta en la red
+ * @param integer $id_encuestado id del encuestado (adolecente infractor de ley)
+ */
+public function getPorcentajeCompletadoEGED($idUser,$idEncuestado){
+  $this->BD_Conectar();
+  $SQL_CONSULTA_PORCENTAJE="SELECT ROUND( count( * ) *100 / (
+                              SELECT count( * )
+                              FROM `EGED_preguntas` )) AS porcCompletado
+                            FROM `EGED_respuestas`
+                            WHERE id_user = '{$idUser}'
+                            AND id_encuestado = '{$idEncuestado}'
+                            LIMIT 0 , 30";
+  $porcCompletado = mysql_query($SQL_CONSULTA_PORCENTAJE);
+  $porcCompletado = mysql_fetch_array($porcCompletado);
+  return $porcCompletado[0];
+} 
     
 /**
  * Dado un usuario y un encuestado retorna el porcentaje de completado del

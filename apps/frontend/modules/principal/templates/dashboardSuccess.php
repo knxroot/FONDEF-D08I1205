@@ -1,3 +1,6 @@
+
+
+
 <?php slot('title') ?>
   <?php  echo sprintf('Dash Board') ?>
 <?php end_slot(); ?>
@@ -15,9 +18,11 @@
 <div class="clear"></div><br>
 
    <div class="grid_6">
+   <?php if(!($esEvaluadorSecundario)): ?>
      <div class="menu-dashboard-autoreporte ui-corner-top" style="padding: 0.3em 0.4em !important;">
       <span class="ui-icon ui-icon-note" style="float: left;"></span> <div>Autoreporte</div>
       </div>
+   <?php endif; ?>&nbsp;
    </div>
 
    <div class="prefix_1 grid_8" >
@@ -35,9 +40,11 @@
      </div>
    </div>
    <div class="grid_3">
+   <?php if(!($esEvaluadorSecundario)): ?>    
      <div class="menu-dashboard-juicioprofesional  ui-corner-top">
         <span class="ui-icon ui-icon-person" style="float: left;"></span> <div>CONSENSO</div>
       </div>
+   <?php endif; ?>&nbsp;
    </div>
 
 
@@ -45,15 +52,19 @@
   <div class="clear"></div><br>
 
    <div class="grid_3">
+   <?php if(!($esEvaluadorSecundario)): ?>
      <a href="<?php echo url_for('ENTREVISTA/index?idEncuestado='.$idEncuestado);?>">
      <div class="menu-dashboard-autoreporte-clickeable">
       ENTREVISTA
       </div></a>
+   <?php endif; ?>&nbsp;
    </div>
    <div class="grid_3">
+   <?php if(!($esEvaluadorSecundario)): ?>    
      <div class="menu-dashboard-autoreporte">
       <?php echo $porcCompletadoENTREVISTA; ?> %
       </div>
+   <?php endif; ?>&nbsp;
    </div>  
 
 
@@ -67,27 +78,33 @@
    </div>
    <div class="grid_3">
      <div class="menu-dashboard-juicioprofesional">
-      H
+      <?php echo $porcCompletadoEGED; ?> %
       </div>
    </div>
    <div class="grid_3">
+   <?php if(!($esEvaluadorSecundario)): ?>    
      <div class="menu-dashboard-juicioprofesional">
       I
       </div>
+   <?php endif; ?>&nbsp;
    </div>
 
   <div class="clear"></div><br>
 
    <div class="grid_3">
+   <?php if(!($esEvaluadorSecundario)): ?>    
      <a href="<?php echo url_for('CAIE/index?idEncuestado='.$idEncuestado);?>">
      <div class="menu-dashboard-autoreporte-clickeable">
       CICUM
       </div></a>
+   <?php endif; ?>&nbsp;
    </div>
    <div class="grid_3">
+   <?php if(!($esEvaluadorSecundario)): ?>
      <div class="menu-dashboard-autoreporte">
       <?php echo $porcCompletadoCAIE; ?> %
       </div>
+   <?php endif; ?>&nbsp;
    </div>
 
 
@@ -103,9 +120,11 @@
       </div>
    </div>
    <div class="grid_3">
+   <?php if(!($esEvaluadorSecundario)): ?> 
      <div class="menu-dashboard-juicioprofesional">
       L
       </div>
+   <?php endif; ?>&nbsp;
    </div>
 
 
@@ -114,15 +133,19 @@
   <div class="clear"></div><br>
 
    <div class="grid_3">
+     <?php if(!($esEvaluadorSecundario)): ?>
      <a href="<?php echo url_for('CACSA/index?idEncuestado='.$idEncuestado);?>">
      <div class="menu-dashboard-autoreporte-clickeable">
       CACSA
       </div></a>
+     <?php endif; ?>&nbsp;
    </div>
    <div class="grid_3">
+     <?php if(!($esEvaluadorSecundario)): ?>
      <div class="menu-dashboard-autoreporte">
-      <?php echo $porcCompletadoCACSA; ?> %
-      </div>
+     <?php echo $porcCompletadoCACSA; ?> %
+     </div>
+     <?php endif; ?>&nbsp;
    </div>
 
    <div class="prefix_1 grid_2">
@@ -139,23 +162,29 @@
       </div>
    </div>
    <div class="grid_3">
+   <?php if(!($esEvaluadorSecundario)): ?>  
      <div class="menu-dashboard-juicioprofesional">
       I
       </div>
+   <?php endif; ?>&nbsp;
    </div>
 
   <div class="clear"></div><br>
 
    <div class="grid_3">
+   <?php if(!($esEvaluadorSecundario)): ?>
      <a href="<?php echo url_for('EDA/index?idEncuestado='.$idEncuestado);?>">
      <div class="menu-dashboard-autoreporte-clickeable">
       EDA
       </div></a>
+   <?php endif; ?>&nbsp;
    </div>
    <div class="grid_3">
+   <?php if(!($esEvaluadorSecundario)): ?>
      <div class="menu-dashboard-autoreporte">
       <?php echo $porcCompletadoEDA; ?> %
       </div>
+   <?php endif; ?>&nbsp;
    </div>
 
    <div class="prefix_1 grid_2">
@@ -173,22 +202,28 @@
       </div>
    </div>
    <div class="grid_3">
+   <?php if(!($esEvaluadorSecundario)): ?>  
      <div class="menu-dashboard-juicioprofesional">
       I
       </div>
+   <?php endif; ?>&nbsp;
    </div>
 
 
    <div class="clear"></div><br>
 
    <div class="grid_3">
+   <?php if(!($esEvaluadorSecundario)): ?>
      <a href="<?php echo url_for('SQIFA/index?idEncuestado='.$idEncuestado);?>">
      <div class="menu-dashboard-autoreporte-clickeable">
       CESMA
       </div></a>
+   <?php endif; ?>&nbsp;
    </div>
+   
+   <?php if(!($esEvaluadorSecundario)): ?>
    <div class="grid_3">
-     <div class="menu-dashboard-autoreporte">
+      <div class="menu-dashboard-autoreporte">
       <?php echo $porcCompletadoCESMA; ?> %
       </div>
    </div>
@@ -258,6 +293,7 @@
       <?php echo $porcCompletadoCONCLUSIONES; ?> %
       </div>
    </div>
+   <?php endif; ?>&nbsp;
   <div class="clear"></div><br>
 
 
@@ -265,7 +301,9 @@
 <div class="prefix_4 grid_11">
      <div class="botonerainferior" style="padding: 0.3em 0.4em !important;">
        <a class="form-button form-left" style="display: block;" href="<?php echo url_for('principal/home?showtable=yes');?>"><- Ir a  la lista de encuestados</a>
-       <a class="form-button-off form-left" style="display: block;" href="">Dar de alta a encuestado -></a>
+       <?php if(!($esEvaluadorSecundario)): ?>    
+         <a class="form-button-off form-left" style="display: block;" href="">Dar de alta a encuestado -></a>
+       <?php endif; ?>&nbsp;
      </div>
 </div>
 
