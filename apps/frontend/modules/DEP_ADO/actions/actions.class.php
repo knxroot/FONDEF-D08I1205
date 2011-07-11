@@ -42,7 +42,7 @@ public function executeProximoBloque(sfWebRequest $request)
 {
   $this->BD_Conectar();
   $idUser=$this->getUser()->getGuardUser()->getId();
-
+$this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'eda_respuestas');
   $this->idEncuestado=$request->getParameter('idEncuestado');
   /*si no llega el parametro idEncuestado entonces tirar un error 404*/
   $this->forward404If(!$this->idEncuestado);
@@ -94,7 +94,8 @@ public function executeProximoBloque(sfWebRequest $request)
   * @param sfRequest $request A request object
   */
 public function executeListarBloque(sfWebRequest $request)
-{
+{      
+
       $this->BD_Conectar();
       $idUser=$this->getUser()->getGuardUser()->getId();
       $this->idEncuestado=$request->getParameter('idEncuestado');
@@ -153,18 +154,7 @@ public function executeListarBloque(sfWebRequest $request)
 
 
       //echo $sql_consulta_preguntas_bloque_DEP_ADO;
-      $result = mysql_query($sql_consulta_preguntas_bloque_DEP_ADO);
-      if (!$result) {
-          echo "error al realizar la consulta a la base de datos";
-          exit;
-      }
-      if (mysql_num_rows($result) == 0) {
-          $this->es_ultimo_bloque=true;
-      }else{
-      /*pasa el resultado (de tipo mysql result) a un arreglo comun para iterarlo en la vista*/
-      while(($resultArray[] = mysql_fetch_assoc($result)) || array_pop($resultArray));
-        $this->Preguntas_DEP_ADO=$resultArray;
-      }
+      
       $this->porcCompletado=$this->getPorcentajeCompletadoDEP_ADO($idUser,$this->idEncuestado);
 
       if($this->porcCompletado >0){

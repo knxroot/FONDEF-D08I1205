@@ -72,19 +72,20 @@ class Actions extends sfActions
                         $sqlGuardar="";
 			foreach ($arrayRespuestas as $idelement => $value) {
                           if (!in_array($idelement, $elementosAIgnorar)) {
-				$sqlGuardar=$sqlGuardar."UPDATE {$nombretabla} SET `respuesta` = '".mysql_real_escape_string($value)."' WHERE `{$nombretabla}`.`id_respuesta` = '".mysql_real_escape_string($idelement)."' AND `{$nombretabla}`.`id_user` =".(int)mysql_real_escape_string($idUser)." AND `{$nombretabla}`.`id_encuestado` =".(int)mysql_real_escape_string($this->idEncuestado)." AND `{$nombretabla}`.`concensoMode` =".(int)mysql_real_escape_string($this->concensoMode)." LIMIT 1;";
-                                 
+				$sqlGuardar="UPDATE {$nombretabla} SET `respuesta` = '".mysql_real_escape_string($value)."' WHERE `{$nombretabla}`.`id_respuesta` = '".mysql_real_escape_string($idelement)."' AND `{$nombretabla}`.`id_user` =".(int)mysql_real_escape_string($idUser)." AND `{$nombretabla}`.`id_encuestado` =".(int)mysql_real_escape_string($this->idEncuestado)." AND `{$nombretabla}`.`concensoMode` =".(int)mysql_real_escape_string($this->concensoMode)." LIMIT 1;";
+                                
                           }
+                          mysql_query($sqlGuardar);   
                         }
-                        mysql_query($sqlGuardar); 
-                        echo $sqlGuardar; 
+                       
+                     
 		}
 		else
 		{
                     $sqlGuardar="";
 			foreach ($arrayRespuestas as $idelement => $value) {
                           if (!in_array($idelement, $elementosAIgnorar)) {
-			   $sqlGuardar=$sqlGuardar."INSERT INTO {$nombretabla} (id_respuesta ,respuesta,id_user,id_encuestado,concensoMode) VALUES (
+			   $sqlGuardar="INSERT INTO {$nombretabla} (id_respuesta ,respuesta,id_user,id_encuestado,concensoMode) VALUES (
 				'".mysql_real_escape_string($idelement)."', 
 				'".mysql_real_escape_string($value)."', 
 				'".mysql_real_escape_string($idUser)."', 
@@ -93,9 +94,10 @@ class Actions extends sfActions
 				
 				
                           }
+                           mysql_query($sqlGuardar);
                         }
-                        mysql_query($sqlGuardar);
-                        echo $sqlGuardar;
+                       
+                    
 		}
 		
 		/*retorna true si todo OK*/

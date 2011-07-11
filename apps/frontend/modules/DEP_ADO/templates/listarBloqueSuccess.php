@@ -1,10 +1,10 @@
 <?php slot('title') ?>
   <?php  echo "Formulario DEP-ADO ({$porcCompletado} % completado)";?>
 <?php end_slot(); ?>
-
+<?php $url_save_post=url_for('DEP_ADO/GuardarInstrumento?idEncuestado='.$idEncuestado);?>
 <?php $url_next_post=url_for('DEP_ADO/proximoBloque?idEncuestado='.$idEncuestado);?>
 
-<form id="formulario_DEP_ADO" name="formulario_DEP_ADO" class="form" method="post" action="<?php echo $url_next_post; ?>">
+<form id="formulario_DEP_ADO" name="formulario_DEP_ADO" class="form" method="post" action="<?php echo $url_save_post; ?>">
   <?php if($porcCompletado!=100): ?>
   <div class="grid-12-12 ui-widget-header ui-corner-all" style="position: relative;">Formulario DEP_ADO - <?php echo $porcCompletado; ?> % completado
   </div>
@@ -391,8 +391,25 @@
 <?php endif; ?>
 
 <!-- Comienzo Botón envio de formulario, en caso de ser último bloque advierte que se cerrará el formulario si se continua -->
-<a class="form-button-off form-left" style="display: block;" href="<?php echo url_for('principal/dashboard?idEncuestado='.$idEncuestado);?>" onclick="return confirm('Al salir del formulario perderás la información que hayas respondido en la pantalla actual. ¿Estas seguro que deseas salir del formulario actual?');"><- Volver al menú</a>
-<input type="submit" value="Finalizar" title="enviar" class="form-button form-right">
+<a class="form-button-off form-left" 
+   style="display: block;" 
+   href="<?php echo url_for('principal/dashboard?idEncuestado='.$idEncuestado);?>" 
+   onclick="return confirm('Al salir del formulario perderás la información que hayas respondido en la pantalla actual. ¿Estas seguro que deseas salir del formulario actual?');">
+   <- Volver al menú
+</a>
+ <button class="form-button" type="submit" name="Guardar"><span class="ui-icon ui-icon-disk" style="float:left;"></span>Guardar</button>
+ 
+
+ <input type="text" id="CLOSE_FLAG" name="CLOSE_FLAG" style="display:none" value="NOCERRADO"></input>
+<div class="grid_2 prefix_9">
+   <a class="form-button-off form-left" style="display: block;"
+      onclick="
+              if(confirm('OJO. Al cerrar el formulario ya no podrás volver a modificarlo.')){
+                  $('#CLOSE_FLAG').val('CERRADO');
+                   document.formulario_DEP_ADO.submit();
+              }">Cerrar forever</a>
+</div>
+<div class="clear"></div>
 <!-- Fin Botón envio de formulario, en caso de ser último bloque advierte que se cerrará el formulario si se continua -->
 </form>
 <br>
