@@ -81,6 +81,12 @@ public function executeProximoBloque(sfWebRequest $request)
 
 }
 
+ public function executeGuardarInstrumento(sfWebRequest $request)
+	{
+		$this->GuardarInstrumento($request, 'depado_respuestas'); //guarda todas las variables del usuario actual cara de palo en la BD
+	}
+        
+        
 
  /**
   * Lista las preguntas del formulario
@@ -95,6 +101,8 @@ public function executeListarBloque(sfWebRequest $request)
 
       /*si no llega el parametro idEncuestado entonces tirar un error 404*/
       $this->forward404If(!$this->idEncuestado);
+      
+       $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'depado_respuestas');
 
       //$idEncuestado=12;
       //$idUser=124;
