@@ -37,6 +37,54 @@ class Actions extends sfActions
     {
         return sfYaml::load($path);
     }
+    
+    
+    
+    public function GuardarTiempo(sfWebRequest $request,$nombremodulo)
+	{
+        $this->BD_Conectar();
+		
+		$idUser=$this->getUser()->getGuardUser()->getId();
+                // $request->$request->getPostParameters();
+		$this->idEncuestado=$request->getParameter('idEncuestado');
+		$this->forward404If(!$this->idEncuestado);
+                $habraalgo="SELECT * FROM `tiempo` WHERE `id_user`={$idUser} AND `id_encuestado`={$this->idEncuestado} AND `nombremodulo`={$nombremodulo} LIMIT 1";
+		$result = mysql_query($habraalgo);
+		$rows=mysql_num_rows($result);
+		$sqlGuardar=null;
+                
+        if ($rows > 0)
+		{
+                       			
+                        
+			$sqlGuardar="UPDATE `tiempo` SET `tiempo` = '".mysql_real_escape_string($value)."' WHERE `{$nombretabla}`.`id_respuesta` = '".mysql_real_escape_string($idelement)."' AND `{$nombretabla}`.`id_user` =".(int)mysql_real_escape_string($idUser)." AND `{$nombretabla}`.`id_encuestado` =".(int)mysql_real_escape_string($this->idEncuestado)." AND `{$nombretabla}`.`concensoMode` =".(int)mysql_real_escape_string($this->concensoMode)." LIMIT 1;";
+                                
+                         
+                          mysql_query($sqlGuardar);   
+                       
+                       
+                     
+		}
+		else
+		{
+                    $sqlGuardar="";
+			foreach ($arrayRespuestas as $idelement => $value) {
+                          if (!in_array($idelement, $elementosAIgnorar)) {
+			   $sqlGuardar="INSERT INTO {$nombretabla} (id_respuesta ,respuesta,id_user,id_encuestado,concensoMode) VALUES (
+				'".mysql_real_escape_string($idelement)."', 
+				'".mysql_real_escape_string($value)."', 
+				'".mysql_real_escape_string($idUser)."', 
+				'".mysql_real_escape_string($this->idEncuestado)."', 
+				'".mysql_real_escape_string($this->concensoMode)."' );"; 
+				
+				
+                          }
+                           mysql_query($sqlGuardar);
+                        }
+                       
+                    
+		}
+    }
 
 
 	//  PARTE DE sfSuperControlador
@@ -51,6 +99,9 @@ class Actions extends sfActions
 	* $concensoMode =1 Si se esta guardando en modo consenso , 0 en caso contrario
 	* @return boolean $saveState 'retorna un bool que dice si se guardo o no esta cosa'
 	*/
+    
+    
+    
 	public function GuardarInstrumento(sfWebRequest $request,$nombretabla,$concensoMode=0)
 	{
 		$this->BD_Conectar();
