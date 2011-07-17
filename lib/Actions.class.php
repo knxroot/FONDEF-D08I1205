@@ -56,7 +56,8 @@ $tiempo=mysql_fetch_array($tiempo);
 		$this->idEncuestado=$request->getParameter('idEncuestado');
 		$this->forward404If(!$this->idEncuestado);
                 $habraalgo="SELECT * FROM `tiempo` WHERE `id_user`={$idUser} AND `id_encuestado`={$this->idEncuestado} AND `nombre_modulo`='{$nombremodulo}' LIMIT 1";
-		$result = mysql_query($habraalgo);
+		
+                $result = mysql_query($habraalgo);
 		$rows=mysql_num_rows($result);
 		//$sqlGuardar=null;
                 $tstart=$request->getParameter('tstart');
@@ -65,6 +66,7 @@ $tiempo=mysql_fetch_array($tiempo);
                 
                 if ($rows > 0)
 		{
+<<<<<<< HEAD
                 $tanteriorconsulta="SELECT tiempo FROM `tiempo` WHERE `id_user`={$idUser} AND `id_encuestado`={$this->idEncuestado} AND `nombre_modulo`='{$nombremodulo}' LIMIT 1";
                 $tanterior = mysql_query($tanteriorconsulta);    			
                   $tanterior=mysql_fetch_array($tanterior);
@@ -84,9 +86,27 @@ $tiempo=mysql_fetch_array($tiempo);
               //  echo $sqlGuardar2;
                        
                      
+=======
+                  if(trim($tstart)!=''){
+                    $tanteriorconsulta="SELECT tiempo FROM `tiempo` WHERE `id_user`={$idUser} AND `id_encuestado`={$this->idEncuestado} AND `nombre_modulo`='{$nombremodulo}' LIMIT 1";
+
+                    $tanterior = mysql_query($tanteriorconsulta);    			
+                    $tanterior=mysql_fetch_array($tanterior);            
+
+                    $sqlGuardar2="UPDATE `tiempo` SET `tiempo` =  ADDTIME('{$tanterior[0]}',TIMEDIFF(TIME(NOW()),'{$tstart}')) 
+                                WHERE 
+                                     `tiempo`.`nombre_modulo` = '{$nombremodulo}' AND 
+                                     `tiempo`.`id_user` = '{$idUser}' AND
+                                     `tiempo`.`id_encuestado` = '{$this->idEncuestado}'  LIMIT 1;";
+
+                     mysql_query($sqlGuardar2);   
+                    // echo       $sqlGuardar2;
+                  }  
+>>>>>>> 271ea56d1f3d1486338caf5ef162bac285ba16f0
 		}
 		else
-		{                    			
+		{   
+                  if(trim($tstart)!=''){                    
 			   $sqlGuardar="INSERT INTO `tiempo` (tiempo ,nombre_modulo,id_user,id_encuestado) VALUES (
 				TIMEDIFF(TIME(NOW()),'{$tstart}'), 
 				'{$nombremodulo}', 
@@ -97,8 +117,13 @@ $tiempo=mysql_fetch_array($tiempo);
                           
                            mysql_query($sqlGuardar);
                        
+<<<<<<< HEAD
                      
                        
+=======
+                       echo $sqlGuardar;
+                   }  
+>>>>>>> 271ea56d1f3d1486338caf5ef162bac285ba16f0
                     
 		}
     }
