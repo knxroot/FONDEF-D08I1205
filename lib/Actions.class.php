@@ -81,7 +81,7 @@ $tiempo=mysql_fetch_array($tiempo);
                       
                          
                  mysql_query($sqlGuardar2);   
-                 echo       $sqlGuardar2;
+              //  echo $sqlGuardar2;
                        
                      
 		}
@@ -97,7 +97,8 @@ $tiempo=mysql_fetch_array($tiempo);
                           
                            mysql_query($sqlGuardar);
                        
-                       echo $sqlGuardar;
+                     
+                       
                     
 		}
     }

@@ -26,6 +26,7 @@ class FCMFActions extends Actions
 	public function executeGuardarInstrumento(sfWebRequest $request)
 	{
 		$this->GuardarInstrumento($request, 'fcmf_respuestas'); //guarda todas las variables del usuario actual cara de palo en la BD
+                  $this->GuardarTiempo($request,'FCMF');
 	}
          /**
           * Lista las preguntas del formulario
@@ -39,6 +40,9 @@ class FCMFActions extends Actions
          return $this->forward('FCMF','Cerrado');;
     }
              $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'fcmf_respuestas');
+        
+                $this->tstart=$this->getTimeStart();  
+             
         }
         
         public function executeCerrado(sfWebRequest $request)

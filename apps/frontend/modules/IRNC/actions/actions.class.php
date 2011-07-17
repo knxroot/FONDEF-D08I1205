@@ -32,7 +32,8 @@ public function executeGuardarInstrumento(sfWebRequest $request)
   $idUser=$this->getUser()->getGuardUser()->getId();
 
   $this->idEncuestado=$request->getParameter('idEncuestado');
-
+  
+       $this->GuardarTiempo($request,'IRNC');//guarda el tiempo
 
   /*si no llega el parametro idEncuestado entonces tirar un error 404*/
   $this->forward404If(!$this->idEncuestado);
@@ -175,6 +176,7 @@ public function executeListarBloque(sfWebRequest $request)
       $this->BD_Conectar();
       $idUser=$this->getUser()->getGuardUser()->getId();
       $this->idEncuestado=$request->getParameter('idEncuestado');
+        $this->tstart=$this->getTimeStart(); //inicializa el contador de tiempo
 
       /*si no llega el parametro idEncuestado entonces tirar un error 404*/
       $this->forward404If(!$this->idEncuestado);

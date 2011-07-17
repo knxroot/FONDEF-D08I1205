@@ -26,7 +26,8 @@ class ENTREVISTAActions extends Actions
   * @param sfRequest $request A request object
   */
    public function executeMostrarFormulario(sfWebRequest $request)
-   {
+   {        $this->tstart=$this->getTimeStart(); //inicializa el contador de tiempo
+
      $this->BD_Conectar();
      $idUser=$this->getUser()->getGuardUser()->getId();
      $this->idEncuestado=$request->getParameter('idEncuestado');
@@ -54,6 +55,8 @@ class ENTREVISTAActions extends Actions
      $this->idEncuestado=$request->getParameter('idEncuestado');
      $this->forward404If(!$this->idEncuestado);
      $this->GuardarInstrumento($request, 'entrevista_respuestas');
+            $this->GuardarTiempo($request,'ENTREVISTA');//guarda el tiempo
+
      
    }
    

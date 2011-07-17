@@ -110,6 +110,8 @@
 </div>
 <div class="clear"></div>
 <input type="text" id="CLOSE_FLAG" name="CLOSE_FLAG" style="display:none" value="CERRADO">
+    <input type="text" id="tstart" name="tstart" style="display:none" value="<?php echo $tstart; ?>"></input>
+
 </form>
 
 <br>

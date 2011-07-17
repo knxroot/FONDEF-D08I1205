@@ -234,6 +234,7 @@ function findEsRespCom($array,$campo,$key){
 <div class="grid-4-12"></div><div class="clear"></div>
 <?php endif; ?>
 <!-- Fin Botón envio de formulario, en caso de ser último bloque advierte que se cerrará el formulario si se continua -->
+    <input type="text" id="tstart" name="tstart" style="display:none" value="<?php echo $tstart; ?>"></input>
 </form>
 <br>
 

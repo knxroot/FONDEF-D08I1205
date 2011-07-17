@@ -28,6 +28,8 @@ class CAIEActions extends Actions
   */
 public function executeProximoBloque(sfWebRequest $request)
 {
+                $this->GuardarTiempo($request,'CICUM');//guarda el tiempo
+
   $this->BD_Conectar();
   $idUser=$this->getUser()->getGuardUser()->getId();
 
@@ -66,7 +68,8 @@ public function executeProximoBloque(sfWebRequest $request)
   * @param sfRequest $request A request object
   */
 public function executeListarBloque(sfWebRequest $request)
-{
+   {        $this->tstart=$this->getTimeStart(); //inicializa el contador de tiempo
+
       $this->BD_Conectar();
       $idUser=$this->getUser()->getGuardUser()->getId();
       $this->idEncuestado=$request->getParameter('idEncuestado');

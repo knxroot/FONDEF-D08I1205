@@ -41,6 +41,7 @@ class FERRActions extends Actions
 	public function executeGuardarInstrumento(sfWebRequest $request)
 	{
 		$this->GuardarInstrumento($request, 'ferr2_respuestas'); //guarda todas las variables del usuario actual cara de palo en la BD
+                 $this->GuardarTiempo($request,'FERR');
 	}
          /**
           * Lista las preguntas del formulario
@@ -54,6 +55,9 @@ class FERRActions extends Actions
          return $this->forward('FERR','Cerrado');;
     }
              $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'ferr2_respuestas');
+        
+             
+                $this->tstart=$this->getTimeStart();  
         }
         
         public function executeCerrado(sfWebRequest $request)
