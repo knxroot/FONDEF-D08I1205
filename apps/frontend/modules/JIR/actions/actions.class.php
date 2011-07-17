@@ -52,6 +52,7 @@ public function executeProximoBloque(sfWebRequest $request)
      mysql_query($sql_insert_respuesta);
      }
   }
+  $this->GuardarTiempo($request,'JIR');
   $this->forward('JIR', 'listarBloque');
 }
 
@@ -109,5 +110,6 @@ public function executeListarBloque(sfWebRequest $request)
       }else{
         $this->is_show_instruccions='true';
       }
+      $this->tstart=$this->getTimeStart();
 }
 }

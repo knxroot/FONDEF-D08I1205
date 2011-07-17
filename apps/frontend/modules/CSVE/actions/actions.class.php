@@ -63,6 +63,7 @@ public function executeProximoBloqueCSVE(sfWebRequest $request)
        mysql_query($sql_insert_respuesta);
      }
   }
+    $this->GuardarTiempo($request,'CSVE');
     $this->forward('CSVE', 'showCSVE');
 }
 
@@ -149,6 +150,7 @@ public function executeProximoBloqueCSVE(sfWebRequest $request)
           }else{
             $this->is_show_instruccions='true';
           }
+      $this->tstart=$this->getTimeStart();
     }
     
 

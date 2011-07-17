@@ -35,6 +35,7 @@ class CONCLUSIONESActions extends Actions
      if($this->esCerrado($request, 'conclusiones_respuestas')){
          return  sfView::ERROR;
      }
+     $this->tstart=$this->getTimeStart();  
      return sfView::SUCCESS;
    }   
  /**
@@ -49,6 +50,6 @@ class CONCLUSIONESActions extends Actions
      $this->idEncuestado=$request->getParameter('idEncuestado');
      $this->forward404If(!$this->idEncuestado);
      $this->GuardarInstrumento($request, 'conclusiones_respuestas');
-     
+     $this->GuardarTiempo($request,'CONCLUSIONES');
    }   
 }
