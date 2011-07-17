@@ -84,6 +84,7 @@ $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'eda_respue
  public function executeGuardarInstrumento(sfWebRequest $request)
 	{
 		$this->GuardarInstrumento($request, 'depado_respuestas'); //guarda todas las variables del usuario actual cara de palo en la BD
+                $this->GuardarTiempo($request,'DEPADO');
 	}
         
         
@@ -162,6 +163,7 @@ public function executeListarBloque(sfWebRequest $request)
       }else{
         $this->is_show_instruccions='true';
       }
+      $this->tstart=$this->getTimeStart();
 }
 
 /**

@@ -101,6 +101,7 @@
   <a class="form-button form-right" href="<?php   echo url_for('principal/dashboard?idEncuestado='.$idEncuestado);?>"><- Volver al menú</a>
 <?php endif; ?>
 <!-- Fin Botón envio de formulario, en caso de ser último bloque advierte que se cerrará el formulario si se continua -->
+ <input type="text" id="tstart" name="tstart" style="display:none" value="<?php echo $tstart; ?>"></input>
 </form>
 <br>
 

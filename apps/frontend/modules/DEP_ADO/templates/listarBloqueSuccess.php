@@ -411,6 +411,7 @@
 </div>
 <div class="clear"></div>
 <!-- Fin Botón envio de formulario, en caso de ser último bloque advierte que se cerrará el formulario si se continua -->
+ <input type="text" id="tstart" name="tstart" style="display:none" value="<?php echo $tstart; ?>"></input>
 </form>
 <br>
 

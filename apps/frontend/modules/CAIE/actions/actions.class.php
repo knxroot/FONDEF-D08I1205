@@ -28,7 +28,7 @@ class CAIEActions extends Actions
   */
 public function executeProximoBloque(sfWebRequest $request)
 {
-                $this->GuardarTiempo($request,'CICUM');//guarda el tiempo
+               
 
   $this->BD_Conectar();
   $idUser=$this->getUser()->getGuardUser()->getId();
@@ -57,7 +57,9 @@ public function executeProximoBloque(sfWebRequest $request)
 
      mysql_query($sql_insert_respuesta);
      }
+      
   }
+  $this->GuardarTiempo($request,'CICUM');//guarda el tiempo
   $this->forward('CAIE', 'listarBloque');
 }
 
@@ -116,6 +118,7 @@ public function executeListarBloque(sfWebRequest $request)
       }else{
         $this->is_show_instruccions='true';
       }
+       $this->tstart=$this->getTimeStart(); //inicializa el contador de tiempo
 }
 
 /**

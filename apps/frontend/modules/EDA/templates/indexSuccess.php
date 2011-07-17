@@ -76,6 +76,7 @@
               }">Cerrar forever</a>
 </div>
 <div class="clear"></div>
+ <input type="text" id="tstart" name="tstart" style="display:none" value="<?php echo $tstart; ?>"></input>
 </form>
 
 <!-- Javascript de inicio de form -->
