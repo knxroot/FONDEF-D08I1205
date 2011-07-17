@@ -80,7 +80,9 @@ public function executeProximoBloquePart1CACSA(sfWebRequest $request)
        mysql_query($sql_insert_respuesta);
 
      }
+ 
   }
+      $this->GuardarTiempo($request,'CACSA1');
   $this->porcCompletado=$this->getPorcentajeCompletadoPart1CACSA($idUser, $this->idEncuestado);
     $this->forward('CACSA', 'showPart1CACSA');
 }
@@ -125,7 +127,9 @@ public function executeProximoBloquePart2CACSA(sfWebRequest $request)
       $SQL_INSERTAR_RESPUESTAS=$SQL_INSERTAR_RESPUESTAS.$sql_insert_respuesta;
        mysql_query($sql_insert_respuesta);
      }
+     
   }
+   $this->GuardarTiempo($request,'CACSA2');
   $this->porcCompletado=$this->getPorcentajeCompletadoPart2CACSA($idUser, $this->idEncuestado);
     $this->forward('CACSA', 'showPart2CACSA');
 }
@@ -192,6 +196,7 @@ public function executeShowPart1CACSA(sfWebRequest $request)
       }else{
         $this->is_show_instruccions='true';
       }
+       $this->tstart=$this->getTimeStart();
 }
 
 
@@ -273,6 +278,7 @@ public function executeShowPart2CACSA(sfWebRequest $request)
       }else{
         $this->is_show_instruccions='true';
       }
+       $this->tstart=$this->getTimeStart();
 }
 
 

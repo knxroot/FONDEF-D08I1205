@@ -7,11 +7,14 @@ class EDAActions extends Actions
      * @param sfWebRequest $request
      */
     public function executeIndex(sfWebRequest $request)
-    {
+    {  
+ 
         // Cargar configuracion de instrumento
         $this->config = $this->loadItems(__DIR__.'/../config/items.yml');
 
         $this->iniciado = true;
+        
+               $this->tstart=$this->getTimeStart();
       $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'eda_respuestas');
        
       if($this->esCerrado($request, 'eda_respuestas')){
@@ -23,7 +26,7 @@ class EDAActions extends Actions
      public function executeMostrarFormulario(sfWebRequest $request)
         {
               // preparaMostrarFormulario retorna un JSON que se usa para mostrar el instrumento
-
+       $this->tstart=$this->getTimeStart();
              $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'eda_respuestas');
         }
         
@@ -41,6 +44,7 @@ class EDAActions extends Actions
    public function executeGuardarInstrumento(sfWebRequest $request)
 	{
 		$this->GuardarInstrumento($request, 'eda_respuestas'); //guarda todas las variables del usuario actual cara de palo en la BD
+                  $this->GuardarTiempo($request,'EDA');
 	}
     
     /**

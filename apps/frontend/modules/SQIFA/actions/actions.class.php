@@ -68,7 +68,9 @@ public function executeProximoBloque(sfWebRequest $request)
       $SQL_INSERTAR_RESPUESTAS=$SQL_INSERTAR_RESPUESTAS.$sql_insert_respuesta;
         mysql_query($sql_insert_respuesta);
      }
+        
   }
+  $this->GuardarTiempo($request,'CESMA');
 //echo $SQL_INSERTAR_RESPUESTAS;
  // mysql_query("");
  /* echo "uAAA".$estado_grabacionformulario."BBBu";
@@ -229,6 +231,8 @@ public function executeListarBloque(sfWebRequest $request)
         $this->is_show_instruccions='true';
       }
       $this->bloque_valor=$primera;
+             $this->tstart=$this->getTimeStart();
+
 }
 
 
