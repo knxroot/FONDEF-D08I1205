@@ -38,7 +38,14 @@ class Actions extends sfActions
         return sfYaml::load($path);
     }
     
-    
+     public function getTimeStart()
+	{
+        $tiemposerver="SELECT TIME(NOW());";
+		$tiempo = mysql_query($tiemposerver);
+                
+$tiempo=mysql_fetch_array($tiempo);
+         return $tiempo[0];
+        }
     
     public function GuardarTiempo(sfWebRequest $request,$nombremodulo)
 	{
@@ -48,40 +55,49 @@ class Actions extends sfActions
                 // $request->$request->getPostParameters();
 		$this->idEncuestado=$request->getParameter('idEncuestado');
 		$this->forward404If(!$this->idEncuestado);
-                $habraalgo="SELECT * FROM `tiempo` WHERE `id_user`={$idUser} AND `id_encuestado`={$this->idEncuestado} AND `nombremodulo`={$nombremodulo} LIMIT 1";
+                $habraalgo="SELECT * FROM `tiempo` WHERE `id_user`={$idUser} AND `id_encuestado`={$this->idEncuestado} AND `nombre_modulo`='{$nombremodulo}' LIMIT 1";
 		$result = mysql_query($habraalgo);
 		$rows=mysql_num_rows($result);
-		$sqlGuardar=null;
+		//$sqlGuardar=null;
+                $tstart=$request->getParameter('tstart');
+          
+      
                 
-        if ($rows > 0)
+                if ($rows > 0)
 		{
-                       			
-                        
-			$sqlGuardar="UPDATE `tiempo` SET `tiempo` = '".mysql_real_escape_string($value)."' WHERE `{$nombretabla}`.`id_respuesta` = '".mysql_real_escape_string($idelement)."' AND `{$nombretabla}`.`id_user` =".(int)mysql_real_escape_string($idUser)." AND `{$nombretabla}`.`id_encuestado` =".(int)mysql_real_escape_string($this->idEncuestado)." AND `{$nombretabla}`.`concensoMode` =".(int)mysql_real_escape_string($this->concensoMode)." LIMIT 1;";
-                                
+                $tanteriorconsulta="SELECT tiempo FROM `tiempo` WHERE `id_user`={$idUser} AND `id_encuestado`={$this->idEncuestado} AND `nombre_modulo`='{$nombremodulo}' LIMIT 1";
+                $tanterior = mysql_query($tanteriorconsulta);    			
+                  $tanterior=mysql_fetch_array($tanterior);
+            
+                  
+     
+		             
+                              
+                $sqlGuardar2="UPDATE `tiempo` SET `tiempo` =  '{$tanterior[0]}' + TIMEDIFF(TIME(NOW()),'{$tstart}') 
+                            WHERE 
+                                 `tiempo`.`nombre_modulo` = '{$nombremodulo}' AND 
+                                 `tiempo`.`id_user` = '{$idUser}' AND
+                                 `tiempo`.`id_encuestado` = '{$this->idEncuestado}'  LIMIT 1;";
+                      
                          
-                          mysql_query($sqlGuardar);   
-                       
+                 mysql_query($sqlGuardar2);   
+                 echo       $sqlGuardar2;
                        
                      
 		}
 		else
-		{
-                    $sqlGuardar="";
-			foreach ($arrayRespuestas as $idelement => $value) {
-                          if (!in_array($idelement, $elementosAIgnorar)) {
-			   $sqlGuardar="INSERT INTO {$nombretabla} (id_respuesta ,respuesta,id_user,id_encuestado,concensoMode) VALUES (
-				'".mysql_real_escape_string($idelement)."', 
-				'".mysql_real_escape_string($value)."', 
-				'".mysql_real_escape_string($idUser)."', 
-				'".mysql_real_escape_string($this->idEncuestado)."', 
-				'".mysql_real_escape_string($this->concensoMode)."' );"; 
+		{                    			
+			   $sqlGuardar="INSERT INTO `tiempo` (tiempo ,nombre_modulo,id_user,id_encuestado) VALUES (
+				TIMEDIFF(TIME(NOW()),'{$tstart}'), 
+				'{$nombremodulo}', 
+				'{$idUser}', 
+				'{$this->idEncuestado}' );"; 
 				
 				
-                          }
+                          
                            mysql_query($sqlGuardar);
-                        }
                        
+                       echo $sqlGuardar;
                     
 		}
     }

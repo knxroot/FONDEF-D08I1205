@@ -68,6 +68,10 @@ public function executeProximoBloque(sfWebRequest $request)
      }
   }
 
+  
+  
+  $this->GuardarTiempo($request,'EGED');
+  
     $this->forward('EGED', 'listarBloque');
 
 }
@@ -120,6 +124,11 @@ public function executeListarBloque(sfWebRequest $request)
       }else{
         $this->is_show_instruccions='true';
       }
+
+    $this->tstart=$this->getTimeStart();  
+     
+      
+      
 }
 
 
