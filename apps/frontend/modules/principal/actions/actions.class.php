@@ -44,10 +44,10 @@ class principalActions extends Actions
 
        /* porcentajes de instrumentos de juicio profesional */
         $this->porcCompletadoEGED  = $this->getPorcentajeCompletadoEGED($idUser,$this->idEncuestado);
-        $esCerradoFerr=$this->esCerrado($request, 'ferr2_respuestas');
+        $esCerradoFerr=$this->esCerrado2($request, 'ferr2_respuestas',0);
         $this->porcCompletadoFERR = $esCerradoFerr*100;
         $this->porcCompletadoIRNC = $this->getPorcentajeCompletadoIRNC($idUser,$this->idEncuestado);
-        $esCerradoFcmf=$this->esCerrado($request, 'fcmf_respuestas');
+        $esCerradoFcmf=$this->esCerrado2($request, 'fcmf_respuestas',0);
         $this->porcCompletadoFCMF = $esCerradoFcmf*100;
        // $this->porcCompletadoFCMF = $this->getPorcentajeCompletadoFCMF($idUser,$this->idEncuestado);
 
@@ -82,11 +82,30 @@ $SQL_CONSULTA_NOMBRE="SELECT `input_primer_nombre` , `input_otros_nombres` , `in
   $r = mysql_fetch_array(mysql_query($SQL_CONSULTA_NOMBRE));
   $this->nombreEncuestado=$r[0]." ".$r[1]." ".$r[2]." ".$r[3];
 
-    if($this->BD_Conectar()) {
+    $this->mostrarColumnaConsenso1=false;
+    $this->mostrarColumnaConsenso2=false;
+    $this->mostrarColumnaConsenso3=false;
+    $this->mostrarColumnaConsenso4=false;
+    $this->mostrarColumnaConsenso5=false;
+    
+
+    $cierresfcmf=$this->contarTotalCierresInstrumento($request, 'fcmf_respuestas');
+    if($cierresfcmf>1){
+      $this->mostrarColumnaConsenso1=true;
+      $this->mostrarColumnaConsenso5=true;
+
+      $esCerradoFcmf=$this->esCerrado2($request, 'fcmf_respuestas',1);
+      $this->porcCompletadoFCMF2 = $esCerradoFcmf*100;
+    }
+    
+    //$this->mostrarColumnaConsenso1=false;
+
+    
+    //if($this->BD_Conectar()) {
        return sfView::SUCCESS;
-    }else{
+  /*  }else{
        return sfView::ERROR;
-    }  
+    }*/  
   }
 
 

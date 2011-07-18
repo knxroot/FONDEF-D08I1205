@@ -1,6 +1,3 @@
-
-
-
 <?php slot('title') ?>
   <?php  echo sprintf('Dash Board') ?>
 <?php end_slot(); ?>
@@ -22,7 +19,7 @@
      <div class="menu-dashboard-autoreporte ui-corner-top" style="padding: 0.3em 0.4em !important;">
       <span class="ui-icon ui-icon-note" style="float: left;"></span> <div>Autoreporte</div>
       </div>
-   <?php endif; ?>&nbsp;
+   <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
 
    <div class="prefix_1 grid_8" >
@@ -40,11 +37,11 @@
      </div>
    </div>
    <div class="grid_3">
-   <?php if(!($esEvaluadorSecundario)): ?>    
+   <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso1): ?>    
      <div class="menu-dashboard-juicioprofesional  ui-corner-top">
         <span class="ui-icon ui-icon-person" style="float: left;"></span> <div>CONSENSO</div>
       </div>
-   <?php endif; ?>&nbsp;
+   <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
 
 
@@ -57,14 +54,14 @@
      <div class="menu-dashboard-autoreporte-clickeable">
       ENTREVISTA
       </div></a>
-   <?php endif; ?>&nbsp;
+   <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
-   <div class="grid_3">
+   <div class="grid_3 ">
    <?php if(!($esEvaluadorSecundario)): ?>    
      <div class="menu-dashboard-autoreporte">
       <?php echo $porcCompletadoENTREVISTA; ?> %
       </div>
-   <?php endif; ?>&nbsp;
+   <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>  
 
 
@@ -82,11 +79,11 @@
       </div>
    </div>
    <div class="grid_3">
-   <?php if(!($esEvaluadorSecundario)): ?>    
+   <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso2): ?>    
      <div class="menu-dashboard-juicioprofesional">
       I
       </div>
-   <?php endif; ?>&nbsp;
+   <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
 
   <div class="clear"></div><br>
@@ -97,14 +94,14 @@
      <div class="menu-dashboard-autoreporte-clickeable">
       CICUM
       </div></a>
-   <?php endif; ?>&nbsp;
+   <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
    <div class="grid_3">
    <?php if(!($esEvaluadorSecundario)): ?>
      <div class="menu-dashboard-autoreporte">
       <?php echo $porcCompletadoCAIE; ?> %
       </div>
-   <?php endif; ?>&nbsp;
+   <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
 
 
@@ -120,11 +117,11 @@
       </div>
    </div>
    <div class="grid_3">
-   <?php if(!($esEvaluadorSecundario)): ?> 
+   <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso3): ?> 
      <div class="menu-dashboard-juicioprofesional">
       L
       </div>
-   <?php endif; ?>&nbsp;
+   <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
 
 
@@ -138,14 +135,14 @@
      <div class="menu-dashboard-autoreporte-clickeable">
       CACSA
       </div></a>
-     <?php endif; ?>&nbsp;
+     <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
    <div class="grid_3">
      <?php if(!($esEvaluadorSecundario)): ?>
      <div class="menu-dashboard-autoreporte">
      <?php echo $porcCompletadoCACSA; ?> %
      </div>
-     <?php endif; ?>&nbsp;
+     <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
 
    <div class="prefix_1 grid_2">
@@ -162,11 +159,11 @@
       </div>
    </div>
    <div class="grid_3">
-   <?php if(!($esEvaluadorSecundario)): ?>  
+   <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso4): ?>  
      <div class="menu-dashboard-juicioprofesional">
       I
       </div>
-   <?php endif; ?>&nbsp;
+   <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
 
   <div class="clear"></div><br>
@@ -177,20 +174,28 @@
      <div class="menu-dashboard-autoreporte-clickeable">
       EDA
       </div></a>
-   <?php endif; ?>&nbsp;
+   <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
    <div class="grid_3">
    <?php if(!($esEvaluadorSecundario)): ?>
      <div class="menu-dashboard-autoreporte">
       <?php echo $porcCompletadoEDA; ?> %
       </div>
-   <?php endif; ?>&nbsp;
+   <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
 
    <div class="prefix_1 grid_2">
     <div class="menu-dashboard-juicioprofesional">
     <a href="<?php echo url_for('FCMF/index?idEncuestado='.$idEncuestado);?>">
+    <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso5): ?>
+    <div class="menu-consenso">
+        
+
+    <?php else: ?>
     <div class="menu-dashboard-juicioprofesional-clickeable">
+      
+      <?php endif; ?>
+    
       FCMF
     </div></a>
    </div>
@@ -202,11 +207,11 @@
       </div>
    </div>
    <div class="grid_3">
-   <?php if(!($esEvaluadorSecundario)): ?>  
+   <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso5): ?>  
      <div class="menu-dashboard-juicioprofesional">
-      I
+      <?php echo $porcCompletadoFCMF2; ?> %
       </div>
-   <?php endif; ?>&nbsp;
+   <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
 
 
@@ -218,7 +223,7 @@
      <div class="menu-dashboard-autoreporte-clickeable">
       CESMA
       </div></a>
-   <?php endif; ?>&nbsp;
+   <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
    
    <?php if(!($esEvaluadorSecundario)): ?>
@@ -293,7 +298,7 @@
       <?php echo $porcCompletadoCONCLUSIONES; ?> %
       </div>
    </div>
-   <?php endif; ?>&nbsp;
+   <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
   <div class="clear"></div><br>
 
 
@@ -303,7 +308,7 @@
        <a class="form-button form-left" style="display: block;" href="<?php echo url_for('principal/home?showtable=yes');?>"><- Ir a  la lista de encuestados</a>
        <?php if(!($esEvaluadorSecundario)): ?>    
          <a class="form-button-off form-left" style="display: block;" href="">Dar de alta a encuestado -></a>
-       <?php endif; ?>&nbsp;
+       <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
      </div>
 </div>
 

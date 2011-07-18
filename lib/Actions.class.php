@@ -101,7 +101,37 @@ $tiempo=mysql_fetch_array($tiempo);
 		}
     }
 
+    /* 
+     * Para poder mostrar en el dashboard la columna que le permite al
+     * encuestador principal responder las preguntas del modo censenso se debe
+     * cumplir que tanto el evaluador secundario como el primario hayan
+     * respondido y cerrado el correspondiente instrumento de juicio
+     * profesional.
+     */
 
+	public function contarTotalCierresInstrumento(sfWebRequest $request, $nombretabla)
+	{
+		$this->BD_Conectar();
+		
+		$idUser=$this->getUser()->getGuardUser()->getId();
+                // $request->$request->getPostParameters();
+		$this->idEncuestado=$request->getParameter('idEncuestado');
+		$this->forward404If(!$this->idEncuestado);
+		
+                $ids_users_sql="SELECT `id_user_responsable_principal`,`select_user_responsable_secundario1` FROM `encuestado` WHERE `id_encuestado`='{$this->idEncuestado}' LIMIT 1";
+
+		$ids_users = mysql_query($ids_users_sql);
+                $ids_users=mysql_fetch_array($ids_users);
+                $id_user_principal=$ids_users[0];
+                $id_user_secundario=$ids_users[1];
+      
+                $q1="SELECT * FROM `{$nombretabla}` WHERE (`id_user`={$id_user_principal} OR `id_user`={$id_user_secundario})AND `id_encuestado`={$this->idEncuestado} AND `concensoMode`=0 AND `id_respuesta`='CLOSE_FLAG' AND `respuesta`='CERRADO';";
+		$result = mysql_query($q1);
+		$rows1=mysql_num_rows($result);  
+                
+          return $rows1;
+        }
+    
 	//  PARTE DE sfSuperControlador
 	
 	/**
@@ -288,9 +318,32 @@ $tiempo=mysql_fetch_array($tiempo);
             else{
                  return 0;
             }
-
 	}        
         
+	/**
+	* Retorna 0 o 1 dependiendo si la tabla esta cerrada para dicho user y dicho idencuestado
+        * funciona para todos los que usan el supercontrolador
+        * ARREGLO ESPECIAL PARA LOS DE JUICIO PROFESIONAL
+	*/
+	public function esCerrado2(sfWebRequest $request,$nombretabla,$consensoMode)
+	{
+            $this->BD_Conectar();
+            $idUser=$this->getUser()->getGuardUser()->getId();
+            $this->idEncuestado=$request->getParameter('idEncuestado');
+            $this->forward404If(!$this->idEncuestado);
+
+            $habraalgo="SELECT * FROM `{$nombretabla}` WHERE `id_user`={$idUser} AND `id_encuestado`={$this->idEncuestado} AND `id_respuesta`='CLOSE_FLAG' AND `respuesta`='CERRADO' AND `concensoMode`={$consensoMode}";
+            $result = mysql_query($habraalgo);
+            $rows=mysql_num_rows($result);
+
+            if ($rows > 0)
+            {
+                return 1;
+            }
+            else{
+                 return 0;
+            }
+	}   
         
     public  function BD_Conectar(){
       $Error_mysql_connect=false;
@@ -369,8 +422,6 @@ public function getPorcentajeCompletadoMACI($idUser,$idEncuestado){
   $porcCompletado = mysql_fetch_array($porcCompletado);
   return $porcCompletado[0];
 }
-
-
 
 /**
  * Dado un usuario y un encuestado retorna el porcentaje de completado del
