@@ -7,6 +7,9 @@
  * @version 0.1
  */
 
+
+var ultimo_bloque_svigente=1;
+
 /** Capa de apoyo mediante JS al formulario de ingreso de nuevo encuestado
  * @class formIngresoEncuestado
  * @requires jquery-1.4.2.min.js, jquery-ui-1.8.1.custom.min.js,jquery.validate.js,funciones_global.js, DOM READY
@@ -365,85 +368,34 @@ FormIngresoEncuestado.prototype.validar= function(){
 /**
  * Agrega un nuevo bloque para agregar una sancion extra que pueda tener la persona
  **/
-function agregarBloqueSancion(){
-    // Obtener clon de primer bloque de sanciones
-    var bloqueSanciones = $('#sancion-fieldset').clone();
-    
-    // Setar algunos atributos
-    bloqueSanciones.removeAttr('id');
-    bloqueSanciones.append('<span class="bloque-sancion-del">Eliminar bloque</span> ');
-    $.each(bloqueSanciones.find('input'), function(index, el) { $(el).val('') });
-    
-    // Agregar al bloque de sanciones
-    $('#bloque-sanciones').append(bloqueSanciones);
-}
+function agregarBloqueSVIGENTE(){
+    if(ultimo_bloque_svigente<10){
+        ultimo_bloque_svigente++;
+        $('#CANT_CAUSASVIGENTES').val(ultimo_bloque_svigente);
 
-function agregarBloqueSancion1(){
-    // Obtener clon de primer bloque de sanciones
-    var bloqueSanciones1 = $('#sancion-fieldset1').clone();
-    
-    // Setar algunos atributos
-    bloqueSanciones1.removeAttr('id');
-    bloqueSanciones1.append('<span class="bloque-sancion-del">Eliminar bloque</span> ');
-    $.each(bloqueSanciones1.find('input'), function(index, el) { $(el).val('') });
-    
-    // Agregar al bloque de sanciones
-    $('#bloque-sanciones1').append(bloqueSanciones1);
+    $('#sancion-fieldset_svigente'+ultimo_bloque_svigente).show();
+    }else{
+        alert("No se pueden agregar mas de 10 causas");
+    }
 }
-function agregarBloqueSancion2(){
-    // Obtener clon de primer bloque de sanciones
-    var bloqueSanciones2 = $('#sancion-fieldset2').clone();
-    
-    // Setar algunos atributos
-    bloqueSanciones2.removeAttr('id');
-    bloqueSanciones2.append('<span class="bloque-sancion-del">Eliminar bloque</span> ');
-    $.each(bloqueSanciones2.find('input'), function(index, el) { $(el).val('') });
-    
-    // Agregar al bloque de sanciones
-    $('#bloque-sanciones2').append(bloqueSanciones2);
-}
-
 
 /**
  * Elimina bloque para agregar una sancion extra que pueda tener la persona
  * @function
  **/
-function eliminarBloqueSancion(){
-  $("#bloque-sancion-adicional").hide();
-  $("#bloque-boton-agregar-sancion").show();
-  $("#es_sancion2").val("NO");
-
-  $("#input_nombre_programa2").rules("remove", "required minlength defaultInvalid");
-  $("#input_fecha_inicio_condena2").rules("remove", "required dateISO");
-  $("#input_tiempo_total_condena2").rules("remove", "required digits");
-  $("#select_tipo_materia2").rules("remove", "noDefaultSelect");
-  $("#select_causa_delito2").rules("remove", "noDefaultSelect");
-  $("#formulario_IngRegAIDLey").valid();
-}
-
-function eliminarBloqueSancion1(){
-  $("#bloque-sancion-adicional").hide();
-  $("#bloque-boton-agregar-sancion").show();
-  $("#es_sancion2").val("NO");
-
-  $("#input_nombre_programa2").rules("remove", "required minlength defaultInvalid");
-  $("#input_fecha_inicio_condena2").rules("remove", "required dateISO");
-  $("#input_tiempo_total_condena2").rules("remove", "required digits");
-  $("#select_tipo_materia2").rules("remove", "noDefaultSelect");
-  $("#select_causa_delito2").rules("remove", "noDefaultSelect");
-  $("#formulario_IngRegAIDLey").valid();
-}
-function eliminarBloqueSancion2(){
-  $("#bloque-sancion-adicional").hide();
-  $("#bloque-boton-agregar-sancion").show();
-  $("#es_sancion2").val("NO");
-
-  $("#input_nombre_programa2").rules("remove", "required minlength defaultInvalid");
-  $("#input_fecha_inicio_condena2").rules("remove", "required dateISO");
-  $("#input_tiempo_total_condena2").rules("remove", "required digits");
-  $("#select_tipo_materia2").rules("remove", "noDefaultSelect");
-  $("#select_causa_delito2").rules("remove", "noDefaultSelect");
-  $("#formulario_IngRegAIDLey").valid();
+function eliminarBloqueSVIGENTE(){
+    if(ultimo_bloque_svigente>1){
+        
+        $('#CANT_CAUSASVIGENTES').val(ultimo_bloque_svigente);
+        $('#sancion-fieldset_svigente'+ultimo_bloque_svigente).hide();
+        $('#input_nombre_programa_svigente'+ultimo_bloque_svigente).val('');
+        $('#input_tiempo_total_condena_svigente'+ultimo_bloque_svigente).val('');
+        $('#input_fecha_inicio_condena_svigente'+ultimo_bloque_svigente).val('');
+        $('#input_ruk_svigente'+ultimo_bloque_svigente).val('');
+        $('#input_detencion_svigente'+ultimo_bloque_svigente).val('');
+        $('#input_fecha_control_detencion_svigente'+ultimo_bloque_svigente).val('');
+        ultimo_bloque_svigente--;
+    }
 }
 
 
