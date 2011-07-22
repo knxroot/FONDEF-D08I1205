@@ -253,16 +253,28 @@
 		</select>
 		</div>
  </div> <!-- Form IMPAR -->
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
 
     <!-- INICIO BLOQUE SANCIONES -->
     <div id="bloque-sanciones">
 	<div class="ui-widget-header ui-corner-all">
 			Causas Vigentes
 		</div>
-        <div class="form2-par" id="sancion-fieldset">
+        
+    <?php for($i = 1; $i <= 10; $i++): ?>
+        
+        <div class="form2-par" id="sancion-fieldset_svigente<?php echo $i;?>" <?php if($i>1){echo "style='display:none'";};?>>
             <div class="grid-3-12">
                 <label class="form-lbl">Sistema de Atención <em class="form-req">*</em></label>
-                <select name="select_sistema_atencion[]" id="select_sistema_atencion">
+                <select name="select_sistema_atencion_svigente<?php echo $i;?>" id="select_sistema_atencion_svigente<?php echo $i;?>">
                     <option value="MCA" selected="">MCA</option>
                     <option value="PSA">PSA</option>
                     <option value="SBC">SBC</option>
@@ -278,12 +290,12 @@
 
             <div class="grid-9-12">
                 <label class="form-lbl">Nombre del Programa<em class="form-req">*</em></label>
-                <input type="text" class="form-txt required error" name="input_nombre_programa[]" id="input_nombre_programa" value="Escriba el nombre del programa"/>
+                <input type="text" class="form-txt required error" name="input_nombre_programa_svigente<?php echo $i;?>" id="input_nombre_programa_svigente<?php echo $i;?>" value="Escriba el nombre del programa"/>
             </div>
 
             <div class="grid-4-12">
                 <label class="form-lbl">Ciudad del Programa <em class="form-req">*</em></label>
-                <select name="select_ciudad_programa[]" id="select_ciudad_programa">
+                <select name="select_ciudad_programa_svigente<?php echo $i;?>" id="select_ciudad_programa_svigente<?php echo $i;?>">
                     <option value="Chillán" selected="">Chillán</option>
                     <option value="Concepción">Concepción</option>
                     <option value="Coronel">Coronel</option>
@@ -299,8 +311,8 @@
 
             <div class="grid-4-12">
                 <label class="form-lbl">T. Total de Condena <em class="form-req">*</em></label>
-                <input type="text" class="form-txt form-date-year" style="float:left;" name="input_tiempo_total_condena[]" id="input_tiempo_total_condena"  value=""/>
-                <select name="select_tipo_tiempo_total_condena[]" id="select_tipo_tiempo_total_condena" style="width:70px;">
+                <input type="text" class="form-txt form-date-year" style="float:left;" name="input_tiempo_total_condena_svigente<?php echo $i;?>" id="input_tiempo_total_condena_svigente<?php echo $i;?>"  value=""/>
+                <select name="select_tipo_tiempo_total_condena_svigente<?php echo $i;?>" id="select_tipo_tiempo_total_condena_svigente<?php echo $i;?>" style="width:70px;">
                     <option value="D" selected="">Dias</option>
                     <option value="A">Años</option>
                     <option value="H">Horas</option>
@@ -310,52 +322,49 @@
 
             <div class="grid-4-12">
                 <label class="form-lbl">F. inicio Condena  aaaa/mm/dd <em class="form-req">*</em></label>
-                <input type="text" class="form-txt" name="input_fecha_inicio_condena[]" id="input_fecha_inicio_condena"/>
+                <input type="text" class="form-txt" name="input_fecha_inicio_condena_svigente<?php echo $i;?>" id="input_fecha_inicio_condena_svigente<?php echo $i;?>"/>
             </div>
 
-			
-			
-			
-			 <div class="grid-4-12">
+            <div class="grid-4-12">
                 <label class="form-lbl">RUC <em class="form-req">*</em></label>
-                <input type="text" class="form-txt" name="input_ruk[]" id="input_ruk"/>
+                <input type="text" class="form-txt" name="input_ruk_svigente<?php echo $i;?>" id="input_ruk_svigente<?php echo $i;?>"/>
             </div>
 
             <div class="grid-4-12">
                 <label class="form-lbl">Fecha de comisión del delito  aaaa/mm/dd <em class="form-req">*</em></label>
-                <input type="text" class="form-txt" name="input_fecha_detencion[]" id="input_detencion"/>
+                <input type="text" class="form-txt" name="input_fecha_detencion_svigente<?php echo $i;?>" id="input_detencion_svigente<?php echo $i;?>"/>
             </div>
 
             <div class="grid-4-12">
                 <label class="form-lbl">Fecha control de detención aaaa/mm/dd <em class="form-req">*</em></label>
-                <input type="text" class="form-txt" name="input_fecha_control_detencion[]" id="input_fecha_control_detencion"/>
+                <input type="text" class="form-txt" name="input_fecha_control_detencion_svigente<?php echo $i;?>" id="input_fecha_control_detencion_svigente<?php echo $i;?>"/>
             </div>	
-			
-			
-			
-			
-			
-			
-			
-			
+	
             <div class="grid-12-12">
                 <label class="form-lbl">Causal de ingreso <em class="form-req">*</em></label>
-                <select name="select_tipo_materia[]" id="select_tipo_materia"  style="width: 500px;float:left;">
+                <select name="select_tipo_materia_svigente<?php echo $i;?>" id="select_tipo_materia_svigente<?php echo $i;?>"  style="width: 500px;float:left;">
                     <option value="none" selected="">Seleccione Tipo de materia</option>
                 </select>
-                <select name="select_causa_delito[]" id="select_causa_delito" disabled="disabled" style="width: 400px;margin-left: 5px;">
+                <select name="select_causa_delito_svigente<?php echo $i;?>" id="select_causa_delito_svigente<?php echo $i;?>" disabled="disabled" style="width: 400px;margin-left: 5px;">
                     <option value="none" selected="">Seleccione Causa Delito</option>
                 </select>
             </div>
+
         </div>
+        
+          <?php  endfor; ?> 
+        
     </div>
    	<div id="bloque-boton-agregar-sancion">
       <div class="grid-4-12"></div>
       <div class="grid-4-12">
-      <div class="medium blue awesome" onClick="agregarBloqueSancion()">
+      <div class="medium blue awesome" onClick="agregarBloqueSVIGENTE()">
         <div class="form-button-add"></div>&nbsp;Agregar sanción vigente</div>
+        <input type="text" id="CANT_CAUSASVIGENTES" name="CANT_CAUSASVIGENTES" style="display:none" value="1"></input>
       </div>
-      <div class="grid-4-12"></div>
+      <div class="grid-3-12">
+        <div class="bloque-sancion-borrar" onClick="eliminarBloqueSVIGENTE()">Eliminar último bloque</div>
+      </div><div class="grid-1-12"></div>
     </div>
     <!-- FIN BLOQUE SANCIONES -->
 	
@@ -365,7 +374,7 @@
 		<div class="ui-widget-header ui-corner-all">
 			Causas Anteriores
 		</div>
-        <div class="form2-par" id="sancion-fieldset1">
+        <div class="form2-par" id="sancion-fieldset1" style="display:none">
           
 
             <div class="grid-4-12">
