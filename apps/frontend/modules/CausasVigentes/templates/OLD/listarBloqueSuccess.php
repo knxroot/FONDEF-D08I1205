@@ -66,19 +66,19 @@
             <tr class="ro2">
             <td colspan="2" style="text-align: left; width: 57.3px;"
             class="ce2">
-            <p>Edad de Inicio <a href="#" class="edadtrigger"><IMG src="/images/question-white.png" /></p>
+            <p>Edad de Inicio</p>
             </td>
             <td colspan="7" style="text-align: left; width: 57.3px;"
             class="ce29">
-            <p>Delitos contra la propiedad "DCP" <a href="#" class="dcptrigger"><IMG src="/images/question-white.png" /></a></p>
+            <p>Delitos contra la propiedad "DCP"</p>
             </td>
             <td colspan="3" style="text-align: left; width: 57.3px;"
             class="ce46">
-            <p>Delitos contra la Integridad Física "DCIF" <a href="#" class="dciftrigger"><IMG src="/images/question-white.png" /></a></p>
+            <p>Delitos contra la Integridad Física "DCIF"</p>
             </td>
             <td colspan="3" style="text-align: left; width: 57.3px;"
             class="ce66">
-            <p>Delitos Específicos "DE" </p>
+            <p>Delitos Específicos "DE"</p>
             </td>
             </tr>
             <tr class="ro2">
@@ -369,7 +369,7 @@
             <p>TDS</p>
             </td>
             <td style="text-align: left; width: 57.3px;" class="ce86">
-            <p>Años Des <a href="#" class="anosdestrigger"><IMG src="/images/question-white.png" /></a></p>
+            <p>Años Des</p>
             </td>
             </tr>
             <tr class="ro5">
@@ -413,7 +413,7 @@
             <p id="L11_2">0</p><input id="L11" name="L11" type="text" value="0" style="display:none;"/>
             </td>
             <td rowspan="2" style="text-align: left; width: 57.3px;"
-            class="ce87"><input id="anos_desaptacion" name="anos_desaptacion" type="text" value="0"/></td>
+            class="ce87">&nbsp;</td>
             </tr>
             <tr class="ro5">
             <td style="text-align: left; width: 57.3px;" class="ce20">
@@ -460,33 +460,33 @@
 
             <tr class="rofix">
             <td style="text-align: left;padding: 2px;" class="ce10" colspan="9">
-            <p>Observaciones<span class="T1"> (Especificar otros delitos) <a href="#" class="obs1trigger"><IMG src="/images/question-white.png" /></a></span></p>
-            <textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="observaciones_otrosdelitos" name="observaciones_otrosdelitos" style="width:510px; height:120px;"></textarea>
+            <p>Observaciones<span class="T1"> (Especificar otros delitos)</span></p>
+            <textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="pruebaaaaaa" style="width:510px; height:120px;"></textarea>
             </td>
             <td colspan="6" style="text-align: left;"
             class="ce53">
 
     <div> 
        <div class="CR RCR_P">
-            <p style="width:100%">Polimorfismo <a href="#" class="polimorfismo1trigger"><IMG src="/images/question-white.png" /></a></p>
-            <select id="polimorfismo" name="polimorfismo">
-			<option value="No">No</option>
-			<option value="Si">Si</option>
-	    </select>
+            <p style="width:100%">Polimorfismo</p>
+            <ul class="form-list-rdo">
+              <li><input type="radio" class="botonradio" name="17" value="Si"><label class="form-lbl">Si</label></li>
+              <li><input type="radio" class="botonradio" name="17" value="No"><label class="form-lbl">No</label></li>
+            </ul>
        </div> 
        <div class="CR RCR_TPD"><p style="width:100%">TDP</p><p id="RCR_TPD_2" class="RCR">0</p><input id="RCR_TPD" name="RCR_TPD" type="text" value="0" style="display:none;"/> </div> 
        <div class="CR RCR_TDIF"><p style="width:100%">TDIF</p><p id="RCR_TDIF_2" class="RCR">0</p><input id="RCR_TDIF" name="RCR_TDIF" type="text" value="0" style="display:none;"/></div>   
     </div>
     <div>
        <div class="CR RCR_ED">
-            <p style="width:100%">E. Delictiva <a href="#" class="edelictiva1trigger"><IMG src="/images/question-white.png" /></a></p>
-            <select id="edelictiva" name="edelictiva">
-			<option value="No">No</option>
-			<option value="Si">Si</option>
-	    </select>
+            <p style="width:100%">E. Delictiva</p>
+            <ul class="form-list-rdo">
+              <li><input type="radio" class="botonradio" name="18" value="Si"><label class="form-lbl">Si</label></li>
+              <li><input type="radio" class="botonradio" name="18" value="No"><label class="form-lbl">No</label></li>
+            </ul>
        </div>
-       <div class="CR RCR_IEDSD"><p style="width:100%">IEDS-D <a href="#" class="iedsdmotrigger"><IMG src="/images/question-white.png" /></a></p><p id="RCR_IEDSD_2" class="RCR">0</p><input id="RCR_IEDSD" name="RCR_IEDSD" type="text" value="0" style="display:none;"/></div>
-       <div class="CR RCR_IEDSP"><p style="width:100%">IEDS-Ponderado <a href="#" class="eidsptrigger"><IMG src="/images/question-white.png" /></a></p><p id="RCR_IEDSP_2" class="RCR">0</p><input id="RCR_IEDSP" name="RCR_IEDSP" type="text" value="0" style="display:none;"/></div>
+       <div class="CR RCR_IEDSD"><p style="width:100%">IEDS-D</p><p id="RCR_IEDSD_2" class="RCR">0</p><input id="RCR_IEDSD" name="RCR_IEDSD" type="text" value="0" style="display:none;"/></div>
+       <div class="CR RCR_IEDSP"><p style="width:100%">IEDS-Ponderado</p><p id="RCR_IEDSP_2" class="RCR">0</p><input id="RCR_IEDSP" name="RCR_IEDSP" type="text" value="0" style="display:none;"/></div>
     </div>
 
 
@@ -495,7 +495,7 @@
             <tr class="rofix">
               <td style="text-align: left;padding: 2px;" class="cetcd" colspan="15">
               <p>Tipos de conductas delictivas registradas: <span class="T1"> describa brevemente secuencia, polimorfismo, actuación sólo o en grupos, si realiza varios tipos de delitos o sólo robos, etc. </span></p>
-              <textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="coment_tipoconductasdelictivas" name="coment_tipoconductasdelictivas" style="width:98%; height:120px;"></textarea>
+              <textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="text_area_input_comentario" style="width:98%; height:120px;"></textarea>
               </td>
             </tr>
             </tbody>
@@ -506,7 +506,7 @@
 
         <div id="tabBloque2">
           <div class="grid-6-12" style="background-color: #F2F2F2">
-            Genograma familiar: <a href="#" class="genogramatrigger"><IMG src="/images/question-white.png" /></a><br>
+            Genograma familiar: <br>
                     <div id="file-uploader-genopro">
               <noscript>
                 <p>Porfavor habilita JavaScript para poder subir los ficheros de gnopro.</p>
@@ -522,12 +522,13 @@
                           multiple: false,
                           allowedExtensions: ['gno'],
                           messages: {
-                            typeError: "{file} posee una extensi\u00F3n inv\u00E1lida. S\u00F3lo la extensi\u00F3n {extensions} (GenoPro) est\u00E1 permitida.",
-                            sizeError: "{file} es demasiado grande, el tama\u00F1o m\u00E1ximo de un archivo es {sizeLimit}.",
-                            minSizeError: "{file} es demasiado peque\u00F1o, el tama\u00F1o m\u00EDnimo de un archivo es {minSizeLimit}.",
-                            emptyError: "{file} est\u00E1 vacio, porfavor selecciona el archivo denuevo e intenta otra vez.",
-                            onLeave: "Los archivos se est\u00E1n subiendo, si cierras la ventana ahora el proceso de subida se cancelar\u00E1."
+                            typeError: "{file} posee una extension invalida. Solo la extension {extensions} (GenoPro) esta permitida.",
+                            sizeError: "{file} es demasiado grande, el tamano maximo de un archivo es {sizeLimit}.",
+                            minSizeError: "{file} es demasiado pequeno, el tamano minimo de un archivo es {minSizeLimit}.",
+                            emptyError: "{file} esta vacio, porfavor selecciona el archivo denuevo e intenta otra vez.",
+                            onLeave: "Los archivos se estan subiendo, si te cierras la ventana ahora la subida se cancelara."
                            }
+
                       });
                   }
 
@@ -536,12 +537,12 @@
               </script>
           </div>
           <div class="grid-6-12" style="background-color: #F2F2F2">
-            <div style="width: 100%;">Personas con las que vive actualmente <a href="#" class="viveactualtrigger"><IMG src="/images/question-white.png" /></a><br><textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="pconlasquevive_comentario" name="pconlasquevive_comentario" style="width:98%; height:70px;"></textarea></div>
-            <div style="width: 100%;">Vínculos significativos autoreportados <a href="#" class="vinculostrigger"><IMG src="/images/question-white.png" /></a><br><textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="vsignificativosautoreportados_comentario" name="vsignificativosautoreportados_comentario" style="width:98%; height:70px;"></textarea></div>
+            <div style="width: 100%;">Personas con las que vive actualmente<br><textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="pconlasquevive_comentario" name="pconlasquevive_comentario" style="width:98%; height:70px;"></textarea></div>
+            <div style="width: 100%;">Vínculos significativos autoreportados<br><textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="vsignificativosautoreportados_comentario" name="vsignificativosautoreportados_comentario" style="width:98%; height:70px;"></textarea></div>
           </div>
           <div class="clear"></div> <br>
           <div class="grid-12-12" style="background-color: #F2F2F2">
-            <b>Autoreporte:</b> ¿A qué atribuye su comportamiento delictivo o transgresor? <a href="#" class="autoreportetrigger"><IMG src="/images/question-white.png" /></a><br><textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="autoreporte_comentario" name="autoreporte_comentario" style="width:98%; height:70px;"></textarea>
+            <b>Autoreporte:</b> ¿A qué atribuye su comportamiento delictivo o transgresor?<br><textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="autoreporte_comentario" name="autoreporte_comentario" style="width:98%; height:70px;"></textarea>
           </div>
 
         </div>
@@ -561,58 +562,73 @@
 
           <div class="grid-12-12">
             <div class="grid-6-12 row_tabla3_even">
-              <input type="text" name="F3_1_frecuencia" id="F3_1_frecuencia" value="0" style="width:32px;height:32px;"/> Prevención Ambulatoria y Protección de Derechos (CAD, CIJ, PIE, PIB, OPD, PRM) <a href="#" class="prevenciontrigger"><IMG src="/images/question-white.png" /></a></div>
+              <input type="text" name="F3_frecuencia1" value="0" style="width:32px;height:32px;"/> Prevención Ambulatoria y Protección de Derechos (CAD, CIJ, PIE, PIB, OPD, PRM)
+            </div>
             <div class="grid-2-12 row_tabla3_even">
-              <input type="text" name="F3_1_edad" id="F3_1_edad" value="0" style="width:32px;height:32px;"/> años
+              <input type="text" name="F3_anos1" value="0" style="width:32px;height:32px;"/> años
             </div>
             <div class="grid-4-12 row_tabla3_even">
-              <textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="F3_1_comentario" name="F3_1_comentario" style="width:98%; height:70px;"></textarea>
+              <textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="pconlasquevive_comentario" name="F3_1_comentario" style="width:98%; height:70px;"></textarea>
             </div>
           </div><div class="clear"></div>
 
           <div class="grid-12-12">
             <div class="grid-6-12 row_tabla3_odd">
-              <input type="text" name="F3_2_frecuencia" id="F3_2_frecuencia" value="0" style="width:32px;height:32px;"/> Internación en Protección Simple (CTD, CREAD, Hogares) <a href="#" class="internaciontrigger"><IMG src="/images/question-white.png" /></a></div>
+              <input type="text" name="F3_frecuencia2" value="0" style="width:32px;height:32px;"/> Internación en Protección Simple (CTD, CREAD, Hogares)
+            </div>
             <div class="grid-2-12 row_tabla3_odd">
-              <input type="text" name="F3_1_edad" id="F3_1_edad" value="0" style="width:32px;height:32px;"/> años
+              <input type="text" name="F3_anos2" value="0" style="width:32px;height:32px;"/> años
             </div>
             <div class="grid-4-12 row_tabla3_odd">
-              <textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="F3_2_comentario" name="F3_2_comentario" style="width:98%; height:70px;"></textarea>
+              <textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="pconlasquevive_comentario" name="F3_2_comentario" style="width:98%; height:70px;"></textarea>
             </div>
           </div><div class="clear"></div>
 
           <div class="grid-12-12">
             <div class="grid-6-12 row_tabla3_even">
-              <input type="text" name="F3_3_frecuencia" id="F3_3_frecuencia" value="0" style="width:32px;height:32px;"/> Programas ambulatorios RPA (PSA, SBC, PLA, PLAE).  <a href="#" class="rpatrigger"><IMG src="/images/question-white.png" /></a></div>
+              <input type="text" name="F3_frecuencia2" value="0" style="width:32px;height:32px;"/> Internación en Protección Simple (CTD, CREAD, Hogares)
+            </div>
             <div class="grid-2-12 row_tabla3_even">
-              <input type="text" name="F3_3_edad" id="F3_3_edad" value="0" style="width:32px;height:32px;"/> años
+              <input type="text" name="F3_anos2" value="0" style="width:32px;height:32px;"/> años
             </div>
             <div class="grid-4-12 row_tabla3_even">
-              <textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="F3_3_comentario" name="F3_3_comentario" style="width:98%; height:70px;"></textarea>
-            </div>
-          </div><div class="clear"></div>
-
-          
-
-          <div class="grid-12-12">
-            <div class="grid-6-12 row_tabla3_even">
-              <input type="text" name="F3_5_frecuencia" id="F3_5_frecuencia" value="0" style="width:32px;height:32px;"/> Centro Semi Cerrado <a href="#" class="semicerradotrigger"><IMG src="/images/question-white.png" /></a></div>
-            <div class="grid-2-12 row_tabla3_even">
-              <input type="text" name="F3_5_edad" id="F3_5_edad" value="0" style="width:32px;height:32px;"/> años
-            </div>
-            <div class="grid-4-12 row_tabla3_even">
-              <textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="F3_5_comentario" name="F3_5_comentario" style="width:98%; height:70px;"></textarea>
+              <textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="pconlasquevive_comentario" name="F3_2_comentario" style="width:98%; height:70px;"></textarea>
             </div>
           </div><div class="clear"></div>
 
           <div class="grid-12-12">
             <div class="grid-6-12 row_tabla3_odd">
-              <input type="text" name="F3_6_frecuencia" id="F3_6_frecuencia" value="0" style="width:32px;height:32px;"/> Sistema Cerrado (COD, CERECO, CIP, CRC, GENCHI) <a href="#" class="sistemacerradotrigger"><IMG src="/images/question-white.png" /></a></div>
+              <input type="text" name="F3_frecuencia3" value="0" style="width:32px;height:32px;"/> Intervención ambulatoria Infractores (PIA, PLA, PLAE, SBC, PSA)
+            </div>
             <div class="grid-2-12 row_tabla3_odd">
-              <input type="text" name="F3_6_edad" id="F3_6_edad" value="0" style="width:32px;height:32px;"/> años
+              <input type="text" name="F3_anos3" value="0" style="width:32px;height:32px;"/> años
             </div>
             <div class="grid-4-12 row_tabla3_odd">
-              <textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="F3_6_comentario" name="F3_6_comentario" style="width:98%; height:70px;"></textarea>
+              <textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="pconlasquevive_comentario" name="F3_3_comentario" style="width:98%; height:70px;"></textarea>
+            </div>
+          </div><div class="clear"></div>
+
+          <div class="grid-12-12">
+            <div class="grid-6-12 row_tabla3_even">
+              <input type="text" name="F3_frecuencia4" value="0" style="width:32px;height:32px;"/> Centro Semi Cerrado
+            </div>
+            <div class="grid-2-12 row_tabla3_even">
+              <input type="text" name="F3_anos4" value="0" style="width:32px;height:32px;"/> años
+            </div>
+            <div class="grid-4-12 row_tabla3_even">
+              <textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="pconlasquevive_comentario" name="F3_4_comentario" style="width:98%; height:70px;"></textarea>
+            </div>
+          </div><div class="clear"></div>
+
+          <div class="grid-12-12">
+            <div class="grid-6-12 row_tabla3_odd">
+              <input type="text" name="F3_frecuencia5" value="0" style="width:32px;height:32px;"/> Sistema Cerrado (COD, CERECO, CIP, CRC, GENCHI)
+            </div>
+            <div class="grid-2-12 row_tabla3_odd">
+              <input type="text" name="F3_anos5" value="0" style="width:32px;height:32px;"/> años
+            </div>
+            <div class="grid-4-12 row_tabla3_odd">
+              <textarea title="Porfavor escribe aqui tu comentario" class="ui-corner-all" id="pconlasquevive_comentario" name="F3_5_comentario" style="width:98%; height:70px;"></textarea>
             </div>
           </div><div class="clear"></div>
 
@@ -622,10 +638,10 @@
               Otro
             </div>
             <div class="grid-5-12">
-              <textarea title="Otro" class="ui-corner-all" id="F3_OTRO" name="F3_OTRO" style="width:98%; height:70px;"></textarea>
+              <textarea title="Otro" class="ui-corner-all" id="F3otro" name="F3otro" style="width:98%; height:70px;"></textarea>
             </div>
-            <div class="grid-6-12"> Nº Total de Derivaciones a programas <a href="#" class="ntotaltrigger"><IMG src="/images/question-white.png" /></a>
-              <input type="text" name="F3_nroderivaciones_a_programas" id="F3_nroderivaciones_a_programas" value="0" style="width:32px;height:32px;"/>
+            <div class="grid-6-12"> Nº Total de Derivaciones a programas
+              <input type="text" name="F3_nroderivaciones_a_programas" value="0" style="width:32px;height:32px;"/>
             </div>
           </div><div class="clear"></div>
         </div>
@@ -634,7 +650,7 @@
 
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               a.- Presentó conducta transgresora y fue puesto a disposición de algún tribunal antes de la causa actual <a href="#" class="4atrigger"><IMG src="/images/question-white.png" /></a>
+               a.- Presentó conducta transgresora y fue puesto a disposición de algún tribunal antes de la causa actual
                      </label>
        </div>
        <div class="grid-4-12">
@@ -642,8 +658,7 @@
                <li><input type="radio" value="Si" name="f4a" class="botonradio"><label class="form-lbl">Si</label>
                </li>
                <li><input type="radio" value="No" name="f4a" class="botonradio"><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="f4a" class="botonradio" ><label class="form-lbl">NI</label></li>
-                   <li><input type="radio" value="no_seleccionado" style="display:none" name="f4a" class="botonradio" checked></li>
+               <li><input type="radio" value="NI" name="f4a" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
@@ -651,7 +666,7 @@
 
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               b.- Asistió, al menos una vez, a un programa de intervención por conductas delictivas antes de esta causa <a href="#" class="4btrigger"><IMG src="/images/question-white.png" /></a>
+               b.- Asistió, al menos una vez, a un programa de intervención por conductas delictivas antes de esta causa
                      </label>
        </div>
        <div class="grid-4-12">
@@ -659,15 +674,14 @@
                <li><input type="radio" value="Si" name="f4b" class="botonradio"><label class="form-lbl">Si</label>
                </li>
                <li><input type="radio" value="No" name="f4b" class="botonradio"><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="f4b" class="botonradio" ><label class="form-lbl">NI</label></li>
-                     <li><input type="radio" value="no_seleccionado" style="display:none" name="f4b" class="botonradio" checked></li>
+               <li><input type="radio" value="NI" name="f4b" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
 
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               c.- Existen antecedentes en informes previos o expedientes de tribunal de al menos dos incumplimientos de medida <a href="#" class="4ctrigger"><IMG src="/images/question-white.png" /></a>
+               c.- Existen antecedentes en informes previos o expedientes de tribunal de al menos dos incumplimientos de medida
                      </label>
        </div>
        <div class="grid-4-12">
@@ -675,15 +689,14 @@
                <li><input type="radio" value="Si" name="f4c" class="botonradio"><label class="form-lbl">Si</label>
                </li>
                <li><input type="radio" value="No" name="f4c" class="botonradio"><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="f4c" class="botonradio" ><label class="form-lbl">NI</label></li>
-                     <li><input type="radio" value="no_seleccionado" style="display:none" name="f4c" class="botonradio" checked></li>
+               <li><input type="radio" value="NI" name="f4c" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
 
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               d.- Existen antecedentes que corroboran al menos 3 causas por conductas delictivas anteriores a la causa actual <a href="#" class="4dtrigger"><IMG src="/images/question-white.png" /></a>
+               d.- Existen antecedentes que corroboran al menos 3 causas por conductas delictivas anteriores a la causa actual
                      </label>
        </div>
        <div class="grid-4-12">
@@ -691,8 +704,7 @@
                <li><input type="radio" value="Si" name="f4d" class="botonradio"><label class="form-lbl">Si</label>
                </li>
                <li><input type="radio" value="No" name="f4d" class="botonradio"><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="f4d" class="botonradio" ><label class="form-lbl">NI</label></li>
-                     <li><input type="radio" value="no_seleccionado" style="display:none" name="f4d" class="botonradio" checked></li>
+               <li><input type="radio" value="NI" name="f4d" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
     </div>
@@ -701,16 +713,15 @@
 
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               a.- Deserción escolar por más de 1 año <a href="#" class="5atrigger"><IMG src="/images/question-white.png" /></a>
+               a.- Deserción escolar por más de 1 año
                      </label>
        </div>
        <div class="grid-4-12">
              <ul class="form-list-rdo">
                <li><input type="radio" value="Si" name="f5a" class="botonradio"><label class="form-lbl">Si</label>
                </li>
-               <li><input type="radio" value="No" name="f5a" class="botonradio" ><label class="form-lbl">No</label></li>
+               <li><input type="radio" value="No" name="f5a" class="botonradio" checked><label class="form-lbl">No</label></li>
                <li><input type="radio" value="NI" name="f5a" class="botonradio"><label class="form-lbl">NI</label></li>
-                     <li><input type="radio" value="no_seleccionado" style="display:none" name="f5a" class="botonradio" checked></li>
              </ul>
        </div><div class="clear"></div>
 
@@ -718,140 +729,131 @@
 
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               b.- Ausentismo escolar <a href="#" class="5btrigger"><IMG src="/images/question-white.png" /></a>
+               b.- Ausentismo escolar
                      </label>
        </div>
        <div class="grid-4-12">
              <ul class="form-list-rdo">
                <li><input type="radio" value="Si" name="f5b" class="botonradio"><label class="form-lbl">Si</label>
                </li>
-               <li><input type="radio" value="No" name="f5b" class="botonradio" ><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="f5b" class="botonradio" ><label class="form-lbl">NI</label></li>
-                     <li><input type="radio" value="no_seleccionado" style="display:none" name="f5b" class="botonradio" checked></li>
+               <li><input type="radio" value="No" name="f5b" class="botonradio" checked><label class="form-lbl">No</label></li>
+               <li><input type="radio" value="NI" name="f5b" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
 
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               c.- Deserta del sistema escolar y no realiza ningún trabajo remunerado <a href="#" class="5ctrigger"><IMG src="/images/question-white.png" /></a>
+               c.- Deserta del sistema escolar y no realiza ningún trabajo remunerado
                      </label>
        </div>
        <div class="grid-4-12">
              <ul class="form-list-rdo">
                <li><input type="radio" value="Si" name="f5c" class="botonradio"><label class="form-lbl">Si</label>
                </li>
-               <li><input type="radio" value="No" name="f5c" class="botonradio" ><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="f5c" class="botonradio" ><label class="form-lbl">NI</label></li>
-                   <li><input type="radio" value="no_seleccionado" style="display:none" name="f5c" class="botonradio" checked></li>
+               <li><input type="radio" value="No" name="f5c" class="botonradio" checked><label class="form-lbl">No</label></li>
+               <li><input type="radio" value="NI" name="f5c" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
 
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               d.- Fugas de la escuela (más de 3 escapadas) <a href="#" class="5dtrigger"><IMG src="/images/question-white.png" /></a>
+               d.- Fugas de la escuela (más de 3 escapadas)
                      </label>
        </div>
        <div class="grid-4-12">
              <ul class="form-list-rdo">
                <li><input type="radio" value="Si" name="f5d" class="botonradio"><label class="form-lbl">Si</label>
                </li>
-               <li><input type="radio" value="No" name="f5d" class="botonradio" ><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="f5d" class="botonradio" ><label class="form-lbl">NI</label></li>
-                   <li><input type="radio" value="no_seleccionado" style="display:none" name="f5d" class="botonradio" checked></li>
+               <li><input type="radio" value="No" name="f5d" class="botonradio" checked><label class="form-lbl">No</label></li>
+               <li><input type="radio" value="NI" name="f5d" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
 
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               e.- Repitencia de curso (más de uno) <a href="#" class="5etrigger"><IMG src="/images/question-white.png" /></a>
+               e.- Repitencia de curso (más de uno)
                      </label>
        </div>
        <div class="grid-4-12">
              <ul class="form-list-rdo">
                <li><input type="radio" value="Si" name="f5e" class="botonradio"><label class="form-lbl">Si</label>
                </li>
-               <li><input type="radio" value="No" name="f5e" class="botonradio" ><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="f5e" class="botonradio" ><label class="form-lbl">NI</label></li>
-                   <li><input type="radio" value="no_seleccionado" style="display:none" name="f5e" class="botonradio" checked></li>
+               <li><input type="radio" value="No" name="f5e" class="botonradio" checked><label class="form-lbl">No</label></li>
+               <li><input type="radio" value="NI" name="f5e" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               f.- Bajo rendimiento escolar (2 promedios rojos) <a href="#" class="5ftrigger"><IMG src="/images/question-white.png" /></a>
+               f.- Bajo rendimiento escolar (2 promedios rojos)
                      </label>
        </div>
        <div class="grid-4-12">
              <ul class="form-list-rdo">
                <li><input type="radio" value="Si" name="f5f" class="botonradio"><label class="form-lbl">Si</label>
                </li>
-               <li><input type="radio" value="No" name="f5f" class="botonradio" ><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="f5f" class="botonradio" ><label class="form-lbl">NI</label></li>
-                   <li><input type="radio" value="no_seleccionado" style="display:none" name="f5f" class="botonradio" checked></li>
+               <li><input type="radio" value="No" name="f5f" class="botonradio" checked><label class="form-lbl">No</label></li>
+               <li><input type="radio" value="NI" name="f5f" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               g.- Comportamiento perturbador en recreos o patio <a href="#" class="5gtrigger"><IMG src="/images/question-white.png" /></a>
+               g.- Comportamiento perturbador en recreos o patio
                      </label>
        </div>
        <div class="grid-4-12">
              <ul class="form-list-rdo">
                <li><input type="radio" value="Si" name="f5g" class="botonradio"><label class="form-lbl">Si</label>
                </li>
-               <li><input type="radio" value="No" name="f5g" class="botonradio" ><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="f5g" class="botonradio" ><label class="form-lbl">NI</label></li>
-                   <li><input type="radio" value="no_seleccionado" style="display:none" name="f5g" class="botonradio" checked></li>
+               <li><input type="radio" value="No" name="f5g" class="botonradio" checked><label class="form-lbl">No</label></li>
+               <li><input type="radio" value="NI" name="f5g" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               h.- Malas relaciones con compañeros de curso <a href="#" class="5htrigger"><IMG src="/images/question-white.png" /></a>
+               h.- Malas relaciones con compañeros de curso
                      </label>
        </div>
        <div class="grid-4-12">
              <ul class="form-list-rdo">
                <li><input type="radio" value="Si" name="f5h" class="botonradio"><label class="form-lbl">Si</label>
                </li>
-               <li><input type="radio" value="No" name="f5h" class="botonradio" ><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="f5h" class="botonradio" ><label class="form-lbl">NI</label></li>
-                   <li><input type="radio" value="no_seleccionado" style="display:none" name="f5h" class="botonradio" checked></li>
+               <li><input type="radio" value="No" name="f5h" class="botonradio" checked><label class="form-lbl">No</label></li>
+               <li><input type="radio" value="NI" name="f5h" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
 
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               i.- Agresiones, riñas o peleas en la Escuela(más de 3) <a href="#" class="5itrigger"><IMG src="/images/question-white.png" /></a>
+               i.- Agresiones, riñas o peleas en la Escuela(más de 3)
                      </label>
        </div>
        <div class="grid-4-12">
              <ul class="form-list-rdo">
                <li><input type="radio" value="Si" name="f5i" class="botonradio"><label class="form-lbl">Si</label>
                </li>
-               <li><input type="radio" value="No" name="f5i" class="botonradio" ><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="f5i" class="botonradio" ><label class="form-lbl">NI</label></li>
-                   <li><input type="radio" value="no_seleccionado" style="display:none" name="f5i" class="botonradio" checked></li>
+               <li><input type="radio" value="No" name="f5i" class="botonradio" checked><label class="form-lbl">No</label></li>
+               <li><input type="radio" value="NI" name="f5i" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               j.- Comportamiento perturbador en sala de clases <a href="#" class="5jtrigger"><IMG src="/images/question-white.png" /></a>
+               j.- Comportamiento perturbador en sala de clases
                      </label>
        </div>
        <div class="grid-4-12">
              <ul class="form-list-rdo">
                <li><input type="radio" value="Si" name="f5j" class="botonradio"><label class="form-lbl">Si</label>
                </li>
-               <li><input type="radio" value="No" name="f5j" class="botonradio" ><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="f5j" class="botonradio" ><label class="form-lbl">NI</label></li>
-                   <li><input type="radio" value="no_seleccionado" style="display:none" name="f5j" class="botonradio" checked></li>
+               <li><input type="radio" value="No" name="f5j" class="botonradio" checked><label class="form-lbl">No</label></li>
+               <li><input type="radio" value="NI" name="f5j" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
@@ -896,16 +898,14 @@
           <?php foreach ($array_f6 as $indice => $valor):?>
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-              <?php echo $indice.".-".$valor.$html;?>
-			  <a href="#" class="6<?php echo $indice;?>trigger"><IMG src="/images/question-white.png" /></a>
+              <?php echo $indice.".-".$valor;?>
                      </label>
        </div>
        <div class="grid-4-12">
              <ul class="form-list-rdo">
                <li><input type="radio" value="Si" name="<?php echo $fx.$indice;?>" class="botonradio"><label class="form-lbl">Si</label></li>
                        <li><input type="radio" value="No" name="<?php echo $fx.$indice;?>" class="botonradio"><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="<?php echo $fx.$indice;?>" class="botonradio" ><label class="form-lbl">NI</label></li>
-                      <li><input type="radio" value="no_seleccionado" style="display:none" name="<?php echo $fx.$indice;?>" class="botonradio" checked></li>
+               <li><input type="radio" value="NI" name="<?php echo $fx.$indice;?>" class="botonradio" checked><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
@@ -913,7 +913,7 @@
 
        <div class="grid-3-12"></div>
        <div class="grid-5-12 f5total">
-                               Total F-6 Relación con pares con desadaptación social
+                               Total F-6 Relación con partes con desadaptación social
        </div>
        <div id="total_relacion_con_pares" class="grid-1-12 f5resultado">0</div>
        <div class="grid-3-12"></div>
@@ -936,27 +936,24 @@
                                   "h"=>"Rol parental inconsistente. Los padres presentan conductas de desadaptación emocional y/o social",
                                   "i"=>"Los adultos o uno de los padres, no trabajan o están cesantes por más de un año",
                                   "j"=>"La familia o algún miembro de ella aprueba las conductas delictivas del joven",
-                                  "k"=>"Otros miembros de la familia presentan conductas delictivas",
-                                  "l"=>"Se registra violencia intrafamiliar severa",
-                                  "m"=>"Abuso de alcohol en los adultos de la familia",
-								  "n"=>"Abuso de drogas y alcohol en más de un miembro de la familia",								  
-                                  "o"=>"Uno o más miembros de la familiar presentan un trastorno psiquiátrico, psicosis, demencia u otro",
+                                  "l"=>"Otros miembros de la familia presentan conductas delictivas",
+                                  "m"=>"Se registra violencia intrafamiliar severa",
+                                  "n"=>"Abuso de alcohol en los adultos de la familia",
+                                  "o"=>"Uno o más miembros de la familiar presentan un transtorno psiquiátrico. Psicosis, demencia u otro.",
                                   "p"=>"Ha sido víctima de abuso sexual",
                                   "q"=>"Ha sido víctima de maltrato físico");?>
 
           <?php foreach ($array_f7 as $indice => $valor):?>
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-              <?php echo $indice.".-".$valor.$html;?>
-			  <a href="#" class="7<?php echo $indice;?>trigger"><IMG src="/images/question-white.png" /></a>
+              <?php echo $indice.".-".$valor;?>
                      </label>
        </div>
        <div class="grid-4-12">
              <ul class="form-list-rdo">
                <li><input type="radio" value="Si" name="<?php echo $fx.$indice;?>" class="botonradio"><label class="form-lbl">Si</label></li>
                 <li><input type="radio" value="No" name="<?php echo $fx.$indice;?>" class="botonradio" checked><label class="form-lbl">No</label></li>
-                       <li><input type="radio" value="NI" name="<?php echo $fx.$indice;?>" class="botonradio" ><label class="form-lbl">NI</label></li>
-                                        <li><input type="radio" value="no_seleccionado" style="display:none" name="<?php echo $fx.$indice;?>" class="botonradio" checked></li>
+                       <li><input type="radio" value="NI" name="<?php echo $fx.$indice;?>" class="botonradio" checked><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
@@ -1004,16 +1001,14 @@
           <?php foreach ($array_f8 as $indice => $valor):?>
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-             <?php echo $indice.".-".$valor.$html;?>
-			  <a href="#" class="8<?php echo $indice;?>trigger"><IMG src="/images/question-white.png" /></a>
+              <?php echo $indice.".-".$valor;?>
                      </label>
        </div>
        <div class="grid-4-12">
              <ul class="form-list-rdo">
                <li><input type="radio" value="Si" name="<?php echo $fx.$indice;?>" class="botonradio"><label class="form-lbl">Si</label></li>
-               <li><input type="radio" value="No" name="<?php echo $fx.$indice;?>" class="botonradio" ><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="<?php echo $fx.$indice;?>" class="botonradio" ><label class="form-lbl">NI</label></li>
-                                <li><input type="radio" value="no_seleccionado" style="display:none" name="<?php echo $fx.$indice;?>" class="botonradio" checked></li>
+               <li><input type="radio" value="No" name="<?php echo $fx.$indice;?>" class="botonradio" checked><label class="form-lbl">No</label></li>
+               <li><input type="radio" value="NI" name="<?php echo $fx.$indice;?>" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
@@ -1055,24 +1050,22 @@
     $array_f9=array(
                                   "a"=>"Hay abuso de alguna droga",
                                   "b"=>"Hay abuso de alcohol",
-                                  "c"=>"Consume solventes, volátiles y pasta base”. Mantener las instrucciones como están",
-                                  "d"=>"hay una conducta adictiva dependiente de drogas o alcohol en grupo y solo",
-                                  "e"=>"El consumo de drogas afecta negativamente su comportamiento y funcionamiento en general",
+                                  "c"=>"Hay una conducta adictiva dependiente de drogas o alcohol en grupo y sólo",
+                                  "d"=>"El consumo de drogas afecta negativamente su comportamiento y funcionamiento en general",
+                                  "e"=>"Consume solventes volátiles o pasta base",
                                   "f"=>"Presenta conductas delictivas asociadas a la dependencia de droga");?>
 
           <?php foreach ($array_f9 as $indice => $valor):?>
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-            <?php echo $indice.".-".$valor.$html;?>
-			  <a href="#" class="9<?php echo $indice;?>trigger"><IMG src="/images/question-white.png" /></a>
+              <?php echo $indice.".-".$valor;?>
                      </label>
        </div>
        <div class="grid-4-12">
              <ul class="form-list-rdo">
                <li><input type="radio" value="Si" name="<?php echo $fx.$indice;?>" class="botonradio"><label class="form-lbl">Si</label></li>
                <li><input type="radio" value="No" name="<?php echo $fx.$indice;?>" class="botonradio"><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="<?php echo $fx.$indice;?>" class="botonradio" ><label class="form-lbl">NI</label></li>
-                                <li><input type="radio" value="no_seleccionado" style="display:none" name="<?php echo $fx.$indice;?>" class="botonradio" checked></li>
+               <li><input type="radio" value="NI" name="<?php echo $fx.$indice;?>" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
@@ -1109,16 +1102,14 @@
           <?php foreach ($array_f10 as $indice => $valor):?>
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               <?php echo $indice.".-".$valor.$html;?>
-			  <a href="#" class="10<?php echo $indice;?>trigger"><IMG src="/images/question-white.png" /></a>
+              <?php echo $indice.".-".$valor;?>
                      </label>
        </div>
        <div class="grid-4-12">
              <ul class="form-list-rdo">
                <li><input type="radio" value="Si" name="<?php echo $fx.$indice;?>" class="botonradio"><label class="form-lbl">Si</label></li>
-                <li><input type="radio" value="No" name="<?php echo $fx.$indice;?>" class="botonradio" ><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="<?php echo $fx.$indice;?>" class="botonradio" ><label class="form-lbl">NI</label></li>
-                                <li><input type="radio" value="no_seleccionado" style="display:none" name="<?php echo $fx.$indice;?>" class="botonradio" checked></li>
+                <li><input type="radio" value="No" name="<?php echo $fx.$indice;?>" class="botonradio" checked><label class="form-lbl">No</label></li>
+               <li><input type="radio" value="NI" name="<?php echo $fx.$indice;?>" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
@@ -1139,7 +1130,7 @@
     $fx='f11';
     $array_f11=array(
                                   "a"=>"Se muestra con buenos recursos cognitivos para comprender y pensar sobre si mismo y su realidad",
-                                  "b"=>"Muestra habilidades sociales con sus pares ",
+                                  "b"=>"Muestra habilidades sociales con sus pares. Se comunica muy bien ",
                                   "c"=>"Muestra habilidades sociales para comunicarse con adultos",
                                   "d"=>"Solicita activamente colaboración o ayuda cuando lo necesita ",
                                   "e"=>"Acepta la ayuda que se le ofrece y participa",
@@ -1157,16 +1148,14 @@
           <?php foreach ($array_f11 as $indice => $valor):?>
        <div class="grid-8-12">
                                <label class="form-lbl-V-or-F">
-               <?php echo $indice.".-".$valor.$html;?>
-			  <a href="#" class="11<?php echo $indice;?>trigger"><IMG src="/images/question-white.png" /></a>
+              <?php echo $indice.".-".$valor;?>
                      </label>
        </div>
        <div class="grid-4-12">
              <ul class="form-list-rdo">
                <li><input type="radio" value="Si" name="<?php echo $fx.$indice;?>" class="botonradio"><label class="form-lbl">Si</label></li>
-               <li><input type="radio" value="No" name="<?php echo $fx.$indice;?>" class="botonradio" ><label class="form-lbl">No</label></li>
-               <li><input type="radio" value="NI" name="<?php echo $fx.$indice;?>" class="botonradio" ><label class="form-lbl">NI</label></li>
-                                <li><input type="radio" value="no_seleccionado" style="display:none" name="<?php echo $fx.$indice;?>" class="botonradio" checked></li>
+               <li><input type="radio" value="No" name="<?php echo $fx.$indice;?>" class="botonradio" checked><label class="form-lbl">No</label></li>
+               <li><input type="radio" value="NI" name="<?php echo $fx.$indice;?>" class="botonradio"><label class="form-lbl">NI</label></li>
              </ul>
        </div><div class="clear"></div>
 
@@ -1226,18 +1215,12 @@
     <div class="grid-4-12">
       <button class="form-button" type="submit" name="Guardar"><span class="ui-icon ui-icon-disk" style="float:left;"></span>Guardar</button>
     </div>
-    
-    
-    <input type="text" id="CLOSE_FLAG" name="CLOSE_FLAG" style="display:none" value="NOCERRADO"></input>
     <div class="grid-4-12">
-    <a class="form-button-off form-left" style="display: block;"
-      onclick="
-              if(confirm('OJO. Al cerrar el formulario ya no podrás volver a modificarlo.')){
-                  $('#CLOSE_FLAG').val('CERRADO');
-                   document.formulario_FERR.submit();
-              }">Cerrar</a>
-    </div>
-    
+      <?php if($porcCompletado>=100):?><!-- Solo si el procentaje de avance es 100%muestro el botón para finalizar el formulario -->
+      <button class="form-button-off" type="button" name="Finalizar" onclick = "finalizarFERR();"><span class="ui-icon ui-icon-circle-check" style="float:left;"></span>Finalizar Formulario</button>
+      <input type="text" name="esCerrarForm" id="esCerrarForm" style="display: none" value="NOCERRAR"/>
+      <?php endif; ?>
+    </div><div class="clear"></div>
 
     <?php else: ?>
     <div class="grid-4-12"></div>
@@ -1247,282 +1230,8 @@
     <div class="grid-4-12"></div><div class="clear"></div>
     <?php endif; ?>
     <!-- Fin Botón envio de formulario, en caso de ser último bloque advierte que se cerrará el formulario si se continua -->
-
-
-    <input type="text" id="tstart" name="tstart" style="display:none" value="<?php echo $tstart; ?>"></input>
     </form>
     <br>
-<!-- MODALS-->	
-<!-- PESTAÑA1-->
-  <div class="jqmWindow" id="edad">
-<img src="/images/loading-image.gif" />
-</div>
-  <div class="jqmWindow" id="dcp">
-<img src="/images/loading-image.gif" />
-</div>  <div class="jqmWindow" id="dcif">
-<img src="/images/loading-image.gif" />
-</div>
-   <div class="jqmWindow" id="anosdes">
-<img src="/images/loading-image.gif" />
-</div>
-  <div class="jqmWindow" id="polimorfismo1">
-<img src="/images/loading-image.gif" />
-</div>  <div class="jqmWindow" id="edelictiva1">
-<img src="/images/loading-image.gif" />
-</div>
-  
-</div>  <div class="jqmWindow" id="obs1">
-<img src="/images/loading-image.gif" />
-</div>  <div class="jqmWindow" id="iedsd">
-<img src="/images/loading-image.gif" />
-</div>  <div class="jqmWindow" id="iedsp">
-<img src="/images/loading-image.gif" />
-</div> 	
-<!-- PESTAÑA2-->
-	</div>  <div class="jqmWindow" id="viveactual">
-<img src="/images/loading-image.gif" />
-</div>  <div class="jqmWindow" id="vinculos">
-<img src="/images/loading-image.gif" />
-</div>  <div class="jqmWindow" id="autoreporte">
-<img src="/images/loading-image.gif" />
-</div> 	
-
-</div>  <div class="jqmWindow" id="genograma">
-<img src="/images/loading-image.gif" />
-</div> 	
-<!-- PESTAÑA3-->
-	</div>  <div class="jqmWindow" id="prevencion">
-<img src="/images/loading-image.gif" />
-
-</div>  <div class="jqmWindow" id="internacion">
-<img src="/images/loading-image.gif" />
-</div>  <div class="jqmWindow" id="rpa">
-<img src="/images/loading-image.gif" />
-</div> 	
-</div>  <div class="jqmWindow" id="iai">
-<img src="/images/loading-image.gif" />
-</div>  <div class="jqmWindow" id="semicerrado">
-<img src="/images/loading-image.gif" />
-</div> 	
-</div>  <div class="jqmWindow" id="sistemacerrado">
-<img src="/images/loading-image.gif" /></div> 
-<div class="jqmWindow" id="ntotal">
-<img src="/images/loading-image.gif" /></div> 
-<!-- PESTAÑA4-->
-<div class="jqmWindow" id="4a">
-<img src="/images/loading-image.gif" />
-</div>
-  <div class="jqmWindow" id="4b">
-<img src="/images/loading-image.gif" />
-</div>  
-<div class="jqmWindow" id="4c">
-<img src="/images/loading-image.gif" />
-</div>
- <div class="jqmWindow" id="4d">
-<img src="/images/loading-image.gif" />
-</div>
-<!-- PESTAÑA5-->
-<div class="jqmWindow" id="5a">
-<img src="/images/loading-image.gif" />
-</div>
-  <div class="jqmWindow" id="5b">
-<img src="/images/loading-image.gif" />
-</div>  
-<div class="jqmWindow" id="5c">
-<img src="/images/loading-image.gif" />
-</div>
- <div class="jqmWindow" id="5d">
-<img src="/images/loading-image.gif" />
-</div>
-<div class="jqmWindow" id="5g">
-<img src="/images/loading-image.gif" />
-</div>
-  <div class="jqmWindow" id="5e">
-<img src="/images/loading-image.gif" />
-</div>  
-<div class="jqmWindow" id="5f">
-<img src="/images/loading-image.gif" />
-</div>
- <div class="jqmWindow" id="5h">
-<img src="/images/loading-image.gif" />
-</div>
-<div class="jqmWindow" id="5i">
-<img src="/images/loading-image.gif" />
-</div>
- <div class="jqmWindow" id="5j">
-<img src="/images/loading-image.gif" />
-</div>
-<!-- PESTAÑA6-->
-<div class="jqmWindow" id="6a">
-<img src="/images/loading-image.gif" />
-</div>
-  <div class="jqmWindow" id="6b">
-<img src="/images/loading-image.gif" />
-</div>  
-<div class="jqmWindow" id="6c">
-<img src="/images/loading-image.gif" />
-</div>
- <div class="jqmWindow" id="6d">
-<img src="/images/loading-image.gif" />
-</div>
-<div class="jqmWindow" id="6e">
-<img src="/images/loading-image.gif" />
-</div>
-
-<!-- PESTAÑA7-->
-
-<div class="jqmWindow" id="7a">
-<img src="/images/loading-image.gif" />
-</div>
-  <div class="jqmWindow" id="7b">
-<img src="/images/loading-image.gif" />
-</div>  
-<div class="jqmWindow" id="7c">
-<img src="/images/loading-image.gif" />
-</div>
- <div class="jqmWindow" id="7d">
-<img src="/images/loading-image.gif" />
-</div>
-  <div class="jqmWindow" id="7e">
-<img src="/images/loading-image.gif" />
-</div> 
-<div class="jqmWindow" id="7f">
-<img src="/images/loading-image.gif" />
-</div> 
-<div class="jqmWindow" id="7g">
-<img src="/images/loading-image.gif" />
-</div>
- <div class="jqmWindow" id="7h">
-<img src="/images/loading-image.gif" />
-</div>
-<div class="jqmWindow" id="7i">
-<img src="/images/loading-image.gif" />
-</div>
- <div class="jqmWindow" id="7j">
-<img src="/images/loading-image.gif" />
-</div>
- <div class="jqmWindow" id="7k">
-<img src="/images/loading-image.gif" />
-</div>
-<div class="jqmWindow" id="7l">
-<img src="/images/loading-image.gif" />
-</div>
-<div class="jqmWindow" id="7m">
-<img src="/images/loading-image.gif" />
-</div>
-<div class="jqmWindow" id="7n">
-<img src="/images/loading-image.gif" />
-</div>
-<div class="jqmWindow" id="7k">
-<img src="/images/loading-image.gif" />
-</div>
-<div class="jqmWindow" id="7p">
-<img src="/images/loading-image.gif" />
-</div>
-<div class="jqmWindow" id="7q">
-<img src="/images/loading-image.gif" />
-</div>
-
-<!-- PESTAÑA8-->
-<div class="jqmWindow" id="8a">
-<img src="/images/loading-image.gif" />
-</div>
-  <div class="jqmWindow" id="8b">
-<img src="/images/loading-image.gif" />
-</div>  
-<div class="jqmWindow" id="8c">
-<img src="/images/loading-image.gif" />
-</div>
- <div class="jqmWindow" id="8d">
-<img src="/images/loading-image.gif" />
-</div>
-  <div class="jqmWindow" id="8e">
-<img src="/images/loading-image.gif" />
-</div> 
-<!-- PESTAÑA9-->
-<div class="jqmWindow" id="9a">
-<img src="/images/loading-image.gif" />
-</div>
-  <div class="jqmWindow" id="9b">
-<img src="/images/loading-image.gif" />
-</div>  
-<div class="jqmWindow" id="9c">
-<img src="/images/loading-image.gif" />
-</div>
- <div class="jqmWindow" id="9d">
-<img src="/images/loading-image.gif" />
-</div>
-  <div class="jqmWindow" id="9e">
-<img src="/images/loading-image.gif" />
-</div> 
-<div class="jqmWindow" id="9f">
-<img src="/images/loading-image.gif" />
-</div> 
-<!-- PESTAÑA10-->
-<div class="jqmWindow" id="10a">
-<img src="/images/loading-image.gif" />
-</div>
-  <div class="jqmWindow" id="10b">
-<img src="/images/loading-image.gif" />
-</div>  
-<div class="jqmWindow" id="10c">
-<img src="/images/loading-image.gif" />
-</div>
- <div class="jqmWindow" id="10d">
-<img src="/images/loading-image.gif" />
-</div>
-  <div class="jqmWindow" id="10e">
-<img src="/images/loading-image.gif" />
-</div> 
-<div class="jqmWindow" id="10f">
-<img src="/images/loading-image.gif" />
-</div> 
-<div class="jqmWindow" id="10g">
-<img src="/images/loading-image.gif" />
-</div>
-<!-- PESTAÑA11-->
-<div class="jqmWindow" id="11a">
-<img src="/images/loading-image.gif" />
-</div>
-  <div class="jqmWindow" id="11b">
-<img src="/images/loading-image.gif" />
-</div>  
-<div class="jqmWindow" id="11c">
-<img src="/images/loading-image.gif" />
-</div>
- <div class="jqmWindow" id="11d">
-<img src="/images/loading-image.gif" />
-</div>
-  <div class="jqmWindow" id="11e">
-<img src="/images/loading-image.gif" />
-</div> 
-<div class="jqmWindow" id="11f">
-<img src="/images/loading-image.gif" />
-</div> 
-<div class="jqmWindow" id="11g">
-<img src="/images/loading-image.gif" />
-</div>
- <div class="jqmWindow" id="11h">
-<img src="/images/loading-image.gif" />
-</div>
-<div class="jqmWindow" id="11i">
-<img src="/images/loading-image.gif" />
-</div>
- <div class="jqmWindow" id="11j">
-<img src="/images/loading-image.gif" />
-</div>
- <div class="jqmWindow" id="11k">
-<img src="/images/loading-image.gif" />
-</div>
-<div class="jqmWindow" id="11l">
-<img src="/images/loading-image.gif" />
-</div>
-<div class="jqmWindow" id="11m">
-<img src="/images/loading-image.gif" />
-</div>
-<div class="jqmWindow" id="11n">
-<img src="/images/loading-image.gif" />
-</div>
 
 <!-- Fin código diálogo de instrucciones
 confirm('¿Desea Cancelar y volver a incidencia?')
