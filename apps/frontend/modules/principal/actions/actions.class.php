@@ -1,5 +1,4 @@
 <?php
-
 class principalActions extends Actions
 {
     public function executeIndex(sfWebRequest $request)

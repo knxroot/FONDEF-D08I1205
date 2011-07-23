@@ -8,8 +8,9 @@
   <div id="dialogo-instrucciones" style="display: none;" title="Instrucciones JIR">
 	<p>
 		<span class="ui-icon-info-grande" style="float:left; margin:4px 4px 4px 4px;"></span>
-     A continuación te presentamos una serie de frases que los jóvenes usan para describirse a sí mismos. Se presentan aquí para ayudarte a describir tus sentimientos y actitudes. 
-      <br><br>
+    A continuación te presentamos una serie de frases que los jóvenes usan para
+describirse a sí mismos. Se presentan aquí para ayudarte a describir tus sentimientos
+y actitudes.  <br><br>
       <b>Al responder trata de hacerlo del modo más serio y honesto posible.</b><br><br>
       No te preocupes si algunas frases te parecen poco comunes, divertidas o extrañas; se han incluido para describir diferentes tipos de problemas que los jóvenes pueden tener.
       <br><br>
