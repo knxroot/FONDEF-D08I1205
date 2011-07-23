@@ -81,6 +81,12 @@ font-size: 14px !important;
 padding: 0.5em;
 color: "#ffffff";
 }
+.ui-consenso-header{
+font-size: 14px !important;
+padding: 0.5em;
+color: "#ffffff";
+background-color: #C3FF68 !important;
+}
 /*Adaptación al framework formee*/
 
 /* tamaño dos campos  cambia de 50% a 46%en firefox */
@@ -226,6 +232,12 @@ text-decoration: none;
 
 .menu-dashboard-autoreporte-clickeable, .menu-dashboard-juicioprofesional-clickeable{
       -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+.menu-consenso{
+    -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+        color: white;
+border-color: #00cc00;
+      background-color: #00cc00 !important;
 }
 
 .menu-dashboard-autoreporte,.menu-dashboard-autoreporte-clickeable{

@@ -423,8 +423,6 @@ public function getPorcentajeCompletadoMACI($idUser,$idEncuestado){
   return $porcCompletado[0];
 }
 
-
-
 /**
  * Dado un usuario y un encuestado retorna el porcentaje de completado del
  * formulario CAIE para dicho encuestado.

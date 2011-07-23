@@ -5,9 +5,20 @@
 <?php $url_save_post=url_for('FCMF/GuardarInstrumento?idEncuestado='.$idEncuestado);?>
 
   <?php if(!($es_ultimo_bloque)): ?>
-  <div class="grid-12-12 ui-widget ui-widget-header ui-corner-all" style="position: relative;"><?php  echo "[{$porcCompletado} % completado] (FCMF) Ficha Criminométrica";?>
-  </div><div class="clear"></div>
 
+  <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso5): ?>
+           
+  <div class="grid-12-12 ui-widget ui-consenso-header ui-corner-all" style="position: relative;"><?php  echo "[{$porcCompletado} % completado] (FCMF) Ficha Criminométrica (Modo consenso)";?>
+  </div><div class="clear"></div>
+        
+
+    <?php else: ?>
+          
+  <div class="grid-12-12 ui-widget ui-widget-header ui-corner-all" style="position: relative;"><?php  echo "[{$porcCompletado} % completado] (FCMF) Ficha Criminométrica ";?>
+  </div><div class="clear"></div>
+      
+      <?php endif; ?>
+        
 
 <div id="msgzone">
     <div class="grid-12-12">

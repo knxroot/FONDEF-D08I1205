@@ -39,6 +39,23 @@ class FCMFActions extends Actions
     if($this->esCerrado($request, 'fcmf_respuestas')){
          return $this->forward('FCMF','Cerrado');;
     }
+    if(!$esEvaluadorSecundario ...)
+    $this->esEvaluadorSecundario=$this->soyResponsableSecundario($request);
+    
+        $cierresfcmf=$this->contarTotalCierresInstrumento($request, 'fcmf_respuestas');
+        if($cierresfcmf==1){
+            
+        }
+        
+    if($cierresfcmf>1){
+      $this->mostrarColumnaConsenso1=true;
+      $this->mostrarColumnaConsenso5=true;
+
+      $esCerradoFcmf=$this->esCerrado2($request, 'fcmf_respuestas',1);
+      $this->porcCompletadoFCMF2 = $esCerradoFcmf*100;
+    }
+    
+    
              $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'fcmf_respuestas');
         
                 $this->tstart=$this->getTimeStart();  

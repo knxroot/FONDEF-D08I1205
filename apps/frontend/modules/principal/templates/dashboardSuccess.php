@@ -1,6 +1,3 @@
-
-
-
 <?php slot('title') ?>
   <?php  echo sprintf('Dash Board') ?>
 <?php end_slot(); ?>
@@ -190,7 +187,15 @@
    <div class="prefix_1 grid_2">
     <div class="menu-dashboard-juicioprofesional">
     <a href="<?php echo url_for('FCMF/index?idEncuestado='.$idEncuestado);?>">
+    <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso5): ?>
+    <div class="menu-consenso">
+        
+
+    <?php else: ?>
     <div class="menu-dashboard-juicioprofesional-clickeable">
+      
+      <?php endif; ?>
+    
       FCMF
     </div></a>
    </div>
