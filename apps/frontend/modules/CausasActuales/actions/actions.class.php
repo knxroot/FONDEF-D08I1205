@@ -8,7 +8,7 @@
  * @author     Gustavo Lacoste <gustavo@lacosox.org>
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
-class CausasVigentesActions extends Actions
+class CausasActualesActions extends Actions
 {
 
  /**
@@ -18,15 +18,15 @@ class CausasVigentesActions extends Actions
   */
   public function executeIndex(sfWebRequest $request)
   {
-    $this->forward('CausasVigentes','mostrarFormulario');
+    $this->forward('CausasActuales','mostrarFormulario');
   }
   
        
         
 	public function executeGuardarInstrumento(sfWebRequest $request)
 	{
-		$this->GuardarInstrumento($request, 'causasvigentes_respuestas'); //guarda todas las variables del usuario actual cara de palo en la BD
-                  $this->GuardarTiempo($request,'CausasVigentes');
+		$this->GuardarInstrumento($request, 'causasactuales_respuestas'); //guarda todas las variables del usuario actual cara de palo en la BD
+                  $this->GuardarTiempo($request,'CausasActuales');
 	}
          /**
           * Lista las preguntas del formulario
@@ -36,10 +36,10 @@ class CausasVigentesActions extends Actions
         public function executeMostrarFormulario(sfWebRequest $request)
         {
               // preparaMostrarFormulario retorna un JSON que se usa para mostrar el instrumento
-    if($this->esCerrado($request, 'causasvigentes_respuestas')){
-         return $this->forward('CausasVigentes','Cerrado');;
+    if($this->esCerrado($request, 'causasactuales_respuestas')){
+         return $this->forward('CausasActuales','Cerrado');;
     }
-             $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'causasvigentes_respuestas');
+             $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'causasactuales_respuestas');
         
                 $this->tstart=$this->getTimeStart();  
              

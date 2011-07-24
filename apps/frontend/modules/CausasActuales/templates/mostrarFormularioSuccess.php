@@ -1,28 +1,25 @@
 <?php slot('title') ?>
-  <?php  echo "[{$porcCompletado} % completado] (CausasAnteriores) Ficha Criminométrica"; ?>
+  <?php  echo "[{$porcCompletado} % completado] (CausasActuales) Ficha Criminométrica"; ?>
 <?php end_slot(); ?>
 
-<?php $url_save_post=url_for('CausasAnteriores/GuardarInstrumento?idEncuestado='.$idEncuestado);?>
+<?php $url_save_post=url_for('CausasActuales/GuardarInstrumento?idEncuestado='.$idEncuestado);?>
 
   <?php if(!($es_ultimo_bloque)): ?>
   
 
 
 <div id="contenido" style="display:display">
- <form id="formulario_CausasAnteriores" name="formulario_CausasAnteriores" class="form" method="post" action="<?php echo $url_save_post; ?>">
+ <form id="formulario_CausasActuales" name="formulario_CausasActuales" class="form" method="post" action="<?php echo $url_save_post; ?>">
 
 
      
      
-  <div id="bloque-sanciones1">
+     <div id="bloque-sanciones2">
 		<div class="ui-widget-header ui-corner-all">
-			Causas Anteriores
+			Causas actualmente imputado
 		</div>
-      
-          <?php for($i = 1; $i <= 10; $i++): ?>
-      
-          <div class="form2-par" id="sancion-fieldset_svigente<?php echo $i;?>" <?php if($i>1){echo "style='display:none'";};?>>
-   
+                  <?php for($i = 1; $i <= 10; $i++): ?>
+              <div class="form2-par" id="sancion-fieldset_svigente<?php echo $i;?>" <?php if($i>1){echo "style='display:none'";};?>>
           
 
             <div class="grid-4-12">
@@ -490,36 +487,20 @@
 				</optgroup></select>
             </div>
            
-            <div class="grid-5-12">
-                <label class="form-lbl">F. inicio Condena  aaaa/mm/dd <em class="form-req">*</em></label>
+            <div class="grid-4-12">
+                <label class="form-lbl">F. inicio investigacion  aaaa/mm/dd <em class="form-req">*</em></label>
                 <input type="text" class="form-txt" name="input_fecha_inicio_condena<?php echo $i;?>" id="input_fecha_inicio_condena<?php echo $i;?>"/>
             </div>
 
+					
 			
-			
-			
-			 <div class="grid-5-12">
-                <label class="form-lbl">F. termino Condena  aaaa/mm/dd <em class="form-req">*</em></label>
-                <input type="text" class="form-txt" name="input_fecha_termino_condena<?php echo $i;?>" id="input_fecha_termino_condena<?php echo $i;?>"/>
+			 <div class="grid-3-12">
+                <label class="form-lbl">Plazo investigación (días) <em class="form-req">*</em></label>
+                <input type="text" class="form-txt" name="input_plazo<?php echo $i;?>" id="input_plazo<?php echo $i;?>"/>
             </div>
-			
-			
-		
-          
-
-            <div class="grid-5-12">
-                <label class="form-lbl">Fecha de comisión del delito aaaa/mm/dd<em class="form-req">*</em></label>
-                <input type="text" class="form-txt" name="input_fecha_detencion<?php echo $i;?>" id="input_detencion<?php echo $i;?>"/>
-            </div>
-
-            <div class="grid-5-12">
-                <label class="form-lbl">Fecha control de detención aaaa/mm/dd<em class="form-req">*</em></label>
-                <input type="text" class="form-txt" name="input_fecha_control_detencion<?php echo $i;?>" id="input_fecha_control_detencion<?php echo $i;?>"/>
-            </div>	
-				
-		
-			
-			
+			              
+						
+						
             <div class="grid-12-12">
                 <label class="form-lbl">Causal de ingreso <em class="form-req">*</em></label>
                 <select name="select_tipo_materia<?php echo $i;?>" id="select_tipo_materia<?php echo $i;?>"  style="width: 500px;float:left;">
@@ -530,9 +511,9 @@
                 </select>
             </div>
         </div>
-            <?php  endfor; ?> 
+          <?php  endfor; ?> 
     </div>
-   	<div id="bloque-boton-agregar-sancion">
+        <div id="bloque-boton-agregar-sancion">
       <div class="grid-4-12"></div>
       <div class="grid-4-12">
       <div class="medium blue awesome" onClick="agregarBloqueSVIGENTE()">
@@ -574,7 +555,7 @@
       onclick="
               if(confirm('OJO. Al cerrar el formulario ya no podrás volver a modificarlo.')){
                   $('#CLOSE_FLAG').val('CERRADO');
-                   document.formulario_CausasAnteriores.submit();
+                   document.formulario_CausasActuales.submit();
               }">Cerrar</a>
     </div>
 </div><div class="clear"></div>
