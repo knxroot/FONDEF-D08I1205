@@ -1,4 +1,4 @@
-<div class="grid-12-12 ui-widget-header ui-corner-all" style="position: relative;">Causas Vigentes</div>
+<div class="grid-12-12 ui-widget-header ui-corner-all" style="position: relative;">Causas Anteriores</div>
 
 <div class="grid-12-12">
   <span class="form-msg-success" style="display: none;"><strong>OK:</strong> El instrumento se ha guardado correctamente.</span>
