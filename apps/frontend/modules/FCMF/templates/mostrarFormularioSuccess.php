@@ -2,11 +2,16 @@
   <?php  echo "[{$porcCompletado} % completado] (FCMF) Ficha Criminométrica"; ?>
 <?php end_slot(); ?>
 
-<?php $url_save_post=url_for('FCMF/GuardarInstrumento?idEncuestado='.$idEncuestado);?>
+<?php 
+$url_save_post=url_for('FCMF/GuardarInstrumento?idEncuestado='.$idEncuestado);
+if($consenso==1){
+  $url_save_post=url_for('FCMF/GuardarInstrumento?idEncuestado='.$idEncuestado.'&modoConsenso=true');
+}
+?>
 
   <?php if(!($es_ultimo_bloque)): ?>
 
-  <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso5): ?>
+  <?php if($consenso==1): ?>
            
   <div class="grid-12-12 ui-widget ui-consenso-header ui-corner-all" style="position: relative;"><?php  echo "[{$porcCompletado} % completado] (FCMF) Ficha Criminométrica (Modo consenso)";?>
   </div><div class="clear"></div>
@@ -1406,6 +1411,9 @@
 <script type="text/javascript">
                 $().ready(function() {
                      $("form").loadJSON(<?php echo $sf_data->getRaw('respuestasGuardadas');?>);
+                    <?php if($consenso==1): ?>
+                      $("form").loadAndBlockJSON(<?php echo $sf_data->getRaw('coincidencias');?>); 
+                    <?php endif; ?>
                      $("#msgzone").hide();
                      $("#contenido").show();
                 });
