@@ -13,4 +13,4 @@ all:
         
     supercontrolador:
           blacklist_FERR: ['module','action','Guardar']
-          blacklist_FCMF: ['module','action','Guardar']
+          blacklist_FCMF: ['module','action','Guardar','tstart','modoConsenso']

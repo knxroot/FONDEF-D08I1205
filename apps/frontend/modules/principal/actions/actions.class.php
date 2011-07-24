@@ -142,7 +142,7 @@ $SQL_CONSULTA_NOMBRE="SELECT `input_primer_nombre` , `input_otros_nombres` , `in
 
   }
 public function executeConsultaRegiones(sfWebRequest $request)
-  {
+  {//
     //$this->forward('default', 'module');
     $esAjax = $request->isXmlHttpRequest();/*true si es una peticion por ajax*/
     $this->forward404Unless($esAjax);/*lo envia a error 404 a menos que sea una peticion ajax*/

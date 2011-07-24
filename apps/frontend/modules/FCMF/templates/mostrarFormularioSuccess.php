@@ -1,5 +1,5 @@
 <?php slot('title') ?>
-  <?php  echo "[{$porcCompletado} % completado] (FCMF) Ficha Criminométrica"; ?>
+  <?php  echo "(FCMF) Ficha Criminométrica"; ?>
 <?php end_slot(); ?>
 
 <?php 
@@ -13,13 +13,13 @@ if($consenso==1){
 
   <?php if($consenso==1): ?>
            
-  <div class="grid-12-12 ui-widget ui-consenso-header ui-corner-all" style="position: relative;"><?php  echo "[{$porcCompletado} % completado] (FCMF) Ficha Criminométrica (Modo consenso)";?>
+  <div class="grid-12-12 ui-widget ui-consenso-header ui-corner-all" style="position: relative;"><?php  echo "(FCMF) Ficha Criminométrica (Modo consenso)";?>
   </div><div class="clear"></div>
         
 
     <?php else: ?>
           
-  <div class="grid-12-12 ui-widget ui-widget-header ui-corner-all" style="position: relative;"><?php  echo "[{$porcCompletado} % completado] (FCMF) Ficha Criminométrica ";?>
+  <div class="grid-12-12 ui-widget ui-widget-header ui-corner-all" style="position: relative;"><?php  echo "(FCMF) Ficha Criminométrica ";?>
   </div><div class="clear"></div>
       
       <?php endif; ?>
@@ -1299,7 +1299,7 @@ if($consenso==1){
     <div class="grid-4-12">
     <a class="form-button-off form-left" style="display: block;"
       onclick="
-              if(confirm('OJO. Al cerrar el formulario ya no podrás volver a modificarlo.')){
+              if(confirm('ALERTA. Al cerrar el formulario ya no podrás volver a modificarlo.')){
                   $('#CLOSE_FLAG').val('CERRADO');
                    document.formulario_FCRIMINOMETRICA.submit();
               }">Cerrar</a>
