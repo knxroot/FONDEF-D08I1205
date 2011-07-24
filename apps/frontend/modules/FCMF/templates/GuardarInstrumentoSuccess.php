@@ -7,7 +7,12 @@
 <div class="prefix_4 grid_11">
 
 <a class="form-button-off form-left" style="display: block;" href="<?php echo url_for('principal/dashboard?idEncuestado='.$idEncuestado);?>"><span class="ui-icon ui-icon-circle-arrow-w" style="float:left;"></span>Volver al menú</a>
+
+<?php if($consenso==1): ?>
+<a class="form-button form-left" style="display: block;" href="<?php echo url_for('FCMF/index?idEncuestado='.$idEncuestado.'&modoConsenso=true');?>"><span class="ui-icon ui-icon-pencil" style="float:left;"></span>Continuar editando instrumento FCMF</a>
+<?php else: ?>
 <a class="form-button form-left" style="display: block;" href="<?php echo url_for('FCMF/index?idEncuestado='.$idEncuestado);?>"><span class="ui-icon ui-icon-pencil" style="float:left;"></span>Continuar editando instrumento FCMF</a>
+<?php endif; ?>
 </div>
 
 <script>

@@ -186,7 +186,12 @@
 
    <div class="prefix_1 grid_2">
     <div class="menu-dashboard-juicioprofesional">
+    <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso5): ?>
+    <a href="<?php echo url_for('FCMF/index?idEncuestado='.$idEncuestado.'&modoConsenso=true');?>">
+    <?php else: ?>
     <a href="<?php echo url_for('FCMF/index?idEncuestado='.$idEncuestado);?>">
+    <?php endif; ?>
+        
     <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso5): ?>
     <div class="menu-consenso">
         

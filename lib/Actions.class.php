@@ -200,6 +200,37 @@ $tiempo=mysql_fetch_array($tiempo);
 		return true; //puro chamullo, hay que buscar en la doc de php.net y ver si yo esoy casi seguro que el mysql_query retorna un estado parece, ese hay que usar para retornaar true o false aqui
 	}
 
+	public function generarListaBloqueadosCruce($idEncuestado,$nombretabla, $iduser1,$iduser2)
+	{
+		$this->BD_Conectar();
+
+
+        $elementosAIgnorar=sfConfig::get('app_supercontrolador_blacklist_'.$this->moduleName);
+                
+		$habraalgo_u1="SELECT id_respuesta,respuesta FROM `{$nombretabla}` WHERE `id_user`={$iduser1} AND `id_encuestado`={$idEncuestado} AND `concensoMode`=0";
+		$habraalgo_u2="SELECT id_respuesta,respuesta FROM `{$nombretabla}` WHERE `id_user`={$iduser1} AND `id_encuestado`={$idEncuestado} AND `concensoMode`=0";
+		
+		$rows1 = mysql_query($habraalgo_u1);
+        $results1 = array();
+        while($row = mysql_fetch_array($rows1)){
+          if (!in_array($row['id_respuesta'], $elementosAIgnorar)) {
+            $results1[$row['id_respuesta']] = $row['respuesta'];
+          }
+        }
+		
+		$rows2 = mysql_query($habraalgo_u2);
+        $results2 = array();
+        while($row = mysql_fetch_array($rows2)){
+          if (!in_array($row['id_respuesta'], $elementosAIgnorar)) {
+            $results2[$row['id_respuesta']] = $row['respuesta'];
+          }
+        }		
+		
+	  $result_array = array_intersect_assoc($results1, $results2);
+
+          return $result_array;
+	}
+        
 	/**
 	* Retorna todas las respuestas de un usuario en formato json para que sean
         * parseadas en JS con JQuery y recrear el formulario que estaba guardado
@@ -207,10 +238,14 @@ $tiempo=mysql_fetch_array($tiempo);
 	* $concensoMode =1 Si se esta guardando en modo consenso , 0 en caso contrario
 	* @return string Retorna un String que representa la cadena en formato JSON A parsear
 	*/
-	public function preparaMostrarFormulario(sfWebRequest $request,$nombretabla,$concensoMode=0)
+	public function preparaMostrarFormulario(sfWebRequest $request,$nombretabla,$concensoMode=0,$nojson=false, $usuario=0)
 	{
 		$this->BD_Conectar();
-		$idUser=$this->getUser()->getGuardUser()->getId();
+                $idUser=$this->getUser()->getGuardUser()->getId();
+                if($usuario!=0){
+                    $idUser=$usuario;
+                }
+		
 		$this->idEncuestado=$request->getParameter('idEncuestado');
 		$this->forward404If(!$this->idEncuestado);
 		$this->concensoMode=$concensoMode;
@@ -227,9 +262,12 @@ $tiempo=mysql_fetch_array($tiempo);
                   if (!in_array($row['id_respuesta'], $elementosAIgnorar)) {
                       $results[$row['id_respuesta']] = $row['respuesta'];
                     }
-                }  
-                return json_encode($results);
-
+                }
+                if($nojson){
+                    return $results;
+                }else{
+                    return json_encode($results);
+                }
 	}
         //  cierra sfSuperControlador
         
@@ -294,6 +332,20 @@ $tiempo=mysql_fetch_array($tiempo);
 
 	}
         
+	 /**
+	 * Obtiene el id del reponsable secundario
+	 * @return number Retorna un Int que representa el id del responsable secundario
+	 */
+	public function getIDResponsableSecundario($idEncuestado)
+	{
+            $this->BD_Conectar();
+			
+            $habraalgo="SELECT select_user_responsable_secundario1  FROM `encuestado`
+             WHERE `id_encuestado` ={$idEncuestado} LIMIT 1";
+            $result = mysql_query($habraalgo);
+            $result = mysql_fetch_array($result);
+            return $result[0];
+	}
         
 	/**
 	* Retorna 0 o 1 dependiendo si la tabla esta cerrada para dicho user y dicho idencuestado
@@ -333,6 +385,7 @@ $tiempo=mysql_fetch_array($tiempo);
             $this->forward404If(!$this->idEncuestado);
 
             $habraalgo="SELECT * FROM `{$nombretabla}` WHERE `id_user`={$idUser} AND `id_encuestado`={$this->idEncuestado} AND `id_respuesta`='CLOSE_FLAG' AND `respuesta`='CERRADO' AND `concensoMode`={$consensoMode}";
+            //ECHO $habraalgo;
             $result = mysql_query($habraalgo);
             $rows=mysql_num_rows($result);
 

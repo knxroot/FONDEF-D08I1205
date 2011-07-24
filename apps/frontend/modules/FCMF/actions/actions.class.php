@@ -20,13 +20,22 @@ class FCMFActions extends Actions
   {
     $this->forward('FCMF','mostrarFormulario');
   }
-  
-       
-        
-	public function executeGuardarInstrumento(sfWebRequest $request)
-	{
-		$this->GuardarInstrumento($request, 'fcmf_respuestas'); //guarda todas las variables del usuario actual cara de palo en la BD
-                  $this->GuardarTiempo($request,'FCMF');
+
+	public function executeGuardarInstrumento(sfWebRequest $request){
+            $modoConsenso = $request->getParameter('modoConsenso');
+            
+            // si se esta tratando de responder en modoConsenso
+            if($modoConsenso==true){
+                $this->consenso=1;
+               /* verifica que quien esta tratando de entrar en modo consenso no
+                sea un evaluador secundario que se esta 'balsiando'*/ 
+                $esEvaluadorSecundario=$this->soyResponsableSecundario($request);
+                $this->forward404If($esEvaluadorSecundario);
+                $this->GuardarInstrumento($request, 'fcmf_respuestas',1); //guarda todas las variables del usuario actual cara de palo en la BD
+            }else{
+                $this->GuardarInstrumento($request, 'fcmf_respuestas'); 
+            }
+          $this->GuardarTiempo($request,'FCMF');
 	}
          /**
           * Lista las preguntas del formulario
@@ -35,31 +44,55 @@ class FCMFActions extends Actions
           */
         public function executeMostrarFormulario(sfWebRequest $request)
         {
-              // preparaMostrarFormulario retorna un JSON que se usa para mostrar el instrumento
-    if($this->esCerrado($request, 'fcmf_respuestas')){
-         return $this->forward('FCMF','Cerrado');;
-    }
-    if(!$esEvaluadorSecundario ...)
-    $this->esEvaluadorSecundario=$this->soyResponsableSecundario($request);
-    
-        $cierresfcmf=$this->contarTotalCierresInstrumento($request, 'fcmf_respuestas');
-        if($cierresfcmf==1){
-            
-        }
-        
-    if($cierresfcmf>1){
-      $this->mostrarColumnaConsenso1=true;
-      $this->mostrarColumnaConsenso5=true;
+            $modoConsenso = $request->getParameter('modoConsenso');
+            // si se esta tratando de responder en modoConsenso
+            if($modoConsenso==true){
+                
+                /* verifica que quien esta tratando de entra en modo consenso no
+                sea un evaluador secundario que se esta balsiando*/ 
+                $esEvaluadorSecundario=$this->soyResponsableSecundario($request);
+                $this->forward404If($esEvaluadorSecundario);
+                
+                // se verifica si ya se cerró el modo consenso
+                if($this->esCerrado2($request, 'fcmf_respuestas',1)){
+                  return $this->forward('FCMF','Cerrado'); 
+                }
 
-      $esCerradoFcmf=$this->esCerrado2($request, 'fcmf_respuestas',1);
-      $this->porcCompletadoFCMF2 = $esCerradoFcmf*100;
-    }
-    
-    
-             $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'fcmf_respuestas');
-        
-                $this->tstart=$this->getTimeStart();  
-             
+                // ademas obiamente debe traer un id encuestado 
+                $this->idEncuestado = $request->getParameter('idEncuestado');
+                $this->forward404If(!$this->idEncuestado);
+                
+                /*primero obtengo las respuestas que fueron guardadas en modo
+                 * consenso, es decir, con el usuario actual (principal)marcando
+                 *  modo consenso. Luego obtengo lo que el usuario actual había
+                 * respondido sin modo consenso.
+                 */
+                $idResponsableSecundario=$this->getIDResponsableSecundario($this->idEncuestado);
+                
+                $idUser=$this->getUser()->getGuardUser()->getId();
+                
+                $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'fcmf_respuestas',1,true);
+                $this->coincidencias=$this->generarListaBloqueadosCruce($this->idEncuestado,'fcmf_respuestas', $idUser, $idResponsableSecundario);
+                if(count($this->respuestasGuardadas)<=1){
+                    $this->respuestasGuardadas=$this->coincidencias;//esto deberia ocurrir exclusivamente la primera vez solamente
+                }
+                $this->respuestasGuardadas=json_encode($this->respuestasGuardadas);
+                $this->coincidencias=json_encode($this->coincidencias);      
+                
+                $this->tstart=$this->getTimeStart();
+                $this->consenso=1;
+                
+            }else{
+                
+              if($this->esCerrado($request, 'fcmf_respuestas')){
+                return $this->forward('FCMF','Cerrado');
+              }
+              $this->idEncuestado = $request->getParameter('idEncuestado');
+              $this->forward404If(!$this->idEncuestado);
+              $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'fcmf_respuestas');
+              $this->tstart=$this->getTimeStart(); 
+              $this->consenso=0;
+            }
         }
         
         public function executeCerrado(sfWebRequest $request)
