@@ -48,9 +48,13 @@ class principalActions extends Actions
 
 
        /* porcentajes de instrumentos de juicio profesional */
-        $this->porcCompletadoEGED  = $this->getPorcentajeCompletadoEGED($idUser,$this->idEncuestado);
+    /* CAMBIO CONSENSO START */
+        $esCerradoEged=$this->esCerrado2($request, 'eged2_respuestas',0);
+        $this->porcCompletadoEGED = $esCerradoEged*100;
+    /* CAMBIO CONSENSO STOP */
         $esCerradoFerr=$this->esCerrado2($request, 'ferr2_respuestas',0);
         $this->porcCompletadoFERR = $esCerradoFerr*100;
+        
         $this->porcCompletadoIRNC = $this->getPorcentajeCompletadoIRNC($idUser,$this->idEncuestado);
         $esCerradoFcmf=$this->esCerrado2($request, 'fcmf_respuestas',0);
         $this->porcCompletadoFCMF = $esCerradoFcmf*100;
@@ -87,14 +91,23 @@ $SQL_CONSULTA_NOMBRE="SELECT `input_primer_nombre` , `input_otros_nombres` , `in
   $r = mysql_fetch_array(mysql_query($SQL_CONSULTA_NOMBRE));
   $this->nombreEncuestado=$r[0]." ".$r[1]." ".$r[2]." ".$r[3];
 
-    $this->mostrarColumnaConsenso1=false;
-    $this->mostrarColumnaConsenso2=false;
-    $this->mostrarColumnaConsenso3=false;
-    $this->mostrarColumnaConsenso4=false;
-    $this->mostrarColumnaConsenso5=false;
+    $this->mostrarColumnaConsenso1=false; //COLUMNA
+    $this->mostrarColumnaConsenso2=false; //EGED
+    $this->mostrarColumnaConsenso3=false; //FERR
+    $this->mostrarColumnaConsenso4=false; //IRNC
+    $this->mostrarColumnaConsenso5=false; //FCMF
     
 
-    
+    /* CAMBIO CONSENSO START */
+    $cierreseged=$this->contarTotalCierresInstrumento($request, 'eged2_respuestas');
+    if($cierreseged>1){
+      $this->mostrarColumnaConsenso1=true;
+      $this->mostrarColumnaConsenso2=true;
+
+      $esCerradoEged=$this->esCerrado2($request, 'eged2_respuestas',1);
+      $this->porcCompletadoEGED2 = $esCerradoEged*100;
+    }    
+    /* CAMBIO CONSENSO STOP */
     
     /* CAMBIO CONSENSO START */
     $cierresferr=$this->contarTotalCierresInstrumento($request, 'ferr2_respuestas');

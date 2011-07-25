@@ -2,7 +2,15 @@
   <?php  echo "Formulario a EGED ({$porcCompletado} % completado)";?>
 <?php end_slot(); ?>
 
-<?php $url_next_post=url_for('EGED/proximoBloque?idEncuestado='.$idEncuestado);?>
+<!-- CAMBIO CONSENSO START-->
+<?php 
+$url_save_post=url_for('EGED/GuardarInstrumento?idEncuestado='.$idEncuestado);
+if($consenso==1){
+  $url_save_post=url_for('EGED/GuardarInstrumento?idEncuestado='.$idEncuestado.'&modoConsenso=true');
+}
+?>
+<!-- CAMBIO CONSENSO STOP-->
+
 
 <!-- Comienzo Bloque Dialogo Instrucciones -->
   <div id="dialogo-instrucciones" style="display: none;" title="Instrucciones EGED">
@@ -21,11 +29,21 @@
   </div>
 <!-- Fin Bloque Dialogo Instrucciones -->
 
-<form id="formulario_EGED" name="formulario_EGED" class="form" method="post" action="<?php echo $url_next_post; ?>">
-  <?php if(!($es_ultimo_bloque)): ?>
-  <div class="grid-12-12 ui-widget-header ui-corner-all" style="position: relative;">Formulario EGED - <?php echo $porcCompletado; ?> % completado
+<form id="formulario_EGED" name="formulario_EGED" class="form" method="post" action="<?php echo $url_save_post; ?>">
+
+<!-- CAMBIO CONSENSO START-->
+  <?php if($consenso==1): ?>           
+    <div class="grid-12-12 ui-widget ui-consenso-header ui-corner-all" style="position: relative;"><?php  echo "Formulario EGED (Modo consenso)";?>
   <span class="icono-ver-instrucciones" onclick="$('#dialogo-instrucciones').dialog('open');"></span>
-  </div>
+    </div><div class="clear"></div>
+  <?php else: ?>
+    <div class="grid-12-12 ui-widget ui-widget-header ui-corner-all" style="position: relative;"><?php  echo "Formulario EGED";?>
+   <span class="icono-ver-instrucciones" onclick="$('#dialogo-instrucciones').dialog('open');"></span>
+    </div><div class="clear"></div>      
+  <?php endif; ?>
+<!-- CAMBIO CONSENSO STOP-->    
+    
+
 <?php foreach ($Preguntas_EGED as $pregunta):?>
   <!-- Comienzo Bloque Pregunta -->
   <div id="EGED_pregunta_<?php echo $pregunta["id_pregunta"];?>" class="EGED_bloque_pregunta">
@@ -41,6 +59,7 @@
       <ul class="form-list-rdo">
         <li><input class="botonradio" name="radio_VorF_EGED_<?php echo $pregunta["id_pregunta"];?>" type="radio" value="Si" /><label class="form-lbl">Sí</label></li>
         <li><input class="botonradio" name="radio_VorF_EGED_<?php echo $pregunta["id_pregunta"];?>" type="radio" value="No" /><label class="form-lbl">No</label></li>
+
 			</ul>
     </div>
     <div class="grid-1-12"> <!-- tools para la pregunta -->
@@ -72,36 +91,25 @@
     </div>
   </div>
 <!-- Fin Bloque Dialogo añadir comentario -->
-<?php else: ?>
-<div class="ui-widget">
-				<div style="margin-top: 20px; padding: 0pt 0.7em;" class="ui-state-highlight ui-corner-all">
-					<p><span style="float: left; margin-right: 0.3em;" class="ui-icon ui-icon-info"></span>
-					<strong>"</strong>El cuestionario ha sido completado.<strong>"</strong></p>
-				</div>
-</div>
-<br>
-<?php endif; ?>
 
-<!-- Comienzo Botón envio de formulario, en caso de ser último bloque advierte que se cerrará el formulario si se continua -->
-<?php if(!($es_ultimo_bloque)): ?>
-<a class="form-button-off form-left" style="display: block;" href="<?php echo url_for('principal/dashboard?idEncuestado='.$idEncuestado);?>" onclick="return confirm('Al salir del formulario perderás la información que hayas respondido en la pantalla actual. ¿Estas seguro que deseas salir del formulario actual?');"><- Volver al menú</a>
-<input type="submit" value="Siguiente" title="siguiente" class="form-button form-right">
-<?php else: ?>
-  <a class="form-button form-right" href="<?php echo url_for('principal/dashboard?idEncuestado='.$idEncuestado);?>"><- Volver al menú</a>
-<?php endif; ?>
-<!-- Fin Botón envio de formulario, en caso de ser último bloque advierte que se cerrará el formulario si se continua -->
-
+<div class="clear"></div>
+<input type="text" id="CLOSE_FLAG" name="CLOSE_FLAG" style="display:none" value="CERRADO"></input>
 <input type="text" id="tstart" name="tstart" style="display:none" value="<?php echo $tstart; ?>"></input>
 
+<!-- Comienzo Botón envio de formulario, en caso de ser último bloque advierte que se cerrará el formulario si se continua -->
+    <div class="grid-4-12">
+      <a class="form-button-off form-left" style="display: block;" href="<?php echo url_for('principal/dashboard?idEncuestado='.$idEncuestado);?>" onclick="return confirm('Al salir del formulario perderás la información que hayas respondido en la pantalla actual. ¿Estas seguro que deseas salir del formulario actual?');"><- Volver al menú</a>
+    </div>
+    <div class="grid-4-12">
+        <input type="submit" value="Cerrar" title="Cerrar" class="form-button form-right">
+    </div>
+    <div class="grid-4-12">&nbsp;</div>
+<!-- Fin Botón envio de formulario, en caso de ser último bloque advierte que se cerrará el formulario si se continua -->
 
 
 
 </form>
 <br>
-
-<div id="dialog-envio-resp-por-bloque" title="Confirmar">
-	<p><span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 20px 0;"></span><strong>¿Estas seguro que deseas continuar enviando los datos?.</strong> Una vez que envies las respuestas de este bloque de preguntas ya no podrán ser modificadas.</p>
-</div>
 
 
 
@@ -114,21 +122,23 @@ Si es la primera vez que se llama a la web se muestra el diálogo de
 instrucciones, en caso contrario el diálogo permanece oculto y se muestra al
 presionar el botón señalado con ícono (i).
 -->
-<script type="text/javascript">
-  var is_show_instruccions=eval("<?php echo $is_show_instruccions;?>"); // pasa el string a bool en js
-  if(is_show_instruccions==null){ var is_show_instruccions=false;$("#formulario_EGED").hide();alert("Al parecer ha habido un problema de connección, es recomendable que recarge la página");}
 
- if(is_show_instruccions){
+
+<!-- CAMBIO CONSENSO START-->
+<script type="text/javascript">
+    $().ready(function() {
+        <?php if($consenso==1): ?>
+          $("form").loadJSON(<?php echo $sf_data->getRaw('respuestasGuardadas');?>);
+        <?php endif; ?>
+    });
+
     $("#formulario_EGED").hide();
-  }else{}
-  //alert(is_show_instruccions);
-    
-		$("#dialogo-instrucciones").dialog( "destroy" );
+    $("#dialogo-instrucciones").dialog( "destroy" );
 		$("#dialogo-instrucciones").dialog({
       height: 373,
       width: 960,
 			modal: true,
-      autoOpen: is_show_instruccions, //se abre solito al cargar la paguina si es true
+      autoOpen: true, //se abre solito al cargar la paguina si es true
 //      closeOnEscape: false,
       closeText: 'Cerrar',
       draggable: false,
@@ -147,7 +157,6 @@ presionar el botón señalado con ícono (i).
       }
 		});
 </script>
+<!-- CAMBIO CONSENSO STOP-->
+
 <!-- Fin código diálogo de instrucciones -->
-
-
-
