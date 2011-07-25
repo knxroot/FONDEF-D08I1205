@@ -81,29 +81,40 @@ if($consenso==1){
           <div class="grid-3-12">
             <ul>
             
-                 <li><input type="radio" value="si" name="f5c" class="botonradio" >
-                     <input type="radio" value="no_seleccionado" style="display:none" name="f5c" class="botonradio" checked></li>
+                 <li><input type="radio" value="si" name="b9p1" class="botonradio" >
+                     <input type="radio" value="no" style="display:none" name="b9p1" class="botonradio" checked><label for="b9p1">Infraciones anteriores</label></li>
                    
-            <li><input type="checkbox" value="SI" name="check_VorF_IRNC_43" id="check_VorF_IRNC_43" ><label for="check_VorF_IRNC_43">Infraciones anteriores</label></li>
+            
       
-                <li><input type="checkbox" value="SI" name="check_VorF_IRNC_44" id="check_VorF_IRNC_44" ><label for="check_VorF_IRNC_44">Desamparo afect / psiquiátrico</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_45" id="check_VorF_IRNC_45" ><label for="check_VorF_IRNC_45">Drogadicción</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_46" id="check_VorF_IRNC_46" ><label for="check_VorF_IRNC_46">Desacuerdos conyugales</label></li>
+               <li><input type="radio" value="si" name="b9p2" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b9p2" class="botonradio" checked><label for="b9p2">Desamparo afect / psiquiátrico</label></li>
+              <li><input type="radio" value="si" name="b9p1" class="botonradio" >
+                  <input type="radio" value="no" style="display:none" name="b9p3" class="botonradio" checked><label for="b9p3">Drogadicción</label></li>
+              
+               <li><input type="radio" value="si" name="b9p4" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b9p4" class="botonradio" checked><label for="b9p4">Desacuerdos conyugales</label></li>
             </ul>
           </div>
           <div class="grid-3-12">
             <ul>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_47" id="check_VorF_IRNC_47" ><label for="check_VorF_IRNC_47">Probl. Económ. / alojamiento</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_48" id="check_VorF_IRNC_48" ><label for="check_VorF_IRNC_48">Desinterés vs problemas</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_49" id="check_VorF_IRNC_49" ><label for="check_VorF_IRNC_49">Probl. de orden cultural (étnico)</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_50" id="check_VorF_IRNC_50" ><label for="check_VorF_IRNC_50">Maltrato de parte del padre</label></li>
+              <li><input type="radio" value="si" name="b9p5" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b9p5" class="botonradio" checked><label for="b9p5">Probl. Económ. / alojamiento</label></li>
+              <li><input type="radio" value="si" name="b9p6" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b9p6" class="botonradio" checked><label for="b9p6">Desinterés vs problemas</label></li>
+              <li><input type="radio" value="si" name="b9p7" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b9p7" class="botonradio" checked><label for="b9p7">Probl. de orden cultural (étnico)</label></li>
+          <li><input type="radio" value="si" name="b9p8" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b9p8" class="botonradio" checked><label for="b9p8">Maltrato de parte del padre</label></li>
             </ul>
           </div>
           <div class="grid-6-12">
             <ul>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_51" id="check_VorF_IRNC_51" ><label for="check_VorF_IRNC_51">Maltrato de parte de la madre</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_52" id="check_VorF_IRNC_52" ><label for="check_VorF_IRNC_52">Trauma familiar grave:</label><input type="text" class="form-txt" style="width:100px;" value="" name="check_VorF_IRNComfix_52" id="check_VorF_IRNComfix_input" /></li>              
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_53" id="check_VorF_IRNC_53" ><label for="check_VorF_IRNC_53">Otro:</label><input type="text" class="form-txt" style="width:100px;" value="" name="check_VorF_IRNComfix_53" id="check_VorF_IRNComfix_input_otro" /></li>   
+              <li><input type="radio" value="si" name="b9p9" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b9p9" class="botonradio" checked><label for="b9p9">Maltrato de parte de la madre</label></li>
+              <li><input type="radio" value="si" name="b9p10" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b9p10" class="botonradio" checked><label for="b9p10">Trauma familiar grave:</label><input type="text" class="form-txt" style="width:100px;" value="" name="b9p10" id="b9p10" /></li>              
+             <li><input type="radio" value="si" name="b9p11" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b9p11" class="botonradio" checked><label for="b9p11">Otro:</label><input type="text" class="form-txt" style="width:100px;" value="" name="b9p11o" id="b9p11o" /></li>   
             </ul>
           </div>
           <div class="clear"></div>
@@ -124,41 +135,94 @@ if($consenso==1){
         <div id="IRNC_pregunta_10" class="IRNC_bloque_pregunta">
           <div class="grid-3-12">
             <ul>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_54" id="check_VorF_IRNC_54" ><label for="check_VorF_IRNC_54">Problemas de salud</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_55" id="check_VorF_IRNC_55" ><label for="check_VorF_IRNC_55">Discapacidad física</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_56" id="check_VorF_IRNC_56" ><label for="check_VorF_IRNC_56">CI bajo / retraso del desarrollo</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_57" id="check_VorF_IRNC_57" ><label for="check_VorF_IRNC_57">Dificultades de aprendizaje</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_58" id="check_VorF_IRNC_58" ><label for="check_VorF_IRNC_58">Rendim. inferior a las expect.</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_59" id="check_VorF_IRNC_59" ><label for="check_VorF_IRNC_59">Baja capac. resoluc. conflictos</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_60" id="check_VorF_IRNC_60" ><label for="check_VorF_IRNC_60">Víct.de agresión física / sex.</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_61" id="check_VorF_IRNC_61" ><label for="check_VorF_IRNC_61">Víctima de negligencia parent.</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_62" id="check_VorF_IRNC_62" ><label for="check_VorF_IRNC_62">Tímido/a / cerrado/a</label></li>
+             <li><input type="radio" value="si" name="b10p1" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p1" class="botonradio" checked><label for="b10p1">Problemas de salud</label></li>
+             
+             <li><input type="radio" value="si" name="b10p2" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p2" class="botonradio" checked><label for="b10p2">Discapacidad física</label></li>
+       
+              <li><input type="radio" value="si" name="b10p3" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p3" class="botonradio" checked><label for="b10p3">CI bajo / retraso del desarrollo</label></li>
+            
+              <li><input type="radio" value="si" name="b10p4" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p4" class="botonradio" checked><label for="b10p4">Dificultades de aprendizaje</label></li>
+         
+              <li><input type="radio" value="si" name="b10p5" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p5" class="botonradio" checked><label for="b10p5">Rendim. inferior a las expect.</label></li>
+         
+              <li><input type="radio" value="si" name="b10p6" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p6" class="botonradio" checked><label for="b10p6">Baja capac. resoluc. conflictos</label></li>
+              
+              <li><input type="radio" value="si" name="b10p7" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p7" class="botonradio" checked><label for="b10p7">Víct.de agresión física / sex.</label></li>
+               
+              <li><input type="radio" value="si" name="b10p8" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p8" class="botonradio" checked><label for="b10p8">Víctima de negligencia parent.</label></li>
+               
+              <li><input type="radio" value="si" name="b10p9" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p9" class="botonradio" checked><label for="b10p9">Tímido/a / cerrado/a</label></li>
             </ul>
           </div>
           <div class="grid-3-12">
             <ul>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_63" id="check_VorF_IRNC_63"><label for="check_VorF_IRNC_63">Compañero-as de otra edad</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_64" id="check_VorF_IRNC_64" ><label for="check_VorF_IRNC_64">Estado depresivo</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_65" id="check_VorF_IRNC_65"><label for="check_VorF_IRNC_65">Baja auto estima</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_66" id="check_VorF_IRNC_66" ><label for="check_VorF_IRNC_66">Actividad sexual inapropiada</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_67" id="check_VorF_IRNC_67" ><label for="check_VorF_IRNC_67">Actitud racista / sexista</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_68" id="check_VorF_IRNC_68" ><label for="check_VorF_IRNC_68">Bajas aptitudes sociales</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_69" id="check_VorF_IRNC_69" ><label for="check_VorF_IRNC_69">Se niega a ver la realidad</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_70" id="check_VorF_IRNC_70" ><label for="check_VorF_IRNC_70">Intento de suicidio</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_71" id="check_VorF_IRNC_71" ><label for="check_VorF_IRNC_71">Diagnóstico de psicosis</label></li>
+                
+              <li><input type="radio" value="si" name="b10p10" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p10" class="botonradio" checked><label for="b10p10">Compañero-as de otra edad</label></li>
+                
+              <li><input type="radio" value="si" name="b10p11" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p11" class="botonradio" checked><label for="b10p11">Estado depresivo</label></li>
+                
+              <li><input type="radio" value="si" name="b10p12" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p12" class="botonradio" checked><label for="b10p12">Baja auto estima</label></li>
+                
+              <li><input type="radio" value="si" name="b10p13" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p13" class="botonradio" checked><label for="b10p13">Actividad sexual inapropiada</label></li>
+                
+              <li><input type="radio" value="si" name="b10p14" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p14" class="botonradio" checked><label for="b10p14">Actitud racista / sexista</label></li>
+                
+              <li><input type="radio" value="si" name="b10p15" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p15" class="botonradio" checked><label for="b10p15">Bajas aptitudes sociales</label></li>
+                
+              <li><input type="radio" value="si" name="b10p16" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p16" class="botonradio" checked><label for="b10p16">Se niega a ver la realidad</label></li>
+                
+              <li><input type="radio" value="si" name="b10p17" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p17" class="botonradio" checked><label for="b10p17">Intento de suicidio</label></li>
+               
+              <li><input type="radio" value="si" name="b10p18" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p18" class="botonradio" checked><label for="b10p18">Diagnóstico de psicosis</label></li>
             </ul>
           </div>
           <div class="grid-6-12">
             <ul>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_72" id="check_VorF_IRNC_72" ><label for="check_VorF_IRNC_72">Amenazas de un tercero</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_73" id="check_VorF_IRNC_73" ><label for="check_VorF_IRNC_73">Agresiones sexuales / físicas</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_74" id="check_VorF_IRNC_74" ><label for="check_VorF_IRNC_74">Agresión vs pers. en autoridad</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_75" id="check_VorF_IRNC_75" ><label for="check_VorF_IRNC_75">Uso de armas</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_76" id="check_VorF_IRNC_76" ><label for="check_VorF_IRNC_76">Piromanía</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_77" id="check_VorF_IRNC_77" ><label for="check_VorF_IRNC_77">Evasión</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_78" id="check_VorF_IRNC_78" ><label for="check_VorF_IRNC_78">Protección</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_79" id="check_VorF_IRNC_79" ><label for="check_VorF_IRNC_79">Condiciones de vida difíciles</label></li>
-              <li><input type="checkbox" value="SI" name="check_VorF_IRNC_80" id="check_VorF_IRNC_80" ><label for="check_VorF_IRNC_80">Otro</label><input type="text" class="form-txt" style="width:100px;" value="" name="check_VorF_IRNComfix_80" id="check_VorF_IRNComfix_input_otro2" /></li>
+                
+              <li><input type="radio" value="si" name="b10p19" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p19" class="botonradio" checked><label for="b10p19">Amenazas de un tercero</label></li>
+                
+              <li><input type="radio" value="si" name="b10p20" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p20" class="botonradio" checked><label for="b10p20">Agresiones sexuales / físicas</label></li>
+                
+              <li><input type="radio" value="si" name="b10p21" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p21" class="botonradio" checked><label for="b10p21">Agresión vs pers. en autoridad</label></li>
+                
+              <li><input type="radio" value="si" name="b10p22" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p22" class="botonradio" checked><label for="b10p22">Uso de armas</label></li>
+               
+              <li><input type="radio" value="si" name="b10p23" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p23" class="botonradio" checked><label for="b10p23">Piromanía</label></li>
+                
+              <li><input type="radio" value="si" name="b10p24" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p24" class="botonradio" checked><label for="b10p24">Evasión</label></li>
+                
+              <li><input type="radio" value="si" name="b10p25" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p25" class="botonradio" checked><label for="b10p25">Protección</label></li>
+                
+              <li><input type="radio" value="si" name="b10p26" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p26" class="botonradio" checked><label for="b10p26">Condiciones de vida difíciles</label></li>
+                
+              <li><input type="radio" value="si" name="b10p27" class="botonradio" >
+                   <input type="radio" value="no" style="display:none" name="b10p27" class="botonradio" checked><label for="b10p27">Otro</label><input type="text" class="form-txt" style="width:100px;" value="" name="b10p27o" id="b10p27o" /></li>
             </ul>
           </div>
           <div class="clear"></div>

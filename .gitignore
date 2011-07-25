@@ -6,3 +6,6 @@ log*
 config/databases.yml
 apps/frontend/config/app.yml
 nbproject*
+/apps/frontend/modules/EGED/templates/listarBloqueError.php
+/apps/frontend/modules/IRNC/templates/listarBloqueSuccess.php
+/apps/frontend/modules/IRNC_old/templates/listarBloqueSuccess.php

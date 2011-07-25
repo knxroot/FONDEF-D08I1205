@@ -102,14 +102,19 @@ Causas Anteriores      </div></a>
    <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>  
 
-
- <div class="prefix_1 grid_2">
-     <div class="menu-dashboard-juicioprofesional">
-       <a href="<?php echo url_for('EGED/index?idEncuestado='.$idEncuestado);?>">
-       <div class="menu-dashboard-juicioprofesional-clickeable">
-        EGED
-        </div></a>
-      </div>
+  <!-- CAMBIO CONSENSO START-->
+   <div class="prefix_1 grid_2">
+   <div class="menu-dashboard-juicioprofesional">
+    <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso2): ?>
+    <a href="<?php echo url_for('EGED/index?idEncuestado='.$idEncuestado.'&modoConsenso=true');?>">
+    <?php else: ?>
+    <a href="<?php echo url_for('EGED/index?idEncuestado='.$idEncuestado);?>">
+     <?php endif; ?>
+     <div class="<?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso2){echo "menu-consenso";}else{echo "menu-dashboard-juicioprofesional-clickeable";} ?>">
+      EGED
+     </div>
+    </a>
+   </div>
    </div>
    <div class="grid_3">
      <div class="menu-dashboard-juicioprofesional">
@@ -117,12 +122,14 @@ Causas Anteriores      </div></a>
       </div>
    </div>
    <div class="grid_3">
-   <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso2): ?>    
+   <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso2): ?>  
      <div class="menu-dashboard-juicioprofesional">
-      I
+      <?php echo $porcCompletadoEGED2; ?> %
       </div>
    <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
+  <!-- CAMBIO CONSENSO STOP-->
+  
 
   <div class="clear"></div><br>
 
