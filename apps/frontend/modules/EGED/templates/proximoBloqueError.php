@@ -1,5 +1,5 @@
 <?php slot('title') ?>
-  <?php  echo sprintf('Formulario a EGED') ?>
+  <?php  echo sprintf('Formulario EGED') ?>
 <?php end_slot(); ?>
 
 <div id="homeAlertMensaje" class="ui-widget">
