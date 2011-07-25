@@ -34,6 +34,18 @@ FormIRNC.prototype.inicializar= function(){
    **/
   $('#formulario_IRNC')[0].reset();
 
+
+$(".cambiador").click(function(){
+    if($(this).val()=='si'){
+        $(this).filter('[value=no]').attr('checked', true);
+    }
+    
+    
+
+});
+
+
+
   /** @description Efecto al hacer un focus sobre un radio, hace un efecto
    * resaltado para resaltar que es esa la pregunta que se esta respondiendo.
    * El efecto puede ser logrado también cambiando el focus con la tecla tab.
