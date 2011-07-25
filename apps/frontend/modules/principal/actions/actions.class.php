@@ -55,7 +55,13 @@ class principalActions extends Actions
         $esCerradoFerr=$this->esCerrado2($request, 'ferr2_respuestas',0);
         $this->porcCompletadoFERR = $esCerradoFerr*100;
         
-        $this->porcCompletadoIRNC = $this->getPorcentajeCompletadoIRNC($idUser,$this->idEncuestado);
+       // $this->porcCompletadoIRNC = $this->getPorcentajeCompletadoIRNC($idUser,$this->idEncuestado);
+        
+    /* CAMBIO CONSENSO START */
+        $esCerradoIrnc=$this->esCerrado2($request, 'irnc2_respuestas',0);
+        $this->porcCompletadoIRNC = $esCerradoIrnc*100;
+    /* CAMBIO CONSENSO STOP */
+        
         $esCerradoFcmf=$this->esCerrado2($request, 'fcmf_respuestas',0);
         $this->porcCompletadoFCMF = $esCerradoFcmf*100;
        // $this->porcCompletadoFCMF = $this->getPorcentajeCompletadoFCMF($idUser,$this->idEncuestado);
@@ -120,6 +126,16 @@ $SQL_CONSULTA_NOMBRE="SELECT `input_primer_nombre` , `input_otros_nombres` , `in
     }    
     /* CAMBIO CONSENSO STOP */
     
+    /* CAMBIO CONSENSO START */
+    $cierresirnc=$this->contarTotalCierresInstrumento($request, 'irnc2_respuestas');
+    if($cierresirnc>1){
+      $this->mostrarColumnaConsenso1=true;
+      $this->mostrarColumnaConsenso4=true;
+
+      $esCerradoIrnc=$this->esCerrado2($request, 'irnc2_respuestas',1);
+      $this->porcCompletadoIRNC2 = $esCerradoIrnc*100;
+    }    
+    /* CAMBIO CONSENSO STOP */
     
     
     $cierresfcmf=$this->contarTotalCierresInstrumento($request, 'fcmf_respuestas');
