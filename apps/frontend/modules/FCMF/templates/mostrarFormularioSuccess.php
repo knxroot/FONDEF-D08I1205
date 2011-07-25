@@ -545,7 +545,7 @@ if($consenso==1){
 								  <td class=xl1518094 width=33 style='width:25pt'></td>
 								 </tr>
 								 <tr height=17 style='height:12.75pt'>
-								  <td height=17 class=xl6518094 colspan=2 style='height:12.75pt'>1. Rendimiento</td>
+								  <td height=17 class=xl6518094 colspan=2 style='height:12.75pt'>1. Rendimiento<a href="#" class="a21a1trigger"><IMG src="/images/question-white.png" /></a></td>
 								  <td class=xl1518094>12-13-14</td>
 								  <td class=xl6618094><input id="21a11" size="2" name="21a11" type="text" style="color: #000000" class="transparente"/></td>
 								  <td class=xl1518094></td>
@@ -564,7 +564,7 @@ if($consenso==1){
 								  <td class=xl1518094></td>
 								 </tr>
 								 <tr height=17 style='height:12.75pt'>
-								  <td height=17 class=xl6518094 colspan=2 style='height:12.75pt'>2. Intereses</td>
+								  <td height=17 class=xl6518094 colspan=2 style='height:12.75pt'>2. Intereses<a href="#" class="a21a2trigger"><IMG src="/images/question-white.png" /></a></td>
 								  <td class=xl1518094>12-13-14</td>
 								  <td class=xl6618094 style='border-top:none'><input id="21a21" size="2" name="21a21" type="text" style="color: #000000" class="transparente"/></td>
 								  <td class=xl1518094></td>
@@ -584,7 +584,7 @@ if($consenso==1){
 								 </tr>
 								 <tr height=17 style='height:12.75pt'>
 								  <td height=17 class=xl6518094 colspan=3 style='height:12.75pt'>3.
-								  Valorización de la escuela</td>
+								  Valorización de la escuela<a href="#" class="a21a3trigger"><IMG src="/images/question-white.png" /></a></td>
 								  <td class=xl1518094></td>
 								  <td class=xl1518094></td>
 								  <td class=xl6618094><input id="21a3" size="2" name="21a3" type="text" style="color: #000000" class="transparente"/></td>
@@ -593,7 +593,7 @@ if($consenso==1){
 								 </tr>
 								 <tr height=18 style='height:13.5pt'>
 								  <td height=18 class=xl6518094 colspan=3 style='height:13.5pt'>4. Proyección
-								  académica</td>
+								  académica<a href="#" class="a21a4trigger"><IMG src="/images/question-white.png" /></a></td>
 								  <td class=xl1518094></td>
 								  <td class=xl1518094></td>
 								  <td class=xl6718094 style='border-top:none'><input id="21a4" size="2" name="21a4" type="text" style="color: #000000" class="transparente"/></td>
@@ -629,7 +629,7 @@ if($consenso==1){
 								 </tr>
 								 <tr height=17 style='height:12.75pt'>
 								  <td height=17 class=xl6518094 colspan=3 style='height:12.75pt'>1. Dominio /
-								  saber hacer</td>
+								  saber hacer<a href="#" class="a21b1trigger"><IMG src="/images/question-white.png" /></a></td>
 								  <td class=xl1518094></td>
 								  <td class=xl1518094></td>
 								  <td class=xl6618094><input id="21b1" size="2" name="21b1" type="text" style="color: #000000" class="transparente"/></td>
@@ -647,7 +647,7 @@ if($consenso==1){
 								 </tr>
 								 <tr height=20 style='height:15.0pt'>
 								  <td colspan=2 height=20 class=xl8118094 style='height:15.0pt'><span
-								  style='mso-spacerun:yes'>    </span>comunitaria</td>
+								  style='mso-spacerun:yes'>    </span>comunitaria<a href="#" class="a21b2trigger"><IMG src="/images/question-white.png" /></a>/td>
 								  <td class=xl1518094>15-16-17</td>
 								  <td class=xl6618094 style='border-top:none'><input id="21b22" size="2" name="21b22" type="text" style="color: #000000" class="transparente"/></td>
 								  <td class=xl1518094></td>
@@ -656,7 +656,7 @@ if($consenso==1){
 								  <td class=xl1518094></td>
 								 </tr>
 								 <tr height=17 style='height:12.75pt'>
-								  <td height=17 class=xl6518094 colspan=2 style='height:12.75pt'>3. Liderazgo</td>
+								  <td height=17 class=xl6518094 colspan=2 style='height:12.75pt'>3. Liderazgo<a href="#" class="a21b3trigger"><IMG src="/images/question-white.png" /></a></td>
 								  <td class=xl1518094>12-13-14</td>
 								  <td class=xl6618094 style='border-top:none'><input id="21b31" size="2" name="21b31" type="text" style="color: #000000" class="transparente"/></td>
 								  <td class=xl1518094></td>
@@ -703,7 +703,7 @@ if($consenso==1){
 								  <td class=xl1518094></td>
 								 </tr>
 								 <tr height=17 style='height:12.75pt'>
-								  <td height=17 class=xl6518094 colspan=2 style='height:12.75pt'>1. Cultura</td>
+								  <td height=17 class=xl6518094 colspan=2 style='height:12.75pt'>1. Cultura<a href="#" class="a21c1trigger"><IMG src="/images/question-white.png" /></a></td>
 								  <td class=xl1518094></td>
 								  <td class=xl1518094></td>
 								  <td class=xl1518094></td>
@@ -712,7 +712,7 @@ if($consenso==1){
 								  <td class=xl1518094></td>
 								 </tr>
 								 <tr height=17 style='height:12.75pt'>
-								  <td height=17 class=xl6518094 colspan=2 style='height:12.75pt'>2. Deportes</td>
+								  <td height=17 class=xl6518094 colspan=2 style='height:12.75pt'>2. Deportes<a href="#" class="a21c2trigger"><IMG src="/images/question-white.png" /></a></td>
 								  <td class=xl1518094></td>
 								  <td class=xl1518094></td>
 								  <td class=xl1518094></td>
@@ -721,7 +721,7 @@ if($consenso==1){
 								  <td class=xl1518094></td>
 								 </tr>
 								 <tr height=18 style='height:13.5pt'>
-								  <td height=18 class=xl6518094 colspan=2 style='height:13.5pt'>3. Actualidad</td>
+								  <td height=18 class=xl6518094 colspan=2 style='height:13.5pt'>3. Actualidad<a href="#" class="a21c3trigger"><IMG src="/images/question-white.png" /></a></td>
 								  <td class=xl1518094></td>
 								  <td class=xl1518094></td>
 								  <td class=xl1518094></td>
@@ -759,7 +759,7 @@ if($consenso==1){
 								 </tr>
 								 <tr height=17 style='height:12.75pt'>
 								  <td height=17 class=xl6518094 colspan=2 style='height:12.75pt'>1.
-								  Disponibilidad</td>
+								  Disponibilidad<a href="#" class="a21d1trigger"><IMG src="/images/question-white.png" /></a></td>
 								  <td class=xl1518094></td>
 								  <td class=xl1518094></td>
 								  <td class=xl1518094></td>
@@ -768,7 +768,7 @@ if($consenso==1){
 								  <td class=xl1518094></td>
 								 </tr>
 								 <tr height=17 style='height:12.75pt'>
-								  <td height=17 class=xl6518094 colspan=2 style='height:12.75pt'>2. Franqueza</td>
+								  <td height=17 class=xl6518094 colspan=2 style='height:12.75pt'>2. Franqueza<a href="#" class="a21d2trigger"><IMG src="/images/question-white.png" /></a></td>
 								  <td class=xl1518094></td>
 								  <td class=xl1518094></td>
 								  <td class=xl1518094></td>
@@ -778,7 +778,7 @@ if($consenso==1){
 								 </tr>
 								 <tr height=17 style='height:12.75pt'>
 								  <td height=17 class=xl6518094 colspan=3 style='height:12.75pt'>3. Habilidades
-								  sociales</td>
+								  sociales<a href="#" class="a21d3trigger"><IMG src="/images/question-white.png" /></a></td>
 								  <td class=xl1518094></td>
 								  <td class=xl1518094></td>
 								  <td class=xl6618094 style='border-top:none'><input id="21d3" size="2" name="21d3" type="text" style="color: #000000" class="transparente"/></td>
@@ -787,7 +787,7 @@ if($consenso==1){
 								 </tr>
 								 <tr height=18 style='height:13.5pt'>
 								  <td height=18 class=xl6518094 colspan=2 style='height:13.5pt'>4.
-								  Transparencia</td>
+								  Transparencia<a href="#" class="a21d4trigger"><IMG src="/images/question-white.png" /></a></td>
 								  <td class=xl1518094></td>
 								  <td class=xl1518094></td>
 								  <td class=xl1518094></td>
@@ -1398,6 +1398,53 @@ if($consenso==1){
   <div class="jqmWindow" id="impunidad">
 <img src="/images/loading-image.gif" />
 </div>  <div class="jqmWindow" id="inestabilidad">
+<img src="/images/loading-image.gif" />
+</div>
+</div>  <div class="jqmWindow" id="a21a1">
+<img src="/images/loading-image.gif" />
+</div>
+ </div>  <div class="jqmWindow" id="a21a1">
+<img src="/images/loading-image.gif" />
+</div>
+ </div>  <div class="jqmWindow" id="a21a2">
+<img src="/images/loading-image.gif" />
+</div>
+ </div>  <div class="jqmWindow" id="a21a3">
+<img src="/images/loading-image.gif" />
+</div>
+ </div>  <div class="jqmWindow" id="a21a4">
+<img src="/images/loading-image.gif" />
+</div>
+ <div class="jqmWindow" id="a21b1">
+<img src="/images/loading-image.gif" />
+</div>
+ <div class="jqmWindow" id="a21b2">
+<img src="/images/loading-image.gif" />
+</div>
+ <div class="jqmWindow" id="a21b3">
+<img src="/images/loading-image.gif" />
+</div>
+ 
+  <div class="jqmWindow" id="a21c1">
+<img src="/images/loading-image.gif" />
+</div>
+ <div class="jqmWindow" id="a21c2">
+<img src="/images/loading-image.gif" />
+</div>
+ <div class="jqmWindow" id="a21c3">
+<img src="/images/loading-image.gif" />
+</div>
+ 
+   <div class="jqmWindow" id="a21d1">
+<img src="/images/loading-image.gif" />
+</div>
+ <div class="jqmWindow" id="a21d2">
+<img src="/images/loading-image.gif" />
+</div>
+ <div class="jqmWindow" id="a21d3">
+<img src="/images/loading-image.gif" />
+</div>
+  <div class="jqmWindow" id="a21d4">
 <img src="/images/loading-image.gif" />
 </div>
  

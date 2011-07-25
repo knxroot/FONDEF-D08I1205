@@ -66,6 +66,27 @@ $(".tip_trigger").hover(function(){
 	  $('#rechazo').jqm({ajax: '/modal/rechazo.html', trigger: 'a.rechazotrigger'});
 	  $('#impunidad').jqm({ajax: '/modal/impunidad.html', trigger: 'a.impunidadtrigger'});
 	   $('#inestabilidad').jqm({ajax: '/modal/inestabilidad.html', trigger: 'a.inestabilidadtrigger'});
+           //21
+             $('#a21a1').jqm({ajax: '/modal/21a1.html', trigger: 'a.a21a1trigger'});
+               $('#a21a2').jqm({ajax: '/modal/21a2.html', trigger: 'a.a21a2trigger'});
+                 $('#a21a3').jqm({ajax: '/modal/21a3.html', trigger: 'a.a21a3trigger'});
+                   $('#a21a4').jqm({ajax: '/modal/21a4.html', trigger: 'a.a21a4trigger'});
+                   
+                   
+       $('#a21b1').jqm({ajax: '/modal/21b1.html', trigger: 'a.a21b1trigger'});
+        $('#a21b2').jqm({ajax: '/modal/21b2.html', trigger: 'a.a21b2trigger'});
+         $('#a21b3').jqm({ajax: '/modal/21b3.html', trigger: 'a.a21b3trigger'});
+         
+                            
+       $('#a21c1').jqm({ajax: '/modal/21c1.html', trigger: 'a.a21c1trigger'});
+        $('#a21c2').jqm({ajax: '/modal/21c2.html', trigger: 'a.a21c2trigger'});
+         $('#a21c3').jqm({ajax: '/modal/21c3.html', trigger: 'a.a21c3trigger'});
+         
+            $('#a21d1').jqm({ajax: '/modal/21d1.html', trigger: 'a.a21d1trigger'});
+        $('#a21d2').jqm({ajax: '/modal/21d2.html', trigger: 'a.a21d2trigger'});
+         $('#a21d3').jqm({ajax: '/modal/21d3.html', trigger: 'a.a21d3trigger'});
+            $('#a21d4').jqm({ajax: '/modal/21d4.html', trigger: 'a.a21d4trigger'})
+         
 	 
  // select + reference "triggering element" -- will pass to $.jqm()
   var triggers = $('a.ex3bTrigger')[0];
