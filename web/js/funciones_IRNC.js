@@ -143,7 +143,7 @@ $('input:checkbox').change(function () {
 
 /*Configuración tabs paguinado*/
 $('#panelTabsPreguntas').tabs({ fx: { opacity: 'toggle' }});
-$('#panelTabsPreguntas').tabs('select', 8);
+$('#panelTabsPreguntas').tabs('select', 0);
 $('#panelTabsPreguntas').tabs('paging', { cycle: true, follow: true, followOnSelect: true, selectOnAdd: true,nextButton: 'Siguiente &gt;', prevButton: '&lt; Anterior' });
 
 
