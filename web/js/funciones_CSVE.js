@@ -143,6 +143,7 @@ FormCSVE.prototype.inicializar= function(){
 			}
 		});
 
+
 } //END FormIngresoEncuestado.prototype.inicializar
 
 /**
@@ -179,6 +180,41 @@ function rTrim(sStr){
 function allTrim(sStr){
  return rTrim(lTrim(sStr));
 }
+
+function mostrar( x){
+var respuesta1_cacsa=x;
+ if ($("input[id='"+x+"']:checked").val() == 'si') {
+                  respuesta1=true;
+
+  }
+  else if ($("input[id='"+x+"']:checked").val() == 'no'){
+      respuesta1=false;
+  }
+  /* Si el adolecente no ha consumido drogas en los últimos 12 meses entonces se ocultan las preguntas para pasar directo a la pregunta7*/
+  if(respuesta1=true){
+         $('#envoltorio'+x).show();
+  }else{
+         $('#envoltorio'+x).hide();
+    
+  }
+ }
+ function ocultar( x){
+var respuesta1_cacsa=x;
+ if ($("input[id='"+x+"']:checked").val() == 'si') {
+                  respuesta1=true;
+
+  }
+  else if ($("input[id='"+x+"']:checked").val() == 'no'){
+      respuesta1=false;
+  }
+  /* Si el adolecente no ha consumido drogas en los últimos 12 meses entonces se ocultan las preguntas para pasar directo a la pregunta7*/
+  if(respuesta1=true){
+         $('#envoltorio'+x).hide();
+  }else{
+         $('#envoltorio'+x).show();
+    
+  }
+ }
 
 $().ready(function() {
   var myFormularioCSVE=new FormCSVE();

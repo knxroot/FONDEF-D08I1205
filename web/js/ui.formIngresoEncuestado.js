@@ -36,7 +36,7 @@ FormIngresoEncuestado= function(){
  **/
 FormIngresoEncuestado.prototype.inicializar= function(){
 
-      $('form#formulario_IngRegAIDLey')[0].reset();
+      $('form')[0].reset();
       /** @description Select dependientes regiones,comunas, provincias
        *  SELECT REGION
        *  @lends SA
@@ -95,15 +95,15 @@ FormIngresoEncuestado.prototype.inicializar= function(){
        *          $("input[name^='select_tipo_materia']").change(function () {
        **/
       
-      $("#select_tipo_materia").change(function () {
-        $("#select_tipo_materia option:selected").each(function () {
+      $("#select_tipo_materia1").change(function () {
+        $("#select_tipo_materia1 option:selected").each(function () {
           var materiaSeleccionada=$(this).val();
           $.get(url_consultaCausaDelito,
               {materia: materiaSeleccionada
               },
               function(data){
-                $("#select_causa_delito").html(data);
-                $("#select_causa_delito").removeAttr('disabled');
+                $("#select_causa_delito1").html(data);
+                $("#select_causa_delito1").removeAttr('disabled');
               });
           });
       });

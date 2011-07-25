@@ -14,6 +14,44 @@
 
 <div class="clear"></div><br>
 
+<div class="grid_5">
+<?php if(!$cuasasactuales): ?> 
+     <a href="<?php echo url_for('CausasActuales/index?idEncuestado='.$idEncuestado);?>">
+     <div class="menu-dashboard-causas-clickeable">
+      Causas actualmente imputado
+      </div></a>
+    <?php endif; ?>
+      </div>
+
+
+
+<div class="grid_5">
+<?php if(!$cuasasvigentes): ?> 
+     <a href="<?php echo url_for('CausasVigentes/index?idEncuestado='.$idEncuestado);?>">
+     <div class="menu-dashboard-causas-clickeable">
+      Causas Vigentes
+      </div></a>
+    <?php endif; ?>
+      </div>
+
+
+
+<div class="grid_5">
+<?php if(!$cuasasanteriores): ?> 
+     <a href="<?php echo url_for('CausasAnteriores/index?idEncuestado='.$idEncuestado);?>">
+     <div class="menu-dashboard-causas-clickeable">
+Causas Anteriores      </div></a>
+    <?php endif; ?>
+      </div>
+
+
+<div class="clear"></div><br>
+
+
+
+
+
+
    <div class="grid_6">
    <?php if(!($esEvaluadorSecundario)): ?>
      <div class="menu-dashboard-autoreporte ui-corner-top" style="padding: 0.3em 0.4em !important;">

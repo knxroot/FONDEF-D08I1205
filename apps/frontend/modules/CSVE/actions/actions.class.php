@@ -43,21 +43,23 @@ public function executeProximoBloqueCSVE(sfWebRequest $request)
       $valRespuesta=$r_valor_parametro;      
 
       $valRespuesta1=$request->getParameter('radio_VorF_CSVE_'.$id_preg);
-      $valRespuesta2=$request->getParameter('respuesta2_CSVE_'.$id_preg);
+      $valRespuesta2a=$request->getParameter('respuesta2a_CSVE_'.$id_preg);
+         $valRespuesta2b=$request->getParameter('respuesta2b_CSVE_'.$id_preg);
       $valRespuesta3=$request->getParameter('radio_respuesta3_CSVE_'.$id_preg);
 
 
       $sql_insert_respuesta="INSERT INTO CSVE_respuestas (
         `id_user` ,
         `respuesta` ,
-        `respuesta2` ,
+        `respuesta2a` ,
+        `respuesta2b` ,
         `respuesta3` ,
         `comentario` ,
         `id_encuestado` ,
         `id_pregunta_CSVE`
       )
       VALUES (
-        '{$idUser}', '{$valRespuesta}', '{$valRespuesta2}', '{$valRespuesta3}', '{$arrayRespuestas["comentario_{$id_preg}"]}', '{$this->idEncuestado}', '{$id_preg}');";
+        '{$idUser}', '{$valRespuesta}', '{$valRespuesta2a}', '{$valRespuesta2b}','{$valRespuesta3}', '{$arrayRespuestas["comentario_{$id_preg}"]}', '{$this->idEncuestado}', '{$id_preg}');";
 
       $SQL_INSERTAR_RESPUESTAS=$SQL_INSERTAR_RESPUESTAS.$sql_insert_respuesta;
        mysql_query($sql_insert_respuesta);

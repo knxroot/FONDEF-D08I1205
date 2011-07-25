@@ -222,7 +222,7 @@ text-decoration: none;
 
 /*ESTILOS DASHBOARD*/
 
-.menu-dashboard-autoreporte, .menu-dashboard-juicioprofesional, .menu-dashboard-encuestado,.menu-dashboard-autoreporte-clickeable,.menu-dashboard-juicioprofesional-clickeable {
+.menu-dashboard-autoreporte,.menu-dashboard-causas,  .menu-dashboard-juicioprofesional, .menu-dashboard-encuestado,.menu-dashboard-autoreporte-clickeable,.menu-dashboard-juicioprofesional-clickeable {
   color: white;
   font-weight: bold;
   text-align: center;
@@ -246,8 +246,23 @@ border-color: #00cc00;
 
 .menu-dashboard-autoreporte-clickeable:hover{
     background-color: #C3C3C3;
+      font-weight: bold;
+    color: white;
+}
+
+.menu-dashboard-causas,.menu-dashboard-causas-clickeable{
+    background-color: #D14836;
+       font-weight: bold;
+    color: white;
+      text-align: center;
+            -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.menu-dashboard-causas-clickeable:hover{
+    background-color: #C3C3C3;
     color: #7C7C7C;
 }
+
 
 .menu-dashboard-juicioprofesional, .menu-dashboard-juicioprofesional-clickeable{
   background-color: #ff8200;

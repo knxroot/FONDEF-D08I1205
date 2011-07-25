@@ -7,17 +7,29 @@
 <!-- Comienzo Bloque Dialogo Instrucciones -->
   <div id="dialogo-instrucciones" style="display: none;" title="Instrucciones CSVE">
 	<p>
-		<span class="ui-icon-info-grande" style="float:left; margin:4px 4px 4px 4px;"></span>
-      En este formulario te presentamos una serie de frases que los jóvenes usan para describirse a sí mismos. Se presentan aquí para ayudarte a describir tus sentimientos y actitudes.
+	
+    El cuestionario que responderás a continuación contiene una serie experiencias o  sucesos que pueden ocurrir a jóvenes como tú.  <br><br>
+      
+Lee cada frase detenidamente y marca en la celda correspondiente de acuerdo a las siguientes indicaciones y al responder hazlo del modo más serio y honesto posible: 
       <br><br>
-      <b>Al responder trata de hacerlo del modo más serio y honesto posible.</b>
-      No te preocupes si algunas frases te parecen poco comunes, divertidas o extrañas; se han incluido para describir diferentes tipos de problemas que los jóvenes pueden tener.
-      <br><br>
-      1.- Cuando decidas que la frase <b>describe tu situación personal</b>, o <b>estás de acuerdo</b> selecciona la letra <b>V</b> para indicar que es <b>V</b>erdadera.
+       <ul>
+      <li>Si el suceso señalado no lo has vivido, selecciona NO y continúa con la siguiente frase.</li>
       <br>
-      2.- Si decides que la frase <b>no describe tu situación personal</b>, o <b>estás en desacuerdo</b> selecciona la letra <b>F</b> para indicar que es <b>F</b>alsa.
+      <li>Si el suceso señalado si lo viviste, selección SI, e inmediatamente se desplegaran otras tres opciones de respuesta que debes completar, en base a las siguientes indicaciones:</li>
+       </ul>
+      <div style="margin-left:65px;">
+      <ul>
+          <li>Si te ocurrió en los últimos 12 meses, selecciona SI. Y si fue hace más de un año, selecciona NO.</li>
+          <li>En la columna ¿Qué valor que le otorgas?, tienes que decidir si esta experiencia fue para ti positiva, negativa o neutra, seleccionando cualquiera de estas tres alternativas.</li>
+          <li>Por último, en la columna ¿Importancia que tuvo para ti? debes elegir entre las cinco alternativas señaladas: ninguna, baja, mediana, alta o muy alta.</li>
+      </ul>
+          </div>
+       <li>Frente a algunas frases, en la columna ¿viviste este suceso?, aparecerá la alternativa de respuesta NO CORRESPONDE, esto ocurre en aquellos sucesos referidos a experiencias donde la respuesta NO, no se aplica, pues supone una  experiencia previa que en tú caso no se ha dado,</li>
+      <br> 
       <br>
-      <?php echo image_tag('ejemplorespuesta.png', 'alt=Selecciona el radio que tenga el label V o el label F') ?>
+    
+     
+     
 	</p>
   <h6>Recuerda:</h6>
   <ul>
@@ -36,38 +48,72 @@
   <div class="grid-12-12 ui-widget-header ui-corner-all" style="position: relative;">Formulario CSVE - <?php echo $porcCompletado; ?> % completado
   <span class="icono-ver-instrucciones" onclick="$('#dialogo-instrucciones').dialog('open');"></span>
   </div>
+    <div class="grid-4-12">Suceso</div>
+     <div class="grid-3-12">¿Viviste este suceso?</div>
+     <div id="respuesta2" class="grid-4-12" >
+         <div  style="Text-align:center; width: 78px;display: inline;float: left;height: 100%;margin-left: 1%;margin-right: 1%;padding: 0.5% 0.5% 0.8%;" >
+             ¿Qué valor le otorgas?
+         </div>
+         <div  style="Text-align:center; width: 80px;display: inline;float: left;height: 100%;margin-left: 1%;margin-right: 1%;padding: 0.5% 0.5% 0.8%;" >
+             ¿Qué importancia tuvo para ti?
+         </div>
+         <div style="Text-align:center; width: 100px;display: inline;float: left;height: 100%;margin-left: 1%;margin-right: 1%;padding: 0.5% 0.5% 0.8%;">
+             ¿Ocurrió en los últimos 12 meses?
+         </div>
+     </div>
+         
+    
+    <?php $nc = array(2,"4","8","10","14","18","21","27","35","38","43","45","49","51","57","68","70","75","79","81"); ?>
 <?php foreach ($Preguntas_CSVE as $pregunta):?>
   <!-- Comienzo Bloque Pregunta -->
   <div id="CSVE_pregunta_<?php echo $pregunta["id_pregunta"];?>" class="CSVE_bloque_pregunta">
-		<div class="grid-5-12">
+		<div class="grid-4-12">
 			<label class="form-lbl-V-or-F">
         <?php echo $pregunta["id_pregunta"].".-".$pregunta["texto_pregunta"];?>
         <?php if($pregunta["es_requerida"]): ?>
-          <em class="form-req">*</em>
+          
+          <em class="form-req"></em>
         <?php endif;?>
       </label>
 		</div>
-    <div class="grid-2-12">
+    <div class="grid-3-12">
       <ul class="form-list-rdo">
         <li><input class="botonradio" id="<?php echo $pregunta["id_pregunta"];?>" name="radio_VorF_CSVE_<?php echo $pregunta["id_pregunta"];?>" type="radio" value="si" Onclick="mostrar(<?php echo $pregunta["id_pregunta"];?>)"/><label class="form-lbl">Si</label></li>
-        <li><input class="botonradio" id="<?php echo $pregunta["id_pregunta"];?>" name="radio_VorF_CSVE_<?php echo $pregunta["id_pregunta"];?>" type="radio" value="no" Onclick="mostrar(<?php echo $pregunta["id_pregunta"];?>)"/><label class="form-lbl">No</label></li>
-			</ul>
+        <li><input class="botonradio" id="<?php echo $pregunta["id_pregunta"];?>" name="radio_VorF_CSVE_<?php echo $pregunta["id_pregunta"];?>" type="radio" value="no" Onclick="ocultar(<?php echo $pregunta["id_pregunta"];?>)" /><label class="form-lbl">No</label></li>
+	<?php if(in_array($pregunta["id_pregunta"], $nc)): ?> 
+         <li><input class="botonradio" id="<?php echo $pregunta["id_pregunta"];?>" name="radio_VorF_CSVE_<?php echo $pregunta["id_pregunta"];?>" type="radio" value="NC" Onclick="ocultar(<?php echo $pregunta["id_pregunta"];?>)"/><label class="form-lbl">NC</label></li>
+       <?php endif; ?>
+
+      </ul>
 
     </div>
 
-       <div id="respuesta2" class="grid-3-12" >
+       <div id="respuesta2" class="grid-4-12" >
    
            <div id="envoltorio<?php echo $pregunta["id_pregunta"];?>" style="display:none">
-
-        <div  style="width: 50px;display: inline;float: left;height: 100%;margin-left: 1%;margin-right: 1%;padding: 0.5% 0.5% 0.8%;" >
+               
+                <div  style="width: 78px;display: inline;float: left;height: 100%;margin-left: 1%;margin-right: 1%;padding: 0.5% 0.5% 0.8%;" >
          
                      <ul>
-                        <select type="checkbox" name="respuesta2_CSVE_<?php echo $pregunta["id_pregunta"];?>">
-                               <OPTION VALUE="0">0 - Ninguna</OPTION>
-                               <OPTION VALUE="1">1 - Baja</OPTION>
-                               <OPTION VALUE="2">2 - Mediana</OPTION>
-                               <OPTION VALUE="3">3 - Alta</OPTION>
-                               <OPTION VALUE="4">4 - Muy Alta</OPTION>
+                        <select type="checkbox" name="respuesta2a_CSVE_<?php echo $pregunta["id_pregunta"];?>">
+                            <OPTION VALUE=""></OPTION>   
+                            <OPTION VALUE="1">Positiva</OPTION>
+                               <OPTION VALUE="-1">Negativa</OPTION>
+                               <OPTION VALUE="0">Neutra</OPTION>
+                                </select>
+                     </ul>
+        </div>
+
+        <div  style="width: 80px;display: inline;float: left;height: 100%;margin-left: 1%;margin-right: 1%;padding: 0.5% 0.5% 0.8%;" >
+         
+                     <ul>
+                        <select type="checkbox" name="respuesta2b_CSVE_<?php echo $pregunta["id_pregunta"];?>">
+                             <OPTION VALUE=""></OPTION>   
+                               <OPTION VALUE="0">Ninguna</OPTION>
+                               <OPTION VALUE="1">Baja</OPTION>
+                               <OPTION VALUE="2">Mediana</OPTION>
+                               <OPTION VALUE="3">Alta</OPTION>
+                               <OPTION VALUE="4">Muy Alta</OPTION>
                                 </select>
                      </ul>
         </div>
@@ -87,9 +133,6 @@
     <div class="grid-1-12"> <!-- tools para la pregunta -->
      <div id="boton_add_comentario_<?php echo $pregunta["id_pregunta"];?>" class="ui-icon-comentar" onclick="$('#dialogo-addcomentario').data('pregunta', {id: '<?php echo $pregunta["id_pregunta"];?>',numero: '<?php echo $pregunta["id_pregunta"];?>', texto: '<?php echo trim($pregunta["texto_pregunta"]);?>'}).dialog('open');"></div>
      </div>
-       <div class="clear">
-
-                </div>
     <div class="grid-12-12" style="display: none;"> <!--"Comentario adicional style="display: none;"-->
       <textarea id="comentario_<?php echo $pregunta["id_pregunta"];?>" name="comentario_<?php echo $pregunta["id_pregunta"];?>" title="Comentario"></textarea>
     </div>

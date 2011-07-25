@@ -13,6 +13,12 @@ class principalActions extends Actions
 
         // redireccionar si no se ha indicado encuestado
         $this->forward404If(!$this->idEncuestado);
+        
+        //obtiene si las cusas estan cerradas o no
+        
+        $this->cuasasactuales = $this->esCerrado($request, 'causasactuales_respuestas');
+          $this->cuasasvigentes = $this->esCerrado($request, 'causasvigentes_respuestas');
+            $this->cuasasanteriores = $this->esCerrado($request, 'causasanteriores_respuestas');
 
 
         // los porcentajes de completado de los instrumentos
