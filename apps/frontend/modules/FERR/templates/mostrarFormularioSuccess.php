@@ -1,22 +1,37 @@
 <?php slot('title') ?>
-  <?php  echo "[{$porcCompletado} % completado] (FERR) Ficha de evaluación de riesgos y recursos de comportamiento desadaptativo";?>
+  <?php  echo "(FERR) Ficha de evaluación de riesgos y recursos de comportamiento desadaptativo";?>
 <?php end_slot(); ?>
 
-<?php $url_save_post=url_for('FERR/GuardarInstrumento?idEncuestado='.$idEncuestado);?>
+<!-- CAMBIO CONSENSO START-->
+<?php 
+$url_save_post=url_for('FERR/GuardarInstrumento?idEncuestado='.$idEncuestado);
+if($consenso==1){
+  $url_save_post=url_for('FERR/GuardarInstrumento?idEncuestado='.$idEncuestado.'&modoConsenso=true');
+}
+?>
+<!-- CAMBIO CONSENSO STOP-->
 
   <?php if(!($es_ultimo_bloque)): ?>
-  <div class="grid-12-12 ui-widget ui-widget-header ui-corner-all" style="position: relative;"><?php  echo "[{$porcCompletado} % completado] (FERR) Ficha de evaluación de riesgos y recursos de comportamiento desadaptativo";?>
-  </div><div class="clear"></div>
+
+<!-- CAMBIO CONSENSO START-->
+  <?php if($consenso==1): ?>           
+    <div class="grid-12-12 ui-widget ui-consenso-header ui-corner-all" style="position: relative;"><?php  echo "(FERR) Ficha de evaluación de riesgos y recursos de comportamiento desadaptativo (Modo Consenso)";?>
+    </div><div class="clear"></div>
+  <?php else: ?>
+    <div class="grid-12-12 ui-widget ui-widget-header ui-corner-all" style="position: relative;"><?php  echo "(FERR) Ficha de evaluación de riesgos y recursos de comportamiento desadaptativo";?>
+    </div><div class="clear"></div>      
+  <?php endif; ?>
+<!-- CAMBIO CONSENSO STOP-->
 
 
 <div id="msgzone">
     <div class="grid-12-12">
-      <?php echo image_tag('loading-image.gif','style=float:left;') ?><h3 id="mensaje">Guardando...</h3>
+      <?php echo image_tag('loading-image.gif','style=float:left;') ?><h3 id="mensaje">Espere... (No cancele ni recarge la página, en caso de observar el mensaje "Aviso: script sin respuesta" marcar "no volver a preguntar" y "continuar")</h3>
     </div>
     <div class="clear"></div>
 </div>
 
-<div id="contenido" style="display:display">
+<div id="contenido">
     <form id="formulario_FERR" name="formulario_FERR" class="form960" method="post" action="<?php echo $url_save_post; ?>">
     <div class="grid-12-12">
       <div id="panelTabsPreguntas" class="ui-widget ui-widget-content ui-corner-all">
@@ -1232,7 +1247,7 @@
     <div class="grid-4-12">
     <a class="form-button-off form-left" style="display: block;"
       onclick="
-              if(confirm('OJO. Al cerrar el formulario ya no podrás volver a modificarlo.')){
+              if(confirm('ADVERTENCIA. Al cerrar el formulario ya no podrás volver a modificarlo.')){
                   $('#CLOSE_FLAG').val('CERRADO');
                    document.formulario_FERR.submit();
               }">Cerrar</a>
@@ -1528,10 +1543,16 @@
 confirm('¿Desea Cancelar y volver a incidencia?')
 -->
 </div><!-- Fin contenido -->
+
+<!-- CAMBIO CONSENSO START-->
 <script type="text/javascript">
                 $().ready(function() {
                      $("form").loadJSON(<?php echo $sf_data->getRaw('respuestasGuardadas');?>);
+                    <?php //if($consenso==1): ?>
+                      /* $("form").loadAndBlockJSON(<?php //echo $sf_data->getRaw('coincidencias');?>); */
+                    <?php //endif; ?>
                      $("#msgzone").hide();
                      $("#contenido").show();
                 });
 </script>
+<!-- CAMBIO CONSENSO STOP-->

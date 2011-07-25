@@ -1299,7 +1299,7 @@ if($consenso==1){
     <div class="grid-4-12">
     <a class="form-button-off form-left" style="display: block;"
       onclick="
-              if(confirm('ALERTA. Al cerrar el formulario ya no podrás volver a modificarlo.')){
+              if(confirm('ADVERTENCIA. Al cerrar el formulario ya no podrás volver a modificarlo.')){
                   $('#CLOSE_FLAG').val('CERRADO');
                    document.formulario_FCRIMINOMETRICA.submit();
               }">Cerrar</a>
@@ -1411,9 +1411,9 @@ if($consenso==1){
 <script type="text/javascript">
                 $().ready(function() {
                      $("form").loadJSON(<?php echo $sf_data->getRaw('respuestasGuardadas');?>);
-                    <?php if($consenso==1): ?>
-                      $("form").loadAndBlockJSON(<?php echo $sf_data->getRaw('coincidencias');?>); 
-                    <?php endif; ?>
+                    <?php //if($consenso==1): ?>
+                      /* $("form").loadAndBlockJSON(<?php //echo $sf_data->getRaw('coincidencias');?>); */
+                    <?php //endif; ?>
                      $("#msgzone").hide();
                      $("#contenido").show();
                 });

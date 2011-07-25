@@ -1,5 +1,5 @@
 <?php //echo $sql_update_or_insert_respuesta;?>
-<div class="grid-12-12 ui-widget-header ui-corner-all" style="position: relative;">Formulario IRNC</div>
+<div class="grid-12-12 ui-widget-header ui-corner-all" style="position: relative;">Formulario FCMF</div>
 <div class="clear"></div>
 <div class="grid-12-12>
 <div id="homeAlertMensaje" class="ui-widget">

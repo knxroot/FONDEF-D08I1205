@@ -44,8 +44,12 @@ public function executeProximoBloque(sfWebRequest $request)
   $idUser=$this->getUser()->getGuardUser()->getId();
 
   $this->idEncuestado=$request->getParameter('idEncuestado');
-  /*si no llega el parametro idEncuestado entonces tirar un error 404*/
+  /*si no llega el parametro idEncuestado entonces tirar un error 404*/  
   $this->forward404If(!$this->idEncuestado);
+  
+  $this->concensoMode=
+          
+          
   $arrayRespuestas=$request->getParameterHolder()->getAll();
   $SQL_INSERTAR_RESPUESTAS="";
   foreach ($arrayRespuestas as $r_nombre_parametro => $r_valor_parametro) {
@@ -58,11 +62,12 @@ public function executeProximoBloque(sfWebRequest $request)
         `respuesta` ,
         `comentario` ,
         `id_encuestado` ,
-        `id_pregunta_EGED`
+        `id_pregunta_EGED`,
+        `concensoMode`
       )
       VALUES (
-        '{$idUser}', '{$valRespuesta}', '{$arrayRespuestas["comentario_{$id_preg}"]}', '{$this->idEncuestado}', '{$id_preg}');";
-
+        '{$idUser}', '{$valRespuesta}', '{$arrayRespuestas["comentario_{$id_preg}"]}', '{$this->idEncuestado}', '{$id_preg}', '{$this->concensoMode}');";
+      echo 
       $SQL_INSERTAR_RESPUESTAS=$SQL_INSERTAR_RESPUESTAS.$sql_insert_respuesta;
         mysql_query($sql_insert_respuesta);
      }

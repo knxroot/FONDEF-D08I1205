@@ -4,7 +4,7 @@
  * FERR actions.
  *
  * @package    psicologia
- * @subpackage FERR
+ * @subpackage FCMF
  * @author     Gustavo Lacoste <gustavo@lacosox.org>
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
@@ -81,7 +81,7 @@ class FCMFActions extends Actions
                 
                 
 
-                // ademas obiamente debe traer un id encuestado 
+                // ademas obviamente debe traer un id encuestado 
                 $this->idEncuestado = $request->getParameter('idEncuestado');
                 $this->forward404If(!$this->idEncuestado);
                 

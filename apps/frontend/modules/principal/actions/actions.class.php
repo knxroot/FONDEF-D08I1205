@@ -88,6 +88,21 @@ $SQL_CONSULTA_NOMBRE="SELECT `input_primer_nombre` , `input_otros_nombres` , `in
     $this->mostrarColumnaConsenso5=false;
     
 
+    
+    
+    /* CAMBIO CONSENSO START */
+    $cierresferr=$this->contarTotalCierresInstrumento($request, 'ferr2_respuestas');
+    if($cierresferr>1){
+      $this->mostrarColumnaConsenso1=true;
+      $this->mostrarColumnaConsenso3=true;
+
+      $esCerradoFerr=$this->esCerrado2($request, 'ferr2_respuestas',1);
+      $this->porcCompletadoFERR2 = $esCerradoFerr*100;
+    }    
+    /* CAMBIO CONSENSO STOP */
+    
+    
+    
     $cierresfcmf=$this->contarTotalCierresInstrumento($request, 'fcmf_respuestas');
     if($cierresfcmf>1){
       $this->mostrarColumnaConsenso1=true;

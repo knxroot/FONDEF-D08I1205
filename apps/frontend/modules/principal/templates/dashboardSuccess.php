@@ -104,12 +104,19 @@
    <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
 
-
+   <!-- CAMBIO CONSENSO START-->
    <div class="prefix_1 grid_2">
-     <a href="<?php echo url_for('FERR/index?idEncuestado='.$idEncuestado);?>">
-     <div class="menu-dashboard-juicioprofesional">
+   <div class="menu-dashboard-juicioprofesional">
+    <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso3): ?>
+    <a href="<?php echo url_for('FERR/index?idEncuestado='.$idEncuestado.'&modoConsenso=true');?>">
+    <?php else: ?>
+    <a href="<?php echo url_for('FERR/index?idEncuestado='.$idEncuestado);?>">
+     <?php endif; ?>
+     <div class="<?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso3){echo "menu-consenso";}else{echo "menu-dashboard-juicioprofesional-clickeable";} ?>">
       FERR
-      </div></a>
+     </div>
+    </a>
+   </div>
    </div>
    <div class="grid_3">
      <div class="menu-dashboard-juicioprofesional">
@@ -117,12 +124,13 @@
       </div>
    </div>
    <div class="grid_3">
-   <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso3): ?> 
+   <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso3): ?>  
      <div class="menu-dashboard-juicioprofesional">
-      L
+      <?php echo $porcCompletadoFERR2; ?> %
       </div>
    <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
+  <!-- CAMBIO CONSENSO STOP-->
 
 
 
@@ -190,19 +198,11 @@
     <a href="<?php echo url_for('FCMF/index?idEncuestado='.$idEncuestado.'&modoConsenso=true');?>">
     <?php else: ?>
     <a href="<?php echo url_for('FCMF/index?idEncuestado='.$idEncuestado);?>">
-    <?php endif; ?>
-        
-    <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso5): ?>
-    <div class="menu-consenso">
-        
-
-    <?php else: ?>
-    <div class="menu-dashboard-juicioprofesional-clickeable">
-      
-      <?php endif; ?>
-    
+     <?php endif; ?>
+     <div class="<?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso5){echo "menu-consenso";}else{echo "menu-dashboard-juicioprofesional-clickeable";} ?>">
       FCMF
-    </div></a>
+     </div>
+    </a>
    </div>
    </div>
    
@@ -312,7 +312,7 @@
      <div class="botonerainferior" style="padding: 0.3em 0.4em !important;">
        <a class="form-button form-left" style="display: block;" href="<?php echo url_for('principal/home?showtable=yes');?>"><- Ir a  la lista de encuestados</a>
        <?php if(!($esEvaluadorSecundario)): ?>    
-         <a class="form-button-off form-left" style="display: block;" href="">Dar de alta a encuestado -></a>
+         <!-- <a class="form-button-off form-left" style="display: block;" href="">Dar de alta a encuestado -></a> -->
        <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
      </div>
 </div>
