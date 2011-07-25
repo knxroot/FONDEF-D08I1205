@@ -35,7 +35,7 @@
                 case 'text':
                 case 'hidden':
                     $(element).attr("value", value);
-                    $(element).css("color","red").css("font-weight","bold").attr("disabled","disabled").css("background-color","#666666");
+                    $(element).css("color","red").css("font-weight","bold").attr("readonly","readonly").css("background-color","#666666");
                     break;
                 case 'a':
                     var href = $(element).attr("href");

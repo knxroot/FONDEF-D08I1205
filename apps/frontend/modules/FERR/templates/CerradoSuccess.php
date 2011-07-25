@@ -1,7 +1,7 @@
 <div class="grid-12-12 ui-widget-header ui-corner-all" style="position: relative;">Formulario FERR</div>
 
 <div class="grid-12-12">
-  <span class="form-msg-error" > El instrumento se ha sido cerrado.</span>
+  <span class="form-msg-error" > El instrumento está cerrado.</span>
 </div>
 <br>
 <div class="prefix_4 grid_11">

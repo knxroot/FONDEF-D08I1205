@@ -4,7 +4,7 @@
  * FERR actions.
  *
  * @package    psicologia
- * @subpackage FERR
+ * @subpackage FCMF
  * @author     Gustavo Lacoste <gustavo@lacosox.org>
  * @version    SVN: $Id: actions.class.php 23810 2009-11-12 11:07:44Z Kris.Wallsmith $
  */
@@ -31,11 +31,24 @@ class FCMFActions extends Actions
                 sea un evaluador secundario que se esta 'balsiando'*/ 
                 $esEvaluadorSecundario=$this->soyResponsableSecundario($request);
                 $this->forward404If($esEvaluadorSecundario);
+
                 $this->GuardarInstrumento($request, 'fcmf_respuestas',1); //guarda todas las variables del usuario actual cara de palo en la BD
+                $this->GuardarTiempo($request,'FCMF_CONSENSO');
+                // El tiempo del consenso se guarda como si fuera otro módulo,
+                //ok, se que estarás pensando: ¿cómo es posible que no siga un 
+                //estándar para guardar las cosas relacionadas al modo consenso?
+                //,quiero aclara que esto es exclusivamente por culpa de los 
+                // psicólogos que andan cambiando las cosas a último momento!!,
+                // y tengo que estar trabajando en un poyecto horriblemente mal
+                // planificado. No pienso cambiar a último momento la BD porque
+                // afecta la estabilidad del sistema que ya esta ultra inestable
+                // por lo lo que preferí usar un nombre de módulo diferente
+                // para no afectar todo el resto de módulos que usan este método.
             }else{
-                $this->GuardarInstrumento($request, 'fcmf_respuestas'); 
+                $this->GuardarInstrumento($request, 'fcmf_respuestas');
+                $this->GuardarTiempo($request,'FCMF');
             }
-          $this->GuardarTiempo($request,'FCMF');
+
 	}
          /**
           * Lista las preguntas del formulario
@@ -53,12 +66,22 @@ class FCMFActions extends Actions
                 $esEvaluadorSecundario=$this->soyResponsableSecundario($request);
                 $this->forward404If($esEvaluadorSecundario);
                 
+                /* para que el evaluador principal pueda entrar a modo consenso
+                 * debe primero haber cerrado el formulario en modo normal.
+                 * se verifica entonces que si ya se cerró en modo normal, sino
+                 * lo envío a 404.
+                 */
+                $this->forward404If(!$this->esCerrado2($request, 'fcmf_respuestas',0));
+
+                
                 // se verifica si ya se cerró el modo consenso
                 if($this->esCerrado2($request, 'fcmf_respuestas',1)){
                   return $this->forward('FCMF','Cerrado'); 
                 }
+                
+                
 
-                // ademas obiamente debe traer un id encuestado 
+                // ademas obviamente debe traer un id encuestado 
                 $this->idEncuestado = $request->getParameter('idEncuestado');
                 $this->forward404If(!$this->idEncuestado);
                 
@@ -73,9 +96,18 @@ class FCMFActions extends Actions
                 
                 $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'fcmf_respuestas',1,true);
                 $this->coincidencias=$this->generarListaBloqueadosCruce($this->idEncuestado,'fcmf_respuestas', $idUser, $idResponsableSecundario);
+                unset($this->coincidencias['CLOSE_FLAG']);
+                unset($this->coincidencias['indicecrim']);
+                unset($this->coincidencias['sumafinal']);
+                unset($this->coincidencias['csocial']);
+                unset($this->coincidencias['cdelic']);
+                
                 if(count($this->respuestasGuardadas)<=1){
                     $this->respuestasGuardadas=$this->coincidencias;//esto deberia ocurrir exclusivamente la primera vez solamente
                 }
+
+
+                
                 $this->respuestasGuardadas=json_encode($this->respuestasGuardadas);
                 $this->coincidencias=json_encode($this->coincidencias);      
                 

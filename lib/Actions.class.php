@@ -144,9 +144,7 @@ $tiempo=mysql_fetch_array($tiempo);
 	* $concensoMode =1 Si se esta guardando en modo consenso , 0 en caso contrario
 	* @return boolean $saveState 'retorna un bool que dice si se guardo o no esta cosa'
 	*/
-    
-    
-    
+
 	public function GuardarInstrumento(sfWebRequest $request,$nombretabla,$concensoMode=0)
 	{
 		$this->BD_Conectar();
@@ -158,7 +156,7 @@ $tiempo=mysql_fetch_array($tiempo);
 		$this->concensoMode=$concensoMode;
 		$arrayRespuestas=$request->getParameterHolder()->getAll();
 		$elementosAIgnorar=sfConfig::get('app_supercontrolador_blacklist_'.$this->moduleName);
-		$habraalgo="SELECT * FROM `{$nombretabla}` WHERE `id_user`={$idUser} AND `id_encuestado`={$this->idEncuestado} AND `concensoMode`={$this->concensoMode} LIMIT 1";
+		$habraalgo="SELECT * FROM `{$nombretabla}` WHERE `id_user`={$idUser} AND `id_encuestado`={$this->idEncuestado} AND `concensoMode`='{$this->concensoMode}' LIMIT 1";
 		$result = mysql_query($habraalgo);
 		$rows=mysql_num_rows($result);
 		$sqlGuardar=null;
@@ -168,9 +166,10 @@ $tiempo=mysql_fetch_array($tiempo);
                         $sqlGuardar="";
 			foreach ($arrayRespuestas as $idelement => $value) {
                           if (!in_array($idelement, $elementosAIgnorar)) {
-				$sqlGuardar="UPDATE {$nombretabla} SET `respuesta` = '".mysql_real_escape_string($value)."' WHERE `{$nombretabla}`.`id_respuesta` = '".mysql_real_escape_string($idelement)."' AND `{$nombretabla}`.`id_user` =".(int)mysql_real_escape_string($idUser)." AND `{$nombretabla}`.`id_encuestado` =".(int)mysql_real_escape_string($this->idEncuestado)." AND `{$nombretabla}`.`concensoMode` =".(int)mysql_real_escape_string($this->concensoMode)." LIMIT 1;";
+				$sqlGuardar="UPDATE {$nombretabla} SET `respuesta` = '".mysql_real_escape_string($value)."' WHERE `{$nombretabla}`.`id_respuesta` = '".mysql_real_escape_string($idelement)."' AND `{$nombretabla}`.`id_user` =".(int)mysql_real_escape_string($idUser)." AND `{$nombretabla}`.`id_encuestado` =".(int)mysql_real_escape_string($this->idEncuestado)." AND `{$nombretabla}`.`concensoMode` ='".(int)mysql_real_escape_string($this->concensoMode)."' LIMIT 1;";
                                 
                           }
+                         
                           mysql_query($sqlGuardar);   
                         }
                        
@@ -178,8 +177,10 @@ $tiempo=mysql_fetch_array($tiempo);
 		}
 		else
 		{
-                    $sqlGuardar="";
+                    
+                    //print_r($arrayRespuestas);
 			foreach ($arrayRespuestas as $idelement => $value) {
+                            $sqlGuardar="";
                           if (!in_array($idelement, $elementosAIgnorar)) {
 			   $sqlGuardar="INSERT INTO {$nombretabla} (id_respuesta ,respuesta,id_user,id_encuestado,concensoMode) VALUES (
 				'".mysql_real_escape_string($idelement)."', 
@@ -188,8 +189,9 @@ $tiempo=mysql_fetch_array($tiempo);
 				'".mysql_real_escape_string($this->idEncuestado)."', 
 				'".mysql_real_escape_string($this->concensoMode)."' );"; 
 				
-				
+			  
                           }
+                           //echo $sqlGuardar;
                            mysql_query($sqlGuardar);
                         }
                        
@@ -200,16 +202,14 @@ $tiempo=mysql_fetch_array($tiempo);
 		return true; //puro chamullo, hay que buscar en la doc de php.net y ver si yo esoy casi seguro que el mysql_query retorna un estado parece, ese hay que usar para retornaar true o false aqui
 	}
 
-	public function generarListaBloqueadosCruce($idEncuestado,$nombretabla, $iduser1,$iduser2)
-	{
-		$this->BD_Conectar();
-
-
+	public function generarListaBloqueadosCruce($idEncuestado,$nombretabla, $iduser1,$iduser2){
+            
+	$this->BD_Conectar();
         $elementosAIgnorar=sfConfig::get('app_supercontrolador_blacklist_'.$this->moduleName);
                 
 		$habraalgo_u1="SELECT id_respuesta,respuesta FROM `{$nombretabla}` WHERE `id_user`={$iduser1} AND `id_encuestado`={$idEncuestado} AND `concensoMode`=0";
-		$habraalgo_u2="SELECT id_respuesta,respuesta FROM `{$nombretabla}` WHERE `id_user`={$iduser1} AND `id_encuestado`={$idEncuestado} AND `concensoMode`=0";
-		
+		$habraalgo_u2="SELECT id_respuesta,respuesta FROM `{$nombretabla}` WHERE `id_user`={$iduser2} AND `id_encuestado`={$idEncuestado} AND `concensoMode`=0";
+
 		$rows1 = mysql_query($habraalgo_u1);
         $results1 = array();
         while($row = mysql_fetch_array($rows1)){
@@ -225,9 +225,16 @@ $tiempo=mysql_fetch_array($tiempo);
             $results2[$row['id_respuesta']] = $row['respuesta'];
           }
         }		
-		
+	 //print_r($results1);
+         //echo "<br><br>**************************";
+         //print_r($results2);
+         //echo "<br><br>**************************";
 	  $result_array = array_intersect_assoc($results1, $results2);
-
+          //print_r($result_array);
+          /*for($i=0;$i<1000;$i++){
+              echo "prometo no trabajar nunca más con psicólogos<br>";
+          }*/
+          
           return $result_array;
 	}
         

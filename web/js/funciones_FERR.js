@@ -7,7 +7,7 @@
  * @version 0.1
  */
 
-/** Capa de apoyo mediante JS al formulario FERR
+/**Capa de apoyo mediante JS al formulario FERR
  * @class FormFERR
  * @requires jquery-1.4.2.min.js, jquery-ui-1.8.1.custom.min.js,jquery.validate.js,funciones_global.js, DOM READY
  * @see  <h3>BIBLIOGRAFIA</h3>
@@ -413,7 +413,7 @@ $('#11a').jqm({ajax: '/modal/ferr/11a.html', trigger: 'a.11atrigger'});
     $('form#formulario_FERR').submit(function(){
       if($('#esCerrarForm').val()!='CERRAR'){
         $('form#formulario_FERR').hide();
-        $('#msg-guardando').show();
+        $('#msgzone').show();
       }
     });
 	});
