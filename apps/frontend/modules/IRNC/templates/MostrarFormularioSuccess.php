@@ -81,40 +81,40 @@ if($consenso==1){
           <div class="grid-3-12">
             <ul>
             
-                 <li><input type="radio" value="si" name="b9p1" class="botonradio" >
-                     <input type="radio" value="no" style="display:none" name="b9p1" class="botonradio" checked><label for="b9p1">Infraciones anteriores</label></li>
+                 <li><input type="radio" value="si" name="b9p1" class="botonradio cambiador" >
+                     <input type="radio" value="no" style="display:none" name="b9p1" class="botonradio cambiador" checked><label for="b9p1">Infraciones anteriores</label></li>
                    
             
       
-               <li><input type="radio" value="si" name="b9p2" class="botonradio" >
-                   <input type="radio" value="no" style="display:none" name="b9p2" class="botonradio" checked><label for="b9p2">Desamparo afect / psiquiátrico</label></li>
-              <li><input type="radio" value="si" name="b9p1" class="botonradio" >
-                  <input type="radio" value="no" style="display:none" name="b9p3" class="botonradio" checked><label for="b9p3">Drogadicción</label></li>
+               <li><input type="radio" value="si" name="b9p2" class="botonradio cambiador" >
+                   <input type="radio" value="no" style="display:none" name="b9p2" class="botonradio cambiador" checked><label for="b9p2">Desamparo afect / psiquiátrico</label></li>
+              <li><input type="radio" value="si" name="b9p1" class="botonradio cambiador" >
+                  <input type="radio" value="no" style="display:none" name="b9p3" class="botonradio cambiador" checked><label for="b9p3">Drogadicción</label></li>
               
-               <li><input type="radio" value="si" name="b9p4" class="botonradio" >
-                   <input type="radio" value="no" style="display:none" name="b9p4" class="botonradio" checked><label for="b9p4">Desacuerdos conyugales</label></li>
+               <li><input type="radio" value="si" name="b9p4" class="botonradio cambiador" >
+                   <input type="radio" value="no" style="display:none" name="b9p4" class="botonradio cambiador" checked><label for="b9p4">Desacuerdos conyugales</label></li>
             </ul>
           </div>
           <div class="grid-3-12">
             <ul>
-              <li><input type="radio" value="si" name="b9p5" class="botonradio" >
-                   <input type="radio" value="no" style="display:none" name="b9p5" class="botonradio" checked><label for="b9p5">Probl. Económ. / alojamiento</label></li>
-              <li><input type="radio" value="si" name="b9p6" class="botonradio" >
-                   <input type="radio" value="no" style="display:none" name="b9p6" class="botonradio" checked><label for="b9p6">Desinterés vs problemas</label></li>
-              <li><input type="radio" value="si" name="b9p7" class="botonradio" >
-                   <input type="radio" value="no" style="display:none" name="b9p7" class="botonradio" checked><label for="b9p7">Probl. de orden cultural (étnico)</label></li>
-          <li><input type="radio" value="si" name="b9p8" class="botonradio" >
-                   <input type="radio" value="no" style="display:none" name="b9p8" class="botonradio" checked><label for="b9p8">Maltrato de parte del padre</label></li>
+              <li><input type="radio" value="si" name="b9p5" class="botonradio cambiador" >
+                   <input type="radio" value="no" style="display:none" name="b9p5" class="botonradio cambiador" checked><label for="b9p5">Probl. Económ. / alojamiento</label></li>
+              <li><input type="radio" value="si" name="b9p6" class="botonradio cambiador" >
+                   <input type="radio" value="no" style="display:none" name="b9p6" class="botonradio cambiador" checked><label for="b9p6">Desinterés vs problemas</label></li>
+              <li><input type="radio" value="si" name="b9p7" class="botonradio cambiador" >
+                   <input type="radio" value="no" style="display:none" name="b9p7" class="botonradio cambiador" checked><label for="b9p7">Probl. de orden cultural (étnico)</label></li>
+          <li><input type="radio" value="si" name="b9p8" class="botonradio cambiador" >
+                   <input type="radio" value="no" style="display:none" name="b9p8" class="botonradio cambiador" checked><label for="b9p8">Maltrato de parte del padre</label></li>
             </ul>
           </div>
           <div class="grid-6-12">
             <ul>
-              <li><input type="radio" value="si" name="b9p9" class="botonradio" >
-                   <input type="radio" value="no" style="display:none" name="b9p9" class="botonradio" checked><label for="b9p9">Maltrato de parte de la madre</label></li>
-              <li><input type="radio" value="si" name="b9p10" class="botonradio" >
-                   <input type="radio" value="no" style="display:none" name="b9p10" class="botonradio" checked><label for="b9p10">Trauma familiar grave:</label><input type="text" class="form-txt" style="width:100px;" value="" name="b9p10" id="b9p10" /></li>              
-             <li><input type="radio" value="si" name="b9p11" class="botonradio" >
-                   <input type="radio" value="no" style="display:none" name="b9p11" class="botonradio" checked><label for="b9p11">Otro:</label><input type="text" class="form-txt" style="width:100px;" value="" name="b9p11o" id="b9p11o" /></li>   
+              <li><input type="radio" value="si" name="b9p9" class="botonradio cambiador" >
+                   <input type="radio" value="no" style="display:none" name="b9p9" class="botonradio cambiador" checked><label for="b9p9">Maltrato de parte de la madre</label></li>
+              <li><input type="radio" value="si" name="b9p10" class="botonradio cambiador" >
+                   <input type="radio" value="no" style="display:none" name="b9p10" class="botonradio cambiador" checked><label for="b9p10">Trauma familiar grave:</label><input type="text" class="form-txt" style="width:100px;" value="" name="b9p10" id="b9p10" /></li>              
+             <li><input type="radio" value="si" name="b9p11" class="botonradio cambiador" >
+                   <input type="radio" value="no" style="display:none" name="b9p11" class="botonradio cambiador" checked><label for="b9p11">Otro:</label><input type="text" class="form-txt" style="width:100px;" value="" name="b9p11o" id="b9p11o" /></li>   
             </ul>
           </div>
           <div class="clear"></div>
@@ -135,8 +135,8 @@ if($consenso==1){
         <div id="IRNC_pregunta_10" class="IRNC_bloque_pregunta">
           <div class="grid-3-12">
             <ul>
-             <li><input type="radio" value="si" name="b10p1" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p1" class="botonradio cambiador" checked><label for="b10p1">Problemas de salud</label></li>
+             <li><input type="radio" value="si" name="b10p1" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="radio" value="no"  name="b10p1" class="botonradio cambiador" onclick="cambiar(this)" checked><label for="b10p1">Problemas de salud</label></li>
              
              <li><input type="radio" value="si" name="b10p2" class="botonradio cambiador" >
                    <input type="radio" value="no" style="display:none" name="b10p2" class="botonradio cambiador" checked><label for="b10p2">Discapacidad física</label></li>
@@ -223,6 +223,8 @@ if($consenso==1){
                 
               <li><input type="radio" value="si" name="b10p27" class="botonradio" >
                    <input type="radio" value="no" style="display:none" name="b10p27" class="botonradio cambiador" checked><label for="b10p27">Otro</label><input type="text" class="form-txt" style="width:100px;" value="" name="b10p27o" id="b10p27o" /></li>
+
+
             </ul>
           </div>
           <div class="clear"></div>

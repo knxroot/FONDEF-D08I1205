@@ -23,6 +23,30 @@ FormIRNC= function(){
   var finalizar=function(){};
 }
 
+function cambiar(self){
+alert($(":radio[name='"+$(self).attr('name')+"'][value='no']").attr('checked'));
+alert($(":radio[name='"+$(self).attr('name')+"'][value='si']").attr('checked'));
+
+
+    if(!$(":radio[name='"+$(self).attr('name')+"'][value='si']").attr('checked'))
+        {
+          $(":radio[name='"+$(self).attr('name')+"'][value='no']").attr('checked', true);
+          $(":radio[name='"+$(self).attr('name')+"'][value='si']").attr('checked', false);
+        }
+    else{
+         
+         //$(this).attr('checked', false); 
+        $(":radio[name='"+$(self).attr('name')+"'][value='si']").attr('checked',true);
+    }
+    
+    
+
+   
+  
+ 
+  
+}
+
 /**
  * Define los procedimeintos estaticos del formulario IRNC
  * @function
@@ -35,15 +59,20 @@ FormIRNC.prototype.inicializar= function(){
   $('#formulario_IRNC')[0].reset();
 
 
-$(".cambiador").click(function(){
-    if($(this).val()=='si'){
-        $(this).filter('[value=no]').attr('checked', true);
-    }
-    
-    
 
+
+
+
+/*$(".cambiador").click(function(event){
+    
+  alert($(this).val());
+  if (this.checked) {
+    $(":radio[name='"+$(this).attr('name')+"'][value='no']").attr('checked', true);
+  } else {
+   $(this).attr('checked', true);
+  }
 });
-
+*/
 
 
   /** @description Efecto al hacer un focus sobre un radio, hace un efecto
