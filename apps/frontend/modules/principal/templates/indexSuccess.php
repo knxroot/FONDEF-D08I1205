@@ -21,14 +21,12 @@
 
  <div class="form2-impar">
     <div class="grid-4-12">
-        <!-- COMENTARIOS INCREIBLEMENTE INUTILES PARA QUIEN MIRA EL CODIGO: EL PROGRAMADOR -->
     <!-- En Chile, comúnmente se le denomina RUT tanto al RUT (Rol Único Tributario) como al RUN (Rol Único Nacional). La diferencia está en que el primero es un identificador de empresas mientras que el segundo sólo es para personas naturales.Aqui se considera el normbre real osea el RUN. -->
           <label class="form-lbl">RUN <em class="form-req">*</em></label>
           <input type="text" value="" id="input_run_nconverificador" name="input_run_nconverificador" style="width: 200px;float: left;" class="form-txt run">
     </div>
 	   
 	   <div class="grid-6-12">
-        <!-- COMENTARIOS INCREIBLEMENTE INUTILES PARA QUIEN MIRA EL CODIGO: EL PROGRAMADOR -->
     <!-- En Chile, comúnmente se le denomina RUT tanto al RUT (Rol Único Tributario) como al RUN (Rol Único Nacional). La diferencia está en que el primero es un identificador de empresas mientras que el segundo sólo es para personas naturales.Aqui se considera el normbre real osea el RUN. -->
           <label class="form-lbl">Co-evaluador <em class="form-req">*</em></label>
           <select name="select_user_responsable_secundario1" id="select_user_responsable_secundario1"  style="width: 500px;float:left;">
@@ -294,8 +292,8 @@
 
 <div id="panelNavegacion">
 	<div class="grid-12-12 form-no-lbl">
-	<!--	<input class="form-button form-left" type="reset" title="anterior" value="Anterior" />  -->
-		<input class="form-button form-right" type="submit" title="siguiente" value="Siguiente"/>
+          <a class="form-button-off form-left" style="display: block;" href="<?php echo url_for('principal/home?showtable=yes');?>" onclick="return confirm('Al salir del formulario perderás la información que hayas respondido en la pantalla actual. ¿Estas seguro que deseas salir del formulario actual?');"><- Volver al menú</a>
+	  <input class="form-button form-right" type="submit" title="siguiente" value="Siguiente"/>
 	</div>
 </div>
 
