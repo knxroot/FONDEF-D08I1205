@@ -1,0 +1,24 @@
+INSERT INTO `sf_guard_user` (`id`, `first_name`, `last_name`, `email_address`, `username`, `algorithm`, `salt`, `password`, `is_active`, `is_super_admin`, `last_login`, `created_at`, `updated_at`) VALUES
+(5, 'Pedro Manuel', 'Abelardo Torres', 'pedro@lacosox.org', '220536866', 'sha1', 'af10c4c7f920e09cd5c7ec984a84408d', '7777a8289bf7f5c327ff38f4144e48d74047290f', 1, 1, '2011-07-27 08:31:00', '2010-10-19 01:48:58', '2011-07-27 08:31:00'),
+(6, 'Georg Wilhelm', 'Hegel Z', 'gustavow@lacosox.org', '69147569', 'sha1', 'af10c4c7f920e09cd5c7ec984a84408d', '7777a8289bf7f5c327ff38f4144e48d74047290f', 1, 1, '2011-07-27 08:28:37', '2011-05-06 03:02:41', '2011-07-27 08:28:37'),
+(7, 'Gottfried Wilhelm', 'Leibniz', 'gootfriend@lacosox.org', '119498562', 'sha1', 'af10c4c7f920e09cd5c7ec984a84408d', '7777a8289bf7f5c327ff38f4144e48d74047290f', 1, 0, '2011-07-02 04:13:02', '0000-00-00 00:00:00', '2011-07-02 04:13:02'),
+(8, 'Georg Wilhelm', 'Hegel Z', 'georg@lacosox.org', '166209692', 'sha1', 'af10c4c7f920e09cd5c7ec984a84408d', '7777a8289bf7f5c327ff38f4144e48d74047290f', 1, 1, '2011-07-27 08:28:37', '2011-05-06 03:02:41', '2011-07-27 08:28:37'),
+(9, 'Alfredo  Bateman', 'Cardenas Z', 'AlfredoJBateman@example.com', '7461678k', 'sha1', 'af10c4c7f920e09cd5c7ec984a84408d', '7777a8289bf7f5c327ff38f4144e48d74047290f', 1, 1, '2011-07-27 08:28:37', '2011-05-06 03:02:41', '2011-07-27 08:28:37'),
+(10, 'Gregory A', 'Cardenas A', 'gustavoa@lacosox.org', '13760213k', 'sha1', 'af10c4c7f920e09cd5c7ec984a84408d', '7777a8289bf7f5c327ff38f4144e48d74047290f', 1, 1, '2011-07-27 08:28:37', '2011-05-06 03:02:41', '2011-07-27 08:28:37'),
+(11, 'Andres Alejandro', 'Valenzuela Concha', 'aalejandro@lacosox.org', '110396600', 'sha1', 'af10c4c7f920e09cd5c7ec984a84408d', '7777a8289bf7f5c327ff38f4144e48d74047290f', 1, 1, '2011-07-27 08:28:37', '2011-05-06 03:02:41', '2011-07-27 08:28:37'),
+(12, 'Claudia Patricia', 'Avendaño', 'cav@lacosox.org', '6898596k', 'sha1', 'af10c4c7f920e09cd5c7ec984a84408d', '7777a8289bf7f5c327ff38f4144e48d74047290f', 1, 1, '2011-07-27 08:28:37', '2011-05-06 03:02:41', '2011-07-27 08:28:37');
+
+
+USUARIOS
+========
+220536866 (Pedro Manuel Abelardo Torres')
+69147569 (Georg Wilhelm Hegel Z)
+119498562 (Gottfried Wilhelm Leibniz)
+166209692 (Georg Wilhelm Hegel Z)
+7461678k (Alfredo  Bateman Cardenas Z)
+13760213k (Gregory A Cardenas A)
+110396600 (Andres Alejandro Valenzuela Concha)
+6898596k (Claudia Patricia Avendaño)
+
+Contraseña para todos: "admini"
+

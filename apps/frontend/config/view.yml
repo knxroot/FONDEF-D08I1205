@@ -24,7 +24,7 @@ default:
         - ayuda.css
 
     javascripts:   
-        - jquery-1.4.2.min.js
+        - jquery-1.4.2.js
         - jquery-ui-1.8.1.custom.min.js
         - jquery.history.js
         - jquery.form.js

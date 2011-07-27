@@ -23,29 +23,19 @@ FormIRNC= function(){
   var finalizar=function(){};
 }
 
-function cambiar(self){
-alert($(":radio[name='"+$(self).attr('name')+"'][value='no']").attr('checked'));
-alert($(":radio[name='"+$(self).attr('name')+"'][value='si']").attr('checked'));
-
-
-    if(!$(":radio[name='"+$(self).attr('name')+"'][value='si']").attr('checked'))
-        {
-          $(":radio[name='"+$(self).attr('name')+"'][value='no']").attr('checked', true);
-          $(":radio[name='"+$(self).attr('name')+"'][value='si']").attr('checked', false);
-        }
-    else{
-         
-         //$(this).attr('checked', false); 
-        $(":radio[name='"+$(self).attr('name')+"'][value='si']").attr('checked',true);
-    }
-    
-    
-
-   
+function validar(){
   
- 
-  
+var camposinvalidos = $(":radio[value='no_seleccionado']:checked").size();
+if(camposinvalidos>0){
+  alert("Aún quedan"+camposinvalidos+" campos sin completar, debes completarlos  antes de cerrar el formulario");
+  return false;
+}else{
+  return true;
 }
+
+}
+
+
 
 /**
  * Define los procedimeintos estaticos del formulario IRNC
@@ -59,8 +49,19 @@ FormIRNC.prototype.inicializar= function(){
   $('#formulario_IRNC')[0].reset();
 
 
+$('.cambiador').bind('click', function(event){      
+//alert($(this).is(":checked"));
+      if($(this).is(":checked")){
+         $(":radio[name='"+$(this).attr('name')+"'][value='no']").click();
 
+      }else{
+          
+         // $(":radio[name='"+$(this).attr('name')+"'][value='no']").click();
+        // $(":radio[name='"+$(this).attr('name')+"'][value='no']").attr('checked', true);
+      }
+event.stopPropagation();
 
+});
 
 
 /*$(".cambiador").click(function(event){

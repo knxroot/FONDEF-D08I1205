@@ -9,7 +9,13 @@
     luego. Este css incoorpora funcionalidades adicionales sobre los módulos (NO
    CRITICAS)
 */
-
+.select-mini{
+  width:50px !important;
+  margin-right:10px !important;
+  font-size:8px;
+  
+  
+}
 .IRNC_bloque_pregunta{
   border: solid 1px transparent; /*solo para que al tener la pregunta seleccionada y poner el border dashed no cambie la proporcion de las cosas*/
 }

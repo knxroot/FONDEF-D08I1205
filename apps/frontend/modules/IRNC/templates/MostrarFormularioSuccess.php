@@ -68,9 +68,6 @@ if($consenso==1){
     </div>
     <?php endforeach ?>
 
-
-
-
     <div id="tabBloque9">
       <div class="grid-12-12">
         <b>9.- Familia / padres</b>
@@ -78,43 +75,29 @@ if($consenso==1){
        <div class="clear"></div>
         <!-- Comienzo Bloque Pregunta -->
         <div id="IRNC_pregunta_9" class="IRNC_bloque_pregunta">
-          <div class="grid-3-12">
+          <div class="grid-6-12">
             <ul>
             
-                 <li><input type="radio" value="si" name="b9p1" class="botonradio cambiador" >
-                     <input type="radio" value="no" style="display:none" name="b9p1" class="botonradio cambiador" checked><label for="b9p1">Infraciones anteriores</label></li>
+                 <li><select name="b9p1" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b9p1">Infraciones anteriores</label></li>
                    
             
       
-               <li><input type="radio" value="si" name="b9p2" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b9p2" class="botonradio cambiador" checked><label for="b9p2">Desamparo afect / psiquiátrico</label></li>
-              <li><input type="radio" value="si" name="b9p1" class="botonradio cambiador" >
-                  <input type="radio" value="no" style="display:none" name="b9p3" class="botonradio cambiador" checked><label for="b9p3">Drogadicción</label></li>
+               <li><select name="b9p2" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b9p2">Desamparo afect / psiquiátrico</label></li>
+              <li><select name="b9p3" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b9p3">Drogadicción</label></li>
               
-               <li><input type="radio" value="si" name="b9p4" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b9p4" class="botonradio cambiador" checked><label for="b9p4">Desacuerdos conyugales</label></li>
-            </ul>
-          </div>
-          <div class="grid-3-12">
-            <ul>
-              <li><input type="radio" value="si" name="b9p5" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b9p5" class="botonradio cambiador" checked><label for="b9p5">Probl. Económ. / alojamiento</label></li>
-              <li><input type="radio" value="si" name="b9p6" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b9p6" class="botonradio cambiador" checked><label for="b9p6">Desinterés vs problemas</label></li>
-              <li><input type="radio" value="si" name="b9p7" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b9p7" class="botonradio cambiador" checked><label for="b9p7">Probl. de orden cultural (étnico)</label></li>
-          <li><input type="radio" value="si" name="b9p8" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b9p8" class="botonradio cambiador" checked><label for="b9p8">Maltrato de parte del padre</label></li>
+               <li><select name="b9p4" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b9p4">Desacuerdos conyugales</label></li>
+              <li><select name="b9p5" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b9p5">Probl. Económ. / alojamiento</label></li>
+              <li><select name="b9p6" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b9p6">Desinterés vs problemas</label></li>
+
             </ul>
           </div>
           <div class="grid-6-12">
             <ul>
-              <li><input type="radio" value="si" name="b9p9" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b9p9" class="botonradio cambiador" checked><label for="b9p9">Maltrato de parte de la madre</label></li>
-              <li><input type="radio" value="si" name="b9p10" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b9p10" class="botonradio cambiador" checked><label for="b9p10">Trauma familiar grave:</label><input type="text" class="form-txt" style="width:100px;" value="" name="b9p10" id="b9p10" /></li>              
-             <li><input type="radio" value="si" name="b9p11" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b9p11" class="botonradio cambiador" checked><label for="b9p11">Otro:</label><input type="text" class="form-txt" style="width:100px;" value="" name="b9p11o" id="b9p11o" /></li>   
+              <li><select name="b9p7" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b9p7">Probl. de orden cultural (étnico)</label></li>
+          <li><select name="b9p8" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b9p8">Maltrato de parte del padre</label></li>
+              <li><select name="b9p9" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b9p9">Maltrato de parte de la madre</label></li>
+              <li><select name="b9p10" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b9p10">Trauma familiar grave:</label><input type="text" class="form-txt" style="width:100px;" value="" name="b9p10" id="b9p10" /></li>              
+             <li><select name="b9p11" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b9p11">Otro:</label><input type="text" class="form-txt" style="width:100px;" value="" name="b9p11o" id="b9p11o" /></li>   
             </ul>
           </div>
           <div class="clear"></div>
@@ -133,97 +116,66 @@ if($consenso==1){
        <div class="clear"></div>
         <!-- Comienzo Bloque Pregunta -->
         <div id="IRNC_pregunta_10" class="IRNC_bloque_pregunta">
-          <div class="grid-3-12">
+          <div class="grid-6-12">
             <ul>
-             <li><input type="radio" value="si" name="b10p1" class="botonradio cambiador" onclick="cambiar(this)">
-                   <input type="radio" value="no"  name="b10p1" class="botonradio cambiador" onclick="cambiar(this)" checked><label for="b10p1">Problemas de salud</label></li>
-             
-             <li><input type="radio" value="si" name="b10p2" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p2" class="botonradio cambiador" checked><label for="b10p2">Discapacidad física</label></li>
+             <li><select name="b10p1" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p1">Problemas de salud</label></li>
+                   
+             <li><select name="b10p2" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p2">Discapacidad física</label></li>
        
-              <li><input type="radio" value="si" name="b10p3" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p3" class="botonradio cambiador" checked><label for="b10p3">CI bajo / retraso del desarrollo</label></li>
+              <li><select name="b10p3" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p3">CI bajo / retraso del desarrollo</label></li>
             
-              <li><input type="radio" value="si" name="b10p4" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p4" class="botonradio cambiador" checked><label for="b10p4">Dificultades de aprendizaje</label></li>
+              <li><select name="b10p4" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p4">Dificultades de aprendizaje</label></li>
          
-              <li><input type="radio" value="si" name="b10p5" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p5" class="botonradio cambiador" checked><label for="b10p5">Rendim. inferior a las expect.</label></li>
+              <li><select name="b10p5" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p5">Rendim. inferior a las expect.</label></li>
          
-              <li><input type="radio" value="si" name="b10p6" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p6" class="botonradio cambiador" checked><label for="b10p6">Baja capac. resoluc. conflictos</label></li>
+              <li><select name="b10p6" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p6">Baja capac. resoluc. conflictos</label></li>
               
-              <li><input type="radio" value="si" name="b10p7" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p7" class="botonradio cambiador" checked><label for="b10p7">Víct.de agresión física / sex.</label></li>
+              <li><select name="b10p7" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p7">Víct.de agresión física / sex.</label></li>
                
-              <li><input type="radio" value="si" name="b10p8" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p8" class="botonradio cambiador" checked><label for="b10p8">Víctima de negligencia parent.</label></li>
+              <li><select name="b10p8" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p8">Víctima de negligencia parent.</label></li>
                
-              <li><input type="radio" value="si" name="b10p9" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p9" class="botonradio cambiador" checked><label for="b10p9">Tímido/a / cerrado/a</label></li>
-            </ul>
-          </div>
-          <div class="grid-3-12">
-            <ul>
+              <li><select name="b10p9" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p9">Tímido/a / cerrado/a</label></li>
+
                 
-              <li><input type="radio" value="si" name="b10p10" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p10" class="botonradio cambiador" checked><label for="b10p10">Compañero-as de otra edad</label></li>
+              <li><select name="b10p10" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p10">Compañero-as de otra edad</label></li>
                 
-              <li><input type="radio" value="si" name="b10p11" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p11" class="botonradio cambiador" checked><label for="b10p11">Estado depresivo</label></li>
+              <li><select name="b10p11" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p11">Estado depresivo</label></li>
                 
-              <li><input type="radio" value="si" name="b10p12" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p12" class="botonradio cambiador" checked><label for="b10p12">Baja auto estima</label></li>
+              <li><select name="b10p12" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p12">Baja auto estima</label></li>
                 
-              <li><input type="radio" value="si" name="b10p13" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p13" class="botonradio cambiador" checked><label for="b10p13">Actividad sexual inapropiada</label></li>
+              <li><select name="b10p13" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p13">Actividad sexual inapropiada</label></li>
+              <li><select name="b10p14" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p14">Actitud racista / sexista</label></li>
                 
-              <li><input type="radio" value="si" name="b10p14" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p14" class="botonradio cambiador" checked><label for="b10p14">Actitud racista / sexista</label></li>
-                
-              <li><input type="radio" value="si" name="b10p15" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p15" class="botonradio cambiador" checked><label for="b10p15">Bajas aptitudes sociales</label></li>
-                
-              <li><input type="radio" value="si" name="b10p16" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p16" class="botonradio cambiador" checked><label for="b10p16">Se niega a ver la realidad</label></li>
-                
-              <li><input type="radio" value="si" name="b10p17" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p17" class="botonradio cambiador" checked><label for="b10p17">Intento de suicidio</label></li>
-               
-              <li><input type="radio" value="si" name="b10p18" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p18" class="botonradio cambiador" checked><label for="b10p18">Diagnóstico de psicosis</label></li>
+          
             </ul>
           </div>
           <div class="grid-6-12">
             <ul>
+              <li><select name="b10p15" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p15">Bajas aptitudes sociales</label></li>
+           
+              <li><select name="b10p16" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p16">Se niega a ver la realidad</label></li>
                 
-              <li><input type="radio" value="si" name="b10p19" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p19" class="botonradio cambiador" checked><label for="b10p19">Amenazas de un tercero</label></li>
-                
-              <li><input type="radio" value="si" name="b10p20" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p20" class="botonradio cambiador" checked><label for="b10p20">Agresiones sexuales / físicas</label></li>
-                
-              <li><input type="radio" value="si" name="b10p21" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p21" class="botonradio cambiador" checked><label for="b10p21">Agresión vs pers. en autoridad</label></li>
-                
-              <li><input type="radio" value="si" name="b10p22" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p22" class="botonradio cambiador" checked><label for="b10p22">Uso de armas</label></li>
+              <li><select name="b10p17" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p17">Intento de suicidio</label></li>
                
-              <li><input type="radio" value="si" name="b10p23" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p23" class="botonradio cambiador" checked><label for="b10p23">Piromanía</label></li>
-                
-              <li><input type="radio" value="si" name="b10p24" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p24" class="botonradio cambiador" checked><label for="b10p24">Evasión</label></li>
-                
-              <li><input type="radio" value="si" name="b10p25" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p25" class="botonradio cambiador" checked><label for="b10p25">Protección</label></li>
-                
-              <li><input type="radio" value="si" name="b10p26" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p26" class="botonradio cambiador" checked><label for="b10p26">Condiciones de vida difíciles</label></li>
-                
-              <li><input type="radio" value="si" name="b10p27" class="botonradio" >
-                   <input type="radio" value="no" style="display:none" name="b10p27" class="botonradio cambiador" checked><label for="b10p27">Otro</label><input type="text" class="form-txt" style="width:100px;" value="" name="b10p27o" id="b10p27o" /></li>
+              <li><select name="b10p18" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p18">Diagnóstico de psicosis</label></li>
 
+              <li><select name="b10p19" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p19">Amenazas de un tercero</label></li>
+                
+              <li><select name="b10p20" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p20">Agresiones sexuales / físicas</label></li>
+                
+              <li><select name="b10p21" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p21">Agresión vs pers. en autoridad</label></li>
+                
+              <li><select name="b10p22" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p22">Uso de armas</label></li>
+
+              <li><select name="b10p23" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p23">Piromanía</label></li>
+                
+              <li><select name="b10p24" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p24">Evasión</label></li>
+                
+              <li><select name="b10p25" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p25">Protección</label></li>
+                
+              <li><select name="b10p26" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p26">Condiciones de vida difíciles</label></li>
+                
+              <li><select name="b10p27" class="select-mini"><option value="Si">Si</option><option selected="selected"  value="No">No</option></select><label for="b10p27">Otro</label><input type="text" class="form-txt" style="width:100px;" value="" name="b10p27o" id="b10p27o" /></li>
 
             </ul>
           </div>
@@ -260,12 +212,18 @@ if($consenso==1){
 <div class="grid-4-12">
   <button class="form-button" type="submit" name="Guardar"><span class="ui-icon ui-icon-disk" style="float:left;"></span>Guardar</button>
 </div>
+<input type="text" id="CLOSE_FLAG" name="CLOSE_FLAG" style="display:none" value="NOCERRADO"></input>
 <div class="grid-4-12">
-  <?php if($porcCompletado>=100):?><!-- Solo si el procentaje de avance es 100%muestro el botón para finalizar el formulario -->
-  <button class="form-button-off" type="button" name="Finalizar" onclick = "finalizarIRNC();"><span class="ui-icon ui-icon-circle-check" style="float:left;"></span>Finalizar Formulario</button>
-<input type="text" name="esCerrarForm" id="esCerrarForm" style="display: none" value="NOCERRAR"/>
-  <?php endif; ?>
-</div><div class="clear"></div>
+<a class="form-button-off form-left" style="display: block;"
+  onclick="
+          if(confirm('ADVERTENCIA. Al cerrar el formulario ya no podrás volver a modificarlo.')){
+            if(validar()){
+              $('#CLOSE_FLAG').val('CERRADO');
+               document.formulario_IRNC.submit();
+            }
+          }">Cerrar</a>
+</div>
+<div class="clear"></div>
 
 <?php else: ?>
 <div class="grid-4-12"></div>
