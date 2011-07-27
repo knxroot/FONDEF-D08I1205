@@ -24,22 +24,41 @@ FormIRNC= function(){
 }
 
 function cambiar(self){
-alert($(":radio[name='"+$(self).attr('name')+"'][value='no']").attr('checked'));
-alert($(":radio[name='"+$(self).attr('name')+"'][value='si']").attr('checked'));
+//alert($(":checkbox[name='"+$(self).attr('name')+"'][value='no']").attr('checked'));
+//alert($(":checkbox[name='"+$(self).attr('name')+"'][value='si']").attr('checked'));
 
 
-    if(!$(":radio[name='"+$(self).attr('name')+"'][value='si']").attr('checked'))
+    if($(":checkbox[name='"+$(self).attr('name')+"'][value='no']").attr('checked'))
         {
-          $(":radio[name='"+$(self).attr('name')+"'][value='no']").attr('checked', true);
-          $(":radio[name='"+$(self).attr('name')+"'][value='si']").attr('checked', false);
+         // alert("no estaba");
+         /*if($(":checkbox[name='"+$(self).attr('name')+"'][value='si']").attr('checked'))
+            {
+                $(":checkbox[name='"+$(self).attr('name')+"'][value='si']").attr('checked',false);
+                $(":checkbox[name='"+$(self).attr('name')+"'][value='no']").attr("checked", true);
+            }
+         else
+             {*/
+                 $(":checkbox[name='"+$(self).attr('name')+"'][value='si']").attr('checked',true);
+                 $(":checkbox[name='"+$(self).attr('name')+"'][value='no']").attr("checked", false);
+         /*    }*/
+            
         }
     else{
          
+       //  alert("si esta");
+          $(":checkbox[name='"+$(self).attr('name')+"'][value='si']").attr('checked', false);
+          $(":checkbox[name='"+$(self).attr('name')+"'][value='no']").attr("checked", true);
+          //$(":radio[name='"+$(self).attr('name')+"'][value='no']").attr("checked", "true");
          //$(this).attr('checked', false); 
-        $(":radio[name='"+$(self).attr('name')+"'][value='si']").attr('checked',true);
+        //$(":radio[name='"+$(self).attr('name')+"'][value='si']").attr('checked',true);
+        //$(":radio[name='"+$(self).attr('name')+"'][value='no']").attr('checked', false);
     }
     
+   /* if(!alert($(":checkbox[name='"+$(self).attr('name')+"'][value='no']").attr('checked')) &&
+       !alert($(":checkbox[name='"+$(self).attr('name')+"'][value='si']").attr('checked')))
+       $(":checkbox[name='"+$(self).attr('name')+"'][value='no']").attr("checked", true);
     
+    */
 
    
   
@@ -183,9 +202,9 @@ $('input:checkbox').change(function () {
 
 
 /*Configuración tabs paguinado*/
-$('#panelTabsPreguntas').tabs({ fx: { opacity: 'toggle' }});
+$('#panelTabsPreguntas').tabs({fx: {opacity: 'toggle'}});
 $('#panelTabsPreguntas').tabs('select', 0);
-$('#panelTabsPreguntas').tabs('paging', { cycle: true, follow: true, followOnSelect: true, selectOnAdd: true,nextButton: 'Siguiente &gt;', prevButton: '&lt; Anterior' });
+$('#panelTabsPreguntas').tabs('paging', {cycle: true, follow: true, followOnSelect: true, selectOnAdd: true,nextButton: 'Siguiente &gt;', prevButton: '&lt; Anterior'});
 
 
 } //END FormIngresoEncuestado.prototype.inicializar

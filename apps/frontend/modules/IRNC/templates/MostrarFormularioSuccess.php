@@ -135,94 +135,94 @@ if($consenso==1){
         <div id="IRNC_pregunta_10" class="IRNC_bloque_pregunta">
           <div class="grid-3-12">
             <ul>
-             <li><input type="radio" value="si" name="b10p1" class="botonradio cambiador" onclick="cambiar(this)">
-                   <input type="radio" value="no"  name="b10p1" class="botonradio cambiador" onclick="cambiar(this)" checked><label for="b10p1">Problemas de salud</label></li>
+             <li><input type="checkbox" value="si" name="b10p1" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no"  style="display:none" name="b10p1" class="botonradio cambiador" checked><label for="b10p1">Problemas de salud</label></li>
              
-             <li><input type="radio" value="si" name="b10p2" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p2" class="botonradio cambiador" checked><label for="b10p2">Discapacidad física</label></li>
+             <li><input type="checkbox" value="si" name="b10p2" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p2" class="botonradio cambiador" checked><label for="b10p2">Discapacidad física</label></li>
        
-              <li><input type="radio" value="si" name="b10p3" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p3" class="botonradio cambiador" checked><label for="b10p3">CI bajo / retraso del desarrollo</label></li>
+              <li><input type="checkbox" value="si" name="b10p3" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p3" class="botonradio cambiador" checked><label for="b10p3">CI bajo / retraso del desarrollo</label></li>
             
-              <li><input type="radio" value="si" name="b10p4" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p4" class="botonradio cambiador" checked><label for="b10p4">Dificultades de aprendizaje</label></li>
+              <li><input type="checkbox" value="si" name="b10p4" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p4" class="botonradio cambiador" checked><label for="b10p4">Dificultades de aprendizaje</label></li>
          
-              <li><input type="radio" value="si" name="b10p5" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p5" class="botonradio cambiador" checked><label for="b10p5">Rendim. inferior a las expect.</label></li>
+              <li><input type="checkbox" value="si" name="b10p5" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p5" class="botonradio cambiador" checked><label for="b10p5">Rendim. inferior a las expect.</label></li>
          
-              <li><input type="radio" value="si" name="b10p6" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p6" class="botonradio cambiador" checked><label for="b10p6">Baja capac. resoluc. conflictos</label></li>
+              <li><input type="checkbox" value="si" name="b10p6" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p6" class="botonradio cambiador" checked><label for="b10p6">Baja capac. resoluc. conflictos</label></li>
               
-              <li><input type="radio" value="si" name="b10p7" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p7" class="botonradio cambiador" checked><label for="b10p7">Víct.de agresión física / sex.</label></li>
+              <li><input type="checkbox" value="si" name="b10p7" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p7" class="botonradio cambiador" checked><label for="b10p7">Víct.de agresión física / sex.</label></li>
                
-              <li><input type="radio" value="si" name="b10p8" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p8" class="botonradio cambiador" checked><label for="b10p8">Víctima de negligencia parent.</label></li>
+              <li><input type="checkbox" value="si" name="b10p8" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p8" class="botonradio cambiador" checked><label for="b10p8">Víctima de negligencia parent.</label></li>
                
-              <li><input type="radio" value="si" name="b10p9" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p9" class="botonradio cambiador" checked><label for="b10p9">Tímido/a / cerrado/a</label></li>
+              <li><input type="checkbox" value="si" name="b10p9" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p9" class="botonradio cambiador" checked><label for="b10p9">Tímido/a / cerrado/a</label></li>
             </ul>
           </div>
           <div class="grid-3-12">
             <ul>
                 
-              <li><input type="radio" value="si" name="b10p10" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p10" class="botonradio cambiador" checked><label for="b10p10">Compañero-as de otra edad</label></li>
+              <li><input type="checkbox" value="si" name="b10p10" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p10" class="botonradio cambiador" checked><label for="b10p10">Compañero-as de otra edad</label></li>
                 
-              <li><input type="radio" value="si" name="b10p11" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p11" class="botonradio cambiador" checked><label for="b10p11">Estado depresivo</label></li>
+              <li><input type="checkbox" value="si" name="b10p11" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p11" class="botonradio cambiador" checked><label for="b10p11">Estado depresivo</label></li>
                 
-              <li><input type="radio" value="si" name="b10p12" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p12" class="botonradio cambiador" checked><label for="b10p12">Baja auto estima</label></li>
+              <li><input type="checkbox" value="si" name="b10p12" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p12" class="botonradio cambiador" checked><label for="b10p12">Baja auto estima</label></li>
                 
-              <li><input type="radio" value="si" name="b10p13" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p13" class="botonradio cambiador" checked><label for="b10p13">Actividad sexual inapropiada</label></li>
+              <li><input type="checkbox" value="si" name="b10p13" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p13" class="botonradio cambiador" checked><label for="b10p13">Actividad sexual inapropiada</label></li>
                 
-              <li><input type="radio" value="si" name="b10p14" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p14" class="botonradio cambiador" checked><label for="b10p14">Actitud racista / sexista</label></li>
+              <li><input type="checkbox" value="si" name="b10p14" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p14" class="botonradio cambiador" checked><label for="b10p14">Actitud racista / sexista</label></li>
                 
-              <li><input type="radio" value="si" name="b10p15" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p15" class="botonradio cambiador" checked><label for="b10p15">Bajas aptitudes sociales</label></li>
+              <li><input type="checkbox" value="si" name="b10p15" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p15" class="botonradio cambiador" checked><label for="b10p15">Bajas aptitudes sociales</label></li>
                 
-              <li><input type="radio" value="si" name="b10p16" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p16" class="botonradio cambiador" checked><label for="b10p16">Se niega a ver la realidad</label></li>
+              <li><input type="checkbox" value="si" name="b10p16" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p16" class="botonradio cambiador" checked><label for="b10p16">Se niega a ver la realidad</label></li>
                 
-              <li><input type="radio" value="si" name="b10p17" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p17" class="botonradio cambiador" checked><label for="b10p17">Intento de suicidio</label></li>
+              <li><input type="checkbox" value="si" name="b10p17" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p17" class="botonradio cambiador" checked><label for="b10p17">Intento de suicidio</label></li>
                
-              <li><input type="radio" value="si" name="b10p18" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p18" class="botonradio cambiador" checked><label for="b10p18">Diagnóstico de psicosis</label></li>
+              <li><input type="checkbox" value="si" name="b10p18" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p18" class="botonradio cambiador" checked><label for="b10p18">Diagnóstico de psicosis</label></li>
             </ul>
           </div>
           <div class="grid-6-12">
             <ul>
                 
-              <li><input type="radio" value="si" name="b10p19" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p19" class="botonradio cambiador" checked><label for="b10p19">Amenazas de un tercero</label></li>
+              <li><input type="checkbox" value="si" name="b10p19" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p19" class="botonradio cambiador" checked><label for="b10p19">Amenazas de un tercero</label></li>
                 
-              <li><input type="radio" value="si" name="b10p20" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p20" class="botonradio cambiador" checked><label for="b10p20">Agresiones sexuales / físicas</label></li>
+              <li><input type="checkbox" value="si" name="b10p20" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p20" class="botonradio cambiador" checked><label for="b10p20">Agresiones sexuales / físicas</label></li>
                 
-              <li><input type="radio" value="si" name="b10p21" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p21" class="botonradio cambiador" checked><label for="b10p21">Agresión vs pers. en autoridad</label></li>
+              <li><input type="checkbox" value="si" name="b10p21" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p21" class="botonradio cambiador" checked><label for="b10p21">Agresión vs pers. en autoridad</label></li>
                 
-              <li><input type="radio" value="si" name="b10p22" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p22" class="botonradio cambiador" checked><label for="b10p22">Uso de armas</label></li>
+              <li><input type="checkbox" value="si" name="b10p22" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p22" class="botonradio cambiador" checked><label for="b10p22">Uso de armas</label></li>
                
-              <li><input type="radio" value="si" name="b10p23" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p23" class="botonradio cambiador" checked><label for="b10p23">Piromanía</label></li>
+              <li><input type="checkbox" value="si" name="b10p23" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p23" class="botonradio cambiador" checked><label for="b10p23">Piromanía</label></li>
                 
-              <li><input type="radio" value="si" name="b10p24" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p24" class="botonradio cambiador" checked><label for="b10p24">Evasión</label></li>
+              <li><input type="checkbox" value="si" name="b10p24" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p24" class="botonradio cambiador" checked><label for="b10p24">Evasión</label></li>
                 
-              <li><input type="radio" value="si" name="b10p25" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p25" class="botonradio cambiador" checked><label for="b10p25">Protección</label></li>
+              <li><input type="checkbox" value="si" name="b10p25" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p25" class="botonradio cambiador" checked><label for="b10p25">Protección</label></li>
                 
-              <li><input type="radio" value="si" name="b10p26" class="botonradio cambiador" >
-                   <input type="radio" value="no" style="display:none" name="b10p26" class="botonradio cambiador" checked><label for="b10p26">Condiciones de vida difíciles</label></li>
+              <li><input type="checkbox" value="si" name="b10p26" class="botonradio cambiador" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p26" class="botonradio cambiador" checked><label for="b10p26">Condiciones de vida difíciles</label></li>
                 
-              <li><input type="radio" value="si" name="b10p27" class="botonradio" >
-                   <input type="radio" value="no" style="display:none" name="b10p27" class="botonradio cambiador" checked><label for="b10p27">Otro</label><input type="text" class="form-txt" style="width:100px;" value="" name="b10p27o" id="b10p27o" /></li>
+              <li><input type="checkbox" value="si" name="b10p27" class="botonradio" onclick="cambiar(this)">
+                   <input type="checkbox" value="no" style="display:none" name="b10p27" class="botonradio cambiador" checked><label for="b10p27">Otro</label><input type="text" class="form-txt" style="width:100px;" value="" name="b10p27o" id="b10p27o" /></li>
 
 
             </ul>
