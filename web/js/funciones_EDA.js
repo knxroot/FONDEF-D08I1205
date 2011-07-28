@@ -19,11 +19,21 @@ EDA.prototype.formTablaCruzada = function(selector) {
     base.find('input.preg-val')
     .change(function(event) {        
         var resultadoFila = $(this).parent().parent().find('input.resultado-fila');
-        resultadoFila.val(parseInt(resultadoFila.val()) + parseInt($(this).val(), 10));            
+        if($.trim($(this).val())==""){$(this).val('0');
+        var name=$(this).attr('name');
+        var patron=name.substr(0, name.length - 1);
+        var suma=$("'#"+patron+"1'").val();
+        alert(suma);
+        }
+        var r1=parseInt(resultadoFila.val()) + parseInt($(this).val(), 10);
+        if(isNaN(r1)){r1=0;}
+        resultadoFila.val(r1);            
         var coord = $(this).attr('class').split(' ')[1];
         var col = coord.split('-')[1];               
-        var resultadoCol = base.find('input.col-' + col);        
-        resultadoCol.val(parseInt(resultadoCol.val()) + parseInt($(this).val(), 10));            
+        var resultadoCol = base.find('input.col-' + col); 
+        var r2=parseInt(resultadoCol.val()) + parseInt($(this).val(), 10);
+        if(isNaN(r2)){r2=0;}
+        resultadoCol.val(r2);            
         var totalCols = function(e) {
             var total = 0;
             $.each(e, function(i, v) {

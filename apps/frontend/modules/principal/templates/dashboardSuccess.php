@@ -88,7 +88,7 @@ Causas Anteriores      </div></a>
 
    <div class="grid_3">
    <?php if(!($esEvaluadorSecundario)): ?>
-     <a href="<?php echo url_for('ENTREVISTA/index?idEncuestado='.$idEncuestado);?>">
+     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=ENTREVISTA');?>">
      <div class="menu-dashboard-autoreporte-clickeable">
       ENTREVISTA
       </div></a>
@@ -135,7 +135,7 @@ Causas Anteriores      </div></a>
 
    <div class="grid_3">
    <?php if(!($esEvaluadorSecundario)): ?>    
-     <a href="<?php echo url_for('CAIE/index?idEncuestado='.$idEncuestado);?>">
+     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=CAIE');?>">
      <div class="menu-dashboard-autoreporte-clickeable">
       CICUM
       </div></a>
@@ -184,7 +184,7 @@ Causas Anteriores      </div></a>
 
    <div class="grid_3">
      <?php if(!($esEvaluadorSecundario)): ?>
-     <a href="<?php echo url_for('CACSA/index?idEncuestado='.$idEncuestado);?>">
+     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=CACSA');?>">
      <div class="menu-dashboard-autoreporte-clickeable">
       CACSA
       </div></a>
@@ -232,7 +232,7 @@ Causas Anteriores      </div></a>
 
    <div class="grid_3">
    <?php if(!($esEvaluadorSecundario)): ?>
-     <a href="<?php echo url_for('EDA/index?idEncuestado='.$idEncuestado);?>">
+     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=EDA');?>">
      <div class="menu-dashboard-autoreporte-clickeable">
       EDA
       </div></a>
@@ -278,7 +278,7 @@ Causas Anteriores      </div></a>
 
    <div class="grid_3">
    <?php if(!($esEvaluadorSecundario)): ?>
-     <a href="<?php echo url_for('SQIFA/index?idEncuestado='.$idEncuestado);?>">
+     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=SQIFA');?>">
      <div class="menu-dashboard-autoreporte-clickeable">
       CESMA
       </div></a>
@@ -294,7 +294,7 @@ Causas Anteriores      </div></a>
    <div class="clear"></div><br>
 
    <div class="grid_3">
-       <a href="<?php echo url_for('DEP_ADO/index?idEncuestado='.$idEncuestado);?>">
+       <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=DEP_ADO');?>">
        <div class="menu-dashboard-autoreporte-clickeable">
         DEPADO
         </div></a>
@@ -308,7 +308,7 @@ Causas Anteriores      </div></a>
    <div class="clear"></div><br>
 
    <div class="grid_3">
-     <a href="<?php echo url_for('MACI/index?idEncuestado='.$idEncuestado);?>">
+     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=MACI');?>">
      <div class="menu-dashboard-autoreporte-clickeable">
       MACI
       </div></a>
@@ -321,7 +321,7 @@ Causas Anteriores      </div></a>
    <div class="clear"></div><br>
 
    <div class="grid_3">
-     <a href="<?php echo url_for('CSVE/index?idEncuestado='.$idEncuestado);?>">
+     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=CSVE');?>">
      <div class="menu-dashboard-autoreporte-clickeable">
       CSVE
       </div></a>
@@ -334,7 +334,7 @@ Causas Anteriores      </div></a>
   <div class="clear"></div><br>
 
    <div class="grid_3">
-     <a href="<?php echo url_for('JIR/index?idEncuestado='.$idEncuestado);?>">
+     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=JIR');?>">
      <div class="menu-dashboard-autoreporte-clickeable">
       JIR
       </div></a>
@@ -347,7 +347,7 @@ Causas Anteriores      </div></a>
   <div class="clear"></div><br>
 
    <div class="grid_3">
-     <a href="<?php echo url_for('CONCLUSIONES/index?idEncuestado='.$idEncuestado);?>">
+     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=CONCLUSIONES');?>">
      <div class="menu-dashboard-autoreporte-clickeable">
       CONCLUSIONES
       </div></a>

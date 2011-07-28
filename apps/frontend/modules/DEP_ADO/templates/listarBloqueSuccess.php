@@ -407,7 +407,7 @@
               if(confirm('OJO. Al cerrar el formulario ya no podrás volver a modificarlo.')){
                   $('#CLOSE_FLAG').val('CERRADO');
                    document.formulario_DEP_ADO.submit();
-              }">Cerrar forever</a>
+              }">Cerrar</a>
 </div>
 <div class="clear"></div>
 <!-- Fin Botón envio de formulario, en caso de ser último bloque advierte que se cerrará el formulario si se continua -->
@@ -415,7 +415,7 @@
 </form>
 <br>
 
-<div id="dialog-envio-resp-por-bloque" title="Confirmar">
+<div id="dialog-envio-resp-por-bloque" title="Confirmar" style="display:none">
 	<p><span class="ui-icon ui-icon-info" style="float:left; margin:0 7px 20px 0;"></span><strong>¿Estas seguro que deseas finalizar este instrumento?.</strong> Una vez que envies las respuestas de este instrumento ya no podrán ser modificadas.</p>
 </div>
 
