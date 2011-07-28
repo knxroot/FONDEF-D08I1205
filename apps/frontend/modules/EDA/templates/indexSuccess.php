@@ -73,7 +73,7 @@
               if(confirm('OJO. Al cerrar el formulario ya no podrás volver a modificarlo.')){
                   $('#CLOSE_FLAG').val('CERRADO');
                    document.form_eda.submit();
-              }">Cerrar forever</a>
+              }">Cerrar</a>
 </div>
 <div class="clear"></div>
  <input type="text" id="tstart" name="tstart" style="display:none" value="<?php echo $tstart; ?>"></input>
