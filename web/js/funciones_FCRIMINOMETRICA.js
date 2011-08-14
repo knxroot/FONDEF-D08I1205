@@ -8,6 +8,7 @@ function IsNumeric(input)
 
 $().ready(function() {
 
+alert("Aaa..");
 //tip tooltip
 
 $(".tip_trigger").hover(function(){

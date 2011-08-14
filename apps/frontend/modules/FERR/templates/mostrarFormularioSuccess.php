@@ -489,8 +489,8 @@ if($consenso==1){
 			<option value="Si">Si</option>
 	    </select>
        </div> 
-       <div class="CR RCR_TPD"><p style="width:100%">TDP</p><p id="RCR_TPD_2" class="RCR">0</p><input id="RCR_TPD" name="RCR_TPD" type="text" value="0" style="display:none;"/> </div> 
-       <div class="CR RCR_TDIF"><p style="width:100%">TDIF</p><p id="RCR_TDIF_2" class="RCR">0</p><input id="RCR_TDIF" name="RCR_TDIF" type="text" value="0" style="display:none;"/></div>   
+       <div class="CR RCR_TPD"><p style="width:100%">TDP</p><p id="RCR_TPD_2" class="RCR"></p><input id="RCR_TPD" name="RCR_TPD" type="text" value="0" /> </div> 
+       <div class="CR RCR_TDIF"><p style="width:100%">TDIF</p><p id="RCR_TDIF_2" class="RCR"></p><input id="RCR_TDIF" name="RCR_TDIF" type="text" value="0" /></div>   
     </div>
     <div>
        <div class="CR RCR_ED">
@@ -500,8 +500,8 @@ if($consenso==1){
 			<option value="Si">Si</option>
 	    </select>
        </div>
-       <div class="CR RCR_IEDSD"><p style="width:100%">IEDS-D <a href="#" class="iedsdmotrigger"><IMG src="/images/question-white.png" /></a></p><p id="RCR_IEDSD_2" class="RCR">0</p><input id="RCR_IEDSD" name="RCR_IEDSD" type="text" value="0" style="display:none;"/></div>
-       <div class="CR RCR_IEDSP"><p style="width:100%">IEDS-Ponderado <a href="#" class="eidsptrigger"><IMG src="/images/question-white.png" /></a></p><p id="RCR_IEDSP_2" class="RCR">0</p><input id="RCR_IEDSP" name="RCR_IEDSP" type="text" value="0" style="display:none;"/></div>
+       <div class="CR RCR_IEDSD"><p style="width:100%">IEDS-D <a href="#" class="iedsdmotrigger"><IMG src="/images/question-white.png" /></a></p><p id="RCR_IEDSD_2" class="RCR"></p><input id="RCR_IEDSD" name="RCR_IEDSD" type="text" value="0" /></div>
+       <div class="CR RCR_IEDSP"><p style="width:100%">IEDS-Ponderado <a href="#" class="eidsptrigger"><IMG src="/images/question-white.png" /></a></p><p id="RCR_IEDSP_2" class="RCR"></p><input id="RCR_IEDSP" name="RCR_IEDSP" type="text" value="0" /></div>
     </div>
 
 

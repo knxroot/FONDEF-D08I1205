@@ -2,6 +2,8 @@
   <?php  echo "[{$porcCompletado} % completado] (CausasActuales) Ficha Criminométrica"; ?>
 <?php end_slot(); ?>
 
+<script type="text/javascript">var url_consultaCausaDelito="<?php echo url_for('CausasActuales/consultaCausaDelito'); ?>";</script>
+<script type="text/javascript">var url_consultaMateriaDelito="<?php echo url_for('CausasActuales/consultaMateriaDelito'); ?>";</script>
 <?php $url_save_post=url_for('CausasActuales/GuardarInstrumento?idEncuestado='.$idEncuestado);?>
 
   <?php if(!($es_ultimo_bloque)): ?>
