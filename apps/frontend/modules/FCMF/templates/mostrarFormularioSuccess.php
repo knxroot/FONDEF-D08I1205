@@ -1458,6 +1458,10 @@ if($consenso==1){
 <script type="text/javascript">
                 $().ready(function() {
                      $("form").loadJSON(<?php echo $sf_data->getRaw('respuestasGuardadas');?>);
+                     $('#result_11').html('('+Math.round($('#11').val()*100)/100+')');
+                     $('#result_12').html('('+Math.round($('#12').val()*100)/100+')');
+                     $('#result_21').html('('+Math.round($('#21').val()*100)/100+')');
+                     $('#result_22').html('('+Math.round($('#22').val()*100)/100+')');
                     <?php //if($consenso==1): ?>
                       /* $("form").loadAndBlockJSON(<?php //echo $sf_data->getRaw('coincidencias');?>); */
                     <?php //endif; ?>
