@@ -94,8 +94,14 @@ $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'eda_respue
   *
   * @param sfRequest $request A request object
   */
+               public function executeCerrado(sfWebRequest $request)
+        {
+               $this->idEncuestado=$request->getParameter('idEncuestado');
+            
+        }
+        
 public function executeListarBloque(sfWebRequest $request)
-{      
+{           
 
       $this->BD_Conectar();
       $idUser=$this->getUser()->getGuardUser()->getId();
@@ -105,6 +111,18 @@ public function executeListarBloque(sfWebRequest $request)
       $this->forward404If(!$this->idEncuestado);
       
        $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'depado_respuestas');
+       
+
+             if($this->esCerrado($request, 'depado_respuestas')){
+         return $this->forward('DEP_ADO','Cerrado');
+     }
+      
+         
+     //  $this->forward404If(!$this->esCerrado2($request, 'depado_respuestas_respuestas',0));
+
+                
+                // se verifica si ya se cerró el modo consenso
+               
 
       //$idEncuestado=12;
       //$idUser=124;
@@ -164,6 +182,7 @@ public function executeListarBloque(sfWebRequest $request)
         $this->is_show_instruccions='true';
       }
       $this->tstart=$this->getTimeStart();
+      
 }
 
 /**

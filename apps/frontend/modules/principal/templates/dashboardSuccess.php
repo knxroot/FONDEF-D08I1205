@@ -301,7 +301,7 @@ Causas Anteriores      </div></a>
    </div>
    <div class="grid_3">
      <div class="menu-dashboard-autoreporte">
-      <?php echo $porcCompletadoDEP_ADO; ?> %
+      <?php echo $porcCompletadodepado; ?> %
       </div>
    </div>
 

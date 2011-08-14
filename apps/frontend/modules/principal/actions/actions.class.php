@@ -52,7 +52,10 @@ class principalActions extends Actions
         $esCerradoEged=$this->esCerrado2($request, 'eged2_respuestas',0);
         $this->porcCompletadoEGED = $esCerradoEged*100;
     /* CAMBIO CONSENSO STOP */
-        $esCerradoFerr=$this->esCerrado2($request, 'ferr2_respuestas',0);
+        $esCerradodepado=$this->esCerrado2($request, 'depado_respuestas',0);
+        $this->porcCompletadodepado = $esCerradodepado*100;
+        
+         $esCerradoFerr=$this->esCerrado2($request, 'ferr2_respuestas',0);
         $this->porcCompletadoFERR = $esCerradoFerr*100;
         
        // $this->porcCompletadoIRNC = $this->getPorcentajeCompletadoIRNC($idUser,$this->idEncuestado);
