@@ -8,6 +8,7 @@ class Actions extends sfActions
     {
         $this->createDbConnection();
         $this->pdo->exec("SET CHARACTER SET utf8;");
+        set_time_limit(90);
     }
     
     public function postExecute()
@@ -163,23 +164,21 @@ $tiempo=mysql_fetch_array($tiempo);
                 
 		if ($rows > 0)
 		{
+      set_time_limit(90);
                         $sqlGuardar="";
 			foreach ($arrayRespuestas as $idelement => $value) {
-                          if (!in_array($idelement, $elementosAIgnorar)) {
-				$sqlGuardar="UPDATE {$nombretabla} SET `respuesta` = '".mysql_real_escape_string($value)."' WHERE `{$nombretabla}`.`id_respuesta` = '".mysql_real_escape_string($idelement)."' AND `{$nombretabla}`.`id_user` =".(int)mysql_real_escape_string($idUser)." AND `{$nombretabla}`.`id_encuestado` =".(int)mysql_real_escape_string($this->idEncuestado)." AND `{$nombretabla}`.`concensoMode` ='".(int)mysql_real_escape_string($this->concensoMode)."' LIMIT 1;";
-                                
-                          }
-                         
-                          mysql_query($sqlGuardar);   
-                        }
-                       
-                     
+        if (!in_array($idelement, $elementosAIgnorar)) {
+          mysql_unbuffered_query("UPDATE {$nombretabla} SET `respuesta` = '".mysql_real_escape_string($value)."' WHERE `{$nombretabla}`.`id_respuesta` = '".mysql_real_escape_string($idelement)."' AND `{$nombretabla}`.`id_user` =".(int)mysql_real_escape_string($idUser)." AND `{$nombretabla}`.`id_encuestado` =".(int)mysql_real_escape_string($this->idEncuestado)." AND `{$nombretabla}`.`concensoMode` ='".(int)mysql_real_escape_string($this->concensoMode)."' LIMIT 1");
+        }
+      }
+                
 		}
 		else
-		{
+		{set_time_limit(90);
                     
                     //print_r($arrayRespuestas);
 			foreach ($arrayRespuestas as $idelement => $value) {
+        
                             $sqlGuardar="";
                           if (!in_array($idelement, $elementosAIgnorar)) {
 			   $sqlGuardar="INSERT INTO {$nombretabla} (id_respuesta ,respuesta,id_user,id_encuestado,concensoMode) VALUES (

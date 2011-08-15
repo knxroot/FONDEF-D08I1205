@@ -16,3 +16,4 @@ all:
           blacklist_FCMF: ['module','action','Guardar','tstart','modoConsenso']
           blacklist_EGED: ['module','action','Guardar','tstart','modoConsenso']
           blacklist_IRNC: ['module','action','Guardar','tstart','modoConsenso']
+          blacklist_EDA: ['module','action','Guardar','tstart','modoConsenso']

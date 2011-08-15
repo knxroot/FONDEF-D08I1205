@@ -22,12 +22,30 @@
         <?php foreach($opciones as $index => $opcion) :?>
         
         <td class="eda-opcion">
-            <input type="checkbox" 
-                name="<?php echo $inputprefix ?>-F<?php echo $indice + 1 ?>C<?php echo $aux ?>"
-                value="<?php echo ($index + 1) % 2 ? 'me-identifico':'me-dicen' ?>" />
+            <select class="select-mini"
+                name="<?php echo $opcion ?>-<?php echo $alternativa ?>">
+           
+            <option value="Si">Si</option><option selected="selected"  value="No">No</option></select>
+            
         </td>
         <?php $aux=$aux+1; ?>
         <?php endforeach ?>
+        
     </tr>
     <?php endforeach ?>
+    <td class="eda-table-indice-td">
+           <span class="eda-table-indice">27</span>
+        </td>
+        
+         <td>
+          Otro
+        </td>
+        
+          <td class="eda-opcion">
+          <input type="text" class="form-txt" style="width:100px;" value="" name="Yo_me_identifico-Otro" id="Yo_me_identifico-Otro" />
+        </td>
+         <td class="eda-opcion">
+     <input type="text" class="form-txt" style="width:100px;" value="" name="Mis_amigos_me_dicen-Otro" id="Mis_amigos_me_dicen-Otro" />
+    
+        </td>
 </table>
