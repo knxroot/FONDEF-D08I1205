@@ -392,40 +392,40 @@ if($consenso==1){
             <p>No Judicial</p>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="A11_2">0</p><input id="A11" name="A11" type="text" value="0" style="display:none;"/>
+            <input id="A11" name="A11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="B11_2">0</p><input id="B11" name="B11" type="text" value="0" style="display:none;"/>
+            <input id="B11" name="B11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="C11_2">0</p><input id="C11" name="C11" type="text" value="0" style="display:none;"/>
+            <input id="C11" name="C11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="D11_2">0</p><input id="D11" name="D11" type="text" value="0" style="display:none;"/>
+            <input id="D11" name="D11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="E11_2">0</p><input id="E11" name="E11" type="text" value="0" style="display:none;"/>
+            <input id="E11" name="E11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="F11_2">0</p><input id="F11" name="F11" type="text" value="0" style="display:none;"/>
+            <input id="F11" name="F11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="G11_2">0</p><input id="G11" name="G11" type="text" value="0" style="display:none;"/>
+            <input id="G11" name="G11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce50">
-            <p id="H11_2">0</p><input id="H11" name="H11" type="text" value="0" style="display:none;"/>
+            <input id="H11" name="H11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce50">
-            <p id="I11_2">0</p><input id="I11" name="I11" type="text" value="0" style="display:none;"/>
+            <input id="I11" name="I11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce50">
-            <p id="J11_2">0</p><input id="J11" name="J11" type="text" value="0" style="display:none;"/>
+            <input id="J11" name="J11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce70">
-            <p id="K11_2">0</p><input id="K11" name="K11" type="text" value="0" style="display:none;"/>
+            <input id="K11" name="K11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce70">
-            <p id="L11_2">0</p><input id="L11" name="L11" type="text" value="0" style="display:none;"/>
+            <input id="L11" name="L11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td rowspan="2" style="text-align: left; width: 57.3px;"
             class="ce87"><input id="anos_desaptacion" name="anos_desaptacion" type="text" value="0"/></td>
@@ -435,40 +435,40 @@ if($consenso==1){
             <p>Judicializado</p>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="A12_2">0</p><input id="A12" name="A12" type="text" value="0" style="display:none;"/>
+            <input id="A12" name="A12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="B12_2">0</p><input id="B12" name="B12" type="text" value="0" style="display:none;"/>
+            <input id="B12" name="B12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="C12_2">0</p><input id="C12" name="C12" type="text" value="0" style="display:none;"/>
+            <input id="C12" name="C12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="D12_2">0</p><input id="D12" name="D12" type="text" value="0" style="display:none;"/>
+            <input id="D12" name="D12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="E12_2">0</p><input id="E12" name="E12" type="text" value="0" style="display:none;"/>
+            <input id="E12" name="E12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="F12_2">0</p><input id="F12" name="F12" type="text" value="0" style="display:none;"/>
+            <input id="F12" name="F12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="G12_2">0</p><input id="G12" name="G12" type="text" value="0" style="display:none;"/>
+            <input id="G12" name="G12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce50">
-            <p id="H12_2">0</p><input id="H12" name="H12" type="text" value="0" style="display:none;"/>
+            <input id="H12" name="H12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce50">
-            <p id="I12_2">0</p><input id="I12" name="I12" type="text" value="0" style="display:none;"/>
+            <input id="I12" name="I12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce50">
-            <p id="J12_2">0</p><input id="J12" name="J12" type="text" value="0" style="display:none;"/>
+            <input id="J12" name="J12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce70">
-            <p id="K12_2">0</p><input id="K12" name="K12" type="text" value="0" style="display:none;"/>
+            <input id="K12" name="K12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce70">
-            <p id="L12_2">0</p><input id="L12" name="L12" type="text" value="0" style="display:none;"/>
+            <input id="L12" name="L12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             </tr>
 
@@ -489,8 +489,8 @@ if($consenso==1){
 			<option value="Si">Si</option>
 	    </select>
        </div> 
-       <div class="CR RCR_TPD"><p style="width:100%">TDP</p><p id="RCR_TPD_2" class="RCR"></p><input id="RCR_TPD" name="RCR_TPD" type="text"  readonly="readonly"/> </div> 
-       <div class="CR RCR_TDIF"><p style="width:100%">TDIF</p><p id="RCR_TDIF_2" class="RCR"></p><input id="RCR_TDIF" name="RCR_TDIF" type="text" readonly="readonly"/></div>   
+       <div class="CR RCR_TPD"><p style="width:100%">TDP</p><p id="RCR_TPD_2" class="RCR"></p><input id="RCR_TPD_RESULTADO" name="RCR_TPD_RESULTADO" type="text"  value="0" readonly="readonly"/> </div> 
+       <div class="CR RCR_TDIF"><p style="width:100%">TDIF</p><p id="RCR_TDIF_2" class="RCR"></p><input id="RCR_TDIF_RESULTADO" name="RCR_TDIF_RESULTADO" type="text" value="0" readonly="readonly"/></div>   
     </div>
     <div>
        <div class="CR RCR_ED">
@@ -500,8 +500,8 @@ if($consenso==1){
 			<option value="Si">Si</option>
 	    </select>
        </div>
-       <div class="CR RCR_IEDSD"><p style="width:100%">IEDS-D <a href="#" class="iedsdmotrigger"><IMG src="/images/question-white.png" /></a></p><p id="RCR_IEDSD_2" class="RCR"></p><input id="RCR_IEDSD" name="RCR_IEDSD" type="text" value="0" /></div>
-       <div class="CR RCR_IEDSP"><p style="width:100%">IEDS-Ponderado <a href="#" class="eidsptrigger"><IMG src="/images/question-white.png" /></a></p><p id="RCR_IEDSP_2" class="RCR"></p><input id="RCR_IEDSP" name="RCR_IEDSP" type="text" value="0" /></div>
+       <div class="CR RCR_IEDSD"><p style="width:100%">IEDS-D <a href="#" class="iedsdmotrigger"><IMG src="/images/question-white.png" /></a></p><p id="RCR_IEDSD_2" class="RCR"></p><input id="RCR_IEDSD_RESULTADO" name="RCR_IEDSD_RESULTADO" type="text" value="0" /></div>
+       <div class="CR RCR_IEDSP"><p style="width:100%">IEDS-Ponderado <a href="#" class="eidsptrigger"><IMG src="/images/question-white.png" /></a></p><p id="RCR_IEDSP_2" class="RCR"></p><input id="RCR_IEDSP_RESULTADO" name="RCR_IEDSP_RESULTADO" type="text" value="0" /></div>
     </div>
 
 

@@ -48,7 +48,7 @@ $("table input[type='text']").change( function() {
 	  {
 		suma=suma+parseInt($('#'+col+NJ[i]).val());
 	  }
-	  $('#'+col+'11_2').html(suma);
+	  //$('#'+col+'11_2').html(suma);
 	  $('#'+col+'11').val(suma);
 
 	  suma=0;i=0;
@@ -56,7 +56,7 @@ $("table input[type='text']").change( function() {
 	  {
 		suma=suma+parseInt($('#'+col+J[i]).val());
 	  }
-	  $('#'+col+'12_2').html(suma);
+	  //$('#'+col+'12_2').html(suma);
 	  $('#'+col+'12').val(suma);
 	  
 	  /*START Calculo del TPD*/
@@ -71,7 +71,7 @@ $("table input[type='text']").change( function() {
 		suma=suma+parseInt($('#'+J_RR[col]+'12').val());
 	  }
 	 // $('#RCR_TPD_2').html(suma);
-	  $('#RCR_TPD').attr('val',suma);
+	  $('#RCR_TPD_RESULTADO').val(suma);
 	  
 	  /*FIN Calculo del TPD*/
 	  
@@ -87,7 +87,7 @@ $("table input[type='text']").change( function() {
 		suma=suma+parseInt($('#'+J_RR[col]+'12').val());
 	  }
 	  //$('#RCR_TDIF_2').html(suma);
-	  $('#RCR_TDIF').val(suma);
+	  $('#RCR_TDIF_RESULTADO').val(suma);
 	  /*FIN Calculo del TDIF*/
   }
 	  /*START Calculo del IEDS-D*/
@@ -108,7 +108,7 @@ $("table input[type='text']").change( function() {
 	
 	  }
 	//  $('#RCR_IEDSD_2').html(suma);
-	  $('#RCR_IEDSD').val(suma);
+	  $('#RCR_IEDSD_RESULTADO').val(suma);
 	  /*FIN Calculo del IEDS-D*/
 	  
 	  /*START Calculo del RCR_IEDSP*/  
@@ -123,7 +123,7 @@ $("table input[type='text']").change( function() {
 	  ((parseInt($('#I11').val())+parseInt($('#I12').val()))*3)+
 	  ((parseInt($('#J11').val())+parseInt($('#J12').val()))*5);
 	//  $('#RCR_IEDSP_2').html(ponderacion);
-	  $('#RCR_IEDSP').val(ponderacion);
+	  $('#RCR_IEDSP_RESULTADO').val(ponderacion);
 	  /*FIN Calculo del RCR_IEDSP*/
 
 });
