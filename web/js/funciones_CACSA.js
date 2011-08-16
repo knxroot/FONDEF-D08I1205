@@ -159,9 +159,10 @@ FormCACSA.prototype.inicializar= function(){
  **/
 FormCACSA.prototype.validar= function(){
     if(Main.getInstance().enableValidation === 'true'){
-      jQuery.validator.addClassRules("botonradio", {
-        required: false
+      jQuery.validator.addClassRules("select", {
+        noDefaultSelect: true
       });
+      
       return $("#formulario_CACSA").valid(); //retorna true si valido, false si invalido
     } else{
       return true; //retorna verdadero si las validaciones estan desactivadas, esto es para que pase como si los campos fueran validos

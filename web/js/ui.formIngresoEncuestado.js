@@ -309,7 +309,7 @@ FormIngresoEncuestado.prototype.validar= function(){
                 defaultInvalid: true
               },
               input_localidad_indigena: {
-                required: true,
+                required: false,
                 minlength: 3,/*nombre de minimo 3 letras*/
                 defaultInvalid: true
               },

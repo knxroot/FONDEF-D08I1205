@@ -104,7 +104,7 @@
 		</div>
 
 		<div class="grid-4-12">
-		<label class="form-lbl">Localidad o Comunidad Indígena<em class="form-req">*</em></label>
+		<label class="form-lbl">Localidad o Comunidad Indígena<em class="form-req"></em></label>
 		<input type="text" class="form-txt" name="input_localidad_indigena" id="input_localidad_indigena" value="Favor especifíque la comunidad"/>
 		</div>
 
@@ -114,7 +114,7 @@
 		<div class="grid-3-12">
 		<label class="form-lbl">Origen Étnico <em class="form-req">*</em></label>
 		<select name="select_origen_etnico" id="select_origen_etnico">
-			<option value="Chileno" selected="">Chileno</option>
+			<option value="Seleccione" selected="">Seleccione</option>
 			<option value="Aymara">Aymara</option>
 			<option value="Quechua">Quechua</option>
                         <option value="Atacameño">Atacameño o Likanantay</option>
@@ -125,6 +125,7 @@
 			<option value="Kawésqar">Kawésqar</option>
                          <option value="Yagan">Yagan</option>
 			<option value="Gitano">Gitano</option>
+                        <option value="Otro">Otro</option>
 		</select>
 		</div>
 

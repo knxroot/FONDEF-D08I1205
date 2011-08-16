@@ -48,7 +48,7 @@ $("table input[type='text']").change( function() {
 	  {
 		suma=suma+parseInt($('#'+col+NJ[i]).val());
 	  }
-	  $('#'+col+'11_2').html(suma);
+	  //$('#'+col+'11_2').html(suma);
 	  $('#'+col+'11').val(suma);
 
 	  suma=0;i=0;
@@ -56,7 +56,7 @@ $("table input[type='text']").change( function() {
 	  {
 		suma=suma+parseInt($('#'+col+J[i]).val());
 	  }
-	  $('#'+col+'12_2').html(suma);
+	  //$('#'+col+'12_2').html(suma);
 	  $('#'+col+'12').val(suma);
 	  
 	  /*START Calculo del TPD*/
@@ -70,8 +70,8 @@ $("table input[type='text']").change( function() {
 	  {
 		suma=suma+parseInt($('#'+J_RR[col]+'12').val());
 	  }
-	  $('#RCR_TPD_2').html(suma);
-	  $('#RCR_TPD').val(suma);
+	 // $('#RCR_TPD_2').html(suma);
+	  $('#RCR_TPD_RESULTADO').val(suma);
 	  
 	  /*FIN Calculo del TPD*/
 	  
@@ -86,8 +86,8 @@ $("table input[type='text']").change( function() {
 	  {
 		suma=suma+parseInt($('#'+J_RR[col]+'12').val());
 	  }
-	  $('#RCR_TDIF_2').html(suma);
-	  $('#RCR_TDIF').val(suma);
+	  //$('#RCR_TDIF_2').html(suma);
+	  $('#RCR_TDIF_RESULTADO').val(suma);
 	  /*FIN Calculo del TDIF*/
   }
 	  /*START Calculo del IEDS-D*/
@@ -107,8 +107,8 @@ $("table input[type='text']").change( function() {
         suma=suma+parseInt($('#M'+i).val());
 	
 	  }
-	  $('#RCR_IEDSD_2').html(suma);
-	  $('#RCR_IEDSD').val(suma);
+	//  $('#RCR_IEDSD_2').html(suma);
+	  $('#RCR_IEDSD_RESULTADO').val(suma);
 	  /*FIN Calculo del IEDS-D*/
 	  
 	  /*START Calculo del RCR_IEDSP*/  
@@ -122,8 +122,8 @@ $("table input[type='text']").change( function() {
 	  ((parseInt($('#H11').val())+parseInt($('#H12').val()))*1)+
 	  ((parseInt($('#I11').val())+parseInt($('#I12').val()))*3)+
 	  ((parseInt($('#J11').val())+parseInt($('#J12').val()))*5);
-	  $('#RCR_IEDSP_2').html(ponderacion);
-	  $('#RCR_IEDSP').val(ponderacion);
+	//  $('#RCR_IEDSP_2').html(ponderacion);
+	  $('#RCR_IEDSP_RESULTADO').val(ponderacion);
 	  /*FIN Calculo del RCR_IEDSP*/
 
 });
@@ -144,9 +144,12 @@ $("#tabBloque5 input:radio").change( function() {
   var tpc=respuestaToInt($("input:radio[name='f5g']:checked").val())+respuestaToInt($("input:radio[name='f5h']:checked").val())+respuestaToInt($("input:radio[name='f5i']:checked").val())+respuestaToInt($("input:radio[name='f5j']:checked").val());
   var tde=respuestaToInt($("input:radio[name='f5a']:checked").val())+respuestaToInt($("input:radio[name='f5b']:checked").val())+respuestaToInt($("input:radio[name='f5c']:checked").val())+respuestaToInt($("input:radio[name='f5d']:checked").val())+respuestaToInt($("input:radio[name='f5e']:checked").val())+respuestaToInt($("input:radio[name='f5f']:checked").val());
 
-  $("#total_problemas_conducta").html(tpc);
-  $("#total_desenganche_escolar").html(tde);
-  $("#total_riesgos_totales").html(tpc+tde);
+$('#TotalF5a').val(tpc); 
+// $("#TotalF5a").html(tpc);
+$('#TotalF5b').val(tde); 
+$('#TotalF5c').val(tpc+tde); 
+//  $("#total_desenganche_escolar").html(tde);
+ // $("#total_riesgos_totales").html(tpc+tde);
 });
 
 $("#tabBloque6 input:radio").change( function() {
@@ -157,7 +160,8 @@ $("#tabBloque6 input:radio").change( function() {
     total=total+respuestaToInt($("input:radio[name='f6"+abc[l]+"']:checked").val())
 }
 
-  $("#total_relacion_con_pares").html(total);
+$('#TotalF6').val(total); 
+
 });
 
 
@@ -171,9 +175,13 @@ $("#tabBloque7 input:radio").change( function() {
   var tmt=respuestaToInt($("input:radio[name='f7l']:checked").val())+respuestaToInt($("input:radio[name='f7m']:checked").val())+respuestaToInt($("input:radio[name='f7q']:checked").val());
   var tds=respuestaToInt($("input:radio[name='f7e']:checked").val())+respuestaToInt($("input:radio[name='f7g']:checked").val())+respuestaToInt($("input:radio[name='f7h']:checked").val());
 
-  $("#totalf7_riesgosfamiliares").html(total);
-  $("#totalf7_malostratos").html(tmt);
-  $("#totalf7_debilsupervision").html(tds);
+$('#TotalF7').val(total); 
+$('#TotalF7a').val(tmt); 
+$('#TotalF7b').val(tds); 
+
+  //$("#totalf7_riesgosfamiliares").html(total);
+ // $("#totalf7_malostratos").html(tmt);
+//  $("#totalf7_debilsupervision").html(tds);
 });
 
 $("#tabBloque8 input:radio").change( function() {
@@ -181,9 +189,14 @@ $("#tabBloque8 input:radio").change( function() {
   var tci=respuestaToInt($("input:radio[name='f8a']:checked").val())+respuestaToInt($("input:radio[name='f8b']:checked").val())+respuestaToInt($("input:radio[name='f8c']:checked").val());
   var tsi=respuestaToInt($("input:radio[name='f8d']:checked").val())+respuestaToInt($("input:radio[name='f8e']:checked").val());
 
-  $("#totalf8_conintereses").html(tci);
-  $("#totalf8_sinintereses").html(tsi);
-  $("#totalf8_intereses").html(tci+tsi);
+
+$('#TotalF8cinter').val(tci); 
+$('#TotalF8sinter').val(tsi); 
+$('#TotalF8inter').val(tsi+tci); 
+
+//  $("#totalf8_conintereses").html(tci);
+  //$("#totalf8_sinintereses").html(tsi);
+  //$("#totalf8_intereses").html(tci+tsi);
 });
 
 
@@ -194,8 +207,8 @@ $("#tabBloque9 input:radio").change( function() {
 {
     total=total+respuestaToInt($("input:radio[name='f9"+abc[l]+"']:checked").val())
 }
-  $("#totalf9").html(total);
-
+  //$("#totalf9").html(total);
+$('#TotalF9').val(total); 
 });
 
 $("#tabBloque10 input:radio").change( function() {
@@ -205,8 +218,8 @@ $("#tabBloque10 input:radio").change( function() {
 {
     total=total+respuestaToInt($("input:radio[name='f10"+abc[l]+"']:checked").val())
 }
-
-  $("#totalf10").html(total);
+$('#TotalF10').val(total); 
+//  $("#totalf10").html(total);
 
 });
 
@@ -216,10 +229,15 @@ $("#tabBloque11 input:radio").change( function() {
   var tcc=respuestaToInt($("input:radio[name='f11a']:checked").val())+respuestaToInt($("input:radio[name='f11b']:checked").val())+respuestaToInt($("input:radio[name='f11c']:checked").val())+respuestaToInt($("input:radio[name='f11e']:checked").val())+respuestaToInt($("input:radio[name='f11f']:checked").val())+respuestaToInt($("input:radio[name='f11g']:checked").val());
   var tvf=respuestaToInt($("input:radio[name='f11i']:checked").val())+respuestaToInt($("input:radio[name='f11j']:checked").val());
 
-  $("#totalf11_a").html(trp);
-  $("#totalf11_b").html(tcc);
-  $("#totalf11_c").html(tvf);
-    $("#totalf11_d").html(trp+tcc+tvf);
+$('#TotalF11a').val(trp); 
+$('#TotalF11b').val(tcc); 
+$('#TotalF11c').val(tvf); 
+$('#TotalF11rec').val(trp+tcc+tvf); 
+
+ // $("#totalf11_a").html(trp);
+  //$("#totalf11_b").html(tcc);
+  //$("#totalf11_c").html(tvf);
+   // $("#totalf11_d").html(trp+tcc+tvf);
 });
 
 

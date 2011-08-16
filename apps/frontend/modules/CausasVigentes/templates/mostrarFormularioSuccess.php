@@ -1,6 +1,8 @@
 <?php slot('title') ?>
   <?php  echo "[{$porcCompletado} % completado] (CausasVigentes) Ficha Criminométrica"; ?>
 <?php end_slot(); ?>
+<script type="text/javascript">var url_consultaCausaDelito="<?php echo url_for('CausasVigentes/consultaCausaDelito'); ?>";</script>
+<script type="text/javascript">var url_consultaMateriaDelito="<?php echo url_for('CausasVigentes/consultaMateriaDelito'); ?>";</script>
 
 <?php $url_save_post=url_for('CausasVigentes/GuardarInstrumento?idEncuestado='.$idEncuestado);?>
 

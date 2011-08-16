@@ -73,8 +73,8 @@ Las posibilidades de respuesta son cinco:
     <div class="grid-3-12">
         <div  style="width: 120px;display: inline;float: left;height: 100%;margin-left: 1%;margin-right: 1%;padding: 0.5% 0.5% 0.8%;" >
       <ul class="form-list-rdo">
-           <select type="checkbox" id="<?php echo $pregunta["id_pregunta"];?>"  name="radio_VorF_CACSA_<?php echo $pregunta["id_pregunta"];?>"  >
-               <OPTION VALUE="-1" Onclick="ocultar(<?php echo $pregunta["id_pregunta"];?>)" >Seleccione...</OPTION>               
+           <select class="select" type="checkbox" id="<?php echo $pregunta["id_pregunta"];?>"  name="radio_VorF_CACSA_<?php echo $pregunta["id_pregunta"];?>"  >
+               <OPTION selected="selected" value="none" Onclick="ocultar(<?php echo $pregunta["id_pregunta"];?>)" >Seleccione...</OPTION>               
                <OPTION VALUE="0" Onclick="ocultar(<?php echo $pregunta["id_pregunta"];?>)" >Nunca</OPTION>
                                <OPTION VALUE="1" Onclick="mostrar(<?php echo $pregunta["id_pregunta"];?>)">1 ó 2 Veces</OPTION>
                                <OPTION VALUE="3" Onclick="mostrar(<?php echo $pregunta["id_pregunta"];?>)">Varias veces</OPTION>

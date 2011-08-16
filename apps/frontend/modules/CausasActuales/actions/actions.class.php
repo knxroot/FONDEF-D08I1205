@@ -50,4 +50,58 @@ class CausasActualesActions extends Actions
                $this->idEncuestado=$request->getParameter('idEncuestado');
             
         }
+        public function executeConsultaMateriaDelito(sfWebRequest $request)
+  {
+    //$this->forward('default', 'module');
+    $esAjax = $request->isXmlHttpRequest();/*true si es una peticion por ajax*/
+    $this->forward404Unless($esAjax);/*lo envia a error 404 a menos que sea una peticion ajax*/
+    //$this->getResponse()->setHttpHeader('Content-type','text/json');
+      /*MysqlBD::BD_Conectar();CONECTO CON MI CLASE TEMPORAL PARA NO COMPLICARME CON ORM*/
+      $this->BD_Conectar();
+
+      $sql_obtieneMateriasDelito = "SELECT
+                                    c_ingreso_materia.id_materia,
+                                    c_ingreso_materia.materia
+                                  FROM
+                                    c_ingreso_materia
+                                  ORDER BY
+                                    c_ingreso_materia.id_materia ASC";
+
+
+      $materias = mysql_query($sql_obtieneMateriasDelito);
+      $respuesta="";
+      while($materia=mysql_fetch_array($materias))
+      {
+        $respuesta=$respuesta."<option value='".$materia["id_materia"]."'>".$materia["materia"]."</option><br>";
+      }
+      return $this->renderText($respuesta);
+  }
+  public function executeConsultaCausaDelito(sfWebRequest $request)
+  {
+    //$this->forward('default', 'module');
+    $esAjax = $request->isXmlHttpRequest();/*true si es una peticion por ajax*/
+    $this->forward404Unless($esAjax);/*lo envia a error 404 a menos que sea una peticion ajax*/
+    //$this->getResponse()->setHttpHeader('Content-type','text/json');
+      /*MysqlBD::BD_Conectar();CONECTO CON MI CLASE TEMPORAL PARA NO COMPLICARME CON ORM*/
+      $this->BD_Conectar();
+
+      $sql_obtieneCausasDelitos = "SELECT
+                                c_ingreso_causa.id_causa,
+                                c_ingreso_causa.causa_nombre,
+                                c_ingreso_causa.id_materia
+                              FROM
+                                c_ingreso_causa
+                              INNER JOIN c_ingreso_materia ON c_ingreso_materia.id_materia = c_ingreso_causa.id_materia
+                              WHERE
+                                c_ingreso_causa.id_materia = '".$request->getParameter('materia')."'";
+      
+
+      $causas = mysql_query($sql_obtieneCausasDelitos);
+      $respuesta="";
+      while($causa=mysql_fetch_array($causas))
+      {
+        $respuesta=$respuesta."<option value='".$causa["id_causa"]."'>".$causa["causa_nombre"]."</option><br>";
+      }
+      return $this->renderText($respuesta);
+  }
 }

@@ -392,40 +392,40 @@ if($consenso==1){
             <p>No Judicial</p>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="A11_2">0</p><input id="A11" name="A11" type="text" value="0" style="display:none;"/>
+            <input id="A11" name="A11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="B11_2">0</p><input id="B11" name="B11" type="text" value="0" style="display:none;"/>
+            <input id="B11" name="B11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="C11_2">0</p><input id="C11" name="C11" type="text" value="0" style="display:none;"/>
+            <input id="C11" name="C11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="D11_2">0</p><input id="D11" name="D11" type="text" value="0" style="display:none;"/>
+            <input id="D11" name="D11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="E11_2">0</p><input id="E11" name="E11" type="text" value="0" style="display:none;"/>
+            <input id="E11" name="E11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="F11_2">0</p><input id="F11" name="F11" type="text" value="0" style="display:none;"/>
+            <input id="F11" name="F11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="G11_2">0</p><input id="G11" name="G11" type="text" value="0" style="display:none;"/>
+            <input id="G11" name="G11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce50">
-            <p id="H11_2">0</p><input id="H11" name="H11" type="text" value="0" style="display:none;"/>
+            <input id="H11" name="H11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce50">
-            <p id="I11_2">0</p><input id="I11" name="I11" type="text" value="0" style="display:none;"/>
+            <input id="I11" name="I11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce50">
-            <p id="J11_2">0</p><input id="J11" name="J11" type="text" value="0" style="display:none;"/>
+            <input id="J11" name="J11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce70">
-            <p id="K11_2">0</p><input id="K11" name="K11" type="text" value="0" style="display:none;"/>
+            <input id="K11" name="K11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce70">
-            <p id="L11_2">0</p><input id="L11" name="L11" type="text" value="0" style="display:none;"/>
+            <input id="L11" name="L11" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td rowspan="2" style="text-align: left; width: 57.3px;"
             class="ce87"><input id="anos_desaptacion" name="anos_desaptacion" type="text" value="0"/></td>
@@ -435,40 +435,40 @@ if($consenso==1){
             <p>Judicializado</p>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="A12_2">0</p><input id="A12" name="A12" type="text" value="0" style="display:none;"/>
+            <input id="A12" name="A12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="B12_2">0</p><input id="B12" name="B12" type="text" value="0" style="display:none;"/>
+            <input id="B12" name="B12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="C12_2">0</p><input id="C12" name="C12" type="text" value="0" style="display:none;"/>
+            <input id="C12" name="C12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="D12_2">0</p><input id="D12" name="D12" type="text" value="0" style="display:none;"/>
+            <input id="D12" name="D12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="E12_2">0</p><input id="E12" name="E12" type="text" value="0" style="display:none;"/>
+            <input id="E12" name="E12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="F12_2">0</p><input id="F12" name="F12" type="text" value="0" style="display:none;"/>
+            <input id="F12" name="F12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce34">
-            <p id="G12_2">0</p><input id="G12" name="G12" type="text" value="0" style="display:none;"/>
+            <input id="G12" name="G12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce50">
-            <p id="H12_2">0</p><input id="H12" name="H12" type="text" value="0" style="display:none;"/>
+            <input id="H12" name="H12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce50">
-            <p id="I12_2">0</p><input id="I12" name="I12" type="text" value="0" style="display:none;"/>
+            <input id="I12" name="I12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce50">
-            <p id="J12_2">0</p><input id="J12" name="J12" type="text" value="0" style="display:none;"/>
+            <input id="J12" name="J12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce70">
-            <p id="K12_2">0</p><input id="K12" name="K12" type="text" value="0" style="display:none;"/>
+            <input id="K12" name="K12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             <td style="text-align: right; width: 57.3px;" class="ce70">
-            <p id="L12_2">0</p><input id="L12" name="L12" type="text" value="0" style="display:none;"/>
+            <input id="L12" name="L12" type="text" value="0" class="transparente" readonly="readonly"/>
             </td>
             </tr>
 
@@ -489,8 +489,8 @@ if($consenso==1){
 			<option value="Si">Si</option>
 	    </select>
        </div> 
-       <div class="CR RCR_TPD"><p style="width:100%">TDP</p><p id="RCR_TPD_2" class="RCR">0</p><input id="RCR_TPD" name="RCR_TPD" type="text" value="0" style="display:none;"/> </div> 
-       <div class="CR RCR_TDIF"><p style="width:100%">TDIF</p><p id="RCR_TDIF_2" class="RCR">0</p><input id="RCR_TDIF" name="RCR_TDIF" type="text" value="0" style="display:none;"/></div>   
+       <div class="CR RCR_TPD"><p style="width:100%">TDP</p><p id="RCR_TPD_2" class="RCR"></p><input id="RCR_TPD_RESULTADO" name="RCR_TPD_RESULTADO" type="text"  value="0" readonly="readonly"/> </div> 
+       <div class="CR RCR_TDIF"><p style="width:100%">TDIF</p><p id="RCR_TDIF_2" class="RCR"></p><input id="RCR_TDIF_RESULTADO" name="RCR_TDIF_RESULTADO" type="text" value="0" readonly="readonly"/></div>   
     </div>
     <div>
        <div class="CR RCR_ED">
@@ -500,8 +500,8 @@ if($consenso==1){
 			<option value="Si">Si</option>
 	    </select>
        </div>
-       <div class="CR RCR_IEDSD"><p style="width:100%">IEDS-D <a href="#" class="iedsdmotrigger"><IMG src="/images/question-white.png" /></a></p><p id="RCR_IEDSD_2" class="RCR">0</p><input id="RCR_IEDSD" name="RCR_IEDSD" type="text" value="0" style="display:none;"/></div>
-       <div class="CR RCR_IEDSP"><p style="width:100%">IEDS-Ponderado <a href="#" class="eidsptrigger"><IMG src="/images/question-white.png" /></a></p><p id="RCR_IEDSP_2" class="RCR">0</p><input id="RCR_IEDSP" name="RCR_IEDSP" type="text" value="0" style="display:none;"/></div>
+       <div class="CR RCR_IEDSD"><p style="width:100%">IEDS-D <a href="#" class="iedsdmotrigger"><IMG src="/images/question-white.png" /></a></p><p id="RCR_IEDSD_2" class="RCR"></p><input id="RCR_IEDSD_RESULTADO" name="RCR_IEDSD_RESULTADO" type="text" value="0" /></div>
+       <div class="CR RCR_IEDSP"><p style="width:100%">IEDS-Ponderado <a href="#" class="eidsptrigger"><IMG src="/images/question-white.png" /></a></p><p id="RCR_IEDSP_2" class="RCR"></p><input id="RCR_IEDSP_RESULTADO" name="RCR_IEDSP_RESULTADO" type="text" value="0" /></div>
     </div>
 
 
@@ -875,7 +875,8 @@ if($consenso==1){
        <div class="grid-5-12 f5total">
                                Total F-5a Problemas de Conducta
        </div>
-       <div id="total_problemas_conducta" class="grid-1-12 f5resultado">0</div>
+       <div id="total_problemas_conducta" class="grid-1-12 f5resultado">
+           <input id="TotalF5a" size="2" name="TotalF5a" type="text" style="color: #000000" class="transparente" readonly="readonly"/></div>
        <div class="grid-3-12"></div>
        <div class="clear"></div>
 
@@ -883,7 +884,9 @@ if($consenso==1){
        <div class="grid-5-12 f5total">
                                Total F-5b Desenganche Escolar
        </div>
-       <div id="total_desenganche_escolar" class="grid-1-12 f5resultado">0</div>
+       <div id="total_desenganche_escolar" class="grid-1-12 f5resultado">
+             <input id="TotalF5b" size="2" name="TotalF5b" type="text" style="color: #000000" class="transparente" readonly="readonly"/>
+       </div>
        <div class="grid-3-12"></div>
        <div class="clear"></div>
 
@@ -891,7 +894,8 @@ if($consenso==1){
        <div class="grid-5-12 f5total">
                                Total F-5 Riesgos Escolares
        </div>
-       <div id="total_riesgos_totales" class="grid-1-12 f5resultado">0</div>
+       <div id="total_riesgos_totales" class="grid-1-12 f5resultado">
+           <input id="TotalF5c" size="2" name="TotalF5c" type="text" style="color: #000000" class="transparente" readonly="readonly"/></div>
        <div class="grid-3-12"></div>
        <div class="clear"></div>
 
@@ -930,7 +934,9 @@ if($consenso==1){
        <div class="grid-5-12 f5total">
                                Total F-6 Relación con pares con desadaptación social
        </div>
-       <div id="total_relacion_con_pares" class="grid-1-12 f5resultado">0</div>
+       <div id="total_relacion_con_pares" class="grid-1-12 f5resultado">
+                  <input id="TotalF6" size="2" name="TotalF6" type="text" style="color: #000000" class="transparente" readonly="readonly"/>
+       </div>
        <div class="grid-3-12"></div>
        <div class="clear"></div>
 
@@ -981,7 +987,10 @@ if($consenso==1){
        <div class="grid-5-12 f5total">
                                Total F-7 Riesgos familiares
        </div>
-       <div id="totalf7_riesgosfamiliares" class="grid-1-12 f5resultado">0</div>
+       <div id="totalf7_riesgosfamiliares" class="grid-1-12 f5resultado">
+             <input id="TotalF7" size="2" name="TotalF7" type="text" style="color: #000000" class="transparente" readonly="readonly"/>
+    
+       </div>
        <div class="grid-3-12"></div>
        <div class="clear"></div>
 
@@ -989,7 +998,10 @@ if($consenso==1){
        <div class="grid-5-12 f5total">
                                Total F-7a Malos tratos
        </div>
-       <div id="totalf7_malostratos" class="grid-1-12 f5resultado">0</div>
+       <div id="totalf7_malostratos" class="grid-1-12 f5resultado">
+             <input id="TotalF7a" size="2" name="TotalF7a" type="text" style="color: #000000" class="transparente" readonly="readonly"/>
+    
+       </div>
        <div class="grid-3-12"></div>
        <div class="clear"></div>
 
@@ -997,7 +1009,10 @@ if($consenso==1){
        <div class="grid-5-12 f5total">
                                Total F-7b Débil Supervisión
        </div>
-       <div id="totalf7_debilsupervision" class="grid-1-12 f5resultado">0</div>
+       <div id="totalf7_debilsupervision" class="grid-1-12 f5resultado">
+             <input id="TotalF7b" size="2" name="TotalF7b" type="text" style="color: #000000" class="transparente" readonly="readonly"/>
+    
+       </div>
        <div class="grid-3-12"></div>
        <div class="clear"></div>
 
@@ -1038,7 +1053,10 @@ if($consenso==1){
        <div class="grid-5-12 f5total">
                               Total F-8 con Intereses
        </div>
-       <div id="totalf8_conintereses" class="grid-1-12 f5resultado">0</div>
+       <div id="totalf8_conintereses" class="grid-1-12 f5resultado">
+             <input id="TotalF8cinter" size="2" name="TotalF8cinter" type="text" style="color: #000000" class="transparente" readonly="readonly"/>
+    
+       </div>
        <div class="grid-3-12"></div>
        <div class="clear"></div>
 
@@ -1046,7 +1064,10 @@ if($consenso==1){
        <div class="grid-5-12 f5total">
                                Total F-8 sin Intereses
        </div>
-       <div id="totalf8_sinintereses" class="grid-1-12 f5resultado">0</div>
+       <div id="totalf8_sinintereses" class="grid-1-12 f5resultado">
+            <input id="TotalF8sinter" size="2" name="TotalF8sinter" type="text" style="color: #000000" class="transparente" readonly="readonly"/>
+    
+       </div>
        <div class="grid-3-12"></div>
        <div class="clear"></div>
 
@@ -1054,7 +1075,10 @@ if($consenso==1){
        <div class="grid-5-12 f5total">
                                Total F-8 Intereses
        </div>
-       <div id="totalf8_intereses" class="grid-1-12 f5resultado">0</div>
+       <div id="totalf8_intereses" class="grid-1-12 f5resultado">
+            <input id="TotalF8inter" size="2" name="TotalF8inter" type="text" style="color: #000000" class="transparente" readonly="readonly"/>
+    
+       </div>
        <div class="grid-3-12"></div>
        <div class="clear"></div>
 
@@ -1097,7 +1121,10 @@ if($consenso==1){
        <div class="grid-5-12 f5total">
                               Total F-9 Drogas
        </div>
-       <div id="totalf9" class="grid-1-12 f5resultado">0</div>
+       <div id="totalf9" class="grid-1-12 f5resultado">
+            <input id="TotalF9" size="2" name="TotalF9" type="text" style="color: #000000" class="transparente" readonly="readonly"/>
+    
+       </div>
        <div class="grid-3-12"></div>
        <div class="clear"></div>
 
@@ -1143,7 +1170,10 @@ if($consenso==1){
        <div class="grid-5-12 f5total">
                               Total F-10 Actitudes y tendencias manifiestas
        </div>
-       <div id="totalf10" class="grid-1-12 f5resultado">0</div>
+       <div id="totalf10" class="grid-1-12 f5resultado">
+           <input id="TotalF10" size="2" name="TotalF10" type="text" style="color: #000000" class="transparente" readonly="readonly"/>
+    
+       </div>
        <div class="grid-3-12"></div>
        <div class="clear"></div>
     </div>
@@ -1191,7 +1221,10 @@ if($consenso==1){
        <div class="grid-5-12 f5total">
                               Total F-11a Recursos personales activos y  vinculación afectiva
        </div>
-       <div id="totalf11_a" class="grid-1-12 f5resultado">0</div>
+       <div id="totalf11_a" class="grid-1-12 f5resultado">
+           <input id="TotalF11a" size="2" name="TotalF11a" type="text" style="color: #000000" class="transparente" readonly="readonly"/>
+    
+       </div>
        <div class="grid-3-12"></div>
        <div class="clear"></div>
 
@@ -1200,7 +1233,10 @@ if($consenso==1){
        <div class="grid-5-12 f5total">
                               Total F-11b Competencias cognitivas y sociales
        </div>
-       <div id="totalf11_b" class="grid-1-12 f5resultado">0</div>
+       <div id="totalf11_b" class="grid-1-12 f5resultado">
+           <input id="TotalF11b" size="2" name="TotalF11b" type="text" style="color: #000000" class="transparente" readonly="readonly"/>
+    
+       </div>
        <div class="grid-3-12"></div>
        <div class="clear"></div>
 
@@ -1208,7 +1244,10 @@ if($consenso==1){
        <div class="grid-5-12 f5total">
                               Total F-11c Vinculación familiar
        </div>
-       <div id="totalf11_c" class="grid-1-12 f5resultado">0</div>
+       <div id="totalf11_c" class="grid-1-12 f5resultado">
+           <input id="TotalF11c" size="2" name="TotalF11c" type="text" style="color: #000000" class="transparente" readonly="readonly"/>
+    
+       </div>
        <div class="grid-3-12"></div>
        <div class="clear"></div>
 
@@ -1217,7 +1256,10 @@ if($consenso==1){
        <div class="grid-5-12 f5total">
                               Total F-11 Recursos Protectores
        </div>
-       <div id="totalf11_d" class="grid-1-12 f5resultado">0</div>
+       <div id="totalf11_d" class="grid-1-12 f5resultado">
+           <input id="TotalF11rec" size="2" name="TotalF11rec" type="text" style="color: #000000" class="transparente" readonly="readonly"/>
+    
+       </div>
        <div class="grid-3-12"></div>
        <div class="clear"></div>
 

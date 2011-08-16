@@ -9,10 +9,11 @@ all:
         db_name: psico
         db_host: localhost
         db_user: root
-        db_pass: holahola
+        db_pass: 
         
     supercontrolador:
           blacklist_FERR: ['module','action','Guardar']
           blacklist_FCMF: ['module','action','Guardar','tstart','modoConsenso']
           blacklist_EGED: ['module','action','Guardar','tstart','modoConsenso']
           blacklist_IRNC: ['module','action','Guardar','tstart','modoConsenso']
+          blacklist_EDA: ['module','action','Guardar','tstart','modoConsenso']

@@ -37,12 +37,12 @@
         <td><?php echo $pregunta ?></td>
         <?php for($i = 0; $i < count($intervalos); $i++) :?>
             <td>
-                <input type="text" maxlength="2" size="20" 
+                <input type="text" maxlength="3" size="20" 
                     name="<?php echo $inputprefix ?>F<?php echo $indice + 1 ?>C<?php echo $i + 1 ?>" 
                     class="preg-val <?php echo $indice + 1?>-<?php echo $i ?>" />
             </td>
         <?php endfor ?>
-        <td><input type="text" value="0" name="<?php echo $inputprefix ?>resultadoF<?php echo $indice + 1 ?> "class="resultado-fila fila-<?php echo $i ?>" readonly /></td>
+        <td><input type="text" value="0" name="<?php echo $inputprefix ?>resultadoF<?php echo $indice + 1 ?>"class="resultado-fila fila-<?php echo $i ?>" readonly /></td>
     </tr>
     <?php endforeach ?>
     <tr>
