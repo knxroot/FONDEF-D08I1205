@@ -9,7 +9,7 @@ all:
         db_name: psico
         db_host: localhost
         db_user: root
-        db_pass: 
+        db_pass: holahola
         
     supercontrolador:
           blacklist_FERR: ['module','action','Guardar']
