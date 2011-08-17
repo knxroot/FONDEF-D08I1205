@@ -17,3 +17,4 @@ all:
           blacklist_EGED: ['module','action','Guardar','tstart','modoConsenso']
           blacklist_IRNC: ['module','action','Guardar','tstart','modoConsenso']
           blacklist_EDA: ['module','action','Guardar','tstart','modoConsenso']
+          blacklist_DEP_ADO: ['module','action','Guardar','tstart','modoConsenso']
