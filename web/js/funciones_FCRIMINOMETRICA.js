@@ -86,7 +86,32 @@ $(".tip_trigger").hover(function(){
         $('#a21d2').jqm({ajax: '/modal/21d2.html', trigger: 'a.a21d2trigger'});
          $('#a21d3').jqm({ajax: '/modal/21d3.html', trigger: 'a.a21d3trigger'});
             $('#a21d4').jqm({ajax: '/modal/21d4.html', trigger: 'a.a21d4trigger'})
-         
+            
+            
+                   $('#a22a1').jqm({ajax: '/modal/22a1.html', trigger: 'a.a22a1trigger'});
+                    $('#a22a2').jqm({ajax: '/modal/22a2.html', trigger: 'a.a22a2trigger'});
+                     $('#a22a3').jqm({ajax: '/modal/22a3.html', trigger: 'a.a22a3trigger'});
+                      $('#a22a4').jqm({ajax: '/modal/22a4.html', trigger: 'a.a22a4trigger'});
+                      
+       $('#a22b1').jqm({ajax: '/modal/22b1.html', trigger: 'a.a22b1trigger'});
+          $('#a22b2').jqm({ajax: '/modal/22b2.html', trigger: 'a.a22b2trigger'});
+             $('#a22b3').jqm({ajax: '/modal/22b3.html', trigger: 'a.a22b3trigger'});
+                $('#a22b4').jqm({ajax: '/modal/22b4.html', trigger: 'a.a22b4trigger'});
+                
+       $('#a22c1').jqm({ajax: '/modal/22c1.html', trigger: 'a.a22c1trigger'});
+       $('#a22c2').jqm({ajax: '/modal/22c2.html', trigger: 'a.a22c2trigger'});
+       $('#a22c3').jqm({ajax: '/modal/22c3.html', trigger: 'a.a22c3trigger'});
+       $('#a22c4').jqm({ajax: '/modal/22c4.html', trigger: 'a.a22c4trigger'});
+       
+       $('#a22d1').jqm({ajax: '/modal/22d1.html', trigger: 'a.a22d1trigger'});
+       $('#a22d2').jqm({ajax: '/modal/22d2.html', trigger: 'a.a22d2trigger'});
+       $('#a22d3').jqm({ajax: '/modal/22d3.html', trigger: 'a.a22d3trigger'});
+      
+                      
+                      
+                      
+                   
+   
 	 
  // select + reference "triggering element" -- will pass to $.jqm()
   var triggers = $('a.ex3bTrigger')[0];

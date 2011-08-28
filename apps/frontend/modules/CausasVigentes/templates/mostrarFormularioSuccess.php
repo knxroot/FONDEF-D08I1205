@@ -93,16 +93,15 @@
                 <input type="text" class="form-txt" name="input_fecha_control_detencion_svigente<?php echo $i;?>" id="input_fecha_control_detencion_svigente<?php echo $i;?>"/>
             </div>	
 	
-            <div class="grid-12-12">
+    <div class="grid-12-12">
                 <label class="form-lbl">Causal de ingreso <em class="form-req">*</em></label>
-                <select name="select_tipo_materia_svigente<?php echo $i;?>" id="select_tipo_materia_svigente<?php echo $i;?>"  style="width: 500px;float:left;">
+                <select name="select_tipo_materia<?php echo $i;?>" id="select_tipo_materia<?php echo $i;?>"  style="width: 500px;float:left;">
                     <option value="none" selected="">Seleccione Tipo de materia</option>
                 </select>
-                <select name="select_causa_delito_svigente<?php echo $i;?>" id="select_causa_delito_svigente<?php echo $i;?>" disabled="disabled" style="width: 400px;margin-left: 5px;">
+                <select name="select_causa_delito<?php echo $i;?>" id="select_causa_delito<?php echo $i;?>" disabled="disabled" style="width: 400px;margin-left: 5px;">
                     <option value="none" selected="">Seleccione Causa Delito</option>
                 </select>
             </div>
-
         </div>
         
           <?php  endfor; ?> 

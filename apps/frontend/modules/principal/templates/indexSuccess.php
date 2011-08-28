@@ -125,6 +125,8 @@
 			<option value="Kawésqar">Kawésqar</option>
                          <option value="Yagan">Yagan</option>
 			<option value="Gitano">Gitano</option>
+                        
+                        <option value="Gitano">Ninguno</option>
                         <option value="Otro">Otro</option>
 		</select>
 		</div>

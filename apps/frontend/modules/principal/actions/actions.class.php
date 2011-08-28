@@ -373,10 +373,11 @@ public function executeConsultaCausaDelito(sfWebRequest $request)
         // Agregar otros parametros
         
         $params['id_user_responsable_principal'] = $this->getUser()->getGuardUser()->getId();
-        $params['created_at'] = $params['updated_at'] = '"NOW()"';
+        $params['created_at'] = $params['updated_at'] = 'NOW()';
         
         // Guardar
-        $sql = DatabaseUtils::prepareInsertQuery('encuestado', $params);                    
+        $sql = DatabaseUtils::prepareInsertQuery('encuestado', $params);   
+       
         $query = $this->pdo->prepare($sql);        
         if(!$query->execute($params)) {
             return sfView::ERROR;        
@@ -384,7 +385,14 @@ public function executeConsultaCausaDelito(sfWebRequest $request)
 
         // Obtener id de encuestado recien añadido
         $id = $this->pdo->lastInsertId();
-       
+        
+        $this->pdo->beginTransaction(); 
+         $actualizador="UPDATE `psico`.`encuestado` SET `created_at` = NOW( ) WHERE `encuestado`.`id_encuestado` ={$id}";
+        mysql_query($actualizador);
+        $query = $this->pdo->prepare($sql);
+        $query->execute($actualizador);           
+        $this->pdo->commit();
+        
         // Obtener sanciones vigentes como objetos
         $count = count($request->getParameter('select_sistema_atencion'));
         $sancionesVigentes = array();
@@ -445,7 +453,7 @@ public function executeConsultaCausaDelito(sfWebRequest $request)
         }
 
         $this->username = $this->getUser()->getUsername();
-		
+       
 		//
     }
 

@@ -871,7 +871,7 @@ if($consenso==1){
  </tr>
  <tr height=17 style='height:12.75pt'>
   <td height=17 class=xl6521549 colspan=2 style='height:12.75pt'>1.
-  Escuela:<span style='mso-spacerun:yes'> </span></td>
+  Escuela:<a href="#" class="a22a1trigger"><IMG src="/images/question-white.png" /></a></td><span style='mso-spacerun:yes'> </span></td>
   <td class=xl1521549>12-13-14</td>
   <td class=xl6721549><input id="22a11" size="2" name="22a11" type="text" style="color: #000000" class="transparente"/></td>
   <td class=xl1521549></td>
@@ -890,7 +890,7 @@ if($consenso==1){
   <td class=xl1521549></td>
  </tr>
  <tr height=17 style='height:12.75pt'>
-  <td height=17 class=xl6521549 colspan=2 style='height:12.75pt'>2. Trabajo:</td>
+  <td height=17 class=xl6521549 colspan=2 style='height:12.75pt'>2. Trabajo:<a href="#" class="a22a2trigger"><IMG src="/images/question-white.png" /></a></td><span style='mso-spacerun:yes'> </span></td>
   <td class=xl1521549>12-13-14</td>
   <td class=xl6721549 style='border-top:none'><input id="22a21" size="2" name="22a21" type="text" style="color: #000000" class="transparente"/></td>
   <td class=xl1521549></td>
@@ -909,7 +909,7 @@ if($consenso==1){
   <td class=xl1521549></td>
  </tr>
  <tr height=18 style='height:13.5pt'>
-  <td height=18 class=xl6521549 colspan=2 style='height:13.5pt'>3. Familia<span
+  <td height=18 class=xl6521549 colspan=2 style='height:13.5pt'>3. Familia<a href="#" class="a22a3trigger"><IMG src="/images/question-white.png" /></a></td><span style='mso-spacerun:yes'> </span><span
   style='mso-spacerun:yes'> </span></td>
   <td class=xl1521549>12-13-14</td>
   <td class=xl6721549 style='border-top:none'><input id="22a31" size="2" name="22a31" type="text" style="color: #000000" class="transparente"/></td>
@@ -929,7 +929,7 @@ if($consenso==1){
   <td class=xl1521549></td>
  </tr>
  <tr height=20 style='height:15.0pt'>
-  <td height=20 class=xl6521549 colspan=2 style='height:15.0pt'>4. Reglas</td>
+  <td height=20 class=xl6521549 colspan=2 style='height:15.0pt'>4. Reglas<a href="#" class="a22a4trigger"><IMG src="/images/question-white.png" /></a></td><span style='mso-spacerun:yes'> </span></td>
   <td class=xl1521549>12-13-14</td>
   <td class=xl6721549 style='border-top:none'><input id="22a41" size="2" name="22a41" type="text" style="color: #000000" class="transparente"/></td>
   <td class=xl1521549></td>
@@ -978,7 +978,7 @@ if($consenso==1){
  </tr>
  <tr height=17 style='height:12.75pt'>
   <td height=17 class=xl6521549 colspan=3 style='height:12.75pt'>1. Adhesión a
-  grupos</td>
+  grupos<a href="#" class="a22b1trigger"><IMG src="/images/question-white.png" /></a></td><span style='mso-spacerun:yes'> </span></td>
   <td class=xl1521549></td>
   <td class=xl1521549></td>
   <td class=xl6721549><input id="22b1" size="2" name="22b1" type="text" style="color: #000000" class="transparente"/></td>
@@ -987,7 +987,7 @@ if($consenso==1){
  </tr>
  <tr height=17 style='height:12.75pt'>
   <td height=17 class=xl6521549 colspan=3 style='height:12.75pt'>2.
-  Comportamiento de grupo</td>
+  Comportamiento de grupo<a href="#" class="a22b2trigger"><IMG src="/images/question-white.png" /></a></td><span style='mso-spacerun:yes'> </span></td>
   <td class=xl1521549></td>
   <td class=xl1521549></td>
   <td class=xl6721549 style='border-top:none'><input id="22b2" size="2" name="22b2" type="text" style="color: #000000" class="transparente"/></td>
@@ -996,7 +996,7 @@ if($consenso==1){
  </tr>
  <tr height=17 style='height:12.75pt'>
   <td height=17 class=xl6521549 colspan=3 style='height:12.75pt'>3. Modelos /
-  héroes</td>
+  héroes<a href="#" class="a22b3trigger"><IMG src="/images/question-white.png" /></a></td><span style='mso-spacerun:yes'> </span></td>
   <td class=xl1521549></td>
   <td class=xl1521549></td>
   <td class=xl6721549 style='border-top:none'><input id="22b3" size="2" name="22b3" type="text" style="color: #000000" class="transparente"/></td>
@@ -1004,7 +1004,7 @@ if($consenso==1){
   <td class=xl1521549></td>
  </tr>
  <tr height=18 style='height:13.5pt'>
-  <td height=18 class=xl6521549 colspan=2 style='height:13.5pt'>4. Afiliación</td>
+  <td height=18 class=xl6521549 colspan=2 style='height:13.5pt'>4. Afiliación<a href="#" class="a22b4trigger"><IMG src="/images/question-white.png" /></a></td><span style='mso-spacerun:yes'> </span></td>
   <td class=xl1521549>12-13-14</td>
   <td class=xl6721549><input id="22b41" size="2" name="22b41" type="text" style="color: #000000" class="transparente"/></td>
   <td class=xl1521549></td>
@@ -1052,7 +1052,7 @@ if($consenso==1){
  </tr>
  <tr height=21 style='height:15.75pt'>
   <td height=21 class=xl6521549 colspan=2 style='height:15.75pt'>1. Moral
-  personal</td>
+  personal<a href="#" class="a22c1trigger"><IMG src="/images/question-white.png" /></a></td><span style='mso-spacerun:yes'> </span></td>
   <td class=xl1521549></td>
   <td class=xl1521549></td>
   <td class=xl1521549></td>
@@ -1062,7 +1062,7 @@ if($consenso==1){
  </tr>
  <tr height=17 style='height:12.75pt'>
   <td height=17 class=xl6521549 colspan=3 style='height:12.75pt'>2. Sectores de
-  conformidad</td>
+  conformidad<a href="#" class="a22c2trigger"><IMG src="/images/question-white.png" /></a></td><span style='mso-spacerun:yes'> </span></td>
   <td class=xl1521549></td>
   <td class=xl1521549></td>
   <td class=xl6721549 style='border-top:none'><input id="22c2" size="2" name="22c2" type="text" style="color: #000000" class="transparente"/></td>
@@ -1070,7 +1070,7 @@ if($consenso==1){
   <td class=xl1521549></td>
  </tr>
  <tr height=17 style='height:12.75pt'>
-  <td height=17 class=xl6521549 colspan=2 style='height:12.75pt'>3. Autocensura</td>
+  <td height=17 class=xl6521549 colspan=2 style='height:12.75pt'>3. Autocensura<a href="#" class="a22c3trigger"><IMG src="/images/question-white.png" /></a></td><span style='mso-spacerun:yes'> </span></td>
   <td class=xl1521549></td>
   <td class=xl1521549></td>
   <td class=xl1521549></td>
@@ -1079,7 +1079,7 @@ if($consenso==1){
   <td class=xl1521549></td>
  </tr>
  <tr height=21 style='height:15.75pt'>
-  <td height=21 class=xl6521549 colspan=2 style='height:15.75pt'>4. Congruencia</td>
+  <td height=21 class=xl6521549 colspan=2 style='height:15.75pt'>4. Congruencia<a href="#" class="a22c4trigger"><IMG src="/images/question-white.png" /></a></td><span style='mso-spacerun:yes'> </span></td>
   <td class=xl1521549></td>
   <td class=xl1521549></td>
   <td class=xl1521549></td>
@@ -1118,7 +1118,7 @@ if($consenso==1){
  </tr>
  <tr height=17 style='height:12.75pt'>
   <td height=17 class=xl6521549 colspan=3 style='height:12.75pt'>1.
-  Expectativas sociales</td>
+  Expectativas sociales<a href="#" class="a22d1trigger"><IMG src="/images/question-white.png" /></a></td><span style='mso-spacerun:yes'> </span></td>
   <td class=xl1521549></td>
   <td class=xl1521549></td>
   <td class=xl6721549><input id="22d1" size="2" name="22d1" type="text" style="color: #000000" class="transparente"/></td>
@@ -1127,7 +1127,7 @@ if($consenso==1){
  </tr>
  <tr height=17 style='height:12.75pt'>
   <td height=17 class=xl6521549 colspan=3 style='height:12.75pt'>2. Objetivos
-  para el futuro</td>
+  para el futuro<a href="#" class="a22d2trigger"><IMG src="/images/question-white.png" /></a></td><span style='mso-spacerun:yes'> </span></td>
   <td class=xl1521549></td>
   <td class=xl1521549></td>
   <td class=xl6721549 style='border-top:none'><input id="22d2" size="2" name="22d2" type="text" style="color: #000000" class="transparente"/></td>
@@ -1136,7 +1136,7 @@ if($consenso==1){
  </tr>
  <tr height=18 style='height:13.5pt'>
   <td height=18 class=xl6521549 colspan=3 style='height:13.5pt'>3.
-  Planificación Realista</td>
+  Planificación Realista<a href="#" class="a22d3trigger"><IMG src="/images/question-white.png" /></a></td><span style='mso-spacerun:yes'> </span></td>
   <td class=xl1521549></td>
   <td class=xl1521549></td>
   <td class=xl6821549 style='border-top:none'><input id="22d3" size="2" name="22d3" type="text" style="color: #000000" class="transparente"/></td>
@@ -1448,7 +1448,59 @@ if($consenso==1){
 <img src="/images/loading-image.gif" />
 </div>
  
+   <div class="jqmWindow" id="a22a1">
+<img src="/images/loading-image.gif" />
+</div>
+    <div class="jqmWindow" id="a22a2">
+<img src="/images/loading-image.gif" />
+</div>
+    <div class="jqmWindow" id="a22a3">
+<img src="/images/loading-image.gif" />
+</div>
+    <div class="jqmWindow" id="a22a4">
+<img src="/images/loading-image.gif" />
+</div>
  
+    <div class="jqmWindow" id="a22b1">
+<img src="/images/loading-image.gif" />
+</div>
+ 
+   <div class="jqmWindow" id="a22b2">
+<img src="/images/loading-image.gif" />
+</div>
+ 
+   <div class="jqmWindow" id="a22b3">
+<img src="/images/loading-image.gif" />
+</div>
+ 
+   <div class="jqmWindow" id="a22b4">
+<img src="/images/loading-image.gif" />
+</div>
+ 
+    <div class="jqmWindow" id="a22c1">
+<img src="/images/loading-image.gif" />
+</div>
+   <div class="jqmWindow" id="a22c2">
+<img src="/images/loading-image.gif" />
+</div>
+   <div class="jqmWindow" id="a22c3">
+<img src="/images/loading-image.gif" />
+</div>
+   <div class="jqmWindow" id="a22c4">
+<img src="/images/loading-image.gif" />
+</div>
+ 
+  <div class="jqmWindow" id="a22d1">
+<img src="/images/loading-image.gif" />
+</div>
+   <div class="jqmWindow" id="a22d2">
+<img src="/images/loading-image.gif" />
+</div>
+   <div class="jqmWindow" id="a22d3">
+<img src="/images/loading-image.gif" />
+</div>
+  
+
 </div><!-- Fin contenido -->
 
 
