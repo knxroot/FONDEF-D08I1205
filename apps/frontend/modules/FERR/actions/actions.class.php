@@ -27,6 +27,8 @@ class FERRActions extends Actions
           //$fileName = $this->getRequest()->getFileName('file');
          // $this->getRequest()->moveFile('file', sfConfig::get('sf_upload_dir').'/'.$fileName);
           //$this->redirect('media/show?filename='.$fileName);
+isset($_GET['qqfile'])
+
 
           $directory=sfConfig::get('sf_upload_dir')."/GNOPRO/";
           if ($request->isXmlHttpRequest())

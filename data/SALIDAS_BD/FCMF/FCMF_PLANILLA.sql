@@ -9,6 +9,6 @@ fcmf_respuestas.concensoMode,
 fcmf_respuestas.id_respuesta,
 fcmf_respuestas.respuesta
 FROM
-sf_guard_user
-Inner Join fcmf_respuestas ON sf_guard_user.id = fcmf_respuestas.id_user
-Inner Join encuestado ON encuestado.id_encuestado = fcmf_respuestas.id_encuestado
+fcmf_respuestas
+INNER JOIN encuestado ON encuestado.id_encuestado = fcmf_respuestas.id_encuestado
+INNER JOIN sf_guard_user ON sf_guard_user.id = fcmf_respuestas.id_user
