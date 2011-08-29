@@ -1,0 +1,11 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+% Bibliograf�a. 
+%
+% Plantilla creada por aristarco.cjb.net
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\begin{thebibliography}{99} 
+
+\bibitem{etiqueta-referencia1} Autor: \textit{T�tulo}. Editorial, a�o. 
+\bibitem{etiqueta-referencia2} Autor: \textit{T�tulo}. Editorial, a�o. 
+% ...

@@ -1,0 +1,4 @@
+all:
+    actions:
+      #parametro TOTALMENTE INUTIL PARA QUIEN LEE EL CODIGO, EL PROGRAMADOR.. q le pagaron :D
+        class: MyAction

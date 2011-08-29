@@ -1,0 +1,4830 @@
+#LyX file created by tex2lyx 1.6.5
+\lyxformat 264
+\begin_document
+\begin_header
+\textclass report
+\begin_preamble
+% El informe de práctica de estudios debe presentarse 
+% anillado en tapas transparentes, hojas TAMAÑO CARTA 
+% y escrito en letra tamaño 12, times new roman,  a 
+% espacio sencillo, y en tercera persona.
+% La información escrita podrá complementarse con dibujos 
+% y fotografías, tablas, gráficos, análisis matemático y 
+% citas bibliográficas, en la medida discreta y propia 
+% para la más fácil comprensión de la materia estudiada.
+
+
+
+
+\usepackage[font=footnotesize]{caption}\usepackage{wrapfig}\usepackage{fancyhdr}\usepackage{subfig}\usepackage{hyperref}\usepackage{moreverb}\usepackage{listings}
+
+
+%-------------Formato de títulos de capítulos -------------------------
+% http://zoonek.free.fr/LaTeX/LaTeX_samples_chapter/0.html
+% titulo #27
+\makeatletter\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}\def\@makechapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ 
+    {\raggedleft \reset@font
+      \scshape \@chapapp{} \thechapter\par\nobreak}%
+    \par\nobreak
+    \vspace*{30\p@}
+    \interlinepenalty\@M
+    {\raggedright \Huge \scshape #1}%
+    \par\nobreak
+    \hrulefill
+    \par\nobreak
+    \vskip 30\p@
+  }}\def\@makeschapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@ 
+    {\raggedleft \reset@font
+      \scshape \vphantom{\@chapapp{} \thechapter}\par\nobreak}%
+    \par\nobreak
+    \vspace*{30\p@}
+    \interlinepenalty\@M
+    {\raggedright \Huge \scshape  #1}%
+    \par\nobreak
+    \hrulefill
+    \par\nobreak
+    \vskip 30\p@
+  }}
+
+
+%fin titulo
+
+
+
+%-------------Encabezado, pie de páginas y numeración-------------------------
+% Cada hoja deberá tener un pie de página que indicará 
+% el nombre de la empresa o institución donde se realizó 
+% la práctica desplazado hacia la izquierda y un 
+% encabezado en el cual se indicará en capítulo 
+% correspondiente del informe, este último deberá estar 
+% desplazado hacia la derecha. La letra y el tamaño 
+% será el mismo que el usado en el pie de página 
+% (negrita y cursiva).
+% Todas las hojas que se encuentran a continuación de 
+% los resúmenes irán numeradas en la parte inferior 
+% derecha partiendo de página nº1. La letra será la 
+% misma del informe tamaño 10 (negrita y cursiva).
+
+
+% http://aristarco.dnsalias.org/node/21
+\fancyhf{}% borrar todos los ajustes
+% En lo siguiente, fancyhead sirve para configurar la cabecera, fancyfoot para el pie.
+% Justificación: C=centered, R=right, L=left, (nada)=LRC
+% Página: O=odd, E=even, (nada)=OE
+
+
+
+\fancyhead[R]{\footnotesize\leftmark}\fancyfoot[L]{\footnotesize\scshapeCEIS-UFRO.}\fancyfoot[R]{\small\thepage}\renewcommand{\chaptermark}[1]{\markboth{\scshape #1}{}}
+
+
+
+% aplicar estilo fancy al inicio de un capítulo
+\fancypagestyle{plain}{\fancyhead{}% elimina cabeceras en páginas "plain"
+\renewcommand{\headrulewidth}{0pt}% así como la raya
+}
+
+
+
+
+\end_preamble
+\language spanish
+\inputencoding utf8
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+\graphics default
+\paperfontsize 12
+\spacing single
+\papersize letterpaper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language spanish
+\papercolumns 1
+\papersides 1
+\paperpagestyle fancy
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Portada -----------------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%quita la numeración de las paginas
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%La primera hoja del informe, que constituirá la tapa irá en forma destacada y con los espacios suficientes para dar una buena presentación, los títulos serán los siguientes:
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Logo institucional (en color azul) centrado en la parte superior 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Debajo, nombre de la Universidad, Facultad y Departamento 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Informe de Práctica Profesional con su código (Práctica I, Código I86300 - Práctica II, Código I86400)
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Nombre de la industria, empresa o institución 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Nombre del alumno, Nº de matrícula y carrera 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%logo de la UFRO
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename images/logo_azul_318.jpg
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+UNIVERSIDAD DE LA FRONTERA
+\newline
+ FACULTAD DE INGENIERÍA, CIENCIAS Y ADMINISTRACIÓN
+\newline
+ DEPARTAMENTO DE INGENIERÍA DE SISTEMAS
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+vskip
+\end_layout
+
+\end_inset
+
+ 78pt 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%6 lineas de 13pt
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+INFORME DE PRÁCTICA DE ESTUDIOS ASDASD
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+vskip
+\end_layout
+
+\end_inset
+
+ 13pt
+\end_layout
+
+\begin_layout Standard
+\align center
+
+PRÁCTICA DE ESTUDIOS II
+\newline
+ CÓDIGO I86400
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+vskip
+\end_layout
+
+\end_inset
+
+ 13pt
+\end_layout
+
+\begin_layout Standard
+\align center
+
+LAZOS-FUDEA
+\newline
+ ÁREA DE DESARROLLO
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+end{center}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+begin{flushright}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+NOMBRE DEL ALUMNO: GUSTAVO ANÍBAL LACOSTE ZÚÑIGA
+\newline
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+vskip
+\end_layout
+
+\end_inset
+
+ 13pt Nº DE MATRÍCULA: 15507962207
+\newline
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+vskip
+\end_layout
+
+\end_inset
+
+ 13pt CARRERA: INGENIERÍA INFORMÁTICA
+\newline
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+vskip
+\end_layout
+
+\end_inset
+
+ 13pt FECHA DE INICIO DE PRÁCTICA: xxxxx
+\newline
+ FECHA DE TÉRMINO DE PRÁCTICA: xxxx 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+end{flushright}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+vskip
+\end_layout
+
+\end_inset
+
+ 63pt
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% 2da y 3ra pagina -----------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% La segunda y tercera hoja del informe será la fotocopia 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% simple del Formulario de Evaluación de Prácticas de 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Estudios entregado por la empresa, estas hojas no tienen 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% encabezado, pie de página, ni numeración.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% 4ta pagina -----------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Sumario : Cada informe será precedido de un resumen sinóptico, en el cual se
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% enunciarán las cuestiones esenciales estudiadas y las conclusiones
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% importantes logradas. 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter*
+
+Sumario
+\end_layout
+
+\begin_layout Standard
+
+El objetivo del presente informe es documentar la experiencia adquirida durante el desarrollo de la práctica realizada en la empresa Lazos durante el periodo Febrero a finales de Abril de 2010. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+El objetivo de la práctica profesional II es desarrollar aplicaciones en el área tecnológica e informática bajo la tutela de un profesional especializado de la empresa. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+En el siguiente informe se divide principalmente en tres partes:
+\end_layout
+
+\begin_layout Enumerate
+
+En la primera parte se muestran los objetivos generales y específicos de la práctica de estudios
+\end_layout
+
+\begin_layout Enumerate
+
+En la segunda parte se da un contexto global de la situación en que se realizó la práctica, dando a conocer la empresa Lazos, su estructura organizacional original y los cambios que se realizaron en esta durante el desarrollo de la práctica además de la misión y visión de la empresa.
+\end_layout
+
+\begin_layout Enumerate
+
+En la tercera parte, el informe se centra en las actividades realizadas en el periodo de práctica, describiendo las actividades más significativas realizadas y dando a conocer mi apreciación de cada una de estas.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%oculta el numero de esta pagina
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Además se describen las principales herramientas tecnológicas utilizadas en la práctica realizando una pequeña crítica alguna de estas. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+Finalmente, se expresan las principales conclusiones obtenidas en el periodo de práctica.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% 5ta pagina -----------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% La quinta hoja del informe será el índice con la indicación 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% de las páginas correspondientes. Los asuntos tratados se 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% enunciarán en un índice de títulos y subtítulos, esta hoja 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% no tiene encabezado, pie de página, ni numeración.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset LatexCommand tableofcontents
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%genera el indice
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+thispagestyle{empty}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% 6ta pagina -----------------------------------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% La sexta hoja en adelante del informe contendrá:
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+
+Introducción y Objetivos
+\end_layout
+
+\begin_layout Section
+
+Introducción
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% 
+\backslash
+addcontentsline{toc}{chapter}{Introducción}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Introducción : La introducción contendrá, primeramente, la explicación del 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% propósito y alcance del trabajo. A continuación se dará cuenta del estado del 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% asunto al tiempo de iniciarse el estudio, debiendo mencionarse las fuentes de
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%  información consultadas para determinarlo, y consignar las noticias que 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% tenga el autor acerca de estudios efectuados anteriormente sobre la misma
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%  materia. Cuando el informe se refiere a un trabajo experimental sobre un 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% asunto con fundamento teórico, la teoría básica se expondrá y desarrollará 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% en la introducción, o en una sección aparte si fuere necesario darle algún
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%  desarrollo a causa de que el informe esté destinado a lectores no 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% familiarizados con el aspecto teórico en cuestión. 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Son varios los objetivos que se persiguen con el ejercicio de esta práctica de estudios, el más importante, la interacción Universidad--Empresa: Investigación y desarrollo de software, adquirir experiencia en el ámbito informático además de tener contacto con las personas que intervienen directamente en la producción, y el conocimiento general de las organizaciones. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+En el desarrollo de esta práctica profesional II se desarrollaron diferentes tareas relacionadas con investigaciones y desarrollo con el fin de experimentar con nuevas tecnologías en el desarrollo de software. Esto último se debe a que la empresa desea migrar progresivamente su linea de desarrollo (actualmente basada en php) a desarrollo en Java. El desarrollo de esta práctica corresponde para la empresa en el desarrollo de una nueva linea de negocio ligada a la informática medica. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+Específicamente en este caso el aporte realizado se basa en el desarrollo del lado servidor, es por esto que una de las primeras tareas a desarrollar es el conocimiento del contexto en si del proyecto y de las tecnologías a utilizar (J2EE, OpenMRS, el servidor de aplicaciones para j2ee Glassfish, el CMS en j2ee Liferay y CentOS GNU/Linux). 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+Paralelamente a la implementación de los servicios del lado del servidor otras personas del equipo de desarrollo realizaban la construcción de módulos que posteriormente se montarían en el servidor de aplicaciones y que debían interactuar entre si. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+El punto fuerte de esta práctica se enfocó sobre la investigación, prueba e implementación del servidor de aplicaciones Glassfish, Liferay y CentOS GNU/Linux. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+Por medio de este informe, se dará a conocer el alcance del trabajo realizado, el conocimiento y la experiencia adquirida en la empresa.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+setcounter{page}{1}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% comenzar la cuenta de las paginas en 1
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+pagebreak
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+Objetivos
+\end_layout
+
+\begin_layout Standard
+
+Dentro de los principales objetivos formalizados al inicio de la práctica, caben mencionar los siguientes:
+\end_layout
+
+\begin_layout Subsection*
+
+Objetivo general
+\end_layout
+
+\begin_layout Standard
+
+Investigar e implementar los servicios necesarios para operar y mantener el software OpenMRS de registro clínico según requerimientos de sistema de salud actualmente implementado bajo php. Lo anterior incluye todas las actividades necesarias a realizar por el lado de servidor.
+\end_layout
+
+\begin_layout Subsection*
+
+Objetivos específicos
+\end_layout
+
+\begin_layout Enumerate
+
+Investigación,implementación, performance, configuración de: 
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+
+Servidor de aplicaciones J2EE Glassfish. 
+\end_layout
+
+\begin_layout Enumerate
+
+Apicación J2EE OpenMRS. 
+\end_layout
+
+\begin_layout Enumerate
+
+CMS J2EE Liferay. 
+\end_layout
+
+\begin_layout Enumerate
+
+Aplicaciones bajo el estándar Portlets en el CMS en J2EE Liferay. 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+
+Documentación sobre el proceso realizado.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% cuerpo del informe----------------------------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+
+Caracterización de la empresa
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+addcontentsline{toc}{chapter}{Caracterización de la empresa}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+Descripción global
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+addcontentsline{toc}{subsection}{Descripción global}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+Tipo de empresa
+\end_layout
+
+\begin_layout Standard
+
+CEIS-UFRO "Centro de excelencia de Ingeniería de Software de la Universidad de la Frontera", 
+\emph on
+Los Troncos Nº 01214, Temuco.
+\emph default
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="7" columns="2">
+<features>
+<column alignment="right" valignment="top" rightline="true">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Tipo de empresa 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Privada
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Actividad 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Desarrollo de software
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Legalidad 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Unidad dependiente de fundación FUDEA
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Rubro 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Desarrollo de proyectos tecnológicos
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+Misión y objetivos
+\end_layout
+
+\begin_layout Subsubsection*
+
+Misión
+\end_layout
+
+\begin_layout Standard
+
+Mejorar la eficiencia y eficacia de los procesos de gestión y comunicación de las organizaciones, a través del desarrollo, operación y mantención de servicios de software Web, con fuerte orientación a la satisfacción del cliente.
+\end_layout
+
+\begin_layout Subsubsection*
+
+Objetivos como organización
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Objetivos como organización
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+
+Búsqueda de la satisfacción de nuestros clientes. 
+\end_layout
+
+\begin_layout Itemize
+
+Mejorar continuamente para ofrecer productos y servicios de primera calidad, que se ajusten a los requerimientos y necesidades específicas de cada uno de sus clientes. 
+\end_layout
+
+\begin_layout Itemize
+
+Ofrecer a todos los estudiantes, perteneciente a una carrera vinculada al área de la Informática, Tecnología y Temática, la posibilidad de participar en proyectos de IT con aplicación en el "mundo real". 
+\end_layout
+
+\begin_layout Standard
+
+
+\newpage
+ 
+\end_layout
+
+\begin_layout Section
+
+Historia de la empresa
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%
+\backslash
+addcontentsline{toc}{subsection}{Historia de la empresa}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Antes de conocer la historia de esta empresa es importante aclarar que esta deriva de la empresa Lazos, es por esto que observaremos primero una mirada a la historia de esta empresa para luego relacionarla con CEIS-UFRO. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+Lazos es una marca de la Fundación de Desarrollo Educacional La Araucanía (FUDEA), fundación de derecho privado, autónoma, con patrimonio propio, creada por la Universidad de La Frontera el 10 de octubre de 1983. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+La misión de FUDEA es "Fomentar y contribuir con la Universidad de La Frontera de manera dinámica y flexible al desarrollo de las actividades de proyectos, capacitación,transferencia tecnológica y prestación de servicios, aumentando el vínculo con empresas públicas y privadas, con el fin de convertir a la Universidad en un agente del desarrollo de la Región de La Araucanía y del país". 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+Lazos nace en 1997, como respuesta a los altos requerimientos tecnológicos en servicios de conectividad y comunicaciones, en particular en la implantación y ejecución del proyecto Enlaces por parte del Instituto de Informática Educativa (IIE). Lazos ha sido pionero en ofrecer comercialmente en la IX Región el servicio de acceso a Internet conmutado (ISP). Actualmente, la empresa ofrece diversos servicios WEB tales como:
+\end_layout
+
+\begin_layout Itemize
+
+Mantención y operación de aplicaciones Web. 
+\end_layout
+
+\begin_layout Itemize
+
+Servicios de software a través de Web (ASP). 
+\end_layout
+
+\begin_layout Itemize
+
+Hospedaje de aplicaciones (Web hosting). 
+\end_layout
+
+\begin_layout Itemize
+
+Arriendo y alojamiento de servidores (housing). 
+\end_layout
+
+\begin_layout Itemize
+
+Asesorías en el diseño de redes y servicios de conectividad. 
+\end_layout
+
+\begin_layout Itemize
+
+Servicios de Internet en general. 
+\end_layout
+
+\begin_layout Standard
+
+Dado que la empresa Lazos fué incubada por la fundación Fudea de la Universidad de la Frontera, parte de la estrategia original contemplaba que en un futuro esta empresa pasaría a ser autónoma. Esto último se llevó a cabo el año 2009 materializandose el año 2010 con la creación de la unidad CEIS-UFRO unidad dependiente de la fundación FUDEA de la Universidad de la Frontera y la separación de la unidad de negocios Lazos S.A como una empresa autónoma. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+CEIS-UFRO nace entonces como una empresa de la Región de la Araucanía dedicada al desarrollo de productos de software y servicios web. Su principal objetivo es mejorar continuamente para entregar productos y servicios de alta calidad, que se ajusten a los requerimientos y necesidades específicas de cada uno de sus clientes.
+\end_layout
+
+\begin_layout Standard
+
+
+\newpage
+
+\end_layout
+
+\begin_layout Section
+
+Estructura organizacional
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Sistemas y sus unidades básicas. Funciones.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Tipo de organización de la empresa y sus sistemas. Organigrama y relaciones interfuncionales.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Generación en la toma de decisiones y secuencia o flujo de ellas.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Flujos de información en el interior de la empresa y en su medio externo.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection*
+
+Tipo de organización de la empresa
+\end_layout
+
+\begin_layout Standard
+
+El esquema organizacional de la empresa, está basado en el modelo de departamentalización por procesos, conformando las áreas de proyectos y construcción. Este modelo de organización presenta entre sus características, la obtención de una ventaja económica y la utilización de habilidades especiales, sin embargo, produce cierta descordinación entre los sistemas.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset VSpace 3cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset Float figure
+placement h
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Graphics 
+	filename images/organigrama.png
+	width 16cm
+
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Standard
+Organigrama de la empresa.
+\end_layout
+
+\end_inset
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset LatexCommand label
+name "fig:organigrama"
+
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+
+Trabajo realizado por el alumno
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% 
+\backslash
+addcontentsline{toc}{chapter}{Trabajo realizado por el alumno}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+
+Descripción general
+\end_layout
+
+\begin_layout Standard
+
+Entre las principales tareas asignadas en el periodo de práctica, cabe destacar las siguientes: 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+
+\series bold
+Investigación:
+\series default
+ Una de las principales actividades de esta práctica profesional fue realizar investigaciones sobre el servidor de aplicaciones Glassfish. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+
+\series bold
+Implementación: 
+\series default
+El punto fuerte de esta práctica se basó en al implementación de los servicios necesarios para operar y mantener el software OpenMRS de registro clínico según requerimientos de sistema de salud actualmente implementado bajo php. Esto incluye todas las actividades necesarias a realizar por el lado de servidor. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+
+\series bold
+Documentación:
+\series default
+ Se generaron documentos que con la finalidad de que en el futuro de existir un cambio del encargado de operaciones la nueva persona acargo pueda tomar el control de forma rápida, además en caso de que se deba levantar nuevamente la implementación dicha documentación será la base para realizar esta tarea. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+
+\newpage
+ 
+\end_layout
+
+\begin_layout Section
+
+Tecnologías involucradas
+\end_layout
+
+\begin_layout Standard
+
+Entre las tecnologías utilizadas en el transcurso de esta práctica se encuentran: 
+\newline
+ 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%---------CentOS------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{wrapfigure}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+r
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+5cm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%centering
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Logo CentOS
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics 
+	filename images/centos.jpg
+	width 5cm
+
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Standard
+CentOS.
+\end_layout
+
+\end_inset
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset LatexCommand label
+name "fig:centos"
+
+\end_inset
+
+ 
+\begin_inset VSpace 1cm
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{wrapfigure}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $ $
+\end_inset
+
+ 
+\begin_inset VSpace -1.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+CentOS
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+(Community Enterprise Operating System) es la distribución libre del sistema operativo Red Hat Enterprise Linux RHEL, compilado por voluntarios a partir del código fuente liberado por Red Hat. CentOS es una distribución enfocada a servidores pero también cuenta con su versión para escritorio. Esta distribución fué utilizada en esta práctica como un requisito impuesto por la empresa.
+\emph on
+(figura 
+\begin_inset LatexCommand ref
+reference "fig:centos"
+
+\end_inset
+
+).
+\emph default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%---------GlassFish------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{wrapfigure}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+r
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+5cm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%centering
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Logo Glassfish
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics 
+	filename images/glassfish_logo.png
+	width 5cm
+
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Standard
+GlassFish.
+\end_layout
+
+\end_inset
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset LatexCommand label
+name "fig:glassfish"
+
+\end_inset
+
+ 
+\begin_inset VSpace 0.5cm
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{wrapfigure}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $ $
+\end_inset
+
+ 
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+GlassFish
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+GlassFish es un servidor de aplicaciones desarrollado por Sun Microsystems que implementa las tecnologías definidas en la plataforma Java2EE y permite ejecutar aplicaciones que siguen esta especificación. Es gratuito y de código libre, se distribuye bajo un licenciamiento dual a través de la licencia CDDL y la GNU GPL.
+\emph on
+(figura 
+\begin_inset LatexCommand ref
+reference "fig:glassfish"
+
+\end_inset
+
+).
+\emph default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%---------Liferay------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{wrapfigure}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+r
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+5cm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%centering
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Logo CentOS
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics 
+	filename images/liferay.jpg
+	width 5cm
+
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Standard
+Liferay.
+\end_layout
+
+\end_inset
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset LatexCommand label
+name "fig:liferay"
+
+\end_inset
+
+ 
+\begin_inset VSpace 1cm*
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{wrapfigure}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $ $
+\end_inset
+
+ 
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+Liferay
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+Liferay es un portal de gestión de contenidos de código abierto escrito en Java que soporta el estándar portlet. Los portlet son componentes de las interfaces de usuario las cuales pueden ser gestionadas, configuradas yt visualizadas por un portal web, en este caso específico se utilizó Liferay. 
+\emph on
+(figura 
+\begin_inset LatexCommand ref
+reference "fig:liferay"
+
+\end_inset
+
+).
+\emph default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%---------OpenMRS------------------
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{wrapfigure}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+r
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+5cm
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%centering
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%Logo OpenMRS
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Graphics 
+	filename images/openmrs.png
+	width 5cm
+
+\end_inset
+
+ 
+\begin_inset Caption
+
+\begin_layout Standard
+OpenMRS.
+\end_layout
+
+\end_inset
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset LatexCommand label
+name "fig:openmrs"
+
+\end_inset
+
+ 
+\begin_inset VSpace 1cm
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{wrapfigure}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $ $
+\end_inset
+
+ 
+\begin_inset VSpace -0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+
+OpenMRS
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+OpenMRS es una aplicación bajo licencia GPL programada sobre el lenguaje JAVA que cumple diferentes funcionalidades de un sistema de registros médicos como: registro de pacientes, registro de especialistas, registro de encuentros entre paciente y especialista, generación de reportes, mantenedor de medicamentos y equipamiento en general.
+\emph on
+(figura 
+\begin_inset LatexCommand ref
+reference "fig:openmrs"
+
+\end_inset
+
+).
+\emph default
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+
+
+\newpage
+
+\end_layout
+
+\begin_layout Section
+
+Obteniendo e instalando JRE Y JDK en CentOS GNU/Linux
+\end_layout
+
+\begin_layout Subsection
+
+Sobre intérprete de Java Sun en CentOS GNU/Linux
+\end_layout
+
+\begin_layout Standard
+
+Es oportuno aclarar las particularidades que posee una instalación de java de sun bajo CentOS GNU/Linux. CentOS GNU/Linux 5 incluye la máquina virtual Java de GNU.org, equivalente a Java 1.4.2, junto con el sistema, la cual permite ejecutar programas escritos en Java a través del paquete java-1.4.2-gcj-compat-1.4.2.0-40jpp.112, disponible a través de los depósitos de equipamiento lógico (software) de estas distribuciones. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+La instalación de Java en forma correcta sobre el sistema CentOS GNU/Linux no es trivial, sin embargo se puede conseguir una instalación “funcional” para un entorno no profesional simplemente utilizando el paquete .bin al descargar java desde la web oficial de sun y luego apuntar la variable de entorno JAVA_HOME al directorio /usr/java/jdk(num.versión). 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+Para conseguir una instalación correcta de Java deberemos descargar el paquete oficial que ofrece sun para los sistemas genéricos GNU/Linux y luego descargar desde la web de jpackage y utilizar ambos ficheros para reconstruir el fichero rpm válido para la versión de CentOS GNU/Linux que utilicemos. Como es lógico deberemos instalar también las herramientas que nos permitirán reconstruir los ficheros rpms. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+Al finalizar el proceso obtendremos todos los rpms válidos necesarios para trabajar con la máquina virtual de sun bajo nuestro sistema CentOS GNU/Linux, vale decir: Java para desarrolladores, fuentes True Type básicas de sun, driver puente JDBC/ODBC, plugin para navegadores, archivos demostrativos y soporte para alsa, además los enlaces internos relacionados con java en CentOS GNU/Linux quedarán configurados de forma correcta, esta es la gran diferencia entre la opción fácil (descomprimir y apuntar) y la difícil (reconstruir rpms). 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+Por razones prácticas en el presente informe sólo se mostrará la forma fácil de realizar este proceso que es la que fué implementada en la empresa, sin embargo, durante el desarrollo de la práctica se geeró un instructivo completo que muestra la forma correcta de realizar la instalación del intérprete de Java bajo CentOS utilizando la técnica de reconstrucción de paquetes. 
+\newline
+ 
+\newpage
+
+\end_layout
+
+\begin_layout Subsection
+
+Forma rápida: Descargar JDK, descomprimir y apuntar las variables
+\end_layout
+
+\begin_layout Subsubsection*
+
+Descargar JDK
+\end_layout
+
+\begin_layout Standard
+
+Describiremos aquí la forma más fácil, la descripción de la forma avanzada fué documentada para la empresa.
+\end_layout
+
+\begin_layout Standard
+
+Ingresamos a la sección de JSE en el portal de java:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+href{http://java.sun.com/javase/downloads/index.jsp}{
+\end_layout
+
+\end_inset
+
+http://java.sun.com/javase/downloads/index.jsp
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+Vamos a la sección de JDK y seleccionamos download a la última versión disponible en este caso nos lleva a la URL:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+href{http://java.sun.com/javase/downloads/widget/jdk6.jsp}{
+\end_layout
+
+\end_inset
+
+http://java.sun.com/javase/downloads/widget/jdk6.jsp
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+. 
+\newline
+
+\end_layout
+
+\begin_layout Standard
+
+Desde donde seleccionamos una descarga para Linux y descargamos la versión .bin disponible (en este caso jdk-6u20-linux-i586.bin)
+\end_layout
+
+\begin_layout Standard
+
+Creamos una carpeta y lo descargamos. Luego se ejecuta dicho fichero y una vez que hemos aceptado los términos de uso este generará una carpeta la cual contendrá el intérprete al cual posteriormente apuntaremos con las variables de entorno correspondientes.
+\end_layout
+
+\begin_layout Standard
+
+El proceso a realizar se ejemplifica a continuación:
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{verbatim}
+\end_layout
+
+\end_inset
+
+ root@localhost: # ./jdk-6u20-linux-i586.bin root@localhost: # ls jdk1.6.020 jdk-6u20-linux-i586.bin liferay-portal-glassfish-linux-5.2.3.jar openmrs.war root@localhost: # mv jdk1.6.020/ /opt/jdk 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{verbatim}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+lstset
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+language=c
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+begin{lstlisting}
+\end_layout
+
+\end_inset
+
+ typedef struct 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+{
+\end_layout
+
+\end_inset
+
+ int orden; char linea[10240]; 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+ TipoArrayLineas; 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+end{lstlisting}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+
+Conclusiones
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% 
+\backslash
+addcontentsline{toc}{chapter}{Conclusiones}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+La práctica industrial inserta al estudiante universitario directamente en el mundo laboral, realizando tareas junto a la fuerza obrera, donde poco sirve la teoría adquirida dentro de la universidad.
+\end_layout
+
+\begin_layout Standard
+
+El trato con el personal, tanto obrero como administrativo, se transforma en una valiosa experiencia para el alumno, mejorando notablemente la eficacia de su comunicación con los diferentes niveles jerárquicos. El pasar a ser parte de una organización, permite conocer su estructura, su forma de trabajo y gestión, y la manera en que se llevan a cabo los procesos. Las labores realizadas por el alumno muestran el nivel de responsabilidad puesto en sus manos, ya que el control de calidad es una tarea no menor dentro del proceso productivo, y tiene gran influencia sobre el producto terminado.
+\end_layout
+
+\begin_layout Standard
+
+Mediante el trabajo práctico, se logra obtener un conocimiento general en la elaboración de productos que utilizan madera como materia prima, y uno específico sobre el proceso de transformación y calidad de la madera.
+\end_layout
+
+\begin_layout Standard
+
+Una rápida adaptación a la forma de trabajo de la empresa no hubiera sido posible de no ser por los obreros, siempre dispuestos a a ayudar y brindar una mano a quien lo necesite. Pero también se puede apreciar la otra cara de la moneda, conocer historias de sudor y esfuerzo por parte de ellos, el arrepentimiento de no haber continuado con su educación, y el no cometer con sus hijos el mismo error. Una realidad hasta ese momento desconocida, pasa a ser parte fundamental en el crecimiento y formación del estudiante.
+\end_layout
+
+\begin_layout Chapter
+
+Bibliografía
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% 
+\backslash
+addcontentsline{toc}{chapter}{Bibliografía}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% La citación corta se ubica después de la sentencia o sección seguida del año de publicación y el número de página cuando se considere apropiado. Algunos ejemplos:
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%     * (Smith, 2005)
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+%     * (Smith, 2005, p.1) o (Smith 2005:1)
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Luego en la sección de bibliografía, la cita completa se escribe como a continuación:
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% 
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Smith, John. (2005). Playing nicely together. St. Petersburg, FL (USA): Wikimedia Foundation.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Si no está el año, poner n.d. (no date)
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% Si no está el autor, comenzar con el nombre del artículo.
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+Avelino Espeso, José, et al. (2006). Manual para la formación de técnicos de prevención de riesgos laborales, Valladolid (España): Lex Nova.
+\end_layout
+
+\begin_layout Itemize
+
+Cañabate Carmona, Antonio. (1997). Toma de decisiones : Edicions UPC.
+\end_layout
+
+\begin_layout Itemize
+
+El Pino Insigne (pinus radiata D.Don). n.d. Consultado el 26 de febrero de 2009, http://www.papelnet.cl/arbol/pino_insigne.htm
+\end_layout
+
+\begin_layout Itemize
+
+Historia de la empresa. n.d. Consultado el 26 de febrero de 2009, http://www.magasa.cl
+\end_layout
+
+\begin_layout Itemize
+
+Ministerio de Agricultura. (1970). Decreto Nº 439 (Chile).
+\end_layout
+
+\begin_layout Itemize
+
+Pérez Perdiguero, José Manuel. (2008). Estudio y evaluación de los EPI. Consultado el 26 de febrero de 2009, http://epis.wikispaces.com/Estudio+y+evaluación+de+los+EPI
+\end_layout
+
+\begin_layout Itemize
+
+Ramos Cáceres, Rafael. (2008). Jerarquía de los sistemas y concepto de niveles de sistemas, Lima (Perú): Universidad Privada San Juan Bautista.
+\end_layout
+
+\begin_layout Chapter
+
+Créditos
+\end_layout
+
+\begin_layout Section*
+
+Fotografías
+\end_layout
+
+\begin_layout Itemize
+
+Cascos, figura 
+\begin_inset LatexCommand ref
+reference "fig:cascos"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="3" columns="2">
+<features>
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Autor 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+José Manuel Pérez
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Enlace 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+http://epis.wikispaces.com/Estudio+y+evaluación+de+los+EPI
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Licencia 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Creative Commons -- Reconocimiento, Licenciar igual 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+Protectores auditivos, figura 
+\begin_inset LatexCommand ref
+reference "fig:paudi"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="3" columns="2">
+<features>
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Autor 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+José Manuel Pérez
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Enlace 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+http://epis.wikispaces.com/Estudio+y+evaluación+de+los+EPI
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Licencia 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Creative Commons -- Reconocimiento, Licenciar igual 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+Chainsaw Chico, figura 
+\begin_inset LatexCommand ref
+reference "fig:cara"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="3" columns="2">
+<features>
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Autor 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Mark_W
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Enlace 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+http://flickr.com/photos/mark_w/2339478606/
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Licencia 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Creative Commons -- Reconocimiento, No comercial, Licenciar igual 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+Wood Knot, figura 
+\begin_inset LatexCommand ref
+reference "fig:nudos"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="3" columns="2">
+<features>
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Autor 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+blockpartypress
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Enlace 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+http://flickr.com/photos/blockpartypress/2443551331/
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Licencia 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Creative Commons -- Reconocimiento, No comercial, Sin obras derivadas 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+cracked log, figura 
+\begin_inset LatexCommand ref
+reference "fig:grieta"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="3" columns="2">
+<features>
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Autor 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Brenda Anderson
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Enlace 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+http://flickr.com/photos/curiouskiwi/20818048/
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Licencia 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Creative Commons -- Reconocimiento, No comercial, Licenciar igual 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+
+Kiefer Holz, figura 
+\begin_inset LatexCommand ref
+reference "fig:hongos"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="3" columns="2">
+<features>
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Autor 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Philipp Zinger
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Enlace 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+http://commons.wikimedia.org/wiki/File:Kiefer_Holz.JPG 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Licencia 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Licencia de documentación libre GNU 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Chapter
+
+Apéndice
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+% 
+\backslash
+addcontentsline{toc}{chapter}{Apéndice}
+\end_layout
+
+\begin_layout Standard
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section*
+
+Historia de la empresa
+\end_layout
+
+\begin_layout Standard
+
+MAGASA deriva de las primeras letras del nombre de su fundador, Don Mario García Sabugal, desciende de una de las primeras familias españolas llegadas a la región de la Araucanía a fines del siglo 19.
+\end_layout
+
+\begin_layout Standard
+
+Desde muy joven, Don Mario García junto a sus padres inició su vocación de trabajo en el campo y el bosque. Años más tarde emprendió en forma particular actividades forestales, logrando ser el mayor productor de madera nativa de la zona e iniciando sus actividades comerciales abasteciendo a clientes como Codelco y Asmar, entre otros.
+\end_layout
+
+\begin_layout Standard
+
+Año a año continuó forestando, logrando una base muy sólida de plantaciones de Pino Radiata y Pino Oregón.
+\end_layout
+
+\begin_layout Standard
+
+En el año 1987 se crea la sociedad Forestal Magasa Limitada y a partir del año 1990 comienza una etapa clave para el crecimiento de la empresa, haciendo una fuerte inversión en tecnología de punta, creando la fábrica de paneles y muebles, plantas de impregnado y secado de madera, así como también una planta terciado--laminado
+\end_layout
+
+\begin_layout Standard
+
+El proceso de producción está destinado a elaborar principalmente productos tales como: madera aserrada, elaborada, impregnada, polines, astillas, briquetas, terciado--laminado (flejes, largueros y muebles curvos), Paneles y Muebles, siendo estos productos vendidos a nivel nacional e internacional.
+\end_layout
+
+\begin_layout Standard
+
+Durante el año 1997 la empresa en forma innovadora le da una solución al uso de los desechos del proceso de aserrío y crea la división MAGABRIX que produce briquetas ecológicas fabricadas 100% de aserrín, producto que cuenta con un alto poder de energía calórica y un bajo nivel de humedad que en su conjunto logran mejorar la combustión.
+\end_layout
+
+\begin_layout Standard
+
+Gracias al esfuerzo de nuestros trabajadores y la visión de nuestro fundador hemos logrado llegar a ser una de las principales empresas de muebles del país, dando la posibilidad de generar trabajo a más de 400 personas y contando con una red de sucursales para venta directa en las ciudades de Temuco, Concepción y Santiago, además estamos presente en las principales grandes tiendas del país.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+
+Fuente: http://www.magasa.cl 
+\end_layout
+
+\begin_layout Standard
+
+
+\newpage
+
+\end_layout
+
+\begin_layout Section*
+
+Propiedades del Pino Insigne
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="7" columns="2">
+<features>
+<column alignment="right" valignment="top" rightline="true">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Orden 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Coniferales 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Familia 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Pinaceae
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Subgénero 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Diploxylon
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+País de origen 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+EEUU, California
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset VSpace 1cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+La madera de Pino Insigne posee cualidades técnicas que la hacen muy apetecida en la industria de la celulosa, donde resulta muy atractiva por su larga fibra; se utiliza en la fabricación de cartones, cartulinas y papeles de resistencia. Asimismo, su uso se ha difundido extensamente en la industria maderera y en la construcción de casas.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+En Chile existen más de 1.4 millones de hectáreas plantadas con esta especie, desde la Región de Valparaíso a la Región de Los Lagos, sustentando cerca del 80% del abastecimiento industrial de la madera.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Respecto a su rendimiento por Hectárea, la densidad de plantación más utilizada para el pino es de 1.250 árbol/há, lo que implica plantar cada uno en un espacio de 2,83 
+\begin_inset Formula $m^2$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+En cuanto a su volumen, es variable y depende de las condiciones de suelo y clima donde se realice la plantación. Por ejemplo, en Valparaíso se puede esperar 300 
+\begin_inset Formula $m^3$
+\end_inset
+
+ de madera; en Talca, 375 
+\begin_inset Formula $m^3$
+\end_inset
+
+; en Concepción 450 
+\begin_inset Formula $m^3$
+\end_inset
+
+, y en Valdivia 500 
+\begin_inset Formula $m^3$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Dependiendo del uso final que se le dará a la madera, los bosques de pino son cosechados entre los 18 y 20 años cuando su destino es celulosa; se cosechan entre los 20 y 25 años cuando el uso de la madera es aserrable, y entre 25 y 30 años cuando la madera se destina a la producción de trozos de exportación.
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset VSpace 0.5cm
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+Después que los árboles son cosechados, en el invierno siguiente se reforestará el mismo terreno, dando así nacimiento a un nuevo bosque.
+\end_layout
+
+\begin_layout Standard
+\align center
+
+
+\begin_inset Tabular 
+<lyxtabular version="3" rows="29" columns="2">
+<features>
+<column alignment="right" valignment="top" rightline="true">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\series bold
+Propiedad
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+
+\series bold
+Descripción
+\series default
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Color 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Duramen castaño y albura blanco - amarillenta
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Nudos 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Normalmente sanos, firmes, de color castaño oscuro
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Anillo de Crecimiento 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Notorios
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Fibra 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Derecha, excepto en anillos próximos a la médula
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Textura 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Homogénea y fina
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Olor 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Levemente resinoso
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Altura Media 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+20 
+\begin_inset Formula $m$
+\end_inset
+
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Densidad Nominal 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+450 
+\begin_inset Formula $kg/m^3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Contracción 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Desde el estado verde a 0% de contenido de humedad 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Tangencial 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+7,0%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Radial 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+4,2%
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Volumétrica 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+11,2% 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Durabilidad natural 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+No durable, madera cuya vida útil es inferior a los 5 años
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="right" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Permeabilidad 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+Fácil de tratar albura y duramen. Retención 
+\begin_inset Formula $>$
+\end_inset
+
+ 240 
+\begin_inset Formula $kg /m^3$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+
+\begin_inset VSpace vfill
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align right
+
+Fuente: http://www.papelnet.cl 
+\end_layout
+
+\end_body
+\end_document

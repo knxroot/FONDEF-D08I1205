@@ -1,0 +1,195 @@
+% El informe de práctica de estudios debe presentarse
+% anillado en tapas transparentes, hojas TAMAÑO CARTA
+% y escrito en letra tamaño 12, times new roman,  a
+% espacio sencillo, y en tercera persona.
+
+% La información escrita podrá complementarse con dibujos
+% y fotografías, tablas, gráficos, análisis matemático y
+% citas bibliográficas, en la medida discreta y propia
+% para la más fácil comprensión de la materia estudiada.
+
+
+\documentclass[a4paper,12pt,oneside]{report}
+
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage[right=2cm,left=3cm,top=2cm,bottom=2.2cm]{geometry}
+\usepackage[font=footnotesize]{caption}
+\usepackage[spanish]{babel}
+\usepackage{wrapfig}
+\usepackage{fancyhdr}
+\usepackage{subfig}
+\usepackage[colorlinks=true,linkcolor=blue,urlcolor=blue]{hyperref}
+\usepackage{moreverb}
+\usepackage{listings}
+\pagestyle{fancy}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[only,mapsfrom,Mapsto,Mapsfrom]{stmaryrd}
+
+\usepackage[absolute]{textpos} %PARA PONER UNA IMAGEN EN PANTALLA COMPLETA, PORTADA ETC
+
+
+\usepackage{color}
+
+
+%\RequirePackage{eurosym}
+%\RequirePackage[style=long,cols=2,border=none,toc=true]{glossary}
+%\RequirePackage{makeidx}
+%\RequirePackage{supertabular}
+\usepackage{listings}
+% Definiendo colores para los listados de código fuente
+\definecolor{violet}{rgb}{0.5,0,0.5}
+\definecolor{navy}{rgb}{0,0,0.5}
+
+%\definecolor{hellgelb}{rgb}{1,1,0.8}
+\definecolor{verdeclaro}{RGB}{221,248,204}
+\definecolor{rojizo}{RGB}{247,112,57}
+\definecolor{plomo}{RGB}{238,238,238}
+\definecolor{celeste}{RGB}{228,247,255}
+\definecolor{colKeys}{rgb}{0,0,1}
+\definecolor{colIdentifier}{rgb}{0,0,0}
+\definecolor{colComments}{rgb}{1,0,0}
+\definecolor{colString}{rgb}{0,0.5,0}
+
+
+\lstset{
+        float=hbp,
+        basicstyle=\ttfamily\small,
+        identifierstyle=\color{colIdentifier},
+        keywordstyle=\color{colKeys},
+        stringstyle=\color{colString},
+        commentstyle=\color{colComments},
+        columns=flexible,
+        tabsize=4,
+        frame=single,
+        extendedchars=true,
+        showspaces=false,
+        showstringspaces=false,
+        numbers=left,
+        numberstyle=\tiny,
+        breaklines=true,
+        backgroundcolor=\color{verdeclaro},
+        breakautoindent=true,
+        captionpos=b
+}
+
+\newcommand{\codigofuente}[3]{%
+  \lstinputlisting[language=#1,caption={#2}]{#3}%
+}
+
+%-------------Formato de títulos de capítulos -------------------------
+
+% http://zoonek.free.fr/LaTeX/LaTeX_samples_chapter/0.html
+% titulo #27
+
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+\def\@makechapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@
+    {\raggedleft \reset@font
+      \scshape \@chapapp{} \thechapter\par\nobreak}%
+    \par\nobreak
+    \vspace*{30\p@}
+    \interlinepenalty\@M
+    {\raggedright \Huge \scshape #1}%
+    \par\nobreak
+    \hrulefill
+    \par\nobreak
+    \vskip 30\p@
+  }}
+\def\@makeschapterhead#1{%
+  \vspace*{10\p@}%
+  {\parindent \z@
+    {\raggedleft \reset@font
+      \scshape \vphantom{\@chapapp{} \thechapter}\par\nobreak}%
+    \par\nobreak
+    \vspace*{30\p@}
+    \interlinepenalty\@M
+    {\raggedright \Huge \scshape  #1}%
+    \par\nobreak
+    \hrulefill
+    \par\nobreak
+    \vskip 30\p@
+  }}
+
+
+%fin titulo
+
+
+
+%-------------Encabezado, pie de páginas y numeración-------------------------
+
+% Cada hoja deberá tener un pie de página que indicará
+% el nombre de la empresa o institución donde se realizó
+% la práctica desplazado hacia la izquierda y un
+% encabezado en el cual se indicará en capítulo
+% correspondiente del informe, este último deberá estar
+% desplazado hacia la derecha. La letra y el tamaño
+% será el mismo que el usado en el pie de página
+% (negrita y cursiva).
+
+% Todas las hojas que se encuentran a continuación de
+% los resúmenes irán numeradas en la parte inferior
+% derecha partiendo de página nº1. La letra será la
+% misma del informe tamaño 10 (negrita y cursiva).
+
+
+% http://aristarco.dnsalias.org/node/21
+
+\fancyhf{} % borrar todos los ajustes
+
+% En lo siguiente, fancyhead sirve para configurar la cabecera, fancyfoot para el pie.
+% Justificación: C=centered, R=right, L=left, (nada)=LRC
+% Página: O=odd, E=even, (nada)=OE
+
+
+
+\fancyhead[R]{\footnotesize \leftmark}
+\fancyfoot[L]{\footnotesize \scshape CEIS-UFRO.}
+\fancyfoot[R]{\small \thepage}
+\renewcommand{\chaptermark}[1]{\markboth{\scshape #1}{}}
+
+
+
+% aplicar estilo fancy al inicio de un capítulo
+\fancypagestyle{plain}{
+   \fancyhead{} % elimina cabeceras en páginas "plain"
+   \renewcommand{\headrulewidth}{0pt} % así como la raya
+}
+
+
+
+
+\begin{document}
+
+% Portada -----------------------------------------------------------------------
+
+
+%\begin{textblock*}{297mm}(-6mm,0mm)
+%%\includegraphics[height=297mm,width=210mm]{images/fondoPortada.png}
+%\end{textblock*}
+%\pagebreak
+\thispagestyle{empty} %quita la numeración de las paginas
+\title{\color{rojizo}{\textbf{Instructivo ssss: ``EAS'}}} % Título
+\author{CEIS - UFRO} % Autor. Pueden ser varios agregando \and Otro autor
+\date{\today} % Fecha siempre actualizada al día presente al compilar.
+\maketitle
+\newpage
+
+
+
+
+\input{sumario.tex}
+\tableofcontents %genera el indice
+\thispagestyle{empty}
+
+%\input{introduccion.tex}%Introducción a los Web Containers J2EE
+\input{instalandoGlassfish.tex} %Instalación y Tunning de GlassFish 2 + Liferay sobre Centos 5.3
+%\input{instalandoOpenMRS.tex}
+%\input{instalandoAlfresco.tex}
+\input{bibliografia.tex}
+
+
+
+\end{document}

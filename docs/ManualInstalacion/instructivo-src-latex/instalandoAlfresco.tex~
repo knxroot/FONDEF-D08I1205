@@ -1,0 +1,93 @@
+\chapter{Instalación del Gestor Documental Alfresco Community 3.3}
+\label{chap:alfresco}
+
+
+\section{Que es alfresco}
+
+``Alfresco es un sistema de administración de contenidos libre, basado en estándares abiertos y de escala empresarial para sistemas operativos tipo Unix  y Otros. Está diseñado para usuarios que requieren un alto grado de modularidad y rendimiento escalable. Alfresco incluye un repositorio de contenidos, un framework de portal web para administrar y usar contenido estándar en portales, una interfaz CIFS  que provee compatibilidad de sistemas de archivos en Windows y sistemas operativos tipo Unix, un sistema de administración de contenido web capacidad de virtualizar aplicaciones web y sitios estáticos vía Apache Tomcat, búsquedas vía el motor Lucene y flujo de trabajo en jBPM. Alfresco está desarrollado en Java.'' \footnote{\url{http://es.wikipedia.org/wiki/Alfresco}}
+
+
+
+\section{Instructivo de instalación}
+
+
+\subsection{Obtener Alfresco y pre-requisitos}
+
+\textbf{Obtener} el archivo war de alfresco “alfresco-community-war-3.3.tar.gz" del sitio:\\ \url{http://process.alfresco.com/ccdl/?file=release/community/build-2765/alfresco-community-war-3.3.tar.gz}
+    \lstset{language=sh,label=alfresco_obteniendo}
+    \begin{lstlisting}
+      root@localhost: cd /tmp/ 
+      root@localhost: tar vzxf alfresco-community-war-3.3.tar.gz
+    \end{lstlisting}
+
+Realizar los siguientes ajustes en MySQL (Debe estar instalado) 
+    \lstset{language=sh,label=alfresco_entrandoAMYSQL}
+    \begin{lstlisting}
+    root@localhost: mysql -u root -p
+    \end{lstlisting}
+
+    \lstset{language=SQL,label=alfresco_CreandoBaseDatos}
+    \begin{lstlisting}
+    create database alfresco;
+    create user 'NOMBRE_DE_USUARIO_ALFRESCO'@'localhost' identified by 'PASSWORD_USUARIO_ALFRESCO';
+    grant all privileges on alfresco.* to 'NOMBRE_DE_USUARIO_ALFRESCO'@'localhost';
+    \end{lstlisting}
+
+\subsection{Configurar}
+
+Configurar Alfresco antes de deplegarlo en glassfish (hacer el deploy).Desde Alfresco 3,3, todos los ajustes ahora se basan en el archivo \textbf{alfresco-global.properties}. Este archivo se encuentra en el package de alfresco del \textbf{alfresco-community-war-3.3.tar.gz}. Este archivo \textbf{alfresco-global.properties} se copia desde la ubicación original hacia la ruta de destino donde glassfish lo reconocerá:
+
+    \lstset{language=sh,label=alfresco_config}
+    \begin{lstlisting}
+    root@localhost: cp /alfresco-community-war-3.3/extensions/extension/alfresco-global.properties /home/glassfish/LiferayPortal/glassfish/domains/domain1/lib/classes/alfresco-global.properties
+    \end{lstlisting}
+
+Modificar este\textbf{ alfresco-global.properties} que se copió en el directorio : \textbf{glassfish/domains/domain1/lib/classes/} para configurar el acceso a la base de datos en alfresco. 
+    \lstset{language=sh,label=alfresco_config}
+    \begin{lstlisting}
+		dir.root = /home/glassfish/LiferayPortal/
+		db.username=NOMBRE_DE_USUARIO_ALFRESCO
+		db.password=PASSWORD_USUARIO_ALFRESCO
+		db.driver=org.gjt.mm.mysql.Driver
+		db.url=jdbc:mysql://localhost/alfresco
+    \end{lstlisting}
+
+Crear un archivo ``sun-web.xml'' para la configuración de Alfresco.\newline
+
+    \lstset{language=xml,label=sun-web_XML}
+    \begin{lstlisting}
+      <?xml version="1.0" encoding="UTF-8"?>
+      <!DOCTYPE sun-web-app PUBLIC "-//Sun Microsystems, Inc.//DTD Application Server 8.1 Servlet 2.4//EN" "http://www.sun.com/software/appserver/dtds/sun-web-app_2_4-1.dtd">
+      <sun-web-app>
+      <class-loader delegate="false"/>
+      <property name="useMyFaces" value="true"/>
+      </sun-web-app>
+    \end{lstlisting}
+
+Añadir el archivo ``sun-web.xml''  al archivo war de alfresco (alfresco.war). Para esto vamos al directorio ``\textbf{alfresco-community-war-3.3}'' (en donde se descomprimió el  \textbf{alfresco-community-war-3.3.tar.gz}. Crear aquí el directorio WEB-INF y dejar el sun-web.xml en esta carpeta. Luego se agrega este archivo xml al alfresco.war.\newline
+
+    \lstset{language=sh}
+    \begin{lstlisting}
+  [root@localhost: tmp]# mkdir -p /alfresco-community-war-3.3/WEB-INF/
+  [root@localhost:  tmp]# cp sun-web.xml /alfresco-community-war-3.3/WEB-INF/sun-web.xml
+  [root@localhost:  tmp]# cd /alfresco-community-war-3.3/
+  [root@localhost:  alfresco-community-war-3.3]# jar -uvf alfresco.war WEB-INF/*.xml
+  [root@localhost:  alfresco-community-war-3.3]# chown glassfish:glassfish alfresco.war
+  [root@localhost:  alfresco-community-war-3.3]# cp alfresco.war /tmp
+    \end{lstlisting}
+
+
+\subsection{Iniciar}
+Iniciar Servidor Glassfishv2.\newline
+
+    \lstset{language=sh}
+    \begin{lstlisting}
+	[root@localhost:  alfresco-community-war-3.3]# service start glassfish 
+	#esto siempre y cuando exista el fichero script en el directorio /etc/init.d/glassfish
+    \end{lstlisting}
+
+Hacer el despliegue (deploy) de alfresco.war en el servidor glassfishv2. Para esto iniciamos el servicio de glassfishv2, luego iniciamos el administrador y desde aquí integrar (hacer el deploy) de alfresco.war (que debería estar en /tmp/alfresco-community-war-3.3). \newline
+
+\textbf{Iniciar alfresco: }Puede iniciarse desde el administrador de glassfis (Web aplication - deploy) aquí elegir el 	alfresco.war del directorio.
+
+

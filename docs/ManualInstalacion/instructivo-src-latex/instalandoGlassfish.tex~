@@ -1,0 +1,314 @@
+\chapter{Instalación y Tunning de GlassFish 2 sobre Centos 5.3}
+% \addcontentsline{toc}{chapter}{Trabajo realizado por el alumno}
+
+\section{Obteniendo e instalando JRE Y JDK en CentOS GNU/Linux}
+
+A continuación se describirá el resultado de las tareas realizadas en esta práctica de estudios, se mostrará el proceso general realizado para montar los servicios que proveen la plataforma OpenMRS bajo el servidor de aplicaciones GlassFish.
+
+\subsection{Sobre intérprete de Java Sun en CentOS GNU/Linux}
+
+Es oportuno aclarar las particularidades que posee una instalación de java de sun bajo CentOS GNU/Linux. CentOS GNU/Linux 5 incluye la máquina virtual Java de GNU.org, equivalente a Java 1.4.2, junto con el sistema, la cual permite ejecutar programas escritos en Java a través del paquete java-1.4.2-gcj-compat-1.4.2.0-40jpp.112, disponible a través de los depósitos de equipamiento lógico (software) de estas distribuciones. 
+\newline
+
+La instalación de Java en forma correcta sobre el sistema CentOS GNU/Linux no es trivial, sin embargo se puede conseguir una instalación “funcional” para un entorno no profesional simplemente utilizando el paquete .bin al descargar java desde la web oficial de sun y luego apuntar la variable de entorno JAVA\_HOME al directorio /usr/java/jdk(num.versión).
+\newline
+
+Para conseguir una instalación correcta de Java se debe descargar el paquete oficial que ofrece sun para los sistemas genéricos GNU/Linux y luego descargar desde la web de jpackage y utilizar ambos ficheros para reconstruir el fichero rpm válido para la versión de CentOS GNU/Linux que se utilice. Como es lógico deberemos instalar también las herramientas que nos permitirán reconstruir los ficheros rpms.
+\newline
+
+Al finalizar el proceso obtendremos todos los rpms válidos necesarios para trabajar con la máquina virtual de sun bajo nuestro sistema CentOS GNU/Linux, vale decir: Java para desarrolladores, fuentes True Type básicas de sun, driver puente JDBC/ODBC, plugin para navegadores, archivos demostrativos y soporte para alsa, además los enlaces internos relacionados con java en CentOS GNU/Linux quedarán configurados de forma correcta, esta es la gran diferencia entre la opción fácil (descomprimir y apuntar) y la difícil (reconstruir rpms).
+\newline
+
+Por razones prácticas nos concentraremos sólo en mostrar la forma fácil de realizar este proceso.
+% que es la que fué implementada en la empresa, sin embargo, durante el desarrollo de la práctica se generó un instructivo completo que muestra la forma correcta de realizar la instalación del intérprete de Java bajo CentOS utilizando la técnica de reconstrucción de paquetes.
+\newline
+\newpage 
+
+\subsection{Forma rápida: Descargar JDK, descomprimir y apuntar las variables}
+\subsubsection*{Descargar JDK}
+
+A continuación se explica la forma más fácil, la descripción de la forma avanzada fué documentada para la empresa. 
+\newline
+
+Ingresamos a la sección de JSE en el portal de java:
+
+\begin{center}\textbf{http://java.sun.com/javase/downloads/index.jsp}\end{center}
+
+%\href{http://java.sun.com/javase/downloads/index.jsp}{http://java.sun.com/javase/downloads/index.jsp}.
+
+
+Vamos a la sección de JDK y seleccionamos download a la última versión disponible en este caso nos lleva a la URL: \begin{center}\textbf{http://java.sun.com/javase/downloads/widget/jdk6.jsp}\end{center}
+%\href{http://java.sun.com/javase/downloads/widget/jdk6.jsp}{http://java.sun.com/javase/downloads/widget/jdk6.jsp}.
+%\newline
+
+Desde donde se selecciona una descarga para Linux y se descarga la versión .bin disponible (en este caso jdk-6u20-linux-i586.bin); creamos una carpeta y lo descargamos. Luego se ejecuta dicho fichero y una vez que hemos aceptado los términos de uso este generará una carpeta la cual contendrá el intérprete al cual posteriormente apuntaremos con las variables de entorno correspondientes.
+\newline
+
+El proceso a realizar se ejemplifica a continuación:
+
+\lstset{language=sh}
+\begin{lstlisting}
+  root@localhost: # ./jdk-6u20-linux-i586.bin
+  root@localhost: # ls 
+  jdk1.6.0_20  jdk-6u20-linux-i586.bin  liferay-portal-glassfish-linux-5.2.3.jar  openmrs.war 
+  root@localhost: # mv jdk-6u20-linux-i586/ /usr/java/
+  root@localhost: nano /etc/profile.d/variablesjava.sh
+\end{lstlisting}
+
+Agregar al fichero /etc/profile.d/variablesjava.sh las siguientes líneas:
+\lstset{language=sh}
+\begin{lstlisting}
+  #/etc/profile.d/variablesjava.sh
+  export JAVA_HOME=/usr/java/jdk1.6.0_18
+  export CLASSPATH=$JAVA_HOME/jre/lib/ext
+  export PATH=$PATH:$JAVA_HOME/bin
+\end{lstlisting}
+
+Ahora que ya se tiene java instalado, sólo queda decirle a CentOS que utilice el java de sun por defecto para esto hacemos lo siguiente:
+\lstset{language=sh}
+\begin{lstlisting}
+root@localhost: su - 
+root@localhost: alternatives --config java
+# elegir la alternativa de sun que hemos instalado y verificamos
+root@localhost: java -version
+\end{lstlisting}
+
+%\codigofuente{Java}{Otro formato de código fuente}{src/Prueba.java}
+\newpage 
+\subsubsection*{Consideraciones finales}
+
+Antes de dar por finalizada la instalación de JDK debemos editar el fichero \newline
+/etc/yum.repos.d/jpackage.repo y cambiar enabled=1 a enabled=0  en los repositorios. Esto es necesario para no correr el riesgo de  que como consecuencia de una actualización, los nuevos paquetes de Java puedan ser instalados en la computadora sin  confirmación durante las actualizaciones que se ejecutan automáticamente por la noche (generalmente programadas por los administradores de los servidores y que tienen por finalidad evitar problemas de seguridad).
+
+
+\section{Obteniendo e instalando Liferay con Glassfish integrado}
+
+\subsection{Obtener Liferay con Glassfish}
+
+Primero que todo se descarga Liferay desde el sitio oficial, seleccionar la versión que trae integrado Glassfish en este caso entrar a: 
+
+\begin{center}\textbf{\url{http://www.liferay.com/downloads}}\end{center}
+
+Ir a la sección de versión \textit{Community Edition}, seleccionamos Download Liferay Portal 5.2.3 CE y luego Bundled with Glassfish 2 for Linux, para este caso (versión 5.2.3) la descarga nos lleva a: 
+
+\begin{center}\textbf{\url{http://sourceforge.net/projects/lportal/files/Liferay\%20Portal/liferay-portal-glassfish-linux-5.2.3.jar}}\end{center}
+
+Utilizaremos esta URL para descargar Liferay. 
+
+\lstset{language=sh}
+\begin{lstlisting}
+#Crear usuario glassfish y grupo con mismo nombre para este usuario 
+root@localhost: sudo groupadd glassfish 
+root@localhost: sudo useradd -s /bin/bash -d /home/glassfish -m -g glassfish glassfish 
+root@localhost: sudo passwd glassfish 
+root@localhost: sudo -i -u  glassfish
+root@localhost: curl -L -O 'http://sourceforge.net/projects/lportal/files/Liferay%20Portal/liferay-portal-glassfish-linux-5.2.3.jar' 
+\end{lstlisting}
+
+Ahora descargaremos el fichero que se encarga de crear la base de datos por defecto en Liferay bajo mysql para eso vamos a \url{http://www.liferay.com/downloads/liferay-portal/additional-files}
+Desde la sección ``Application Server Plugins - Database Scripts'' - Liferay Portal 5.2.3 SQL Scripts 
+
+\lstset{language=sh}
+\begin{lstlisting}
+root@localhost: curl -L -O 'http://downloads.sourceforge.net/project/lportal/Liferay%20Portal/5.2.3/liferay-portal-sql-5.2.3.zip?use_mirror=ufpr'
+root@localhost: sudo -i -u  glassfish
+root@localhost: unzip -e liferay-portal-sql-5.2.3.zip\?use_mirror\=ufpr
+root@localhost: mv liferay-portal-sql-5.2.3 /home/glassfish/
+\end{lstlisting}
+
+
+\subsection{Descomprimir e instalar Liferay con Glassfish}
+
+A continuación se muestra el proceso en forma general:
+
+\lstset{language=sh}
+\begin{lstlisting}
+#-----------------------------------------------------------
+# Definicion de variables , no existen valores por defecto  / 
+#----------------------------------------------------------
+root@localhost: export INS_D=/home/glassfish/LiferayPortal 
+root@localhost: export  LF_PORTAL_JAR_INS=/home/glassfish/liferay-portal-glassfish-linux-5.2.3.jar 
+root@localhost: export  JDBC_CONECTOR=jdbc/LiferayPool 
+root@localhost: export  MYSQL_SQL=/home/glassfish/liferay-portal-sql-5.2.3/create-minimal/create-minimal-mysql.sql 
+#---------------------------- 
+# Descomprime Ficheros      / 
+#-------------------------- 
+root@localhost:  mkdir -p $INS_D 
+root@localhost:  cp $LF_PORTAL_JAR_INS $INS_D 
+root@localhost:  cd $INS_D 
+root@localhost:  java -Xmx512m -jar $LF_PORTAL_JAR_INS 
+root@localhost:  chmod +x $INS_D/glassfish/lib/ant/bin/ant 
+root@localhost:  $INS_D/glassfish/lib/ant/bin/ant -f $INS_D/glassfish/setup.xml 
+root@localhost:  rm $INS_D/*.jar #borra el archivo desde donde descomprimimos  Liferay
+\end{lstlisting}
+
+\subsection{Configurar  Liferay con  MYSQL}
+
+A continuación se configura JDBC en Liferay (previamente definidas las variables del script anterior). Primero que todo se descarga e integra la librería de mysql JConnector en Liferay:
+
+\lstset{language=sh}
+\begin{lstlisting}
+#----------------------------- 
+#Cofigurar JDBC en Liferay  / 
+#--------------------------- 
+# Agregar librerias JDBC - http://dev.mysql.com/downloads/connector/j/ 
+
+root@localhost: cd /tmp 
+root@localhost: wget http://mirrors.ucr.ac.cr/MySQL/Downloads/Connector-J/mysql-connector-java-5.1.12.tar.gz 
+root@localhost: tar -xvzf mysql-connector-java-5.1.12.tar.gz 
+root@localhost: cp mysql-connector-java-5.1.12/mysql-connector-java-5.1.12-bin.jar $INS_D/glassfish/lib/ 
+
+\end{lstlisting}
+
+Luego se configurar Liferay  para que pueda utilizar estas librerías utilizando para ello los valores de variables definidos inicialmente:
+
+\lstset{language=sh}
+\begin{lstlisting}
+root@localhost: echo "jdbc.default.jndi.name=$JDBC_CONECTOR" > $INS_D/glassfish/domains/domain1/lib/classes/portal-ext.properties 
+#creamos la BD, XXX= clave user root mysql, esto carga el fichero y crea la bd.
+root@localhost: mysql -u root -pXXX< $MYSQL_SQL
+\end{lstlisting}
+
+El  comando anterior creó una base de datos llamada \textbf{lportal} ahora se crea un usuario con el mismo nombre y se asignan todos los permisos a dicha base de datos (el significado de '***' es la clave de usuario lportal en MySQL).
+
+\lstset{language=sh}
+\begin{lstlisting}
+root@localhost: mysql -u root -pXXX
+\end{lstlisting}
+
+\lstset{language=SQL}
+\begin{lstlisting}
+CREATE USER 'lportal'@'localhost' IDENTIFIED BY '***';
+
+GRANT USAGE ON * . * TO 'lportal'@'localhost' IDENTIFIED BY '***' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
+
+GRANT ALL PRIVILEGES ON `lportal` . * TO 'lportal'@'localhost';
+quit;
+\end{lstlisting}
+
+
+
+
+
+Se definen las variables que tendrá la política en Glassfish que será creada y su conector, esto se define con los datos son los creados anteriormente:
+\lstset{language=sh}
+\begin{lstlisting}
+#----------------------------- 
+#Crea JDBC pools GlassFish  / 
+#---------------------------- 
+root@localhost:  export BD_NAME=lportal
+root@localhost:  export BD_USER=lportal
+root@localhost:  export BD_PASS=******
+root@localhost:  export BD_PORT=3306
+root@localhost:  export SERVER_NAME=localhost
+root@localhost:  export SERVER_SSL=false
+root@localhost:  export USER_LOGINTIMEOUT=60
+root@localhost:  export SERVER_PTHRESHOLD=0
+root@localhost:  export JDBC_CONECT_POOL_NAME=LiferayPool
+root@localhost:  export JDBC_RESOURCE=jdbc/Liferay
+\end{lstlisting}
+
+
+Se arranca glassfish para poder utilizar su administrador modo comando :
+\lstset{language=sh}
+\begin{lstlisting}
+root@localhost: export INS_D=/home/glassfish/LiferayPortal
+
+root@localhost: $INS_D/glassfish/bin/asadmin start-domain 
+\end{lstlisting}
+
+Ahora se crea el JDBC Connection Pools y el recurso JDBC utilizando el administrador modo comandos de GlassFish:
+\lstset{language=sh}
+\begin{lstlisting}
+root@localhost: $INS_D/glassfish/bin/asadmin create-jdbc-connection-pool --datasourceclassname com.mysql.jdbc.jdbc2.optional.MysqlDataSource --restype javax.sql.DataSource --property DatabaseName=$BD_NAME:user=$BD_USER:password=$BD_PASS:PortNumber=$BD_PORT:ServerName=$SERVER_NAME:Ssl=$SERVER_SSL:LoginTimeout=$USER_LOGINTIMEOUT:PrepareThreshold=$SERVER_PTHRESHOLD $JDBC_CONECT_POOL_NAME
+
+#Crea recurso JDBC
+root@localhost: $INS_D/glassfish/bin/asadmin create-jdbc-resource --connectionpoolid  $JDBC_CONECT_POOL_NAME --enabled=true $JDBC_RESOURCE
+\end{lstlisting}
+
+Un resumen del procedimiento descrito allí es realizar los siguientes pasos desde el  panel de administración de Glassfish:\newline 
+Resources - JDBC - JDBC Resources - Connection Pools - new\newline
+Name: LiferayPool\newline
+Datasource Classname: com.mysql.jdbc.jdbc2.optional.MysqlDataSource \newline
+Resource Type: javax.sql.ConnectionPoolDataSource\newline
+Properties\newline
+------------\newline 
+DatabaseName: lportal\newline 
+User: lportal \newline
+Password: lportal \newline
+PortNumber: 3306\newline 
+ServerName: localhost \newline
+Ssl: false \newline
+LoginTimeout: 60 \newline
+PrepareThreshold: 0 \newline
+
+Resources - JDBC - JDBC Resources - jdbc\/LiferayPool 
+JNDI NLiame: jdbc\/LiferayPool \newline
+Pool Name: LiferayPool\newline	 
+Status:   Enabled \newline
+jdbc\/LiferayPool\newline
+
+
+\subsection{Eliminar datos de prueba de Liferay}
+
+Básicamente lo que hay que hacer según  \url{http://www.liferay.com/web/guest/community/wiki/-/wiki/Main/7Cogs\%20sample\%20data} la propia comunidad de Liferay es borrar desde el directorio del contenedor web (tomcats o Glassfish)  la aplicación sevencogs-hook.war luego al entrar a Liferay nuevamente nos pedirá aceptar los Términos de uso, y reiniciar para verificar. Una alternativa es hacer undeploy a la aplicación desde la interfaz de administración de Glassfish o mediante línea de comandos como se muestra a continuación:
+
+\lstset{language=sh}
+\begin{lstlisting}
+#----------------------------- 
+#Quitando los datos de prueba / 
+#---------------------------- 
+
+# con el servidor en funcionamiento con los datos de prueba se realiza un undeploy a las siguientes aplicaciones
+
+root@localhost: $INS_D/glassfish/bin/asadmin undeploy sevencogs-hook 
+root@localhost: $INS_D/glassfish/bin/asadmin undeploy wol-portlet 
+root@localhost: $INS_D/glassfish/bin/asadmin undeploy sevencogs-theme 
+root@localhost: $INS_D/glassfish/bin/asadmin stop-domain 
+# rm $INS_D/glassfish/domains/domain1/autodeploy/sevencogs-hook* 
+# rm $INS_D/glassfish/domains/domain1/autodeploy/wol-portlet* 
+# rm $INS_D/glassfish/domains/domain1/autodeploy/sevencogs-theme* 
+
+#Como un precaución si aun se utilizaba hipersonic se realiza lo siguiente
+root@localhost: mv $INS_D/data/hsql/lportal.properties /tmp/ 
+root@localhost: mv $INS_D/data/hsql/lportal.script /tmp/
+\end{lstlisting}
+
+
+
+\subsection{Agregar librerías Struts y  ajustar arranque en el sistema}
+
+Las librerías Struts son necesarias para soportar las aplicaciones desarrolladas por el equipo de construcción  bajo el patrón MVC y bajo la plataforma J2EE ya que estas han sido utilzadas como un framework base para la construcción de las aplicaciones. A continuación se muestra la forma de implementar estas librerías para ser utilziadas en timpo de ejecución por el lado del servidor.
+
+Agregando  librería Struts: 
+\lstset{language=sh}
+\begin{lstlisting}
+root@localhost: wget -b http://apache.freeby.pctools.cl/struts/library/struts-2.1.8.1-lib.zip [^]
+root@localhost: unzip struts-2.1.8.1-lib.zip
+root@localhost: cp struts-2.1.8.1/lib/*.jar /opt/java/lib/
+root@localhost: tree struts-2.1.8.1/ >> estructura_struts-2.1.8.1-lib.txt
+root@localhost: rm -rf struts-2.1.8.1/ 
+\end{lstlisting}
+
+\newpage 
+
+Para el arranque automático del servicio GlassFish se diseñó el siguiente script el cual se fija en el servidor como un script autoarrancable:
+
+\codigofuente{sh}{Fichero: /etc/init.d/glassfish.sh}{src/glassfish.sh}
+%\codigofuente{Java}{Otro formato de código fuente}{src/Prueba.java}
+
+\newpage 
+Se utiliza chkconfig para indicar que el servicio arrancará al inicio.
+
+\lstset{language=sh}
+\begin{lstlisting}
+root@localhost: chmod +x /etc/init.d/glassfish
+root@localhost: chkconfig --add glassfish
+root@localhost: chkconfig --level 2 glassfish on
+root@localhost: chkconfig --level 3 glassfish on
+root@localhost: chkconfig --level 5 glassfish on
+root@localhost: /etc/init.d/glassfish start
+\end{lstlisting}
+
+
+

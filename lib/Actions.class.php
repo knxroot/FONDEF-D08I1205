@@ -337,7 +337,43 @@ $tiempo=mysql_fetch_array($tiempo);
             }
 
 	}
-        
+
+
+
+
+  	 /**
+	 * Retorna true en caso de que el usuario actual(el que esta usando el sistema)
+	 * sea un evaluador secundario para el encuestado con idEcuestado
+	 *
+	 * @return string Retorna un Int que representa si o no
+	 */
+	public function soyResponsableSecundario_appsupervisor(sfWebRequest $request,$idUser)
+	{
+            $this->BD_Conectar();
+           // $idUser=$this->getUser()->getGuardUser()->getId();
+            $this->idEncuestado=$request->getParameter('idEncuestado');
+            $this->forward404If(!$this->idEncuestado);
+            $habraalgo="SELECT *
+             FROM `encuestado`
+             WHERE `id_encuestado` ={$this->idEncuestado}
+                 AND
+                   `select_user_responsable_secundario1` ={$idUser}
+             LIMIT 1";
+            $result = mysql_query($habraalgo);
+            $rows=mysql_num_rows($result);
+
+            if ($rows > 0)
+            {
+                return 1;
+            }
+            else{
+                 return 0;
+            }
+
+	}
+
+
+
 	 /**
 	 * Obtiene el id del reponsable secundario
 	 * @return number Retorna un Int que representa el id del responsable secundario
@@ -403,7 +439,61 @@ $tiempo=mysql_fetch_array($tiempo);
                  return 0;
             }
 	}   
-        
+
+
+
+
+  	/**
+	* Retorna 0 o 1 dependiendo si la tabla esta cerrada para dicho user y dicho idencuestado
+        * funciona para todos los que usan el supercontrolador
+        *
+	*/
+	public function esCerrado_appsupervisor(sfWebRequest $request,$nombretabla,$idUser)
+	{
+            $this->BD_Conectar();
+            $this->idEncuestado=$request->getParameter('idEncuestado');
+            $this->forward404If(!$this->idEncuestado);
+
+            $habraalgo="SELECT * FROM `{$nombretabla}` WHERE `id_user`={$idUser} AND `id_encuestado`={$this->idEncuestado} AND `id_respuesta`='CLOSE_FLAG' AND `respuesta`='CERRADO'";
+            $result = mysql_query($habraalgo);
+            $rows=mysql_num_rows($result);
+
+            if ($rows > 0)
+            {
+                return 1;
+            }
+            else{
+                 return 0;
+            }
+	}
+
+	/**
+	* Retorna 0 o 1 dependiendo si la tabla esta cerrada para dicho user y dicho idencuestado
+        * funciona para todos los que usan el supercontrolador
+        * ARREGLO ESPECIAL PARA LOS DE JUICIO PROFESIONAL
+	*/
+	public function esCerrado2_appsupervisor(sfWebRequest $request,$nombretabla,$consensoMode,$idUser)
+	{
+            $this->BD_Conectar();
+           // $idUser=$this->getUser()->getGuardUser()->getId();
+            $this->idEncuestado=$request->getParameter('idEncuestado');
+            $this->forward404If(!$this->idEncuestado);
+
+            $habraalgo="SELECT * FROM `{$nombretabla}` WHERE `id_user`={$idUser} AND `id_encuestado`={$this->idEncuestado} AND `id_respuesta`='CLOSE_FLAG' AND `respuesta`='CERRADO' AND `concensoMode`={$consensoMode}";
+            //ECHO $habraalgo;
+            $result = mysql_query($habraalgo);
+            $rows=mysql_num_rows($result);
+
+            if ($rows > 0)
+            {
+                return 1;
+            }
+            else{
+                 return 0;
+            }
+	}
+
+
     public  function BD_Conectar(){
       $Error_mysql_connect=false;
       $Error_mysql_select_db=false;

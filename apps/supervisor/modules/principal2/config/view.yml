@@ -1,0 +1,5 @@
+indexSuccess:
+    javascripts:   [ui.formIngresoEncuestado.js]
+ 
+homeSuccess:
+    javascripts:   [jquery.tablesorter.min.js, ui.homeSuccess.js]

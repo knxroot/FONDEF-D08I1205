@@ -1,0 +1,10 @@
+\chapter*{Sumario}
+
+
+El objetivo del presente instructivo es servir de apoyo a la realización de este tutorial. Este tutorial es el resultado del trabajo realizado en el Centro de Excelencia en Ingeniería de Software.\newline
+
+El presente documento trata sobre la instalación y administración de servidores bajo la plataforma empresarial J2EE utilizando el webcontainer GlassFish y algunas aplicaciones que utilizadas bajo el mismo.\newline
+
+Este documento está disponible bajo los términos de la GNU Free Documentation License 1.3. Lea: \url{http://www.gnu.org/copyleft/fdl.html}.\newline
+
+Se permite la copia, ya sea de uno o más artículos completos de esta obra o del conjunto de la edición, en cualquier formato, mecánico o digital, siempre y cuando no se modifique el contenido de los textos, se respete su autoría y esta nota se mantenga.
