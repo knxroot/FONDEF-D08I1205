@@ -1,0 +1,118 @@
+\chapter{Instalación de OpenMRS}
+
+\section{Introducción}
+
+
+\begin{description}
+\item OpenMRS
+
+OpenMRS es una aplicación  bajo licencia GPL programada sobre el lenguaje Java que cumple diferentes funcionalidades de un sistema de registros médicos como: registro de pacientes, registro de especialistas, registro de encuentros entre paciente y especialista, generación de reportes, mantenedor de medicamentos y equipamiento en general.
+\end{description}
+
+
+\section{Obtener OpenMRS}
+
+Se ingresa al sitio de descarga de OpenMRS:
+\begin{center}\textbf{http://openmrs.org/wiki/Downloads}\end{center}
+
+En la sección \textit{Official Releases} seleccionamos el fichero openmrs.war correspondiente a la última versión disponible para este caso esta corresponde a la versión 1.6.1.
+\newline
+
+Esto nos llevará a la siguiente URL en la cual debemos aceptar la licencia de OpenMRS antes de descargar.Utilziando esta URL realizamos la descarga.
+\newline
+
+\lstset{language=sh}
+\begin{lstlisting}
+root@localhost:  wget -b http://resources.openmrs.org/builds/releases/OpenMRS_1.6.1/openmrs.war
+\end{lstlisting}
+
+\section{Agregar como aplicación a GlassFish}
+
+Se ingresa  al panel de administración de GlassFish en http://miserver.lazos.cl:4848/  \emph{(figura \ref{fig:panelglassfish})}.\newline
+
+\begin{figure}
+ \centering
+ \includegraphics[width=15cm]{./images/panelglassfish.png}
+ % panelglassfish.png: 1024x768 pixel, 72dpi, 36.12x27.09 cm, bb=0 0 1024 768
+ \caption{Vista del ingreso al panel de administración de GlassFish}
+ \label{fig:panelglassfish}
+\end{figure}
+
+
+Luego utilizando el nombre y password de usuario admin se ingresa  a Applications, Web Applications y click  en deploy. \emph{(figura \ref{fig:deployglassfish})}.\newline
+
+\begin{figure}
+ \centering
+ \includegraphics[width=15cm]{./images/deployglassfish.png}
+ % deployglassfish.png: 796x436 pixel, 72dpi, 28.08x15.38 cm, bb=0 0 796 436
+ \caption{Vista del panel de administración en la pantalla deploy de GlassFish}
+ \label{fig:deployglassfish}
+\end{figure}
+
+Se selecciona el fichero que contiene OpenMRS y se sube al servidor \emph{(figura \ref{fig:deployopenmrscontexto})}, en este momento existe la posibilidad de modificar el nombre y el contexto de la aplicación. Esto último hace referencia al nombre de la URL bajo el cual funcionará la aplicación OpenMRS que se ha instalado  y el contexto sobre el cual correrá. Si se desea agregar más de 1 OpenMRS al mismo dominio entonces este nombre y contexto deben ser modificados  antes de continuar.\newline
+
+
+\begin{figure}
+ \centering
+ \includegraphics[width=15cm]{./images/deploypopenmrs.png}
+ % deploypopenmrs.png: 916x491 pixel, 72dpi, 32.31x17.32 cm, bb=0 0 916 491
+ \caption{Vista del panel de administración momentos antes de hacer deploy de la aplicación OpenMRS}
+ \label{fig:deployopenmrscontexto}
+\end{figure}
+
+Se puede verificar que el deploy se realizó correctamente observando el log del proceso.
+
+\newpage 
+\subsection{Configurar OpenMRS con MySQL}
+
+Se realiza una conexión a mysql con usuario root desde terminal:
+
+\lstset{language=sh}
+\begin{lstlisting}
+root@localhost: Mysql -u root -p
+\end{lstlisting}
+
+Se crea una base de datos y usuario asociado asignando todos los privilegios.
+
+
+\lstset{language=SQL}
+\begin{lstlisting}
+CREATE USER 'MINUEVOOPENMRS'@'localhost' IDENTIFIED BY '***';
+
+GRANT USAGE ON * . * TO 'MINUEVOOPENMRS'@'localhost' IDENTIFIED BY '***' WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0 ;
+
+CREATE DATABASE IF NOT EXISTS `MINUEVOOPENMRS` ;
+
+GRANT ALL PRIVILEGES ON `MINUEVOOPENMRS` . * TO 'MINUEVOOPENMRS'@'localhost';
+\end{lstlisting}
+
+Entrar por el navegador a la dirección http://miserver.lazos.cl:8080/openmrs y seguir los  pasos para la configuración.
+
+\begin{itemize}
+ \item Paso 1: Configuración de la base de datos: Se debe seleccionar la opción ``NO`` y proporcionar datos de usuario y contraseña de MySQL.
+
+  \item Paso 2: Las primeras dos opciones en “SI” luego proporcionar usuario y contraseña de MySQL.
+
+  \item Paso 3: Dejar las opciones por defecto y continuar
+
+  \item Paso 4: Configurar una contraseña para administración, debe contener números y letras mayúsculas y minúsculas.
+
+  \item Paso 5: Configurar una implementación y continuar
+
+  \item Paso 6: Presionar Finish y esperar.
+\end{itemize}
+
+
+Con esto  OpenMRS queda configurado y listo para trabajar.
+
+\section{Ingresando a OpenMRS}
+
+Ingresamos desde el navegador a la URL: http://miserver.lazos.cl:8080/openmrs y luego ingresamos usuario y password configurados en la instalación. El navegador muestra la pantalla de la \emph{(figura \ref{fig:pantallainicialopenmrs})}.
+
+\begin{figure}
+ \centering
+ \includegraphics[width=15cm]{./images/openmrs_pantallainicial.png}
+ % openmrs_pantallainicial.png: 1280x800 pixel, 72dpi, 45.16x28.22 cm, bb=0 0 1280 800
+ \caption{Vista de la pantalla de ingreso de OpenMRS}
+ \label{fig:pantallainicialopenmrs}
+\end{figure}

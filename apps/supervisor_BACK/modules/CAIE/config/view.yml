@@ -1,0 +1,3 @@
+listarBloqueSuccess:
+ javascripts:   [funciones_CAIE.js]
+ stylesheets: [caie.css]

@@ -259,11 +259,11 @@ public function executeShowPart2CACSA(sfWebRequest $request)
     }*/
 
 
-      echo $sql_consulta_preguntas_bloque_CACSA3;
+      //echo $sql_consulta_preguntas_bloque_CACSA3;
       $result = mysql_query($sql_consulta_preguntas_bloque_CACSA3);
        if (!$result) {
-          echo "error al realizar la consulta a la base de datosa";
-          die('Invalid query: ' . mysql_error());
+          echo "error al realizar la consulta a la base de datos";
+          //die('Invalid query: ' . mysql_error());
           exit;
       }
       if (mysql_num_rows($result) == 0) {

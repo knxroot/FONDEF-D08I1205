@@ -1,0 +1,3 @@
+mostrarFormularioSuccess:
+ javascripts:   [jquery.autoresize.js,jquery-ui.tabs.paging.js, funciones_IRNC.js, jquery.loadJSON.js]
+ stylesheets: [irnc.css]

@@ -1,0 +1,3 @@
+mostrarFormularioSuccess:
+ javascripts:   [jquery.loadJSON.js, jquery.validate.js, jquery.simpletip-1.3.1.min.js, funciones_EGED.js]
+ stylesheets:   [style.css]
