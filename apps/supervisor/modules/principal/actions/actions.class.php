@@ -48,7 +48,7 @@ class principalActions extends Actions
   
      $this->porcCompletadoEDA = $esCerrado*100;
 
-     $this->esEvaluadorSecundario=$this->soyResponsableSecundario($request);
+     $this->esEvaluadorSecundario=$this->soyResponsableSecundario_appsupervisor($request,$this->idEncuestador);
 
 
 
