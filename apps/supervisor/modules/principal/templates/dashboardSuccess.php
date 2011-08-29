@@ -16,10 +16,9 @@
 
 <div class="grid_5">
 <?php if(!$cuasasactuales): ?> 
-     <a href="<?php echo url_for('CausasActuales/index?idEncuestado='.$idEncuestado);?>">
      <div class="menu-dashboard-causas-clickeable">
       Causas actualmente imputado
-      </div></a>
+      </div>
     <?php endif; ?>
       </div>
 
@@ -27,10 +26,9 @@
 
 <div class="grid_5">
 <?php if(!$cuasasvigentes): ?> 
-     <a href="<?php echo url_for('CausasVigentes/index?idEncuestado='.$idEncuestado);?>">
      <div class="menu-dashboard-causas-clickeable">
       Causas Vigentes
-      </div></a>
+      </div>
     <?php endif; ?>
       </div>
 
@@ -38,9 +36,8 @@
 
 <div class="grid_5">
 <?php if(!$cuasasanteriores): ?> 
-     <a href="<?php echo url_for('CausasAnteriores/index?idEncuestado='.$idEncuestado);?>">
      <div class="menu-dashboard-causas-clickeable">
-Causas Anteriores      </div></a>
+Causas Anteriores      </div>
     <?php endif; ?>
       </div>
 
@@ -88,10 +85,9 @@ Causas Anteriores      </div></a>
 
    <div class="grid_3">
    <?php if(!($esEvaluadorSecundario)): ?>
-     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=ENTREVISTA');?>">
      <div class="menu-dashboard-autoreporte-clickeable">
       ENTREVISTA
-      </div></a>
+      </div>
    <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
    <div class="grid_3 ">
@@ -106,14 +102,14 @@ Causas Anteriores      </div></a>
    <div class="prefix_1 grid_2">
    <div class="menu-dashboard-juicioprofesional">
     <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso2): ?>
-    <a href="<?php echo url_for('EGED/index?idEncuestado='.$idEncuestado.'&modoConsenso=true');?>">
+    
     <?php else: ?>
-    <a href="<?php echo url_for('EGED/index?idEncuestado='.$idEncuestado);?>">
+
      <?php endif; ?>
      <div class="<?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso2){echo "menu-consenso";}else{echo "menu-dashboard-juicioprofesional-clickeable";} ?>">
       EGED
      </div>
-    </a>
+
    </div>
    </div>
    <div class="grid_3">
@@ -135,10 +131,10 @@ Causas Anteriores      </div></a>
 
    <div class="grid_3">
    <?php if(!($esEvaluadorSecundario)): ?>    
-     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=CAIE');?>">
+
      <div class="menu-dashboard-autoreporte-clickeable">
       CICUM
-      </div></a>
+      </div>
    <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
    <div class="grid_3">
@@ -152,15 +148,14 @@ Causas Anteriores      </div></a>
    <!-- CAMBIO CONSENSO START-->
    <div class="prefix_1 grid_2">
    <div class="menu-dashboard-juicioprofesional">
-    <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso3): ?>
-    <a href="<?php echo url_for('FERR/index?idEncuestado='.$idEncuestado.'&modoConsenso=true');?>">
+
     <?php else: ?>
-    <a href="<?php echo url_for('FERR/index?idEncuestado='.$idEncuestado);?>">
+
      <?php endif; ?>
      <div class="<?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso3){echo "menu-consenso";}else{echo "menu-dashboard-juicioprofesional-clickeable";} ?>">
       FERR
      </div>
-    </a>
+
    </div>
    </div>
    <div class="grid_3">
@@ -184,10 +179,10 @@ Causas Anteriores      </div></a>
 
    <div class="grid_3">
      <?php if(!($esEvaluadorSecundario)): ?>
-     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=CACSA');?>">
+
      <div class="menu-dashboard-autoreporte-clickeable">
       CACSA
-      </div></a>
+      </div>
      <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
    <div class="grid_3">
@@ -202,14 +197,14 @@ Causas Anteriores      </div></a>
    <div class="prefix_1 grid_2">
    <div class="menu-dashboard-juicioprofesional">
     <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso4): ?>
-    <a href="<?php echo url_for('IRNC/index?idEncuestado='.$idEncuestado.'&modoConsenso=true');?>">
+
     <?php else: ?>
-    <a href="<?php echo url_for('IRNC/index?idEncuestado='.$idEncuestado);?>">
+
      <?php endif; ?>
      <div class="<?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso4){echo "menu-consenso";}else{echo "menu-dashboard-juicioprofesional-clickeable";} ?>">
       IRNC
      </div>
-    </a>
+
    </div>
    </div>
    <div class="grid_3">
@@ -232,10 +227,10 @@ Causas Anteriores      </div></a>
 
    <div class="grid_3">
    <?php if(!($esEvaluadorSecundario)): ?>
-     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=EDA');?>">
+
      <div class="menu-dashboard-autoreporte-clickeable">
       EDA
-      </div></a>
+      </div>
    <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
    <div class="grid_3">
@@ -249,14 +244,13 @@ Causas Anteriores      </div></a>
    <div class="prefix_1 grid_2">
     <div class="menu-dashboard-juicioprofesional">
     <?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso5): ?>
-    <a href="<?php echo url_for('FCMF/index?idEncuestado='.$idEncuestado.'&modoConsenso=true');?>">
+
     <?php else: ?>
-    <a href="<?php echo url_for('FCMF/index?idEncuestado='.$idEncuestado);?>">
+
      <?php endif; ?>
      <div class="<?php if(!$esEvaluadorSecundario && $mostrarColumnaConsenso5){echo "menu-consenso";}else{echo "menu-dashboard-juicioprofesional-clickeable";} ?>">
       FCMF
      </div>
-    </a>
    </div>
    </div>
    
@@ -278,10 +272,10 @@ Causas Anteriores      </div></a>
 
    <div class="grid_3">
    <?php if(!($esEvaluadorSecundario)): ?>
-     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=SQIFA');?>">
+
      <div class="menu-dashboard-autoreporte-clickeable">
       CESMA
-      </div></a>
+      </div>
    <?php endif; ?><?php if($esEvaluadorSecundario): ?>&#160;<?php endif; ?>
    </div>
    
@@ -294,10 +288,10 @@ Causas Anteriores      </div></a>
    <div class="clear"></div><br>
 
    <div class="grid_3">
-       <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=DEP_ADO');?>">
+
        <div class="menu-dashboard-autoreporte-clickeable">
         DEPADO
-        </div></a>
+        </div>
    </div>
    <div class="grid_3">
      <div class="menu-dashboard-autoreporte">
@@ -308,10 +302,10 @@ Causas Anteriores      </div></a>
    <div class="clear"></div><br>
 
    <div class="grid_3">
-     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=MACI');?>">
+
      <div class="menu-dashboard-autoreporte-clickeable">
       MACI
-      </div></a>
+      </div>
    </div>
    <div class="grid_3">
      <div class="menu-dashboard-autoreporte">
@@ -321,10 +315,10 @@ Causas Anteriores      </div></a>
    <div class="clear"></div><br>
 
    <div class="grid_3">
-     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=CSVE');?>">
+
      <div class="menu-dashboard-autoreporte-clickeable">
       CSVE
-      </div></a>
+      </div>
    </div>
    <div class="grid_3">
      <div class="menu-dashboard-autoreporte">
@@ -334,10 +328,10 @@ Causas Anteriores      </div></a>
   <div class="clear"></div><br>
 
    <div class="grid_3">
-     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=JIR');?>">
+
      <div class="menu-dashboard-autoreporte-clickeable">
       JIR
-      </div></a>
+      </div>
    </div>
    <div class="grid_3">
      <div class="menu-dashboard-autoreporte">
@@ -347,10 +341,9 @@ Causas Anteriores      </div></a>
   <div class="clear"></div><br>
 
    <div class="grid_3">
-     <a href="<?php echo url_for('modorespuesta/index?idEncuestado='.$idEncuestado.'&nombremodulo=CONCLUSIONES');?>">
      <div class="menu-dashboard-autoreporte-clickeable">
       CONCLUSIONES
-      </div></a>
+      </div>
    </div>
    <div class="grid_3">
      <div class="menu-dashboard-autoreporte">
