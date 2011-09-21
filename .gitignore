@@ -1,8 +1,8 @@
 .*
 Thumbs.db
 lib/vendor*
-cache*
-log*
+cache/*
+log/*
 config/databases.yml
 apps/frontend/config/app.yml
 nbproject*
