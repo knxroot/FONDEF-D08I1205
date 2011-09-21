@@ -1,8 +1,0 @@
-showPart1CACSASuccess:
- javascripts:   [funciones_CACSA.js]
- 
-showPart2CACSASuccess:
- javascripts:   [funciones_CACSA2.js]
-
-showPart3CACSASuccess:
- javascripts:   [funciones_CACSA3.js]

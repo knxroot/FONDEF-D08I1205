@@ -1,6 +1,0 @@
-mostrarFormularioSuccess:
- javascripts:   [fileuploader.js, funciones_FERR.js,jquery.loadJSON.js, jqModal.js]
-
-
- stylesheets:    [fileuploader.css, ferr.css, style.css, tablitas.css]
- 

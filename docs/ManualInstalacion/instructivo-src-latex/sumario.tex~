@@ -1,9 +1,0 @@
-\chapter*{Sumario}
-
-El objetivo del presente instructivo es servir de apoyo a la instalaci\'on y configuraci\'on de la maqueta del Sistema de registro de adolecentes infractores de ley (Fondef D08I1205). Se debe tener presente que las configuraciones indicadas de instalaci\'on son requisito para que el sistema pueda funcionar correctamente, por lo cual deben ser seguidas al pie de la letra.\newline
-
-El sistema est\'a basado en el framework Symfony 1.4 por lo que algunos de los pasos que se describen en el proceso corresponden a requisitos heredados de dicho framework, se solicita seguir el procedimiento descrito en las p\'aginas siguientes.\newline
-
-
-
-

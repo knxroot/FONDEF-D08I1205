@@ -1,6 +1,0 @@
-\BOOKMARK [0][-]{chapter.1}{Instalaci\363n del sistema sobre Ubuntu 10.04.1 LTS}{}
-\BOOKMARK [1][-]{section.1.1}{Configuraciones previas}{chapter.1}
-\BOOKMARK [2][-]{subsection.1.1.1}{Configurando MySQL \(my.cnf\)}{section.1.1}
-\BOOKMARK [2][-]{subsection.1.1.2}{Creaci\363n y configuraci\363n de la BD MySQL \(PhpMyAdmin\)}{section.1.1}
-\BOOKMARK [2][-]{subsection.1.1.3}{Configurando PHP \(php.ini\)}{section.1.1}
-\BOOKMARK [2][-]{subsection.1.1.4}{Configurando Virtualhost \(a criterio\)}{section.1.1}

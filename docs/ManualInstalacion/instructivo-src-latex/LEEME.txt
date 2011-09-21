@@ -1,1 +1,0 @@
-Este informe fué compilado utilizando el editor de LateX Kile 2.1 beta 4 en Ubuntu 10.04. Codificación UTF-8.

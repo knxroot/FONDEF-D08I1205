@@ -1,3 +1,0 @@
-mostrarFormularioSuccess:
- javascripts:   [ui.formCausasActuales.js, jquery.autoresize.js,jquery-ui.tabs.paging.js,jquery.loadJSON.js, jquery.validate.js, jqModal.js]
- stylesheets:   [excel.css, style.css, tablitas.css]

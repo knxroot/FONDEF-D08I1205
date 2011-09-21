@@ -1,1 +1,0 @@
-Error, recarge la página

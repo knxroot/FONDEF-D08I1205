@@ -1,3 +1,0 @@
-all:
- stylesheets:   ['conclusiones.css']
- javascripts:   ['conclusiones.js']

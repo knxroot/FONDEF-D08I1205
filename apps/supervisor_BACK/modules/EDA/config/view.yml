@@ -1,3 +1,0 @@
-indexSuccess:
-    javascripts: [funciones_EDA.js, jquery.loadJSON.js]
-    stylesheets: [eda.css]

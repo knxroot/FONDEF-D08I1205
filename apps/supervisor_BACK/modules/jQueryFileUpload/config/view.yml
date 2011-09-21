@@ -1,3 +1,0 @@
-default:
-  has_layout: true
-  layout: layout_jQueryFileUpload

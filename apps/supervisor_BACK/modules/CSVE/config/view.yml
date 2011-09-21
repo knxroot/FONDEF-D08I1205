@@ -1,3 +1,0 @@
-showCSVESuccess:
- javascripts:   [funciones_CSVE.js]
- stylesheets: [csve.css, MACI.css]
