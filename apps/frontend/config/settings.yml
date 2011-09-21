@@ -1,0 +1,60 @@
+# You can find more information about this file on the symfony website:
+# http://www.symfony-project.org/reference/1_4/en/04-Settings
+
+prod:
+  .settings:
+    no_script_name:         true
+    logging_enabled:        false
+
+dev:
+  .settings:
+    web_debug:              true
+    cache:                  false
+    no_script_name:         false
+    etag:                   false
+
+test:
+  .settings:
+    error_reporting:        <?php echo ((E_ALL | E_STRICT) ^ E_NOTICE)."\n" ?>
+    cache:                  false
+    web_debug:              false
+    no_script_name:         false
+    etag:                   false
+
+all:
+
+  .settings:
+    # Form security secret (CSRF protection)
+    csrf_secret:            UniqueSecret
+    enabled_modules:      [default, sfGuardAuth]
+
+    login_module:           sfGuardAuth   # To be called when a non-authenticated user
+    login_action:           signin     # Tries to access a secure page
+
+    secure_module:          sfGuardAuth   # To be called when a user doesn't have
+    secure_action:          secure    # The credentials required for an action
+    
+    # Output escaping settings
+    escaping_strategy:      true
+    escaping_method:        ESC_SPECIALCHARS
+
+    
+    # Enable the database manager
+    use_database:           true
+    default_culture:     es_ES
+    
+
+    
+ # .actions:
+ #   login_module:           sfGuardAuth   # To be called when a non-authenticated user
+ #   login_action:           login     # Tries to access a secure page
+#
+ #   secure_module:          sfGuardAuth   # To be called when a user doesn't have
+ #   secure_action:          secure    # The credentials required for an action
+
+  .actions:
+   error_404_module: default
+   error_404_action: error404
+
+
+

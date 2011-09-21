@@ -1,0 +1,22 @@
+/* 
+    Document   : entrevista
+    Created on : 23-06-2011, 11:25:40 PM
+    Author     : Gustavo Lacoste <gustavo@lacosox.org>
+    Description:
+         Simple css fixed for entrevista module.
+*/
+.form textarea{
+    height: 66.6px;
+}
+
+.form-lbl{
+    font-weight:normal !important;
+}
+
+.form .input_escribiendo { /* para aplicarlo a los elementos input type="text"*/
+	padding-right: 20px;
+	background-image: url("../images/date_edit.png") !important;
+	background-repeat: no-repeat !important;
+	background-position: right center !important;
+	min-height:16px; /*altura imagen*/
+}
