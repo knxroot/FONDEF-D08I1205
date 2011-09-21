@@ -7,3 +7,5 @@ config/databases.yml
 apps/frontend/config/app.yml
 nbproject*
 data/*
+web/uploads/ENTREVISTA/*
+web/uploads/FERR/*
