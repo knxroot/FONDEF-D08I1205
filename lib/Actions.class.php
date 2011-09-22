@@ -199,7 +199,7 @@ $tiempo=mysql_fetch_array($tiempo);
 				
 			  
                           }
-                           echo $sqlGuardar;
+                           //echo $sqlGuardar;
                            mysql_query($sqlGuardar);
                         }
                        

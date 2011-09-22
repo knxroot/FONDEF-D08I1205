@@ -34,6 +34,7 @@ class ENTREVISTAActions extends Actions
       
      $this->forward404If(!$this->esEncuestadoAccesibleAutoreporte($request));
      $this->forward404If(!$this->idEncuestado);
+     $this->respuestasGuardadas=$this->preparaMostrarFormulario($request, 'entrevista_respuestas');
          /* START para el loader del iframe*/
     $this->modoConsenso=0;
     $this->idEncuestado=$request->getParameter('idEncuestado');

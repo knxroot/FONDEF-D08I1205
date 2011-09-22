@@ -76,18 +76,37 @@ Cargando...
 </IFRAME>
 </div>
 <div class="clear"></div>
-<br>
-<div class="grid-3-12">
-    <a class="form-button-off form-left" style="display: block;" href="<?php echo url_for('principal/dashboard?idEncuestado='.$idEncuestado);?>" onclick="return confirm('Al salir del formulario perderás la información que hayas respondido en la pantalla actual. ¿Estas seguro que deseas salir del formulario actual?');"><- Volver al menú</a>
-</div>
-<div class="grid-2-12"></div>
-<div class="grid-4-12">
-    <input type="submit" value="Finalizar" title="enviar" class="form-button form-right">
+
+<!-- Comienzo Botón envio de formulario, en caso de ser último bloque advierte que se cerrará el formulario si se continua -->
+<a class="form-button-off form-left" 
+   style="display: block;" 
+   href="<?php echo url_for('principal/dashboard?idEncuestado='.$idEncuestado);?>" 
+   onclick="return confirm('Al salir del formulario perderás la información que hayas respondido en la pantalla actual. ¿Estas seguro que deseas salir del formulario actual?');">
+   <- Volver al menú
+</a>
+ <button class="form-button" type="submit" name="Guardar"><span class="ui-icon ui-icon-disk" style="float:left;"></span>Guardar</button>
+ 
+
+ <input type="text" id="CLOSE_FLAG" name="CLOSE_FLAG" style="display:none" value="NOCERRADO"></input>
+<div class="grid_2 prefix_9">
+   <a class="form-button-off form-left" style="display: block;"
+      onclick="
+              if(confirm('ADVERTENCIA. Al cerrar el formulario ya no podrás volver a modificarlo.')){
+                  $('#CLOSE_FLAG').val('CERRADO');
+                   document.formulario_ENTREVISTA.submit();
+              }">Cerrar</a>
 </div>
 <div class="clear"></div>
-<input type="text" id="CLOSE_FLAG" name="CLOSE_FLAG" style="display:none" value="CERRADO">
-    <input type="text" id="tstart" name="tstart" style="display:none" value="<?php echo $tstart; ?>"></input>
+<!-- Fin Botón envio de formulario, en caso de ser último bloque advierte que se cerrará el formulario si se continua -->
+ <input type="text" id="tstart" name="tstart" style="display:none" value="<?php echo $tstart; ?>"></input>
 
 </form>
 
 <br>
+
+
+<script type="text/javascript">
+                $().ready(function() {
+                     $("form").loadJSON(<?php echo $sf_data->getRaw('respuestasGuardadas');?>);
+                });
+</script>

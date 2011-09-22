@@ -416,7 +416,7 @@
 <div class="grid_2 prefix_9">
    <a class="form-button-off form-left" style="display: block;"
       onclick="
-              if(confirm('OJO. Al cerrar el formulario ya no podrás volver a modificarlo.')){
+              if(confirm('ADVERTENCIA. Al cerrar el formulario ya no podrás volver a modificarlo.')){
                   $('#CLOSE_FLAG').val('CERRADO');
                    document.formulario_DEP_ADO.submit();
               }">Cerrar</a>
